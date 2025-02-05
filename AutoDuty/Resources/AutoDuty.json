@@ -1,6 +1,7 @@
 {
   "Name": "AutoDuty",
   "Modules": {
+    "BossMod.Autorotation.MiscAI.AutoFarm": [],
     "BossMod.Autorotation.xan.BLM": [
       {
         "Track": "Targeting",
@@ -395,6 +396,17 @@
         "Track": "Protect party members",
         "Option": "Enabled"
       }
-    ]
+    ],
+    "BossMod.Autorotation.MiscAI.StayWithinLeylines": [
+      {
+        "Track": "Use Retrace",
+        "Option": "Yes"
+      },
+      {
+        "Track": "Use Between The Lines",
+        "Option": "Yes"
+      }
+    ],
+    "BossMod.Autorotation.MiscAI.NormalMovement": []
   }
 }

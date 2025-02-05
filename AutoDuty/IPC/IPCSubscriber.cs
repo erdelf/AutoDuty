@@ -14,8 +14,6 @@ using System.Threading.Tasks;
 namespace AutoDuty.IPC
 {
     using System.ComponentModel;
-    using System.Reflection;
-    using Dalamud.Plugin;
     using ECommons.GameFunctions;
     using Helpers;
 
@@ -81,6 +79,12 @@ namespace AutoDuty.IPC
     {
         private static EzIPCDisposalToken[] _disposalTokens = EzIPC.Init(typeof(BossMod_IPCSubscriber), "BossMod", SafeWrapper.AnyException);
 
+        private enum MovementTrack { Destination, Range, Cast, SpecialModes }
+        private enum MovementDestinationStrategy { None, Pathfind, Explicit }
+
+        public enum TargetingTrack { General, Fate, Specific }
+        public enum TargetingGeneralStrategy { FightBack, AllowPull, Aggressive, Passive }
+
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("BossMod") || IPCSubscriber_Common.IsReady("BossModReborn");
 
         [EzIPC] internal static readonly Func<uint, bool> HasModuleByDataId;
@@ -103,7 +107,7 @@ namespace AutoDuty.IPC
             //check if our preset does not exist
             if (Presets_Get(name) == null)
                 //load it
-                Svc.Log.Debug($"AutoDuty Preset Loaded: {Presets_Create(preset, true)}");
+                Svc.Log.Error($"AutoDuty Preset Loaded: {name} {Presets_Create(preset, true)}\n{Environment.StackTrace}");
         }
 
         public static void RefreshPreset(string name, string preset)
@@ -143,6 +147,43 @@ namespace AutoDuty.IPC
 
                 Presets_AddTransientStrategy("AutoDuty",         "BossMod.Autorotation.MiscAI.StayCloseToTarget", "range", MathF.Round(range, 1).ToString(CultureInfo.InvariantCulture));
                 Presets_AddTransientStrategy("AutoDuty Passive", "BossMod.Autorotation.MiscAI.StayCloseToTarget", "range", MathF.Round(range, 1).ToString(CultureInfo.InvariantCulture));
+            }
+        }
+
+        public static void SetMovementAI(bool active, bool queue = false)
+        {
+            void BossModReborn()
+            {
+                Plugin.Chat.ExecuteCommand($"/vbmai followtarget {(active ? "on" : "off")}");
+                Plugin.Chat.ExecuteCommand($"/vbmai {(active ? "on" : "off")}");
+            }
+
+            void VBossMod()
+            {
+                string strategyName = active ?
+                                          nameof(MovementDestinationStrategy.Pathfind) :
+                                          nameof(MovementDestinationStrategy.None);
+                
+                Svc.Log.Info("Movement Info:::" + strategyName);
+                Presets_AddTransientStrategy("AutoDuty",         "BossMod.Autorotation.MiscAI.NormalMovement", nameof(MovementTrack.Destination), strategyName);
+                Presets_AddTransientStrategy("AutoDuty Passive", "BossMod.Autorotation.MiscAI.NormalMovement", nameof(MovementTrack.Destination), strategyName);
+            }
+
+            Svc.Log.Info($"Setting movement info: {active} | queued: {queue}");
+
+            if (BossModReborn_IPCSubscriber.IsEnabled)
+            {
+                if (queue)
+                    Plugin.TaskManager.Enqueue(BossModReborn, "StopForCombat");
+                else
+                    BossModReborn();
+            }
+            else
+            {
+                if (queue)
+                    Plugin.TaskManager.Enqueue(VBossMod, "StopForCombat");
+                else
+                    VBossMod();
             }
         }
     }

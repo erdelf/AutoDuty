@@ -83,7 +83,24 @@ public sealed class AutoDuty : IDalamudPlugin
 
     internal static string Name => "AutoDuty";
     internal static AutoDuty Plugin { get; private set; }
-    internal bool StopForCombat = true;
+
+    private bool stopForCombat = true;
+
+    internal bool StopForCombat
+    {
+        get => this.stopForCombat;
+        set
+        {
+            if (this.stopForCombat != value)
+            {
+                this.stopForCombat = value;
+                BossMod_IPCSubscriber.SetMovementAI(value);
+            }
+        }
+
+    }
+
+
     internal DirectoryInfo PathsDirectory;
     internal FileInfo AssemblyFileInfo;
     internal FileInfo ConfigFile;
@@ -1150,12 +1167,8 @@ public sealed class AutoDuty : IDalamudPlugin
                 ExitDuty();
             if (Configuration.AutoManageRotationPluginState && !Configuration.UsingAlternativeRotationPlugin)
                 SetRotationPluginSettings(false);
-            if (Configuration.AutoManageBossModAISettings)
-            {
-                Chat.ExecuteCommand($"/vbmai off");
-                if (!IPCSubscriber_Common.IsReady("BossModReborn"))
-                    Chat.ExecuteCommand($"/vbm cfg AIConfig Enable false");
-            }
+            if (Configuration.AutoManageBossModAISettings) 
+                BossMod_IPCSubscriber.SetMovementAI(false);
             States &= ~PluginState.Navigating;
         }
         else
@@ -1247,6 +1260,10 @@ public sealed class AutoDuty : IDalamudPlugin
                 {
                     BossMod_IPCSubscriber.AddPreset("AutoDuty", Resources.AutoDutyPreset);
                     BossMod_IPCSubscriber.SetPreset("AutoDuty");
+                    BossMod_IPCSubscriber.Presets_AddTransientStrategy("AutoDuty", "BossMod.Autorotation.MiscAI.AutoFarm", nameof(BossMod_IPCSubscriber.TargetingTrack.General),
+                                                                       Plugin.JobLastKnown.GetCombatRole() == CombatRole.Tank ?
+                                                                           nameof(BossMod_IPCSubscriber.TargetingGeneralStrategy.Aggressive) :
+                                                                           nameof(BossMod_IPCSubscriber.TargetingGeneralStrategy.AllowPull));
                 }
                 else if(this.Configuration.AutoManageBossModAISettings)
                 {
@@ -1278,25 +1295,23 @@ public sealed class AutoDuty : IDalamudPlugin
             Configuration.MaxDistanceToTargetRoleBased = true;
             Configuration.PositionalRoleBased = true;
         }
-        Chat.ExecuteCommand($"/vbmai on");
-        if(!bmr)
-            Chat.ExecuteCommand($"/vbm cfg AIConfig Enable true");
 
-        Chat.ExecuteCommand($"/vbm cfg AIConfig ForbidActions false");
-        Chat.ExecuteCommand($"/vbm cfg AIConfig ForbidMovement false");
+        BossMod_IPCSubscriber.SetMovementAI(true);
+
         if (bmr)
         {
+            Chat.ExecuteCommand($"/vbm cfg AIConfig ForbidActions false");
+            Chat.ExecuteCommand($"/vbm cfg AIConfig ForbidMovement false");
             Chat.ExecuteCommand($"/vbm cfg AIConfig FollowDuringCombat {Configuration.FollowDuringCombat}");
             Chat.ExecuteCommand($"/vbm cfg AIConfig FollowDuringActiveBossModule {Configuration.FollowDuringActiveBossModule}");
             Chat.ExecuteCommand($"/vbm cfg AIConfig FollowOutOfCombat {Configuration.FollowOutOfCombat}");
             Chat.ExecuteCommand($"/vbm cfg AIConfig FollowTarget {Configuration.FollowTarget}");
             Chat.ExecuteCommand($"/vbm cfg AIConfig MaxDistanceToSlot {Configuration.MaxDistanceToSlotFloat}");
             Chat.ExecuteCommand($"/vbm cfg AIConfig DesiredPositional {Configuration.PositionalEnum}");
+            Chat.ExecuteCommand($"/vbmai follow {(Configuration.FollowSelf ? Player.Name : ((Configuration.FollowRole && !ConfigTab.FollowName.IsNullOrEmpty()) ? ConfigTab.FollowName : (Configuration.FollowSlot ? $"Slot{Configuration.FollowSlotInt}" : Player.Name)))}");
         }
 
         BossMod_IPCSubscriber.SetRange(Plugin.Configuration.MaxDistanceToTargetFloat);
-
-        Chat.ExecuteCommand($"/vbmai follow {(Configuration.FollowSelf ? Player.Name : ((Configuration.FollowRole && !ConfigTab.FollowName.IsNullOrEmpty()) ? ConfigTab.FollowName : (Configuration.FollowSlot ? $"Slot{Configuration.FollowSlotInt}" : Player.Name)))}");
 
         if (!bmr && false)
         {
@@ -1343,7 +1358,6 @@ public sealed class AutoDuty : IDalamudPlugin
         {
             if (PathAction.Name.Equals("Boss"))
             {
-
                 if (Configuration.DutyModeEnum == DutyMode.Regular && Svc.Party.PartyId > 0)
                 {
                     Message message = new()
@@ -1500,12 +1514,8 @@ public sealed class AutoDuty : IDalamudPlugin
         this.Framework_Update_InDuty = _ => {};
         if (!InDungeon)
             CurrentLoop = 0;
-        if (Configuration.AutoManageBossModAISettings)
-        {
-            Chat.ExecuteCommand($"/vbmai off");
-            if(!IPCSubscriber_Common.IsReady("BossModReborn"))
-                Chat.ExecuteCommand($"/vbm cfg AIConfig Enable false");
-        }
+        if (Configuration.AutoManageBossModAISettings) 
+            BossMod_IPCSubscriber.SetMovementAI(false);
         SetGeneralSettings(true);
         if (Configuration.AutoManageRotationPluginState && !Configuration.UsingAlternativeRotationPlugin)
             SetRotationPluginSettings(false);

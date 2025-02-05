@@ -155,7 +155,7 @@ namespace AutoDuty.Managers
             }
         }
 
-        public void BossMod(PathAction action) => _chat.ExecuteCommand($"/vbmai {action.Arguments[0]}");
+        public void BossMod(PathAction action) => BossMod_IPCSubscriber.SetMovementAI(bool.Parse(action.Arguments[0]));
 
         public void ModifyIndex(PathAction action)
         {
@@ -193,9 +193,10 @@ namespace AutoDuty.Managers
             var boolTrueFalse = action.Arguments[0].Equals("true", StringComparison.InvariantCultureIgnoreCase);
             Plugin.Action = $"StopForCombat: {action.Arguments[0]}";
             Plugin.StopForCombat = boolTrueFalse;
-            _taskManager.Enqueue(() => _chat.ExecuteCommand($"/vbmai followtarget {(boolTrueFalse ? "on" : "off")}"), "StopForCombat");
-            _taskManager.Enqueue(() => _chat.ExecuteCommand($"/vbmai {(boolTrueFalse ? "on" : "off")}"), "StopForCombat");
-            if(boolTrueFalse)
+
+            BossMod_IPCSubscriber.SetMovementAI(boolTrueFalse, true);
+
+            if (boolTrueFalse)
                 this.Wait(new PathAction {Arguments = ["500"]});
         }
 
@@ -501,7 +502,7 @@ namespace AutoDuty.Managers
             if (((Plugin.BossObject?.IsDead ?? true) && !Svc.Condition[ConditionFlag.InCombat]) || !Svc.Condition[ConditionFlag.InCombat])
                 return true;
 
-            if (EzThrottler.Throttle("PositionalChecker", 25) && ReflectionHelper.Avarice_Reflection.PositionalChanged(out Positional positional) && !Plugin.Configuration.UsingAlternativeBossPlugin && IPCSubscriber_Common.IsReady("BossModReborn"))
+            if (EzThrottler.Throttle("PositionalChecker", 25) && ReflectionHelper.Avarice_Reflection.PositionalChanged(out Positional positional) && !Plugin.Configuration.UsingAlternativeBossPlugin && BossModReborn_IPCSubscriber.IsEnabled)
                 Plugin.Chat.ExecuteCommand($"/vbm cfg AIConfig DesiredPositional {positional}");
 
             return false;
@@ -539,22 +540,24 @@ namespace AutoDuty.Managers
         public void Boss(PathAction action)
         {
             Svc.Log.Info($"Starting Action Boss: {Plugin.BossObject?.Name.TextValue ?? "null"}");
-            int index = 0;
+            int                index                 = 0;
             List<IGameObject>? treasureCofferObjects = null;
             Plugin.SkipTreasureCoffer = false;
             _taskManager.Enqueue(() => BossMoveCheck(action.Position), "Boss-MoveCheck");
             if (Plugin.BossObject == null)
                 _taskManager.Enqueue(() => (Plugin.BossObject = GetBossObject()) != null, "Boss-GetBossObject");
             _taskManager.Enqueue(() => Plugin.Action = $"Boss: {Plugin.BossObject?.Name.TextValue ?? ""}", "Boss-SetActionVar");
-            _taskManager.Enqueue(() => Svc.Condition[ConditionFlag.InCombat], "Boss-WaitInCombat");
-            _taskManager.Enqueue(() => BossCheck(), int.MaxValue, "Boss-BossCheck");
-            _taskManager.Enqueue(() => { Plugin.StopForCombat = true; }, "Boss-SetStopForCombatTrue");
-            _taskManager.Enqueue(() => { Plugin.BossObject = null; }, "Boss-ClearBossObject");
+            _taskManager.Enqueue(() => Svc.Condition[ConditionFlag.InCombat],                              "Boss-WaitInCombat");
+            _taskManager.Enqueue(() => { Plugin.StopForCombat = true; },                                   "Boss-SetStopForCombatTrue");
+            _taskManager.Enqueue(() => BossCheck(),                                                        int.MaxValue, "Boss-BossCheck");
+            _taskManager.Enqueue(() => { Plugin.StopForCombat = true; },                                   "Boss-SetStopForCombatTrue");
+            _taskManager.Enqueue(() => { Plugin.BossObject    = null; },                                   "Boss-ClearBossObject");
 
             if (Plugin.Configuration.LootTreasure)
             {
                 _taskManager.DelayNext("Boss-TreasureDelay", 1000);
-                _taskManager.Enqueue(() => treasureCofferObjects = GetObjectsByObjectKind(Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Treasure)?.Where(x => GetDistanceToPlayer(x) <= 50).ToList(), "Boss-GetTreasureChests");
+                _taskManager.Enqueue(() => treasureCofferObjects = GetObjectsByObjectKind(Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Treasure)?.Where(x => GetDistanceToPlayer(x) <= 50).ToList(),
+                                     "Boss-GetTreasureChests");
                 _taskManager.Enqueue(() => BossLoot(treasureCofferObjects, index), "Boss-LootCheck");
             }
         }
