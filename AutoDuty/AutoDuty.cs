@@ -266,7 +266,7 @@ public sealed class AutoDuty : IDalamudPlugin
             (ConfigurationMain.Instance = EzConfig.Init<ConfigurationMain>()).Init();
 
             // Initialize localization system
-            LocalizationManager.Initialize(ConfigurationMain.Instance.Language);
+            LocalizationManager.Initialize(Configuration.Language);
 
 
 

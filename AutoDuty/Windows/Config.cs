@@ -63,8 +63,7 @@ public class ConfigurationMain
     [JsonProperty]
     public string DefaultConfigName { get; set; } = CONFIGNAME_BARE;
 
-    [JsonProperty]
-    public string Language { get; set; } = "zh-CN";
+    public string Language { get; set; } = "en-US";
 
     [JsonProperty]
     private string activeProfileName = CONFIGNAME_BARE;
@@ -200,6 +199,8 @@ public class ConfigurationMain
         if (this.profileByName.ContainsKey(name))
         {
             this.activeProfileName = name;
+            if (LocalizationManager.CurrentLanguage != GetCurrentConfig.Language)
+                LocalizationManager.SetLanguage(GetCurrentConfig.Language);
             EzConfig.Save();
             return true;
         }
