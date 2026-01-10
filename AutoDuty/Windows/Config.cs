@@ -850,7 +850,7 @@ public static class ConfigTab
     public static void Draw()
     {
         if (MainWindow.CurrentTabName != "Config")
-            MainWindow.CurrentTabName = "Config";
+            MainWindow.SetCurrentTabName("Config");
 
         //Start of Profile Selection
         ImGui.AlignTextToFramePadding();

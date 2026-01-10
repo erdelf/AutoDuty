@@ -57,7 +57,9 @@ namespace AutoDuty.Windows
 
         internal static unsafe void Draw()
         {
-            SetCurrentTabName("BuildTab");
+            if (MainWindow.CurrentTabName != "Build")
+                MainWindow.SetCurrentTabName("Build");
+
             using (ImRaii.Disabled(Plugin.states.HasFlag(PluginState.Navigating) || Plugin.states.HasFlag(PluginState.Looping)))
             {
                 if (InDungeon)

@@ -342,7 +342,7 @@ public sealed class MainWindow : Window, IDisposable
         }
     }
 
-    public static void EzTabBar(string id, string? KoFiTransparent, string openTabName, ImGuiTabBarFlags flags, params (string name, Action function, Vector4? color, bool child)[] tabs)
+    public static void EzTabBar(string id, string? KoFiTransparent, string openTabName, ImGuiTabBarFlags flags, params (string name, string LabelKey, Action function, Vector4? color, bool child)[] tabs)
     {
         ImGui.BeginTabBar(id, flags);
 
@@ -354,14 +354,14 @@ public sealed class MainWindow : Window, IDisposable
         if (!valid)
             openTabName = "Info";
 
-        foreach ((string name, Action function, Vector4? color, bool child) in tabs)
+        foreach ((string name, string LabelKey, Action function, Vector4? color, bool child) in tabs)
         {
             if (name.IsNullOrEmpty()) 
                 continue;
             if (color != null) 
                 ImGui.PushStyleColor(ImGuiCol.Tab, color.Value);
             
-            if ((valid || name == "Info") && ImGui.BeginTabItem(name, openTabName == name ? ImGuiTabItemFlags.SetSelected : ImGuiTabItemFlags.None))
+            if ((valid || name == "Info") && ImGui.BeginTabItem($"{Loc.Get(LabelKey)}###{name}", openTabName == name ? ImGuiTabItemFlags.SetSelected : ImGuiTabItemFlags.None))
             {
                 if (color != null) 
                     ImGui.PopStyleColor();
@@ -392,16 +392,16 @@ public sealed class MainWindow : Window, IDisposable
         ImGui.EndTabBar();
     }
 
-    private static (string, Action, Vector4?, bool)[] tabList =>
+    private static (string, string, Action, Vector4?, bool)[] tabList =>
     [
-        (Loc.Get("MainWindow.Tabs.Main"), MainTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Build"), BuildTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Paths"), PathsTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Config"), ConfigTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Info"), InfoTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Logs"), LogTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Stats"), StatsTab.Draw, null, false),
-        (Loc.Get("MainWindow.Tabs.Support"), KofiLink, ImGui.ColorConvertU32ToFloat4(ColorNormal), false)
+        ("Main", "MainWindow.Tabs.Main", MainTab.Draw, null, false),
+        ("Build", "MainWindow.Tabs.Build", BuildTab.Draw, null, false),
+        ("Paths", "MainWindow.Tabs.Paths", PathsTab.Draw, null, false),
+        ("Config", "MainWindow.Tabs.Config", ConfigTab.Draw, null, false),
+        ("Info", "MainWindow.Tabs.Info", InfoTab.Draw, null, false),
+        ("Logs", "MainWindow.Tabs.Logs", LogTab.Draw, null, false),
+        ("Stats", "MainWindow.Tabs.Stats", StatsTab.Draw, null, false),
+        ("Support", "MainWindow.Tabs.Support", KofiLink, ImGui.ColorConvertU32ToFloat4(ColorNormal), false)
     ];
 
     public override void Draw()

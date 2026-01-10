@@ -44,7 +44,8 @@ namespace AutoDuty.Windows
         internal static void Draw()
         {
             if (MainWindow.CurrentTabName != "Paths")
-                MainWindow.CurrentTabName = "Paths";
+                MainWindow.SetCurrentTabName("Paths");
+
             ImGui.Text(Loc.Get("PathsTab.Title"));
             ImGui.Spacing();
             ImGui.Separator();

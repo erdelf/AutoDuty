@@ -36,8 +36,9 @@ namespace AutoDuty.Windows
         private static bool _clearedDataAfterPopupClose = true;
         public static void Draw()
         {
-            if (MainWindow.CurrentTabName != "Log")
-                MainWindow.CurrentTabName = "Log";
+            if (MainWindow.CurrentTabName != "Logs")
+                MainWindow.SetCurrentTabName("Logs");
+
             if (!_popupOpen && !_clearedDataAfterPopupClose)
             {
                 _clearedDataAfterPopupClose = false;

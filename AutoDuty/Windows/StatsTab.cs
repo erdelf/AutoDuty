@@ -18,6 +18,9 @@ internal static class StatsTab
 
     public static void Draw()
     {
+        if (MainWindow.CurrentTabName != "Stats")
+            MainWindow.SetCurrentTabName("Stats");
+
         ConfigurationMain.StatData stats = ConfigurationMain.Instance.stats;
 
         using (ImRaii.Disabled(!ImGui.GetIO().KeyCtrl))

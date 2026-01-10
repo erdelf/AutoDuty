@@ -16,7 +16,8 @@ namespace AutoDuty.Windows
 
         public static void Draw()
         {
-            MainWindow.CurrentTabName = Loc.Get("InfoTab.Title");
+            if (MainWindow.CurrentTabName != "Info")
+                MainWindow.SetCurrentTabName("Info");
 
             ImGui.NewLine();
             ImGuiEx.TextWrapped(Loc.Get("InfoTab.SetupGuideIntro"));

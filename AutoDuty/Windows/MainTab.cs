@@ -36,7 +36,8 @@ namespace AutoDuty.Windows
 
         internal static void Draw()
         {
-            MainWindow.CurrentTabName = "Main";
+            if (MainWindow.CurrentTabName != "Main")
+                MainWindow.SetCurrentTabName("Main");
             
             DutyMode     dutyMode     = AutoDuty.Configuration.DutyModeEnum;
             LevelingMode levelingMode = Plugin.LevelingModeEnum;
