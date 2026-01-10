@@ -1,0 +1,62 @@
+{
+  "MainTab": {
+    "SearchDuties": "搜尋副本...",
+    "ClearSavedPath": "清除已儲存路徑",
+    "TerminationNotice": "請注意，您啟用了自動終止選項，這可能會導致您的循環提早結束",
+    "MeshLoading": "{0} 網格導航: 載入中: ",
+    "MeshLoadedPath": "{0} 網格導航: 已載入路徑: {1}",
+    "Loaded": "已載入",
+    "None": "無",
+    "Start": "開始",
+    "Times": "次",
+    "NoPathFound": "未找到路徑檔案：\n{0}\n({1}.json)\n路徑目錄: \n{2}\n請從以下位置下載: \n{3}\n或在「建構」頁籤中自行建立",
+    "RequiresVNavmesh": "AutoDuty 需要安裝並載入 VNavmesh 插件\n請新增第三方倉庫: \nhttps://puni.sh/api/repository/veyn",
+    "RequiresBossMod": "AutoDuty 需要安裝並載入 BossMod 插件\n請新增第三方倉庫: \nhttps://puni.sh/api/repository/veyn",
+    "RequiresRotation": "AutoDuty 需要安裝並載入戰鬥循環插件 (Wrath Combo、Rotation Solver Reborn 或 BossMod AutoRotation 其中之一)",
+    "SelectMode": "選擇模式: ",
+    "Run": "執行",
+    "Error": "錯誤",
+    "ErrorSelectVersion": "您必須選擇要執行的副本版本",
+    "ErrorNotInParty": "您必須處於未組隊狀態才能執行劇情輔助器、親信戰友或冒險者分隊",
+    "ErrorGroupOf4": "您必須組成 4 人隊伍才能執行迷宮副本",
+    "ErrorPartyMakeup": "您必須擁有正確的隊伍組成(1T 1H 2D)才能執行迷宮副本",
+    "ErrorNoPath": "找不到 {0} {1} 的路徑",
+    "SelectDutyMode": "選擇副本模式: ",
+    "SelectLevelingMode": "選擇練級模式: ",
+    "LevelingModeHelp": "練級模式會根據您的等級和裝等，選擇最穩定的副本。\n{0}\n\n它不總是選擇最高等級的副本，而是依照我們的穩定副本列表",
+    "LevelingModeHelpTrust": "組隊模式: 平均提升您的親信戰友等級。\n單人模式: 只練您自己的等級。",
+    "PreferTrust": "優先使用親信戰友而非劇情輔助器練級",
+    "UseLowestMembers": "優先使用最低等級 NPC",
+    "SelectTrustParty": "選擇您的親信戰友隊伍",
+    "Refresh": "重新整理",
+    "RefreshTrustLevels": "重新整理親信戰友等級",
+    "HideUnavailable": "隱藏不可用的副本",
+    "Unsynced": "解除限制",
+    "SwitchCombatJob": "請切換至戰鬥職業以使用 AutoDuty",
+    "BlueMageRestriction": "青魔道士無法執行親信戰友、劇情輔助器、冒險者分隊或異聞迷宮。請切換職業或選擇不同類別",
+    "LevelingModeStatus": "練級模式: 等級{0} (裝等{1})",
+    "SelectSupportTrust": "請選擇劇情輔助器、親信戰友、冒險者分隊或迷宮其中之一\n以載入副本列表",
+    "CurrentGearset": "當前套裝",
+    "Busy": "忙碌中...",
+    "RequiresVNavmeshAlt": "AutoDuty 需要安裝並載入 vnavmesh 插件以進行正確的導航與移動。請新增第三方倉庫：\nhttps://puni.sh/api/repository/veyn",
+    "RequiresBossModAlt": "AutoDuty 需要安裝並載入 BossMod 插件以正確處理機制。請新增第三方倉庫：\nhttps://puni.sh/api/repository/veyn",
+    "Modes": {
+      "Looping": "循環模式(單副本掛機)",
+      "Playlist": "任務列表模式"
+    },
+    "DutyModes": {
+      "None": "無",
+      "Support": "劇情輔助器",
+      "Trust": "親信戰友",
+      "Squadron": "冒險者分隊",
+      "Regular": "迷宮挑戰 (排本)",
+      "Trial": "討伐殲滅戰 (排本)",
+      "Raid": "大型任務 (排本)",
+      "Variant": "異聞迷宮"
+    },
+    "LevelingModes": {
+      "None": "無",
+      "Auto": "自動"
+    }
+  }
+}

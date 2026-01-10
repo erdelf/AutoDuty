@@ -1,0 +1,30 @@
+{
+  "InfoTab": {
+    "Title": "資訊",
+    "SetupGuideIntro": "如需 AutoDuty 及其依賴插件的設定協助，請務必查閱下方的設定指南: ",
+    "InformationAndSetup": "資訊與設定",
+    "PathStatusInfo": "上述指南也包含各副本路徑的狀態，例如路徑成熟度、模組成熟度以及每個路徑的整體穩定性。您也可以查看額外的備註或注意事項，以確保順利執行。若有任何關於 AutoDuty 的請求、問題或貢獻，請到 AutoDuty GitHub 提交 Issue：",
+    "GitHubIssues": "GitHub Issues",
+    "DiscordInvite": "其他任何問題，歡迎加入 Discord 討論",
+    "PunishDiscord": "Punish Discord",
+    "Install": "安裝",
+    "RequiredPlugins": "必要前置插件",
+    "CombatPlugins": "戰鬥插件",
+    "CombatPluginsNote": "選喜歡的就好。您可以在設定中進行配置",
+    "RecommendedPlugins": "推薦插件",
+    "PluginDesc": {
+      "BossModFights": "自動處理 Boss 機制",
+      "VNavMovement": "負責自動尋路與角色移動",
+      "BossModRotations": "BossMod 自帶的基礎輸出循環",
+      "WrathCombo": "Puni.sh 的輸出循環插件",
+      "RotationSolverReborn": "RSR 的輸出循環插件",
+      "AntiAFK": "防止您被標記為暫離 (AFK)",
+      "AutoRetainer": "自動僱員，處理軍票繳交與捨棄物品",
+      "Avarice": "顯示身位指示器",
+      "Lifestream": "強大的自動傳送工具",
+      "Pandora": "自動開啟寶箱 + 自動開啟坦姿",
+      "Gearsetter": "推薦並更換最佳裝備",
+      "Stylist": "推薦並更換最佳裝備"
+    }
+  }
+}

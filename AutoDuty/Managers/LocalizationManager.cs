@@ -120,7 +120,7 @@ internal static class LocalizationManager
 
     internal static string CurrentLanguage => _currentLanguage;
 
-    internal static string[] AvailableLanguages => new[] { "en-US", "zh-CN" };
+    internal static string[] AvailableLanguages => new[] { "en-US", "zh-CN", "zh-TW" };
 }
 
 // Alias for shorter syntax

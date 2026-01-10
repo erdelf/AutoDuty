@@ -1,0 +1,15 @@
+{
+  "PathsTab": {
+    "Title": "路徑檔案",
+    "OpenFolder": "開啟資料夾",
+    "OpenFile": "開啟檔案",
+    "DoNotOverwrite": "更新時不要覆蓋",
+    "ClearCachedJobs": "清除所有職業快取",
+    "CollapseAll": "全部摺疊",
+    "RevealAll": "全部展開",
+    "DownloadPaths": "下載路徑",
+    "BrokenStatus": "已損壞",
+    "Separator": " => ",
+    "ClearJobSelection": "清除此副本的職業選擇"
+  }
+}
