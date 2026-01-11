@@ -1,0 +1,39 @@
+{
+  "LogTab": {
+    "AutoScroll": "自動捲動",
+    "ClearLog": "清除日誌",
+    "CopyLog": "複製完整日誌到剪貼簿",
+    "CreateIssue": "建立 Issue (回報問題)",
+    "CreateIssueTooltip": "點擊以開啟「建立 Issue」視窗 (需先完成 GitHub 驗證)，填寫表單並將問題提交至倉庫",
+    "FilterLogLevel": "過濾日誌事件等級",
+    "DebugLevelWarning": "AutoDuty 無法更改 Dalamud 的日誌等級。若要查看除錯相關內容，您必須進入 Dalamud 日誌 (輸入 \"/xllog\") 並在左上角設定適當的等級。",
+    "Auth": {
+      "PollingGithub": "正在輪詢 GitHub 使用者授權: {0}",
+      "WaitingResponse": "正在等待 GitHub 回應",
+      "ClickHere": "點擊此處",
+      "ToCopy": " 複製 ",
+      "ToClipboard": " 至剪貼簿，接著:",
+      "OpenGithub": "開啟 GitHub",
+      "InBrowserPaste": " 在您的瀏覽器貼上"
+    },
+    "IssueForm": {
+      "Submitting": "正在提交 Issue",
+      "Title": "Issue: 錯誤回報",
+      "AddTitle": "新增標題",
+      "DuplicateWarning": "請前往 Issues 頁面搜尋類似問題，確認是否已有其他人回報過相同的錯誤。如果您發現類似的問題，請對該則原始貼文按讚以提高其優先級。",
+      "WhatHappened": "發生了什麼事？",
+      "WhatHappenedHelp": "此外，您預期應該發生什麼？請將任何可分享的截圖也貼在這裡。",
+      "ReproSteps": "重現錯誤的步驟",
+      "ReproStepsHelp": "請列出我們可以重現此錯誤的所有步驟。",
+      "Submit": "提交 Issue"
+    },
+    "LogLevels": {
+      "Verbose": "詳細 (Verbose)",
+      "Debug": "除錯 (Debug)",
+      "Information": "資訊 (Information)",
+      "Warning": "警告 (Warning)",
+      "Error": "錯誤 (Error)",
+      "Fatal": "嚴重錯誤 (Fatal)"
+    }
+  }
+}

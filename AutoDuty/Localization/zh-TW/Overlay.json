@@ -1,0 +1,28 @@
+{
+  "Overlay": {
+    "Button": {
+      "Goto": "移動到",
+      "TurnIn": "交軍票",
+      "Desynth": "分解裝備",
+      "Extract": "精煉魔晶石",
+      "Repair": "修理裝備",
+      "Equip": "推薦裝備",
+      "Coffers": "開啟裝備箱",
+      "TripleTriad": "九宮幻卡"
+    },
+    "Tooltip": {
+      "TurnIn": "點擊前往軍隊總部，並呼叫 AutoRetainer 執行繳交",
+      "TurnInMissing": "軍票繳交功能需要 AutoRetainer 插件。請至 https://love.puni.sh/ment.json 取得",
+      "Desynth": "點擊以分解背包內的所有可分解物品",
+      "Extract": "點擊以精煉魔晶石",
+      "ExtractMissing": "魔晶石精煉功能需要先完成任務: 情感培育之力",
+      "Repair": "點擊以修理裝備",
+      "Equip": "點擊裝備推薦裝備",
+      "Coffers": "點擊開啟裝備箱"
+    },
+    "Popup": {
+      "MissingPlugin": "缺少插件",
+      "MissingQuestCompletion": "未完成任務"
+    }
+  }
+}

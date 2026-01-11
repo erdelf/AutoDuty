@@ -1,0 +1,29 @@
+{
+  "MainWindow": {
+    "Tabs": {
+      "Main": "主頁",
+      "Build": "建構",
+      "Paths": "路徑",
+      "Config": "設定",
+      "Info": "資訊",
+      "Logs": "日誌",
+      "Stats": "統計",
+      "Support": "支持 AutoDuty"
+    },
+    "Goto": {
+      "Barracks": "軍營",
+      "Inn": "旅館",
+      "GCSupply": "軍隊籌備",
+      "FlagMarker": "地圖標記",
+      "SummoningBell": "傳喚鈴",
+      "Apartment": "公寓",
+      "PersonalHome": "個人房屋",
+      "FCEstate": "部隊房屋",
+      "TripleTriadTrader": "九宮幻卡兌換員"
+    },
+    "TT": {
+      "RegisterCards": "自動收錄九宮幻卡",
+      "SellCards": "出售多餘九宮幻卡"
+    }
+  }
+}

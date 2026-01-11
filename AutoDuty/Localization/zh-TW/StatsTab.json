@@ -1,0 +1,19 @@
+{
+  "StatsTab": {
+    "ClearStatistics": "清除統計資料",
+    "ClearStatisticsHelp": "按住 Ctrl 以永久刪除統計資料",
+    "DutiesRun": "副本執行次數: {0}",
+    "TimeSpent": "花費時間: {0}",
+    "DutiesRunHeader": "副本執行紀錄",
+    "ScrambleNames": "混淆名稱",
+    "Unknown": "未知 ({0})",
+    "Columns": {
+      "CompletedAt": "完成時間",
+      "Duration": "耗時",
+      "Duty": "副本",
+      "Char": "角色",
+      "ilvl": "裝等",
+      "Job": "職業"
+    }
+  }
+}
