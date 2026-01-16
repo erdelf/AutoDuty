@@ -392,6 +392,20 @@
     },
     {
       "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "10000"
+      ],
+      "Conditions": [],
+      "Note": "RP"
+    },
+    {
+      "Tag": "None",
       "Name": "Interactable",
       "Position": {
         "X": 0.0,
@@ -531,7 +545,12 @@
   ],
   "Meta": {
     "CreatedAt": 285,
-    "Changelog": [],
+    "Changelog": [
+      {
+        "Version": 286,
+        "Change": "Add delay before scales puzzle"
+      }
+    ],
     "Notes": []
   }
 }

@@ -308,7 +308,7 @@
         "Z": 0.0
       },
       "Arguments": [
-        "10000"
+        "20000"
       ],
       "Conditions": [],
       "Note": "RP"
@@ -372,7 +372,12 @@
   ],
   "Meta": {
     "CreatedAt": 285,
-    "Changelog": [],
+    "Changelog": [
+      {
+        "Version": 286,
+        "Change": "Increase door delay because it felt close..."
+      }
+    ],
     "Notes": []
   }
 }
