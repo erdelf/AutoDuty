@@ -1,273 +1,397 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 4.35,
-        "Y": 41.04,
-        "Z": -77.92
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 2.82,
-        "Y": 29.55,
-        "Z": -17.25
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -54.684883,
+        "Y": 46.222656,
+        "Z": -108.59734
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -8.22,
-        "Y": 30.83,
-        "Z": -16.46
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -47.80308,
+        "Y": 44.37835,
+        "Z": -86.81023
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -43.110474,
+        "Y": 42.11093,
+        "Z": -84.70266
       },
-      "arguments": [
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 24.2801,
+        "Y": 30.36734,
+        "Z": -20.465487
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -4.3266563,
+        "Y": 29.549915,
+        "Z": -16.60404
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Void Soulcounter #1"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -8.056498,
+        "Y": 30.82913,
+        "Z": -16.468863
+      },
+      "Arguments": [
         "2000061"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -18.43,
-        "Y": 23.41,
-        "Z": 26.77
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -3.6154556,
+        "Y": 29.549915,
+        "Z": -15.093389
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 70.07499,
+        "Y": 23.820414,
+        "Z": 3.4448137
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -23.07,
-        "Y": 24.71,
-        "Z": 20.42
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 8.704077,
+        "Y": 23.482735,
+        "Z": 75.44724
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -1.1750278,
+        "Y": 23.642925,
+        "Z": 45.79136
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -21.644335,
+        "Y": 23.875113,
+        "Z": 22.516497
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Void Soulcounter #2"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -22.917223,
+        "Y": 24.713142,
+        "Z": 20.484219
       },
-      "arguments": [
+      "Arguments": [
         "2000062"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -177.97,
-        "Y": 13.49,
-        "Z": -5.13
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -22.436468,
+        "Y": 23.833231,
+        "Z": 23.044706
+      },
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -154.19998,
+        "Y": 16.604599,
+        "Z": 106.105545
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -174.38287,
+        "Y": 12.627574,
+        "Z": -5.104916
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -178.6848,
+        "Y": 13.914281,
+        "Z": -5.0782905
+      },
+      "Arguments": [
         "2000057"
       ],
-      "note": "Cultist Rosary"
+      "Conditions": [],
+      "Note": "Cultist Rosary"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -104.14,
-        "Y": 13.92,
-        "Z": 15.52
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 3 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -104.47461,
+        "Y": 13.92077,
+        "Z": 15.448282
       },
-      "arguments": [
+      "Arguments": [
         "2000060"
       ],
-      "note": "Sealed Barrier"
+      "Conditions": [],
+      "Note": "Sealed Barrier"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": -93.34,
         "Y": 13.86,
         "Z": 9.51
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Void Soulcounter #3"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -94.66,
-        "Y": 14.91,
-        "Z": 3.94
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -95.02361,
+        "Y": 14.9742985,
+        "Z": 4.1162972
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2000067"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -89.51,
-        "Y": 14.9,
-        "Z": 13.71
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -89.71331,
+        "Y": 14.961386,
+        "Z": 13.43632
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2000063"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -85.41,
+        "Y": 15.046852,
+        "Z": 6.4923916
       },
-      "arguments": [
-        "4000"
+      "Arguments": [
+        "3000"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -51.88,
-        "Y": 14.05,
-        "Z": -12.76
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 4 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -50.046577,
+        "Y": 14.046315,
+        "Z": -13.530736
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -46.75,
-        "Y": 14.05,
-        "Z": -15.12
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Galvanth the Dominator"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
-      {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
-      },
-      {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
-      },
-      {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "version": 189,
-        "change": "Adjusted tags to string values"
-      }
-    ],
-    "notes": []
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [],
+    "Notes": []
   }
 }

@@ -1,0 +1,220 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -18.98,
+        "Y": 27.0,
+        "Z": 121.18
+      },
+      "Arguments": [
+        "2005048"
+      ],
+      "Conditions": [],
+      "Note": "Steam-spouting Contraption"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": -18.403654,
+        "Y": 26.778944,
+        "Z": 119.903656
+      },
+      "Arguments": [
+        "Combat"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -15.615263,
+        "Y": 23.584011,
+        "Z": 101.78438
+      },
+      "Arguments": [
+        "700"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -10.369115,
+        "Y": 21.849895,
+        "Z": 92.52557
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 12.985632,
+        "Y": 21.360409,
+        "Z": 89.173676
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 14.667949,
+        "Y": 14.386927,
+        "Z": 48.942284
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 8.542285,
+        "Y": 12.249518,
+        "Z": 36.765564
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -2.29,
+        "Y": -17.96,
+        "Z": 38.93
+      },
+      "Arguments": [
+        "2005427"
+      ],
+      "Conditions": [],
+      "Note": "Steam-spouting Contraption"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": -2.2820222,
+        "Y": -18.081104,
+        "Z": 38.254673
+      },
+      "Arguments": [
+        "Combat"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -1.6208358,
+        "Y": -24.324087,
+        "Z": 2.847136
+      },
+      "Arguments": [
+        "1200"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -21.034998,
+        "Y": -28.0,
+        "Z": -86.47153
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 284,
+    "Changelog": [
+      {
+        "Version": 285,
+        "Change": ""
+      }
+    ],
+    "Notes": []
+  }
+}

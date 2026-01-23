@@ -1,0 +1,1383 @@
+{
+  "Actions": [
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -54.684883,
+        "Y": 46.222656,
+        "Z": -108.59734
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 1 & 2 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -54.684883,
+        "Y": 46.222656,
+        "Z": -108.59734
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": -54.668175,
+        "Y": 44.37834,
+        "Z": -82.66542
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -18.831394,
+        "Y": 41.379124,
+        "Z": -71.552895
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -39.93512,
+        "Y": 42.20827,
+        "Z": -81.46102
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -53.095123,
+        "Y": 44.378334,
+        "Z": -85.67807
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -20.693483,
+        "Y": 41.39484,
+        "Z": -72.531784
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -45.979687,
+        "Y": 44.466476,
+        "Z": -77.4535
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 3, 4 & 5 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -9.948495,
+        "Y": 41.25859,
+        "Z": -69.928604
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 13.123997,
+        "Y": 41.072376,
+        "Z": -88.92166
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 56.036846,
+        "Y": 39.999996,
+        "Z": -81.429184
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 33.13581,
+        "Y": 41.17193,
+        "Z": -88.69124
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 31.488644,
+        "Y": 40.999992,
+        "Z": -90.10728
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 53.775097,
+        "Y": 40.11641,
+        "Z": -78.30579
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 65.116196,
+        "Y": 35.373077,
+        "Z": -45.37831
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 57.003666,
+        "Y": 38.89036,
+        "Z": -69.82416
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 1 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 32.217484,
+        "Y": 31.643003,
+        "Z": -24.243193
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -4.3266563,
+        "Y": 29.549915,
+        "Z": -16.60404
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Void Soulcounter #1"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -8.056498,
+        "Y": 30.82913,
+        "Z": -16.468863
+      },
+      "Arguments": [
+        "2000061"
+      ],
+      "Conditions": [],
+      "Note": "Cultist Orb"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -3.6154556,
+        "Y": 29.549915,
+        "Z": -15.093389
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 6 & 7 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 6.979635,
+        "Y": 29.602299,
+        "Z": -11.431786
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 5.163441,
+        "Y": 29.006,
+        "Z": 10.479254
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 3.5045924,
+        "Y": 28.773485,
+        "Z": 15.143066
+      },
+      "Arguments": [
+        "17500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 28.731604,
+        "Y": 25.681255,
+        "Z": 28.427057
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 17.00939,
+        "Y": 27.240664,
+        "Z": 20.381168
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -2.1779196,
+        "Y": 29.549915,
+        "Z": -14.57017
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 29.882206,
+        "Y": 24.933949,
+        "Z": 29.115688
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 12.736789,
+        "Y": 29.142618,
+        "Z": 17.831057
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 70.07499,
+        "Y": 23.820414,
+        "Z": 3.4448137
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 8.704077,
+        "Y": 23.482735,
+        "Z": 75.44724
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 2 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 5.885143,
+        "Y": 23.123379,
+        "Z": 53.586334
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -21.644335,
+        "Y": 23.875113,
+        "Z": 22.516497
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Void Soulcounter #2"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -22.917223,
+        "Y": 24.713142,
+        "Z": 20.484219
+      },
+      "Arguments": [
+        "2000062"
+      ],
+      "Conditions": [],
+      "Note": "Cultist Orb"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -22.436468,
+        "Y": 23.833231,
+        "Z": 23.044706
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 9 & 10 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -19.998857,
+        "Y": 23.410244,
+        "Z": 27.5811
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": -35.241898,
+        "Y": 22.479246,
+        "Z": 45.420002
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -20.41309,
+        "Y": 18.51614,
+        "Z": 83.46057
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -31.480942,
+        "Y": 21.965527,
+        "Z": 59.679802
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -22.413599,
+        "Y": 23.785261,
+        "Z": 23.147562
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -20.569822,
+        "Y": 18.970226,
+        "Z": 82.38073
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -32.197186,
+        "Y": 21.985662,
+        "Z": 57.478424
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 12 & 13 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -83.31016,
+        "Y": 17.019154,
+        "Z": 87.28428
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -121.2647,
+        "Y": 16.050692,
+        "Z": 90.3304
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -116.95621,
+        "Y": 16.006432,
+        "Z": 66.641655
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -131.81454,
+        "Y": 16.033772,
+        "Z": 73.78882
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -119.59556,
+        "Y": 16.008614,
+        "Z": 68.08994
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -128.59917,
+        "Y": 16.101095,
+        "Z": 83.76651
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "DPS/Heals"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -154.19998,
+        "Y": 16.604599,
+        "Z": 106.105545
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Pack / 雑魚 15 -->"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -147.95618,
+        "Y": 12.33217,
+        "Z": -1.474548
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Rotation",
+      "Position": {
+        "X": -172.1856,
+        "Y": 12.673714,
+        "Z": -5.2698946
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Tanks"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -174.38287,
+        "Y": 12.627574,
+        "Z": -5.104916
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -178.6848,
+        "Y": 13.914281,
+        "Z": -5.0782905
+      },
+      "Arguments": [
+        "2000057"
+      ],
+      "Conditions": [],
+      "Note": "Cultist Rosary"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -104.47461,
+        "Y": 13.92077,
+        "Z": 15.448282
+      },
+      "Arguments": [
+        "2000060"
+      ],
+      "Conditions": [],
+      "Note": "Sealed Barrier"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -93.34,
+        "Y": 13.86,
+        "Z": 9.51
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Void Soulcounter #3"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -95.02361,
+        "Y": 14.9742985,
+        "Z": 4.1162972
+      },
+      "Arguments": [
+        "2000067"
+      ],
+      "Conditions": [],
+      "Note": "Cultist Orb"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -89.71331,
+        "Y": 14.961386,
+        "Z": 13.43632
+      },
+      "Arguments": [
+        "2000063"
+      ],
+      "Conditions": [],
+      "Note": "Cultist Orb"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -85.41,
+        "Y": 15.046852,
+        "Z": 6.4923916
+      },
+      "Arguments": [
+        "3000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 4 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -50.046577,
+        "Y": 14.046315,
+        "Z": -13.530736
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Galvanth the Dominator"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [],
+    "Notes": []
+  }
+}

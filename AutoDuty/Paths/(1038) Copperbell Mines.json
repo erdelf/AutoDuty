@@ -1,524 +1,581 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "ForceAttack",
-      "position": {
-        "X": -222.18,
-        "Y": 23.85,
-        "Z": -208.19
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -219.81682,
+        "Y": 23.802656,
+        "Z": -209.75781
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
-        "3000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -222.18,
-        "Y": 23.85,
-        "Z": -208.19
-      },
-      "arguments": [
+      "Arguments": [
         "2000159"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -206.3,
-        "Y": 23.47,
-        "Z": -208.46
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -206.78925,
+        "Y": 23.484663,
+        "Z": -208.43341
       },
-      "arguments": [
+      "Arguments": [
         "2000160"
       ],
-      "note": "Sealed Blasting Door"
+      "Conditions": [],
+      "Note": "Sealed Blasting Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -184.08,
-        "Y": 24,
-        "Z": -206.39
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -183.85149,
+        "Y": 23.999985,
+        "Z": -206.91066
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2000163"
       ],
-      "note": "Lift Lever"
+      "Conditions": [],
+      "Note": "Lift Lever"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -182.83044,
-        "Y": -6.0000143,
-        "Z": -209.94675
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -183.00774,
+        "Y": -6.0000153,
+        "Z": -209.84471
       },
-      "arguments": [
-        "false"
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
         "10000"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -178.09,
-        "Y": -6.52,
-        "Z": -208.07
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -164.00105,
+        "Y": -7.915082,
+        "Z": -208.1908
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 43.57459,
+        "Y": -9.846998,
+        "Z": -139.45566
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 51.89,
         "Y": -8.75,
         "Z": -136.52
       },
-      "arguments": [
+      "Arguments": [
         "2000169"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 52.93,
         "Y": -3.92,
         "Z": -153.77
       },
-      "arguments": [
+      "Arguments": [
         "2000172"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 43.98,
         "Y": -9.75,
         "Z": -128.93
       },
-      "arguments": [
+      "Arguments": [
         "2001536"
       ],
-      "note": "Powder Chamber"
+      "Conditions": [],
+      "Note": "Powder Chamber"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 42.08,
         "Y": -9.98,
         "Z": -135.22
       },
-      "arguments": [
+      "Arguments": [
         "2000170"
       ],
-      "note": "Blasting Device"
+      "Conditions": [],
+      "Note": "Blasting Device"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "2000"
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 1 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 42.98,
-        "Y": -9.92,
-        "Z": -89.63
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 43.097,
+        "Y": -9.924997,
+        "Z": -83.402145
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "<40.933,-9.925,-71.392>"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Kottos"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 42.97,
         "Y": -9.92,
         "Z": -69.18
       },
-      "arguments": [
+      "Arguments": [
         "2000178"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 43.18,
         "Y": -9.92,
         "Z": -58.98
       },
-      "arguments": [
+      "Arguments": [
         "2000173"
       ],
-      "note": "Sealed Blasting Door"
+      "Conditions": [],
+      "Note": "Sealed Blasting Door"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": 63.44,
-        "Y": -9.92,
-        "Z": -37.99
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "2000179"
+      ],
+      "Conditions": [],
+      "Note": "<-- Movement / 動き -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 63.785522,
+        "Y": -9.873647,
+        "Z": -38.76346
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 56.69,
         "Y": -8.25,
         "Z": 5.91
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 56.69,
-        "Y": -8.25,
-        "Z": 5.91
-      },
-      "arguments": [
+      "Arguments": [
         "2000175"
       ],
-      "note": "Lift Lever"
+      "Conditions": [],
+      "Note": "Lift Lever"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 60.041435,
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 60.025738,
         "Y": -8.250014,
-        "Z": 7.4902554
+        "Z": 6.2503405
       },
-      "arguments": [
-        "false"
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
         "10000"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 58.27,
-        "Y": -38.69,
-        "Z": 11.74
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 59.300026,
+        "Y": -38.835022,
+        "Z": 26.038067
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 92.73,
-        "Y": -42.09,
-        "Z": 39.41
-      },
-      "arguments": [
-        "2000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 91.78,
         "Y": -42.19,
         "Z": 41.22
       },
-      "arguments": [
+      "Arguments": [
         "2001531"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
         "X": 97.55,
         "Y": -41.64,
         "Z": 70.42
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 19.62,
-        "Y": -42.42,
-        "Z": 40.48
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 16.672009,
+        "Y": -42.723915,
+        "Z": 44.113026
       },
-      "arguments": [
-        "3000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 21.7,
-        "Y": -42.69,
-        "Z": 42.35
-      },
-      "arguments": [
+      "Arguments": [
         "2000179"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 58.89,
         "Y": -38.75,
         "Z": 54.16
       },
-      "arguments": [
+      "Arguments": [
         "2001537"
       ],
-      "note": "Powder Chamber"
+      "Conditions": [],
+      "Note": "Powder Chamber"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 57.48,
         "Y": -38.74,
         "Z": 47.62
       },
-      "arguments": [
+      "Arguments": [
         "2000180"
       ],
-      "note": "Blasting Device"
+      "Conditions": [],
+      "Note": "Blasting Device"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 38.07,
         "Y": -38.69,
         "Z": 60.38
       },
-      "arguments": [
+      "Arguments": [
         "2001532"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 27.61,
-        "Y": -38,
-        "Z": 113.91
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 28.735514,
+        "Y": -38.0,
+        "Z": 113.01183
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Ichorous Ire"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 8.15,
-        "Y": -38,
+        "Y": -38.0,
         "Z": 113.01
       },
-      "arguments": [
+      "Arguments": [
         "2001533"
       ],
-      "note": "Firesand"
+      "Conditions": [],
+      "Note": "Firesand"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 1.84,
         "Y": -37.98,
         "Z": 113.05
       },
-      "arguments": [
+      "Arguments": [
         "2001538"
       ],
-      "note": "Powder Chamber"
+      "Conditions": [],
+      "Note": "Powder Chamber"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 4.85,
         "Y": -38.02,
         "Z": 110.96
       },
-      "arguments": [
+      "Arguments": [
         "2001534"
       ],
-      "note": "Blasting Device"
+      "Conditions": [],
+      "Note": "Blasting Device"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "4000"
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
         "X": -65.28,
-        "Y": -42,
+        "Y": -42.0,
         "Z": 167.21
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -98.82,
-        "Y": -57.88,
-        "Z": 6.8
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -97.538826,
+        "Y": -38.155354,
+        "Z": 110.03951
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -95.61066,
+        "Y": -58.668556,
+        "Z": 29.890532
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -100.3877,
+        "Y": -57.878,
+        "Z": -2.5265365
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Gyges the Great"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 40.933296,
+        "Y": -9.924997,
+        "Z": -71.39244
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     }
   ],
-  "meta": {
-    "createdAt": 130,
-    "changelog": [
-      {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
-      },
-      {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
-      },
-      {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "version": 189,
-        "change": "Adjusted tags to string values"
-      },
-      {
-        "version": 207,
-        "change": "Adjusted elevators"
-      }
-    ],
-    "notes": []
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [],
+    "Notes": []
   }
 }
