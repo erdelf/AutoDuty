@@ -1484,7 +1484,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
         Svc.Log.Debug($"Starting Action {this.pathAction.ToCustomString()}");
 
-        bool unsync = QueueHelper.ShouldBeUnSynced();
+        bool unsync = !Svc.PlayerState.IsLevelSynced;
 
         if (this.pathAction.Tag.HasFlag(ActionTag.Unsynced) && !unsync)
         {
@@ -1765,8 +1765,6 @@ public sealed class AutoDuty : IDalamudPlugin
                 else
                     Configuration.dutyModeEnum = content.DutyModes.GetFlags().FirstOrDefault(dm => dm is not (DutyMode.None or DutyMode.Squadron or DutyMode.Support or DutyMode.Trust));
 
-                int level = Player.Level;
-                Configuration.Unsynced = level == PlayerHelper.GetCurrentLevelFromSheet() && level - content.ClassJobLevelRequired > 3;
                 Svc.Log.Info("DUTYMODE: " + Configuration.DutyModeEnum + " out of " + content.DutyModes + " - " + string.Join("|",content.DutyModes.GetFlags().Select(dm => dm.ToString())));
             }
         }
