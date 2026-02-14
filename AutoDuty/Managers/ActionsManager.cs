@@ -245,7 +245,7 @@ namespace AutoDuty.Managers
         public  void Rotation(PathAction action) => 
             this.Rotation(action.Arguments[0].Equals("on", StringComparison.InvariantCultureIgnoreCase));
 
-        public void Rotation(bool on)
+        public void Rotation(bool on, bool rotationPlugins = true)
         {
             if (!on)
             {
@@ -255,14 +255,16 @@ namespace AutoDuty.Managers
                     Configuration.AutoManageRotationPluginState = false;
                 }
 
-                Plugin.SetRotationPluginSettings(false, true);
+                if(rotationPlugins)
+                    Plugin.SetRotationPluginSettings(false, true);
             }
             else
             {
                 if (this.autoManageRotationPluginState)
                     Configuration.AutoManageRotationPluginState = true;
 
-                Plugin.SetRotationPluginSettings(true, true);
+                if(rotationPlugins)
+                    Plugin.SetRotationPluginSettings(true, true);
             }
         }
 

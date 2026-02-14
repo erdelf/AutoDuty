@@ -2173,7 +2173,7 @@ public sealed class AutoDuty : IDalamudPlugin
             BossMod_IPCSubscriber.DisablePresets();
 
         this.stopForCombat = true;
-        this.actions.Rotation(true);
+        this.actions.Rotation(true, false);
 
         this.SetGeneralSettings(true);
         if (Configuration is { AutoManageRotationPluginState: true, UsingAlternativeRotationPlugin: false }) 
