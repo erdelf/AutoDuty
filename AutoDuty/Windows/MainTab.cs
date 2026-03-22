@@ -143,7 +143,7 @@ namespace AutoDuty.Windows
 
             if (InDungeon)
             {
-                if (Plugin.CurrentTerritoryContent == null)
+                if (Plugin.CurrentTerritoryContent == null || Plugin.CurrentTerritoryContent.TerritoryType != Svc.ClientState.TerritoryType)
                 {
                     Plugin.LoadPath();
                 }
