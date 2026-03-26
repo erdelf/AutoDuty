@@ -2,15 +2,16 @@
   "Actions": [
     {
       "Tag": "None",
-      "Name": "Boss",
+      "Name": "WaitFor",
       "Position": {
-        "X": -38.98,
-        "Y": 114.71,
-        "Z": -4.16
+        "X": -39.60939,
+        "Y": 114.710785,
+        "Z": -0.35883564
       },
       "Arguments": [
-        ""
+        "Combat"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -24,6 +25,7 @@
       "Arguments": [
         "2007455"
       ],
+      "Conditions": [],
       "Note": "Cranial Hatch"
     },
     {
@@ -37,6 +39,7 @@
       "Arguments": [
         "2007456"
       ],
+      "Conditions": [],
       "Note": "Ingress"
     },
     {
@@ -50,30 +53,7 @@
       "Arguments": [
         "IsReady"
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "WaitFor",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "IsReady"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 0.041660503,
-        "Y": -250.29001,
-        "Z": -239.65451
-      },
-      "Arguments": [],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -87,38 +67,13 @@
       "Arguments": [
         ""
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "WaitFor",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "IsReady"
-      ],
+      "Conditions": [],
       "Note": ""
     }
   ],
   "Meta": {
-    "CreatedAt": 173,
-    "Changelog": [
-      {
-        "Version": 173,
-        "Change": "kuku"
-      },
-      {
-        "Version": 189,
-        "Change": "Adjusted tags to string values"
-      },
-      {
-        "Version": 231,
-        "Change": "Added IsReady checks"
-      }
-    ],
+    "CreatedAt": 285,
+    "Changelog": [],
     "Notes": []
   }
 }

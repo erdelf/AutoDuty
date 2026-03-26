@@ -1,273 +1,534 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 4.35,
-        "Y": 41.04,
-        "Z": -77.92
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 2.82,
-        "Y": 29.55,
-        "Z": -17.25
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -8.22,
-        "Y": 30.83,
-        "Z": -16.46
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -47.80308,
+        "Y": 44.37835,
+        "Z": -86.81023
       },
-      "arguments": [
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -43.110474,
+        "Y": 42.11093,
+        "Z": -84.70266
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -4.3266563,
+        "Y": 29.549915,
+        "Z": -16.60404
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Void Soulcounter #1"
+    },
+    {
+      "Tag": "None",
+      "Name": "ConditionAction",
+      "Position": {
+        "X": -7.6970167,
+        "Y": 30.82913,
+        "Z": -16.47624
+      },
+      "Arguments": [
+        "ObjectData;2000061; IsTargetable;FALSE & ModifyIndex;+2"
+      ],
+      "Conditions": [],
+      "Note": "Skips ahead if the Orb is not targetable / already interacted with."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -7.6970167,
+        "Y": 30.82913,
+        "Z": -16.47624
+      },
+      "Arguments": [
         "2000061"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -18.43,
-        "Y": 23.41,
-        "Z": 26.77
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 70.07499,
+        "Y": 23.820414,
+        "Z": 3.4448137
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -23.07,
-        "Y": 24.71,
-        "Z": 20.42
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 8.704077,
+        "Y": 23.482735,
+        "Z": 75.44724
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -21.644335,
+        "Y": 23.875113,
+        "Z": 22.516497
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Void Soulcounter #2"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "ConditionAction",
+      "Position": {
+        "X": -22.79746,
+        "Y": 24.71314,
+        "Z": 20.55435
       },
-      "arguments": [
+      "Arguments": [
+        "ObjectData;2000062; IsTargetable;FALSE & ModifyIndex;+2"
+      ],
+      "Conditions": [],
+      "Note": "Skips ahead if the Orb is not targetable / already interacted with."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -22.79746,
+        "Y": 24.71314,
+        "Z": 20.55435
+      },
+      "Arguments": [
         "2000062"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -177.97,
-        "Y": 13.49,
-        "Z": -5.13
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -154.19998,
+        "Y": 16.604599,
+        "Z": 106.105545
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "ConditionAction",
+      "Position": {
+        "X": -108.48225,
+        "Y": 13.836549,
+        "Z": 16.725882
+      },
+      "Arguments": [
+        "ObjectData;2000060; IsTargetable;FALSE & ModifyIndex;+5"
+      ],
+      "Conditions": [],
+      "Note": "Skips ahead if the Barrier is already open."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -174.38287,
+        "Y": 12.627574,
+        "Z": -5.104916
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -177.83923,
+        "Y": 13.487554,
+        "Z": -5.110391
+      },
+      "Arguments": [
         "2000057"
       ],
-      "note": "Cultist Rosary"
+      "Conditions": [],
+      "Note": "Cultist Rosary"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -104.14,
-        "Y": 13.92,
-        "Z": 15.52
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 3 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -104.47461,
+        "Y": 13.92077,
+        "Z": 15.448282
       },
-      "arguments": [
+      "Arguments": [
         "2000060"
       ],
-      "note": "Sealed Barrier"
+      "Conditions": [],
+      "Note": "Sealed Barrier"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": -93.34,
         "Y": 13.86,
         "Z": 9.51
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Void Soulcounter #3"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -94.66,
-        "Y": 14.91,
-        "Z": 3.94
+      "Tag": "None",
+      "Name": "ConditionAction",
+      "Position": {
+        "X": -94.96522,
+        "Y": 14.974234,
+        "Z": 4.1052155
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "ObjectData;2000067; IsTargetable;FALSE & ModifyIndex;+2"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Skips ahead if the Orb is not targetable / already interacted with."
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -94.96522,
+        "Y": 14.974234,
+        "Z": 4.1052155
       },
-      "arguments": [
+      "Arguments": [
         "2000067"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -89.51,
-        "Y": 14.9,
-        "Z": 13.71
+      "Tag": "None",
+      "Name": "ConditionAction",
+      "Position": {
+        "X": -89.66112,
+        "Y": 14.961804,
+        "Z": 13.50636
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "ObjectData;2000063; IsTargetable;FALSE & ModifyIndex;+2"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Skips ahead if the Orb is not targetable / already interacted with."
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -89.66112,
+        "Y": 14.961804,
+        "Z": 13.50636
       },
-      "arguments": [
+      "Arguments": [
         "2000063"
       ],
-      "note": "Cultist Orb"
+      "Conditions": [],
+      "Note": "Cultist Orb"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -85.41,
+        "Y": 15.046852,
+        "Z": 6.4923916
       },
-      "arguments": [
-        "4000"
+      "Arguments": [
+        "3000"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -51.88,
-        "Y": 14.05,
-        "Z": -12.76
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス 4 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -50.046577,
+        "Y": 14.046315,
+        "Z": -13.530736
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -46.75,
-        "Y": 14.05,
-        "Z": -15.12
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Galvanth the Dominator"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 297,
+        "Change": ""
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
-      },
-      {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 298,
+        "Change": ""
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }
