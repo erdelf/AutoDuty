@@ -1,0 +1,184 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -1.090649,
+        "Y": -7.4295893,
+        "Z": 21.08543
+      },
+      "Arguments": [
+        "/ac \"Arm's Length\""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks, Melee, Aiming"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -1.090649,
+        "Y": -7.4295893,
+        "Z": 21.08543
+      },
+      "Arguments": [
+        "/ac \"Surecast\""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, Casters"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -2.6017478,
+        "Y": -5.831023,
+        "Z": 12.019513
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -3.0328507,
+        "Y": -4.788142,
+        "Z": 5.90504
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Coords for this are ever-so-slightly in the wall."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+4"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": -2.993,
+            "Y": -4.678,
+            "Z": 5.48
+          },
+          "operatorValue": "<",
+          "distance": 0.63
+        }
+      ],
+      "Note": "If the distance to a specific spot is slightly higher due to running into the wall, it goes around via the next few steps."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -2.3681834,
+        "Y": -5.1682224,
+        "Z": 8.260581
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 2.5345376,
+        "Y": -5.1920013,
+        "Z": 8.395439
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 2.7095714,
+        "Y": -4.498504,
+        "Z": 5.300501
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.06933032,
+        "Y": -3.8355274,
+        "Z": 0.70249367
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -0.04,
+        "Y": -23.9,
+        "Z": -161.8
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 284,
+    "Changelog": [
+      {
+        "Version": 298,
+        "Change": ""
+      }
+    ],
+    "Notes": []
+  }
+}

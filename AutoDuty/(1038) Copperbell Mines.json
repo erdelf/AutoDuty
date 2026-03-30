@@ -1,0 +1,823 @@
+{
+  "Actions": [
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Movement / 動き -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -226.74023,
+        "Y": 23.725645,
+        "Z": -202.55614
+      },
+      "Arguments": [
+        "25"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2000159"
+      ],
+      "Conditions": [],
+      "Note": "Tiny Key"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -206.78925,
+        "Y": 23.484663,
+        "Z": -208.43341
+      },
+      "Arguments": [
+        "2000160"
+      ],
+      "Conditions": [],
+      "Note": "Sealed Blasting Door"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2000162,
+          "property": "IsTargetable",
+          "value": 0
+        }
+      ],
+      "Note": "Skips ahead if the lift is in the proper spot."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -192.58878,
+        "Y": 22.464869,
+        "Z": -206.17871
+      },
+      "Arguments": [
+        "2000162"
+      ],
+      "Conditions": [],
+      "Note": "Clicks the Lever for bringing the Lift back up to the top (if you die before the first boss somehow)."
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -189.62508,
+        "Y": 23.609837,
+        "Z": -206.9074
+      },
+      "Arguments": [
+        "9500"
+      ],
+      "Conditions": [],
+      "Note": "Waits for the Lift to come back to the top if you died."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -183.85149,
+        "Y": 23.999985,
+        "Z": -206.91066
+      },
+      "Arguments": [
+        "2000163"
+      ],
+      "Conditions": [],
+      "Note": "Lift Lever"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -183.00774,
+        "Y": -6.0000153,
+        "Z": -209.84471
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "9500"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -164.00105,
+        "Y": -7.915082,
+        "Z": -208.1908
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid janky pathing when stepping out of the elevator."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 43.55107,
+        "Y": -9.847498,
+        "Z": -139.48125
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 51.89,
+        "Y": -8.75,
+        "Z": -136.52
+      },
+      "Arguments": [
+        "2000169"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 52.93,
+        "Y": -3.92,
+        "Z": -153.77
+      },
+      "Arguments": [
+        "2000172"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 43.98,
+        "Y": -9.75,
+        "Z": -128.93
+      },
+      "Arguments": [
+        "2001536"
+      ],
+      "Conditions": [],
+      "Note": "Powder Chamber"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 42.08,
+        "Y": -9.98,
+        "Z": -135.22
+      },
+      "Arguments": [
+        "2000170"
+      ],
+      "Conditions": [],
+      "Note": "Blasting Device"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 43.097,
+        "Y": -9.924997,
+        "Z": -83.402145
+      },
+      "Arguments": [
+        "<41.834, -9.925, -68.995>"
+      ],
+      "Conditions": [],
+      "Note": "Kottos"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2000179"
+      ],
+      "Conditions": [],
+      "Note": "<-- Movement / 動き -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 43.287666,
+        "Y": -9.924997,
+        "Z": -70.63153
+      },
+      "Arguments": [
+        "2000178"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000441,
+          "quantity": 1,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Tiny Key - Added Condition in case the Key is picked up while looting the boss chest."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 43.18,
+        "Y": -9.92,
+        "Z": -58.98
+      },
+      "Arguments": [
+        "2000173"
+      ],
+      "Conditions": [],
+      "Note": "Sealed Blasting Door"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 63.785522,
+        "Y": -9.873647,
+        "Z": -38.76346
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 57.283302,
+        "Y": -9.924997,
+        "Z": -5.0259447
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2000174,
+          "property": "IsTargetable",
+          "value": 0
+        }
+      ],
+      "Note": "Skips ahead if the lift is in the proper spot."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 56.297573,
+        "Y": -9.785133,
+        "Z": -2.439798
+      },
+      "Arguments": [
+        "2000174"
+      ],
+      "Conditions": [],
+      "Note": "Clicks the Lever for bringing the Lift back up to the top (if you die before the next boss somehow)."
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 57.00592,
+        "Y": -8.671912,
+        "Z": 0.30332246
+      },
+      "Arguments": [
+        "9500"
+      ],
+      "Conditions": [],
+      "Note": "Wait for the lift to come back to the top if you died."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 56.69,
+        "Y": -8.25,
+        "Z": 5.91
+      },
+      "Arguments": [
+        "2000175"
+      ],
+      "Conditions": [],
+      "Note": "Lift Lever"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 60.025738,
+        "Y": -8.250014,
+        "Z": 6.2503405
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "9500"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 60.597054,
+        "Y": -38.80623,
+        "Z": 28.431131
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid janky pathing when stepping out of the elevator."
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 87.68248,
+        "Y": -42.2191,
+        "Z": 40.937878
+      },
+      "Arguments": [
+        "25"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2001531"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 97.55,
+        "Y": -41.64,
+        "Z": 70.42
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 27.889702,
+        "Y": -42.33252,
+        "Z": 40.982258
+      },
+      "Arguments": [
+        "25"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2000179"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 58.89,
+        "Y": -38.75,
+        "Z": 54.16
+      },
+      "Arguments": [
+        "2001537"
+      ],
+      "Conditions": [],
+      "Note": "Powder Chamber"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 57.48,
+        "Y": -38.74,
+        "Z": 47.62
+      },
+      "Arguments": [
+        "2000180"
+      ],
+      "Conditions": [],
+      "Note": "Blasting Device"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 38.07,
+        "Y": -38.69,
+        "Z": 60.38
+      },
+      "Arguments": [
+        "2001532"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 28.735514,
+        "Y": -38.0,
+        "Z": 113.01183
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Ichorous Ire"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Movement / 動き -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 8.15,
+        "Y": -38.0,
+        "Z": 113.01
+      },
+      "Arguments": [
+        "2001533"
+      ],
+      "Conditions": [],
+      "Note": "Firesand"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 1.84,
+        "Y": -37.98,
+        "Z": 113.05
+      },
+      "Arguments": [
+        "2001538"
+      ],
+      "Conditions": [],
+      "Note": "Powder Chamber"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 4.85,
+        "Y": -38.02,
+        "Z": 110.96
+      },
+      "Arguments": [
+        "2001534"
+      ],
+      "Conditions": [],
+      "Note": "Blasting Device"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -65.28,
+        "Y": -42.0,
+        "Z": 167.21
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -97.538826,
+        "Y": -38.155354,
+        "Z": 110.03951
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -97.272964,
+        "Y": -58.03769,
+        "Z": 26.64893
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -100.3877,
+        "Y": -57.878,
+        "Z": -2.5265365
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Gyges the Great"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [
+      {
+        "Version": 297,
+        "Change": ""
+      },
+      {
+        "Version": 298,
+        "Change": ""
+      }
+    ],
+    "Notes": []
+  }
+}

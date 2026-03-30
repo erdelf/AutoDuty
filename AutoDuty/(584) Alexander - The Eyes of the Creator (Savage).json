@@ -1,0 +1,98 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": -39.60939,
+        "Y": 114.710785,
+        "Z": -0.35883564
+      },
+      "Arguments": [
+        "Combat"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -40.24,
+        "Y": 114.71,
+        "Z": 3.47
+      },
+      "Arguments": [
+        "2007455"
+      ],
+      "Conditions": [],
+      "Note": "Cranial Hatch"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -40.24,
+        "Y": 114.71,
+        "Z": 3.47
+      },
+      "Arguments": [
+        "2007456"
+      ],
+      "Conditions": [],
+      "Note": "Ingress"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Extra / Filler step in case IsReady doesn't work properly."
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.04,
+        "Y": -250.29,
+        "Z": -239.65
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [
+      {
+        "Version": 298,
+        "Change": ""
+      }
+    ],
+    "Notes": []
+  }
+}

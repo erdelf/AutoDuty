@@ -1,0 +1,648 @@
+{
+  "Actions": [
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 156.9388,
+        "Y": 6.2784195,
+        "Z": -66.165726
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 128.21317,
+        "Y": -2.7288835,
+        "Z": 27.183329
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Has a chance to skip the enemies in the middle of the room."
+    },
+    {
+      "Tag": "Synced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 124.595665,
+        "Y": -3.7119107,
+        "Z": 66.68335
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 92.88048,
+        "Y": -3.5624468,
+        "Z": 82.622375
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 78.25955,
+        "Y": 1.8193996,
+        "Z": 87.974434
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 19.768585,
+        "Y": 0.9252167,
+        "Z": 100.14889
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 30.076004,
+        "Y": 0.9545418,
+        "Z": 125.03961
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Firemane"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 32.866,
+        "Y": 0.9545418,
+        "Z": 130.9583
+      },
+      "Arguments": [
+        "2001619"
+      ],
+      "Conditions": [],
+      "Note": "Aetherial Flow"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Filler step in case IsReady doesn't work properly and a step is skipped while loading."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 74.735535,
+        "Y": -11.165159,
+        "Z": -105.90789
+      },
+      "Arguments": [
+        "2001624"
+      ],
+      "Conditions": [],
+      "Note": "Chain Winch"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 75.234436,
+        "Y": -11.03907,
+        "Z": -106.76251
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Chance to spawn after using a Winch."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 43.43475,
+        "Y": -11.040856,
+        "Z": -85.47054
+      },
+      "Arguments": [
+        "2001625"
+      ],
+      "Conditions": [],
+      "Note": "Chain Winch"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 41.65467,
+        "Y": -10.900485,
+        "Z": -84.30613
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Chance to spawn after using a Winch."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -22.407799,
+        "Y": 0.16448319,
+        "Z": -131.95642
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -17.174164,
+        "Y": -11.172751,
+        "Z": -137.87387
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 16.414598,
+        "Y": -10.966246,
+        "Z": -189.88957
+      },
+      "Arguments": [
+        "2001626"
+      ],
+      "Conditions": [],
+      "Note": "Chain Winch"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 18.181356,
+        "Y": -10.928166,
+        "Z": -190.35655
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Chance to spawn after using a Winch."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 30.598001,
+        "Y": -15.7974205,
+        "Z": -132.61546
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -37.440296,
+        "Y": -11.070918,
+        "Z": -128.69514
+      },
+      "Arguments": [
+        "2001627"
+      ],
+      "Conditions": [],
+      "Note": "Chain Winch"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -39.73436,
+        "Y": -11.061834,
+        "Z": -129.22627
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Chance to spawn after using a Winch."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -81.42801,
+        "Y": -11.029103,
+        "Z": -112.195435
+      },
+      "Arguments": [
+        "2001628"
+      ],
+      "Conditions": [],
+      "Note": "Chain Winch"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -82.42086,
+        "Y": -10.93343,
+        "Z": -113.425186
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Chance to spawn after using a Winch."
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -182.74692,
+        "Y": -15.306585,
+        "Z": -132.63612
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Thunderclap Guivre"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -178.0384,
+        "Y": -15.306587,
+        "Z": -133.69275
+      },
+      "Arguments": [
+        "2001647"
+      ],
+      "Conditions": [],
+      "Note": "Aetherial Flow"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Filler step in case IsReady doesn't work properly and a step is skipped while loading."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -138.34854,
+        "Y": 5.640684,
+        "Z": -28.227573
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid slightly janky pathing."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -122.82572,
+        "Y": 9.833187,
+        "Z": -1.0819875
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -168.72563,
+        "Y": 12.558849,
+        "Z": 10.897344
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -172.20668,
+        "Y": 12.661985,
+        "Z": 12.365979
+      },
+      "Arguments": [
+        "2001623"
+      ],
+      "Conditions": [],
+      "Note": "Ludus Door"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -269.39,
+        "Y": 17.23,
+        "Z": 19.49
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Tangata"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 285,
+    "Changelog": [
+      {
+        "Version": 297,
+        "Change": ""
+      },
+      {
+        "Version": 298,
+        "Change": ""
+      }
+    ],
+    "Notes": []
+  }
+}
