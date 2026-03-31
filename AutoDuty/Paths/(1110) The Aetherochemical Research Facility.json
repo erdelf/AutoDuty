@@ -321,7 +321,7 @@
           "value": 0
         }
       ],
-      "Note": "Skips ahead if you the Lift Terminal isn't targetable (presumably if you died)."
+      "Note": "Skips ahead if the Lift Terminal isn't targetable (presumably if you died)."
     },
     {
       "Tag": "None",
