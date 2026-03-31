@@ -1,12 +1,12 @@
 {
   "Author": "Herculezz, erdelf",
-  "Name": "AutoDuty",
+  "Name": "AutoDuty Jer Fork",
   "Punchline": "AutoDuty",
-  "Description": "A plugin to run dungeons for you with Trust, Duty Support, Squadrons, Variants, and Regular, Requires BossMod, vnavmesh and a Rotation Plugin (Wrath Combo, BossMod AutoRotation, or RotationSolverReborn)",
-  "InternalName": "AutoDuty",
+  "Description": "A plugin to run dungeons for you with Trust, Duty Support, Squadrons, Variants, and Regular, Requires BossMod, vnavmesh and a Rotation Plugin (Wrath Combo, BossMod AutoRotation, or RotationSolverReborn). Forked by Jer to add extra IPC integration.",
+  "InternalName": "AutoDutyJerFork",
   "DalamudApiLevel": "14",
   "MinimumDalamudVersion": "14.0.0.0",
-  "RepoUrl": "https://github.com/erdelf/AutoDuty",
+  "RepoUrl": "https://github.com/JerVenture/AutoDutyForkedJer",
   "IconUrl": "https://s3.puni.sh/media/plugin/54/icon-15ug2vnr9m1.png",
   "ImageUrls": [
     "https://s3.puni.sh/media/plugin/54/image-15l1o9gf3yg.png",
