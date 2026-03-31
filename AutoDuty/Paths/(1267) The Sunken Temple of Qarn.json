@@ -1,118 +1,497 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -135.39299,
+        "Y": -17.732855,
+        "Z": -9.479457
+      },
+      "Arguments": [
+        "25"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "135"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer - Listed as Interactable since it's position is not static."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -96.418274,
+        "Y": -11.683962,
+        "Z": -60.97844
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": -71.01,
-        "Y": -12,
+        "Y": -12.0,
         "Z": -61.7
       },
-      "arguments": [
-        "on"
+      "Arguments": [
+        ""
       ],
-      "note": "Teratotaur"
+      "Conditions": [],
+      "Note": "Teratotaur"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -25.371717,
-        "Y": -18.000046,
-        "Z": 0.06027671
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 74.8394,
+        "Y": -25.302977,
+        "Z": -79.98918
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 75.35086,
+        "Y": -33.816315,
+        "Z": -71.624306
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.69974,
+        "Y": -44.900944,
+        "Z": -35.4194
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": 57.38,
         "Y": -49.71,
         "Z": -7.63
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Temple Guardian"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 49.523148,
-        "Y": -19.000088,
-        "Z": 5.0506725
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 120.22537,
-        "Y": -4.0001907,
-        "Z": -0.55485016
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 189.58017,
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 60.84028,
+        "Y": -18.000008,
+        "Z": 21.169098
+      },
+      "Arguments": [
+        "2000423"
+      ],
+      "Conditions": [],
+      "Note": "Stone Pedestal"
+    },
+    {
+      "Tag": "Unsynced, Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.721924,
+        "Y": -18.000006,
+        "Z": 20.33614
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 89.153854,
+        "Y": -14.999944,
+        "Z": 53.556858
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 61.4344,
+        "Y": -18.000008,
+        "Z": -20.93435
+      },
+      "Arguments": [
+        "2000425"
+      ],
+      "Conditions": [],
+      "Note": "Stone Pedestal"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 89.21593,
+        "Y": -14.999941,
+        "Z": -53.522285
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 116.36426,
         "Y": -4.000005,
-        "Z": 0.053727567
+        "Z": -23.000778
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "2000419"
+      ],
+      "Conditions": [],
+      "Note": "Stone Pedestal"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 151.68494,
+        "Y": -0.99994665,
+        "Z": -46.649555
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 126.39331,
+        "Y": -3.9999428,
+        "Z": -19.40426
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "To avoid getting stuck in the doorway."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 116.718544,
+        "Y": -3.9999995,
+        "Z": 22.838966
+      },
+      "Arguments": [
+        "2000421"
+      ],
+      "Conditions": [],
+      "Note": "Stone Pedestal"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 151.43388,
+        "Y": -0.9999418,
+        "Z": 46.475647
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 135.09444,
+        "Y": -3.999943,
+        "Z": 28.241337
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid slightly janky pathing."
+    },
+    {
+      "Tag": "Unsynced, Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 187.00888,
+        "Y": -4.000032,
+        "Z": -0.12032705
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 189.58,
-        "Y": -4,
+        "Y": -4.0,
         "Z": 0.05
       },
-      "arguments": [
+      "Arguments": [
         "2000658"
       ],
-      "note": "The Scales of Judgment"
+      "Conditions": [],
+      "Note": "The Scales of Judgment"
     },
     {
-      "tag": "None",
-      "name": "SelectYesno",
-      "position": {
-        "X": 189.58,
-        "Y": -4,
-        "Z": 0.05
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "Yes"
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": 233.46,
-        "Y": -4,
+        "Y": -4.0,
         "Z": -0.17
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Adjudicator"
     }
   ],
-  "meta": {
-    "createdAt": 203,
-    "changelog": [],
-    "notes": []
+  "Meta": {
+    "CreatedAt": 299,
+    "Changelog": [],
+    "Notes": []
   }
 }
