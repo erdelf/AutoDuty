@@ -1,14 +1,28 @@
 {
   "Actions": [
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 142.04065,
-        "Y": -8.21857,
-        "Z": 48.576538
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -21,7 +35,49 @@
         "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 113.88036,
+        "Y": -9.283727,
+        "Z": 35.086517
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 98.69428,
+        "Y": -9.236141,
+        "Z": 33.123753
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 84.63628,
+        "Y": -8.530854,
+        "Z": 22.085766
+      },
+      "Arguments": [
+        ""
       ],
       "Conditions": [],
       "Note": ""
@@ -30,40 +86,64 @@
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 56.253372,
-        "Y": -7.522547,
-        "Z": 13.608386
+        "X": 56.190235,
+        "Y": -7.52927,
+        "Z": 13.619279
       },
       "Arguments": [
-        "true"
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 33.479492,
-        "Y": -8.698334,
-        "Z": 3.8162766
+        "X": 34.466824,
+        "Y": -9.306429,
+        "Z": 1.593219
       },
       "Arguments": [
-        "<18.5,-9.5,-43>"
+        "<18.52, -9.42, -42.97>"
       ],
       "Conditions": [],
       "Note": "Locksmith"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": -40.199345,
-        "Y": -16.490795,
-        "Z": -96.7561
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
@@ -81,29 +161,60 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -77.19089,
-        "Y": -25.223156,
-        "Z": -143.37308
+        "X": -71.85433,
+        "Y": -24.31031,
+        "Z": -143.70514
       },
-      "Arguments": [],
-      "Conditions": [],
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
       "Note": ""
     },
     {
-      "Tag": "W2W",
-      "Name": "StopForCombat",
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": -100.662964,
+        "Y": -30.3,
+        "Z": -128.13884
       },
       "Arguments": [
-        "false"
+        "2500"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -108.88354,
+        "Y": -30.220198,
+        "Z": -133.80357
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
       "Note": ""
     },
     {
@@ -119,26 +230,81 @@
       "Note": ""
     },
     {
-      "Tag": "W2W",
-      "Name": "StopForCombat",
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
       "Position": {
-        "X": -126.20563,
-        "Y": -30.000011,
-        "Z": -151.04462
+        "X": -127.23948,
+        "Y": -30.141445,
+        "Z": -146.41226
       },
       "Arguments": [
-        "true"
+        "3000"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
       "Note": ""
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -119.334206,
+        "Y": -30.439249,
+        "Z": -137.76614
+      },
+      "Arguments": [
+        "3000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -148.8825,
-        "Y": -30.000011,
-        "Z": -143.786
+        "X": -150.77948,
+        "Y": -30.64743,
+        "Z": -140.82878
       },
       "Arguments": [
         ""
@@ -147,6 +313,18 @@
       "Note": "Coincounter"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
@@ -155,33 +333,21 @@
         "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": -338.6293,
-        "Y": -31.935883,
-        "Z": -141.96301
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": -337.37057,
+        "Y": -32.15146,
+        "Z": -141.05577
       },
       "Arguments": [
-        "true"
+        "20"
       ],
       "Conditions": [],
       "Note": ""
@@ -197,6 +363,18 @@
       "Arguments": [],
       "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
       "Tag": "None",
@@ -219,6 +397,10 @@
       {
         "Version": 284,
         "Change": "Unsynced path"
+      },
+      {
+        "Version": 299,
+        "Change": "Katsu format edits, to be consistent with other paths. Adjusted the W2W section."
       }
     ],
     "Notes": []

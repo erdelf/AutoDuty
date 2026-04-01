@@ -58,9 +58,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 22.94805,
-        "Y": 386.01993,
-        "Z": -723.1017
+        "X": 40.323463,
+        "Y": 366.02948,
+        "Z": -589.19354
       },
       "Arguments": [],
       "Conditions": [],
@@ -77,18 +77,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #1 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -145,20 +133,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": "Filler step in case IsReady doesn't work properly and a step is skipped while loading."
-    },
-    {
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
@@ -185,18 +159,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 349.59738,
-        "Y": 33.999454,
-        "Z": -373.94083
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -207,18 +169,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #2 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -289,20 +239,6 @@
       "Note": "While you're falling after the loading screen."
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": "Filler step in case IsReady doesn't work properly and a step is skipped while loading."
-    },
-    {
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
@@ -327,18 +263,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -249.81042,
-        "Y": -173.09805,
-        "Z": 160.42627
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -349,18 +273,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #3 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -398,6 +310,10 @@
       },
       {
         "Version": 298,
+        "Change": ""
+      },
+      {
+        "Version": 299,
         "Change": ""
       }
     ],

@@ -129,7 +129,7 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Moves farther into the lift, to make sure you're inside it."
     },
     {
       "Tag": "None",
@@ -268,18 +268,6 @@
       "Note": "<-- Boss / ボス #1 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -326,7 +314,7 @@
           "operatorValue": "<"
         }
       ],
-      "Note": "Tiny Key - Added Condition in case the Key is picked up while looting the boss chest."
+      "Note": "Tiny Key - Skipped if the Key was picked up while looting the boss chest."
     },
     {
       "Tag": "None",
@@ -353,18 +341,6 @@
       "Arguments": [
         ""
       ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
       "Conditions": [],
       "Note": ""
     },
@@ -455,7 +431,7 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Moves farther into the lift, to make sure you're inside it."
     },
     {
       "Tag": "None",
@@ -610,18 +586,6 @@
       "Note": "<-- Boss / ボス #2 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -645,7 +609,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Movement / 動き -->"
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
       "Tag": "None",
@@ -690,30 +654,6 @@
       "Note": "Blasting Device"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Comment",
-      "Name": "<-- Comment -->",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 -->"
-    },
-    {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
@@ -756,18 +696,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -97.272964,
-        "Y": -58.03769,
-        "Z": 26.64893
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -778,18 +706,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #3 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -815,6 +731,10 @@
       },
       {
         "Version": 298,
+        "Change": ""
+      },
+      {
+        "Version": 299,
         "Change": ""
       }
     ],

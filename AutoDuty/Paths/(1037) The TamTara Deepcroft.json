@@ -69,18 +69,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 19.976006,
-        "Y": 30.11977,
-        "Z": -19.519047
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -91,18 +79,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #1 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -116,7 +92,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Void Soulcounter #1"
+      "Note": "Void Soulcounter"
     },
     {
       "Tag": "Comment",
@@ -143,18 +119,6 @@
       ],
       "Conditions": [],
       "Note": "Cultist Orb"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "Unsynced",
@@ -197,18 +161,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -4.027351,
-        "Y": 23.754131,
-        "Z": 41.925236
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -219,18 +171,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #2 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -244,7 +184,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Void Soulcounter #2"
+      "Note": "Void Soulcounter"
     },
     {
       "Tag": "Comment",
@@ -271,18 +211,6 @@
       ],
       "Conditions": [],
       "Note": "Cultist Orb"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "Unsynced",
@@ -365,18 +293,6 @@
       "Note": "<-- Boss / ボス #3 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -388,19 +304,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Void Soulcounter #3"
-    },
-    {
-      "Tag": "Comment",
-      "Name": "<-- Comment -->",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": "<-- Movement / 動き -->"
+      "Note": "Void Soulcounter"
     },
     {
       "Tag": "None",
@@ -457,18 +361,6 @@
       "Note": "<-- Boss / ボス #4 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -492,6 +384,10 @@
       },
       {
         "Version": 298,
+        "Change": ""
+      },
+      {
+        "Version": 299,
         "Change": ""
       }
     ],

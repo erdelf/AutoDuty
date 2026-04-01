@@ -1,30 +1,6 @@
 {
   "Actions": [
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 2.2436545,
-        "Y": 4.735791,
-        "Z": 249.11252
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 16.979097,
-        "Y": 8.3953285,
-        "Z": 208.51074
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -34,10 +10,38 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Prevents hugging the wall before reaching second crystal -->"
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "Tag": "None",
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Synced",
       "Name": "StopForCombat",
       "Position": {
         "X": 77.23121,
@@ -45,7 +49,21 @@
         "Z": 210.3302
       },
       "Arguments": [
-        "false"
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Prevents hugging the wall before reaching the second crystal."
+    },
+    {
+      "Tag": "Synced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 97.99722,
+        "Y": 1.2761085,
+        "Z": 177.64655
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -63,44 +81,42 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 97.995125,
-        "Y": 1.2761989,
-        "Z": 177.65997
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "true"
-      ],
+      "Arguments": [],
       "Conditions": [],
-      "Note": ""
+      "Note": "<-- Boss / ボス #1 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 61.472412,
-        "Y": -14.258039,
-        "Z": 90.59538
+        "X": 46.360134,
+        "Y": -14.405196,
+        "Z": 75.00261
       },
       "Arguments": [
         ""
       ],
       "Conditions": [],
       "Note": "All-seeing Eye"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
       "Tag": "None",
@@ -162,29 +178,19 @@
           "distance": 100.0
         }
       ],
-      "Note": ""
+      "Note": "Goes back if you haven't taken the Transporter."
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -224.82825,
-        "Y": -17.228802,
-        "Z": 10.259609
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -229.39293,
-        "Y": -22.21717,
-        "Z": 32.205605
-      },
-      "Arguments": [],
+      "Arguments": [
+        "FALSE"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -195,18 +201,6 @@
         "X": -225.68459,
         "Y": -23.137669,
         "Z": 42.028175
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -159.75516,
-        "Y": -32.752716,
-        "Z": 44.408596
       },
       "Arguments": [],
       "Conditions": [],
@@ -247,10 +241,22 @@
         "Z": -7.4638395
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
       "Tag": "None",
@@ -267,12 +273,24 @@
       "Note": "Taulurd"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": -96.61875,
-        "Y": -30.442142,
-        "Z": -34.57864
+        "X": -96.86854,
+        "Y": -30.246162,
+        "Z": -37.788185
       },
       "Arguments": [
         "2000474"
@@ -326,17 +344,33 @@
           "distance": 20.0
         }
       ],
+      "Note": "Goes back if you haven't taken the Transporter."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": -15.0631075,
-        "Y": -22.5,
-        "Z": -160.47144
+        "X": -6.961212,
+        "Y": -22.155823,
+        "Z": -160.72961
       },
-      "Arguments": [],
+      "Arguments": [
+        "25"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -353,12 +387,24 @@
       "Note": ""
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 77.634384,
-        "Y": -39.472744,
-        "Z": -164.33348
+        "X": 79.07387,
+        "Y": -39.000008,
+        "Z": -170.15167
       },
       "Arguments": [
         ""
@@ -389,6 +435,10 @@
       {
         "Version": 298,
         "Change": "Added safety step before b3"
+      },
+      {
+        "Version": 299,
+        "Change": "Katsu format edits, to be consistent with other paths."
       }
     ],
     "Notes": []

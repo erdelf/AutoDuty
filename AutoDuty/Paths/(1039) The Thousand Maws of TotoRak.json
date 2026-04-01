@@ -41,43 +41,57 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": -208.96109,
-        "Y": -1.5073593,
-        "Z": 13.701893
+        "X": -220.90645,
+        "Y": -0.26602775,
+        "Z": -80.44838
       },
       "Arguments": [
-        "TRUE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": -212.43282,
+        "Y": 0.15094392,
+        "Z": -19.734608
       },
       "Arguments": [
-        "FALSE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": -135.02089,
-        "Y": -5.2052345,
-        "Z": 109.687195
+        "X": -207.06738,
+        "Y": -5.4987497,
+        "Z": 44.42472
       },
       "Arguments": [
-        "TRUE"
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -154.46559,
+        "Y": -5.0522184,
+        "Z": 108.18725
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -95,20 +109,6 @@
       "Note": "<-- Boss / ボス #1 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -120,7 +120,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Coeurl O' Nine Tails #1"
+      "Note": "Coeurl O' Nine Tails"
     },
     {
       "Tag": "Comment",
@@ -144,6 +144,20 @@
       },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -52.19156,
+        "Y": -3.4333134,
+        "Z": 111.80408
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -161,6 +175,20 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 18.8069,
+        "Y": -13.003204,
+        "Z": 82.606186
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
@@ -173,29 +201,29 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": 48.022675,
-        "Y": -17.259413,
-        "Z": 41.36635
+        "X": 47.479603,
+        "Y": -17.711655,
+        "Z": 45.336258
       },
       "Arguments": [
-        "TRUE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": 22.468622,
+        "Y": -15.553313,
+        "Z": 6.989319
       },
       "Arguments": [
-        "FALSE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -213,15 +241,15 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": -59.876175,
-        "Y": -8.516265,
-        "Z": -48.039593
+        "X": -51.418915,
+        "Y": -9.366447,
+        "Z": -47.085575
       },
       "Arguments": [
-        "TRUE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -239,18 +267,6 @@
       "Note": "<-- Boss / ボス #2 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -262,7 +278,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Coeurl O' Nine Tails #2"
+      "Note": "Coeurl O' Nine Tails"
     },
     {
       "Tag": "Comment",
@@ -291,29 +307,43 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": -57.420975,
-        "Y": -12.791198,
-        "Z": -137.91873
+        "X": -110.26405,
+        "Y": -11.103379,
+        "Z": -88.37449
       },
       "Arguments": [
-        "TRUE"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": -59.617275,
+        "Y": -12.898154,
+        "Z": -137.85298
       },
       "Arguments": [
-        "FALSE"
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 11.226551,
+        "Y": -13.054368,
+        "Z": -109.77756
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -331,15 +361,29 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "None",
+      "Name": "KillInRange",
       "Position": {
-        "X": 121.7126,
-        "Y": -23.328304,
-        "Z": -112.98896
+        "X": 86.589836,
+        "Y": -20.9775,
+        "Z": -111.43667
       },
       "Arguments": [
-        "TRUE"
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 120.512566,
+        "Y": -23.300955,
+        "Z": -113.772385
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -355,18 +399,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #3 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -392,6 +424,10 @@
       },
       {
         "Version": 298,
+        "Change": ""
+      },
+      {
+        "Version": 299,
         "Change": ""
       }
     ],

@@ -1,15 +1,62 @@
 {
   "Actions": [
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "WaitFor",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "ObjectData;2001462;IsTargetable;false&ModifyIndex;4"
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+6"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001462,
+          "property": "IsTargetable",
+          "value": 0
+        }
+      ],
+      "Note": "Skips ahead if the Gate is already open."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
@@ -30,14 +77,35 @@
     },
     {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "ModifyIndex",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "ItemCount;2000521;<;1&ModifyIndex;0"
+        "-3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000521,
+          "quantity": 1,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you don't have the Key."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 100.091774,
+        "Y": 0.060914516,
+        "Z": 13.517183
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -57,6 +125,18 @@
       "Note": "Runstop Headgate"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -68,30 +148,86 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Great Yellow Pelican"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 38.689632,
-        "Y": 5.519903,
-        "Z": -103.78054
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": 35.10659,
-        "Y": 8.595805,
-        "Z": -144.68
+        "X": 89.26027,
+        "Y": 4.976077,
+        "Z": -72.18172
       },
       "Arguments": [
-        ""
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced, Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "105"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer - Listed as Interactable since it's position is not static."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 36.50248,
+        "Y": 8.595807,
+        "Z": -144.52536
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -100,38 +236,24 @@
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
-        "X": 40.068916,
+        "X": 39.516823,
         "Y": 8.595814,
-        "Z": -145.86595
+        "Z": -145.67468
       },
       "Arguments": [],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 42.73,
-        "Y": 6.98,
-        "Z": -80.07
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Treasure",
-      "Name": "StopForCombat",
+      "Name": "KillInRange",
       "Position": {
-        "X": 23.227104,
-        "Y": 15.688599,
-        "Z": -60.626186
+        "X": 65.155136,
+        "Y": 3.13669,
+        "Z": -65.31773
       },
       "Arguments": [
-        "true"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -140,9 +262,9 @@
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
-        "X": 19.525162,
-        "Y": 15.790934,
-        "Z": -62.852474
+        "X": 65.45306,
+        "Y": 3.18878,
+        "Z": -59.834206
       },
       "Arguments": [],
       "Conditions": [],
@@ -150,28 +272,134 @@
     },
     {
       "Tag": "None",
-      "Name": "Boss",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -5.17,
-        "Y": 5.74,
-        "Z": -83.51
+        "X": 42.787643,
+        "Y": 6.9770145,
+        "Z": -80.0873
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
+      "Tag": "Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 28.10787,
+        "Y": 13.501427,
+        "Z": -54.929825
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 19.35828,
+        "Y": 15.786371,
+        "Z": -62.730194
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -107.99,
-        "Y": -2.38,
-        "Z": -26.81
+        "X": -6.635355,
+        "Y": 5.742157,
+        "Z": -85.50831
       },
       "Arguments": [
         ""
+      ],
+      "Conditions": [],
+      "Note": "Inferno Drake"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -109.66331,
+        "Y": -2.3816218,
+        "Z": -30.228254
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Hellbender"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
       ],
       "Conditions": [],
       "Note": ""
@@ -191,48 +419,35 @@
       "Note": "Longstop Gutgate"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #4 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -27.24,
+        "X": -25.284258,
         "Y": 35.5,
-        "Z": -236.09
+        "Z": -236.15797
       },
       "Arguments": [
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Aiatar"
     }
   ],
   "Meta": {
-    "CreatedAt": 130,
-    "Changelog": [
-      {
-        "Version": 161,
-        "Change": "Converted to new JSON Structure"
-      },
-      {
-        "Version": 163,
-        "Change": "Converted to newer JSON Structure"
-      },
-      {
-        "Version": 164,
-        "Change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "Version": 189,
-        "Change": "Adjusted tags to string values"
-      },
-      {
-        "Version": 289,
-        "Change": "Added chests"
-      },
-      {
-        "Version": 291,
-        "Change": "fixed chest before b2"
-      }
-    ],
+    "CreatedAt": 299,
+    "Changelog": [],
     "Notes": []
   }
 }

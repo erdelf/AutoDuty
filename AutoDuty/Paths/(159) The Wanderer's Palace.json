@@ -1,142 +1,108 @@
 {
   "Actions": [
     {
-      "Tag": "None",
-      "Name": "StopForCombat",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 130.18,
-        "Y": -18.0,
-        "Z": 388.21
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "IsReady"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 132.92798,
-        "Y": -18.066633,
-        "Z": 378.877
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 181.23668,
-        "Y": -17.999996,
-        "Z": 374.15518
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 177.8228,
-        "Y": -14.200506,
-        "Z": 272.59308
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 126.12096,
-        "Y": -14.000002,
-        "Z": 250.73283
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 105.97218,
-        "Y": -14.000002,
-        "Z": 267.2812
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 124.63327,
-        "Y": -14.049899,
-        "Z": 234.92801
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 125.23,
-        "Y": -14.0,
-        "Z": 190.56
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        "true"
+        "FALSE"
       ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 106.02246,
+        "Y": -14.000002,
+        "Z": 266.8359
+      },
+      "Arguments": [],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": 125.0357,
-        "Y": -12.050001,
-        "Z": 122.75217
+        "X": 125.21471,
+        "Y": -14.0000105,
+        "Z": 190.57355
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 125.15,
-        "Y": -12.0,
-        "Z": 112.52
+        "X": 124.88814,
+        "Y": -12.000001,
+        "Z": 104.07443
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Keeper of Halidom"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 125.13059,
-        "Y": -12.05,
-        "Z": 92.62143
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 118.08523,
-        "Y": -9.800122,
-        "Z": 66.08849
-      },
-      "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
       "Tag": "None",
@@ -149,114 +115,172 @@
       "Arguments": [
         "2001123"
       ],
+      "Conditions": [],
       "Note": "Nymian Device"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 125.64723,
-        "Y": -9.511898,
-        "Z": 65.64236
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 125.95,
-        "Y": -9.46,
-        "Z": 60.09
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 125.026634,
-        "Y": -10.05,
-        "Z": 27.954779
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Checks periodically for Lantern Oil along the hallway. -->"
     },
     {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 80.2139,
-        "Y": -10.300005,
-        "Z": 26.349417
+        "X": 122.50596,
+        "Y": -10.049898,
+        "Z": 48.63542
       },
-      "Arguments": [],
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
     },
     {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 80.604996,
+        "X": 118.82414,
+        "Y": -9.650001,
+        "Z": 33.173355
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 104.22704,
+        "Y": -10.049898,
+        "Z": 27.914196
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 78.41629,
         "Y": -10.16426,
-        "Z": 22.420565
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 80.62,
-        "Y": -10.16,
-        "Z": 23.06
+        "Z": 27.985952
       },
       "Arguments": [
-        "5000"
+        ""
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 80.6,
-        "Y": -10.16,
-        "Z": 22.42
-      },
-      "Arguments": [
-        "true"
-      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 70.14461,
-        "Y": 1.9073486E-06,
-        "Z": -147.05768
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2002789"
       ],
-      "Note": "Lantern Oil"
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 78.2,
-        "Y": -10.05,
-        "Z": 3.76
-      },
-      "Arguments": [
-        "2002789"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
       ],
       "Note": "Lantern Oil"
     },
@@ -264,51 +288,172 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 79.94951,
-        "Y": -5.050021,
-        "Z": -17.01018
+        "X": 79.01769,
+        "Y": -10.049899,
+        "Z": 3.3984594
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 68.52,
-        "Y": -2.63,
-        "Z": -16.85
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 40.61,
-        "Y": -0.16,
-        "Z": -16.67
-      },
-      "Arguments": [
-        "true"
-      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 40.61,
-        "Y": -0.16,
-        "Z": -16.67
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2002789"
       ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 74.470245,
+        "Y": -5.0,
+        "Z": -12.444524
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 58.025253,
+        "Y": -0.050060987,
+        "Z": -15.1401205
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 46.30574,
+        "Y": -0.16426003,
+        "Z": -15.915035
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-17"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001071,
+          "quantity": 3,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you do not have three Lantern Oils."
     },
     {
       "Tag": "None",
@@ -321,6 +466,7 @@
       "Arguments": [
         "2001124"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
     },
     {
@@ -334,18 +480,8 @@
       "Arguments": [
         "2001125"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 43.225113,
-        "Y": -0.16426003,
-        "Z": -26.225996
-      },
-      "Arguments": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -358,77 +494,8 @@
       "Arguments": [
         "2001126"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 43.15,
-        "Y": 0.2,
-        "Z": -57.79
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 51.839214,
-        "Y": 1.9073486E-06,
-        "Z": -38.780407
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 69.57142,
-        "Y": 1.9073486E-06,
-        "Z": -38.48212
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 71.552475,
-        "Y": 7.950102,
-        "Z": -66.23613
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 44.109245,
-        "Y": 7.950102,
-        "Z": -68.957504
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 43.45,
-        "Y": 7.84,
-        "Z": -98.98
-      },
-      "Arguments": [
-        "true"
-      ],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -441,138 +508,104 @@
       "Arguments": [
         "2001127"
       ],
+      "Conditions": [],
       "Note": "Nymian Device"
     },
     {
-      "Tag": "None",
-      "Name": "StopForCombat",
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
       "Position": {
-        "X": 44.67,
-        "Y": 7.95,
-        "Z": -104.94
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 27.93304,
-        "Y": 7.950102,
-        "Z": -116.91823
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 15.2450905,
-        "Y": 8.000004,
-        "Z": -119.78891
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 15.809546,
-        "Y": 1.9073486E-06,
-        "Z": -144.20432
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 44.002438,
+        "X": -35.38914,
         "Y": 0.0,
-        "Z": -145.50356
+        "Z": -156.31465
       },
       "Arguments": [],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "Interactable",
       "Position": {
-        "X": 91.13656,
-        "Y": 1.9073486E-06,
-        "Z": -142.02025
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 119.156654,
-        "Y": -0.29999864,
-        "Z": -145.77126
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 119.16,
-        "Y": -0.3,
-        "Z": -145.77
+        "X": 42.94773,
+        "Y": 0.0,
+        "Z": -146.08058
       },
       "Arguments": [
-        "true"
+        "2002789"
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Lantern Oil"
     },
     {
       "Tag": "None",
-      "Name": "StopForCombat",
+      "Name": "Interactable",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "2002789"
       ],
+      "Conditions": [],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 80.74909,
+        "Y": 1.9073486E-06,
+        "Z": -146.08894
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 70.163086,
-        "Y": 1.9073486E-06,
-        "Z": -145.92033
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2002789"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
       ],
       "Note": "Lantern Oil"
     },
     {
       "Tag": "None",
-      "Name": "Interactable",
+      "Name": "ModifyIndex",
       "Position": {
-        "X": 76.256775,
-        "Y": 1.9073486E-06,
-        "Z": -145.45692
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        "2002789"
+        "-4"
       ],
-      "Note": "Lantern Oil"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001071,
+          "quantity": 2,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you do not have two Lantern Oils."
     },
     {
       "Tag": "None",
@@ -585,41 +618,19 @@
       "Arguments": [
         "2001128"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
     },
     {
-      "Tag": "None",
-      "Name": "StopForCombat",
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
       "Position": {
-        "X": 119.9,
-        "Y": -0.3,
-        "Z": -145.83
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 121.249245,
-        "Y": -1.7881393E-06,
-        "Z": -156.45215
+        "X": 121.13179,
+        "Y": 0.0,
+        "Z": -156.52881
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 36.26247,
-        "Y": 0.1998781,
-        "Z": -149.98203
-      },
-      "Arguments": [],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -633,161 +644,49 @@
       "Arguments": [
         "2001129"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 42.741913,
-        "Y": 0.3728603,
-        "Z": -149.87273
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 43.39307,
+        "X": 0.0,
         "Y": 0.0,
-        "Z": -168.79868
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 43.09,
-        "Y": -0.0,
-        "Z": -180.35
-      },
-      "Arguments": [
-        "true"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 43.506264,
-        "Y": 0.0,
-        "Z": -212.77098
-      },
-      "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 43.07,
-        "Y": 0.0,
-        "Z": -227.37
+        "X": 43.090256,
+        "Y": -0.16399956,
+        "Z": -232.2736
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Giant Bavarois"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 37.782192,
+        "X": 0.0,
         "Y": 0.0,
-        "Z": -248.18336
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 42.503784,
-        "Y": 0.0,
-        "Z": -281.10056
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 42.73,
-        "Y": 0.0,
-        "Z": -296.87
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 41.994034,
-        "Y": 5.0,
-        "Z": -313.36584
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 37.92016,
-        "Y": 5.0,
-        "Z": -319.22
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 70.52501,
-        "Y": 9.950101,
-        "Z": -321.83032
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 73.10791,
-        "Y": 9.8359995,
-        "Z": -371.3127
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 72.99,
-        "Y": 9.84,
-        "Z": -374.35
-      },
-      "Arguments": [
-        "true"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
         "X": 0.0,
@@ -795,35 +694,120 @@
         "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 37.785847,
+        "Y": 5.0,
+        "Z": -318.95093
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 64.85663,
+        "Y": 9.999999,
+        "Z": -321.62463
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 72.85,
-        "Y": 9.84,
-        "Z": -372.84
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2002789"
       ],
+      "Conditions": [],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 72.790726,
+        "Y": 9.835997,
+        "Z": -363.3552
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [],
       "Note": "Lantern Oil"
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 63.83,
-        "Y": 9.95,
-        "Z": -320.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2002789"
       ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002789,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-5"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001071,
+          "quantity": 2,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you do not have two Lantern Oils."
     },
     {
       "Tag": "None",
@@ -836,6 +820,7 @@
       "Arguments": [
         "2001131"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
     },
     {
@@ -849,75 +834,48 @@
       "Arguments": [
         "2001130"
       ],
+      "Conditions": [],
       "Note": "Rusted Nymian Device"
     },
     {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 72.79861,
-        "Y": 10.390436,
-        "Z": -380.79797
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 71.97784,
-        "Y": 9.976898,
-        "Z": -395.93323
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 55.08925,
-        "Y": 5.999981,
-        "Z": -406.00552
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 59.66234,
+        "X": 58.019855,
         "Y": 5.9999933,
-        "Z": -412.63318
+        "Z": -406.15042
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 72.57,
+        "X": 69.72424,
         "Y": 6.0,
-        "Z": -433.19
+        "Z": -439.23096
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 72.846756,
-        "Y": 6.0,
-        "Z": -461.5674
-      },
-      "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Tonberry King"
     }
   ],
   "Meta": {
@@ -930,6 +888,10 @@
       {
         "Version": 231,
         "Change": "Adjusted combat stopping during lantern oil"
+      },
+      {
+        "Version": 299,
+        "Change": ""
       }
     ],
     "Notes": []

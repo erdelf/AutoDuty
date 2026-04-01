@@ -193,18 +193,6 @@
       "Note": "<-- Boss / ボス #1 -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
@@ -217,18 +205,6 @@
       ],
       "Conditions": [],
       "Note": "Chopper"
-    },
-    {
-      "Tag": "Comment",
-      "Name": "<-- Comment -->",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
       "Tag": "None",
@@ -259,18 +235,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -4.0895653,
-        "Y": 23.899998,
-        "Z": 29.61869
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -281,18 +245,6 @@
       "Arguments": [],
       "Conditions": [],
       "Note": "<-- Boss / ボス #2 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -344,20 +296,6 @@
       },
       "Arguments": [
         "25"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -443,8 +381,8 @@
       "Note": "<-- ...and the other is surrounded by a lot of enemies which makes it dangerous for min-iLvl Tanks. -->"
     },
     {
-      "Tag": "Revival",
-      "Name": "Revival",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
@@ -452,15 +390,29 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": ""
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -183.50957,
+        "Y": 6.4215565,
+        "Z": 245.3128
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Captain Madison"
     },
     {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": -199.23349,
-        "Y": 6.3301344,
-        "Z": 265.96167
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "FALSE"
@@ -478,19 +430,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Boss / ボス #3 -->"
-    },
-    {
-      "Tag": "Revival",
-      "Name": "Revival",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
+      "Note": "<-- Boss / ボス #4 -->"
     },
     {
       "Tag": "None",
@@ -516,7 +456,11 @@
       },
       {
         "Version": 298,
-        "Change": "."
+        "Change": ""
+      },
+      {
+        "Version": 299,
+        "Change": ""
       }
     ],
     "Notes": []
