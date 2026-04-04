@@ -158,7 +158,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": -142.43767,
         "Y": 0.10622609,
@@ -238,7 +238,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 269.30826,
         "Y": -94.82437,
@@ -316,7 +316,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 234.33961,
         "Y": -92.90415,
@@ -394,7 +394,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 279.94528,
         "Y": -90.84955,
@@ -446,7 +446,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 274.15887,
         "Y": -78.99109,
@@ -496,7 +496,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 295.99542,
         "Y": -74.0,
@@ -550,7 +550,7 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "MoveTo",
+      "name": "TreasureCoffer",
       "Position": {
         "X": 280.0095,
         "Y": -75.859985,
