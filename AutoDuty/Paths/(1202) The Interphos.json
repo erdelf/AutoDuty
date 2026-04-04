@@ -1,0 +1,23 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 100.0,
+        "Y": -2.3841858E-07,
+        "Z": 105.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Queen Eternal"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 299,
+    "Changelog": [],
+    "Notes": []
+  }
+}
