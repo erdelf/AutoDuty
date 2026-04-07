@@ -1,0 +1,383 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 308.52988,
+        "Y": 10.221672,
+        "Z": 278.74472
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 293.49307,
+        "Y": 15.068699,
+        "Z": 255.89383
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 286.35733,
+        "Y": 18.95496,
+        "Z": 239.75095
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 272.60962,
+        "Y": 26.99066,
+        "Z": 196.4645
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 306.22412,
+        "Y": 31.820875,
+        "Z": 179.85341
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 218.76178,
+        "Y": 61.156155,
+        "Z": 126.14476
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 220.15186,
+        "Y": 63.7167,
+        "Z": 113.54618
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 220.83504,
+        "Y": 65.07085,
+        "Z": 13.959994
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 221.15598,
+        "Y": 64.6908,
+        "Z": -1.2304201
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Sanguine Sirens Targirl"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "10000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 202.22426,
+        "Y": 64.6908,
+        "Z": -11.994142
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 67.98596,
+        "Y": 80.7656,
+        "Z": 7.5146236
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 58.544346,
+        "Y": 81.8343,
+        "Z": -0.22601378
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 19.984533,
+        "Y": 99.92895,
+        "Z": -108.07029
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": 17.057495,
+        "Y": 100.46874,
+        "Z": -110.15757
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -30.20217,
+        "Y": 45.005413,
+        "Z": -124.39686
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": -33.56032,
+        "Y": 44.909103,
+        "Z": -131.2826
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -59.06731,
+        "Y": 44.391747,
+        "Z": -124.73815
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -77.30278,
+        "Y": 44.223553,
+        "Z": -124.85879
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Ymir"
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": -97.52388,
+        "Y": 44.21873,
+        "Z": -123.8904
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -163.4817,
+        "Y": 52.35295,
+        "Z": -103.37632
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": -165.44215,
+        "Y": 53.62319,
+        "Z": -95.531006
+      },
+      "Arguments": [
+        "4000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -226.65749,
+        "Y": 0.57653046,
+        "Z": -0.28483593
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -271.26877,
+        "Y": 4.2253914,
+        "Z": 17.53109
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": -300.9886,
+        "Y": 0.9062797,
+        "Z": 2.160915
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -326.92923,
+        "Y": 1.2791188,
+        "Z": 11.118855
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -344.35373,
+        "Y": 7.892083,
+        "Z": 39.812958
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -344.35373,
+        "Y": 7.892083,
+        "Z": 39.812958
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Grand Storm Marshal Slafyrsyn"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 299,
+    "Changelog": [],
+    "Notes": []
+  }
+}

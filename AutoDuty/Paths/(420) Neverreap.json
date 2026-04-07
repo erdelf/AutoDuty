@@ -1,0 +1,744 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -166.4036,
+        "Y": 4.932597,
+        "Z": 292.44617
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -166.75443,
+        "Y": 4.999131,
+        "Z": 289.39047
+      },
+      "Arguments": [
+        "1013331"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001568,
+          "quantity": 5,
+          "operatorValue": "!="
+        }
+      ],
+      "Note": "Tonu Vanu"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -162.16138,
+        "Y": 4.9994087,
+        "Z": 291.7448
+      },
+      "Arguments": [
+        "2005130"
+      ],
+      "Conditions": [],
+      "Note": "Cloud Altar"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -165.05762,
+        "Y": 4.8718967,
+        "Z": 295.34402
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": -162.16618,
+        "Y": 4.8706846,
+        "Z": 296.17984
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "isReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -84.8993,
+        "Y": 20.721766,
+        "Z": 290.2374
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -84.92415,
+        "Y": 20.739098,
+        "Z": 290.40976
+      },
+      "Arguments": [
+        "2005131"
+      ],
+      "Conditions": [],
+      "Note": "Cloud Altar"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -88.62402,
+        "Y": 20.493982,
+        "Z": 300.7507
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": -90.34853,
+        "Y": 20.73152,
+        "Z": 299.0473
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "isReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -49.989662,
+        "Y": 32.24611,
+        "Z": 250.49435
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -59.98835,
+        "Y": 33.645145,
+        "Z": 238.80699
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -68.602486,
+        "Y": 35.1013,
+        "Z": 222.99147
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -61.03827,
+        "Y": 36.438057,
+        "Z": 212.26416
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -66.90125,
+        "Y": 37.06066,
+        "Z": 198.68948
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -52.80636,
+        "Y": 38.91952,
+        "Z": 189.70119
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -44.044373,
+        "Y": 40.65624,
+        "Z": 178.83875
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -25.566496,
+        "Y": 42.5067,
+        "Z": 186.4168
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -18.703897,
+        "Y": 43.147644,
+        "Z": 202.0766
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -16.271948,
+        "Y": 43.06297,
+        "Z": 221.57544
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -6.8263927,
+        "Y": 43.168514,
+        "Z": 216.8258
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -6.8263927,
+        "Y": 43.168514,
+        "Z": 216.8258
+      },
+      "Arguments": [
+        "2005132"
+      ],
+      "Conditions": [],
+      "Note": "Cloud Altar"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -4.8284984,
+        "Y": 43.16935,
+        "Z": 213.59216
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": -4.156595,
+        "Y": 43.013783,
+        "Z": 212.62674
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "isReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 45.874435,
+        "Y": 38.223755,
+        "Z": 221.63248
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Nunyenunc"
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 69.793144,
+        "Y": 38.16634,
+        "Z": 215.29466
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 75.61853,
+        "Y": 38.368053,
+        "Z": 212.08643
+      },
+      "Arguments": [
+        "2005133"
+      ],
+      "Conditions": [],
+      "Note": "Cloud Altar"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 74.62408,
+        "Y": 38.36322,
+        "Z": 210.05943
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": 74.32343,
+        "Y": 38.363537,
+        "Z": 209.24767
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "isReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 153.17819,
+        "Y": 54.19476,
+        "Z": 156.85413
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 136.48645,
+        "Y": 54.92413,
+        "Z": 132.67494
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 84.21607,
+        "Y": 60.05999,
+        "Z": 84.11786
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 146.8267,
+        "Y": 66.91196,
+        "Z": 63.31666
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 159.38564,
+        "Y": 66.38194,
+        "Z": 32.875538
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": 159.71623,
+        "Y": 66.381096,
+        "Z": 31.491564
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 163.42776,
+        "Y": 64.004265,
+        "Z": 7.2365904
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 168.42807,
+        "Y": 64.004265,
+        "Z": -4.1634035
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Canu Vanu"
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 179.8766,
+        "Y": 64.090004,
+        "Z": -24.047499
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 188.80879,
+        "Y": 63.46963,
+        "Z": -43.899944
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 164.57469,
+        "Y": 63.515553,
+        "Z": -94.31255
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 156.67088,
+        "Y": 64.099594,
+        "Z": -99.16726
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 165.18001,
+        "Y": 60.43709,
+        "Z": -126.44177
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 165.18001,
+        "Y": 60.43709,
+        "Z": -126.44177
+      },
+      "Arguments": [
+        "2005134"
+      ],
+      "Conditions": [],
+      "Note": "Cloud Altar"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "4000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 156.74199,
+        "Y": 60.94107,
+        "Z": -190.16847
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 163.75842,
+        "Y": 61.420975,
+        "Z": -218.97656
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 142.66536,
+        "Y": 61.17974,
+        "Z": -237.2086
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 165.98274,
+        "Y": 59.99014,
+        "Z": -274.6424
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 174.6651,
+        "Y": 59.42665,
+        "Z": -305.64487
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "AutoMoveFor",
+      "Position": {
+        "X": 174.57137,
+        "Y": 59.474503,
+        "Z": -307.57806
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Arguments": [
+        "isReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 172.13696,
+        "Y": 58.487793,
+        "Z": -337.13507
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Waukkeon"
+    },
+    {
+      "Tag": "Treasure",
+      "name": "TreasureCoffer",
+      "Position": {
+        "X": 172.0228,
+        "Y": 58.533985,
+        "Z": -353.64792
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 299,
+    "Changelog": [],
+    "Notes": []
+  }
+}
