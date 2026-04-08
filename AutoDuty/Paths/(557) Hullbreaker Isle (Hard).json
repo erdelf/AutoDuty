@@ -16,18 +16,6 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 293.49307,
-        "Y": 15.068699,
-        "Z": 255.89383
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
         "X": 286.35733,
         "Y": 18.95496,
         "Z": 239.75095
@@ -40,11 +28,13 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 272.60962,
-        "Y": 26.99066,
-        "Z": 196.4645
+        "X": 281.13983,
+        "Y": 26.684998,
+        "Z": 201.04752
       },
-      "Arguments": [],
+      "Arguments": [
+        ""
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -61,14 +51,44 @@
       "Note": ""
     },
     {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 311.84818,
+        "Y": 33.512814,
+        "Z": 177.45885
+      },
+      "Arguments": [
+        "false"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 218.76178,
-        "Y": 61.156155,
-        "Z": 126.14476
+        "X": 236.10684,
+        "Y": 60.70777,
+        "Z": 126.80835
       },
-      "Arguments": [],
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 221.07393,
+        "Y": 61.131966,
+        "Z": 126.22483
+      },
+      "Arguments": [
+        "true"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -98,35 +118,35 @@
     },
     {
       "Tag": "None",
-      "Name": "Boss",
+      "Name": "KillInRange",
       "Position": {
-        "X": 221.15598,
-        "Y": 64.6908,
-        "Z": -1.2304201
+        "X": 223.63074,
+        "Y": 64.69081,
+        "Z": -16.216091
       },
       "Arguments": [
-        ""
+        "30"
       ],
       "Conditions": [],
-      "Note": "Sanguine Sirens Targirl"
+      "Note": "Boss: Sanguine Sirens"
     },
     {
       "Tag": "None",
-      "Name": "Wait",
+      "Name": "Boss",
       "Position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+        "X": 210.75749,
+        "Y": 64.6908,
+        "Z": -11.379797
       },
       "Arguments": [
-        "10000"
+        ""
       ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "Treasure",
-      "name": "TreasureCoffer",
+      "Name": "TreasureCoffer",
       "Position": {
         "X": 202.22426,
         "Y": 64.6908,
@@ -139,20 +159,36 @@
       "Note": ""
     },
     {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 183.18848,
+        "Y": 69.7016,
+        "Z": -11.613138
+      },
+      "Arguments": [
+        "false"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 67.98596,
-        "Y": 80.7656,
-        "Z": 7.5146236
+        "X": 75.50619,
+        "Y": 79.947205,
+        "Z": 6.9421325
       },
-      "Arguments": [],
+      "Arguments": [
+        ""
+      ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "Treasure",
-      "name": "TreasureCoffer",
+      "Name": "TreasureCoffer",
       "Position": {
         "X": 58.544346,
         "Y": 81.8343,
@@ -166,14 +202,14 @@
     },
     {
       "Tag": "None",
-      "Name": "Wait",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+        "X": 63.94955,
+        "Y": 84.90486,
+        "Z": -59.855267
       },
       "Arguments": [
-        "2000"
+        "true"
       ],
       "Conditions": [],
       "Note": ""
@@ -199,7 +235,21 @@
         "Z": -110.15757
       },
       "Arguments": [
-        "2000"
+        "3500"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "isReady"
       ],
       "Conditions": [],
       "Note": ""
@@ -220,7 +270,7 @@
     },
     {
       "Tag": "Treasure",
-      "name": "TreasureCoffer",
+      "Name": "TreasureCoffer",
       "Position": {
         "X": -33.56032,
         "Y": 44.909103,
@@ -260,7 +310,7 @@
     },
     {
       "Tag": "Treasure",
-      "name": "TreasureCoffer",
+      "Name": "TreasureCoffer",
       "Position": {
         "X": -97.52388,
         "Y": 44.21873,
@@ -293,38 +343,70 @@
         "Z": -95.531006
       },
       "Arguments": [
-        "4000"
+        "4500"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "WaitFor",
       "Position": {
-        "X": -226.65749,
-        "Y": 0.57653046,
-        "Z": -0.28483593
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "Arguments": [],
+      "Arguments": [
+        "isReady"
+      ],
       "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": -271.26877,
-        "Y": 4.2253914,
-        "Z": 17.53109
+        "X": -225.60905,
+        "Y": 0.57653046,
+        "Z": -1.1512457
       },
-      "Arguments": [],
+      "Arguments": [
+        "15"
+      ],
       "Conditions": [],
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -271.269,
+        "Y": 4.225,
+        "Z": 17.531
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -274.56006,
+        "Y": 4.1948338,
+        "Z": 16.149996
+      },
+      "Arguments": [
+        "3000"
+      ],
+      "Conditions": [],
+      "Note": "Barracuda Elite (Stealth)"
+    },
+    {
       "Tag": "Treasure",
-      "name": "TreasureCoffer",
+      "Name": "TreasureCoffer",
       "Position": {
         "X": -300.9886,
         "Y": 0.9062797,
@@ -338,13 +420,15 @@
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": -326.92923,
-        "Y": 1.2791188,
-        "Z": 11.118855
+        "X": -326.929,
+        "Y": 1.279,
+        "Z": 11.119
       },
-      "Arguments": [],
+      "Arguments": [
+        "15"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -377,7 +461,12 @@
   ],
   "Meta": {
     "CreatedAt": 299,
-    "Changelog": [],
+    "Changelog": [
+      {
+        "Version": 299,
+        "Change": "Fix to Sanguine Sirens boss, added W2W/StopForCombat"
+      }
+    ],
     "Notes": []
   }
 }
