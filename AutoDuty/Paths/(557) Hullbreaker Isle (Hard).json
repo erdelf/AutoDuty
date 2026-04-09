@@ -118,31 +118,17 @@
     },
     {
       "Tag": "None",
-      "Name": "KillInRange",
+      "Name": "Boss",
       "Position": {
         "X": 223.63074,
         "Y": 64.69081,
         "Z": -16.216091
       },
       "Arguments": [
-        "30"
-      ],
-      "Conditions": [],
-      "Note": "Boss: Sanguine Sirens"
-    },
-    {
-      "Tag": "None",
-      "Name": "Boss",
-      "Position": {
-        "X": 210.75749,
-        "Y": 64.6908,
-        "Z": -11.379797
-      },
-      "Arguments": [
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Sanguine Sirens"
     },
     {
       "Tag": "Treasure",
