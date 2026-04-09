@@ -450,7 +450,7 @@
     "Changelog": [
       {
         "Version": 299,
-        "Change": "Fix to Sanguine Sirens boss, added W2W/StopForCombat"
+        "Change": "Added W2W/StopForCombat"
       }
     ],
     "Notes": []
