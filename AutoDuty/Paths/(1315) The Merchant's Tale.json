@@ -1924,9 +1924,9 @@
       "Tag": "None",
       "Name": "Wait",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": 195.75525,
+        "Y": -28.358759,
+        "Z": 663.2798
       },
       "Arguments": [
         "500"
@@ -1990,6 +1990,28 @@
             7,
             8,
             13
+          ]
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "DisableBMModule",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "BossMod.Dawntrail.Variant.V01NMerchantsTale.V08NYawningMaw.V08NYawningMaw",
+        "true"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
+          "pathIndices": [
+            6
           ]
         }
       ],
@@ -2116,63 +2138,23 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "BossMod",
+      "Tag": "Revival",
+      "Name": "Revival",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "off"
-      ],
+      "Arguments": [],
       "Conditions": [
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "false"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Rotation",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "off"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
+            5,
+            6,
+            7,
+            8,
+            13
           ]
         }
       ],
@@ -2182,9 +2164,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 292.49222,
-        "Y": -29.957844,
-        "Z": 686.5801
+        "X": 201.80034,
+        "Y": -28.289026,
+        "Z": 661.0879
       },
       "Arguments": [
         ""
@@ -2193,28 +2175,11 @@
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 291.3407,
-        "Y": -28.685898,
-        "Z": 686.13275
-      },
-      "Arguments": [
-        "500"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
+            5,
+            6,
+            7,
+            8,
+            13
           ]
         }
       ],
@@ -2229,114 +2194,8 @@
         "Z": 0.0
       },
       "Arguments": [
-        "1",
-        "2"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 305.80774,
-        "Y": -29.843794,
-        "Z": 674.4505
-      },
-      "Arguments": [
-        "500"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "DutySpecificCode",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "1",
-        "2"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "BossMod",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "on"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Rotation",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "on"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            5
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "true"
+        "2",
+        "19122"
       ],
       "Conditions": [
         {
@@ -2369,6 +2228,28 @@
         }
       ],
       "Note": "Yawning Maw"
+    },
+    {
+      "Tag": "None",
+      "Name": "DisableBMModule",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "BossMod.Dawntrail.Variant.V01NMerchantsTale.V08NYawningMaw.V08NYawningMaw",
+        "false"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
+          "pathIndices": [
+            6
+          ]
+        }
+      ],
+      "Note": ""
     },
     {
       "Tag": "None",
@@ -2822,7 +2703,7 @@
             "Z": 0.0
           },
           "operatorValue": "<",
-          "distance": 10.0
+          "distance": 15.0
         },
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
@@ -3213,21 +3094,22 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "Rotation",
+      "Tag": "Revival",
+      "Name": "Revival",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "off"
-      ],
+      "Arguments": [],
       "Conditions": [
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
-            9
+            9,
+            10,
+            11,
+            12
           ]
         }
       ],
@@ -3235,20 +3117,23 @@
     },
     {
       "Tag": "None",
-      "Name": "BossMod",
+      "Name": "MoveTo",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": 62.067776,
+        "Y": -31.208807,
+        "Z": -632.37933
       },
       "Arguments": [
-        "off"
+        ""
       ],
       "Conditions": [
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
-            9
+            9,
+            10,
+            11,
+            12
           ]
         }
       ],
@@ -3256,20 +3141,21 @@
     },
     {
       "Tag": "None",
-      "Name": "StopForCombat",
+      "Name": "DisableBMModule",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "false"
+        "BossMod.Dawntrail.Variant.V01NMerchantsTale.V07NStonePuppet.V07NStonePuppet",
+        "true"
       ],
       "Conditions": [
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
-            9
+            10
           ]
         }
       ],
@@ -3299,27 +3185,6 @@
     },
     {
       "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 177.75414,
-        "Y": -24.692678,
-        "Z": -645.8662
-      },
-      "Arguments": [
-        "500"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
       "Name": "DutySpecificCode",
       "Position": {
         "X": 0.0,
@@ -3327,157 +3192,8 @@
         "Z": 0.0
       },
       "Arguments": [
-        "1",
-        "1"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 149.75952,
-        "Y": -26.019506,
-        "Z": -630.24554
-      },
-      "Arguments": [
-        "500"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "DutySpecificCode",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "1",
-        "1"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Wait",
-      "Position": {
-        "X": 127.6751,
-        "Y": -24.964474,
-        "Z": -636.58514
-      },
-      "Arguments": [
-        "500"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "DutySpecificCode",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "1",
-        "1"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Rotation",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "on"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "BossMod",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "on"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
-          "pathIndices": [
-            9
-          ]
-        }
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "true"
+        "2",
+        "19132"
       ],
       "Conditions": [
         {
@@ -3507,6 +3223,28 @@
           "property": "IsTargetable",
           "value": 0
         },
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
+          "pathIndices": [
+            10
+          ]
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "DisableBMModule",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "BossMod.Dawntrail.Variant.V01NMerchantsTale.V07NStonePuppet.V07NStonePuppet",
+        "false"
+      ],
+      "Conditions": [
         {
           "$type": "AutoDuty.Data.Classes+PathActionConditionVariantPath, AutoDuty",
           "pathIndices": [
@@ -4129,6 +3867,10 @@
       {
         "Version": 297,
         "Change": "Path 10 Golem additional wait step"
+      },
+      {
+        "Version": 300,
+        "Change": "Paths 5,6,9,10 updated with new bossmod modules"
       }
     ],
     "Notes": []
