@@ -271,20 +271,6 @@
       "Note": ""
     },
     {
-      "Tag": "Synced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 42.787643,
-        "Y": 6.9770145,
-        "Z": -80.0873
-      },
-      "Arguments": [
-        "FALSE"
-      ],
-      "Conditions": [],
-      "Note": "Carried over from previous iteration. Unsure of efficacy."
-    },
-    {
       "Tag": "Treasure",
       "Name": "KillInRange",
       "Position": {
@@ -294,20 +280,6 @@
       },
       "Arguments": [
         "15"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -538,9 +510,9 @@
         "Version": 291,
         "Change": "fixed chest before b2"
       },
-	  {
+      {
         "Version": 299,
-        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing TreasureCoffer steps before the 2nd boss."
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing TreasureCoffer steps before the 2nd boss. Removed StopForCombat:False before the second boss."
       }
     ],
     "Notes": []
