@@ -57,6 +57,14 @@ namespace AutoDuty.IPC
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("BossMod") || IPCSubscriber_Common.IsReady("BossModReborn");
 
         public static bool HasModuleByDataId(uint id) => BossMod.HasModuleByDataId(id);
+        public static void DisableModule(string moduleName, bool disable)
+        {
+            if(Configuration.AutoManageBossModAISettings)
+            {
+                Svc.Log.Debug($"BossMod IPC - Disabling Module: {moduleName}, Disable: {disable}");
+                BossMod.DisableModule(moduleName, disable);
+            }
+        }
 
         public static void AddPreset(string name, string preset)
         {

@@ -22,11 +22,12 @@ using static AutoDuty.Helpers.PlayerHelper;
 
 namespace AutoDuty.Managers
 {
+    using ECommons.ExcelServices;
+    using FFXIVClientStructs.FFXIV.Client.Game.Object;
+    using global::AutoDuty.Properties;
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using ECommons.ExcelServices;
-    using FFXIVClientStructs.FFXIV.Client.Game.Object;
     using System.Reflection;
     using ObjectKind = Dalamud.Game.ClientState.Objects.Enums.ObjectKind;
 
@@ -64,6 +65,7 @@ namespace AutoDuty.Managers
             ("Action", "", "Run any action"),
             ("BLULoad", "enable?;which spell", "Enables or disables a spell from the current BLU loadout"),
             ("VariantVote", "which option?", "Votes for the VVD option specified (0-based index)"),
+            ("DisableBMModule", "which module?, disable?", "Disables the BossMod module specified by name"),
         ];
 
         public void InvokeAction(PathAction action)
@@ -856,6 +858,11 @@ namespace AutoDuty.Managers
             }
         }
 
+        public void DisableBMModule(PathAction action)
+        {
+            BossMod_IPCSubscriber.DisableModule(action.Arguments[0], bool.Parse(action.Arguments[1]));
+        }
+
         public enum OID : uint
         {
             Blue = 0x1E8554,
@@ -1091,7 +1098,7 @@ namespace AutoDuty.Managers
                             taskManager.Enqueue(() =>
                                                 {
                                                     this.Rotation(Player.Object != null && Player.Object.Health < 0.75f);
-                                                }, "DutySpecificCode-MerchantsTale-Path5-HealthCheck");
+                                                }, "DutySpecificCode-MerchantsTale-HealthCheck");
                             taskManager.EnqueueDelay(500);
                             taskManager.Enqueue(() =>
                                                 {
@@ -1099,8 +1106,40 @@ namespace AutoDuty.Managers
                                                             Take(action.Arguments.Count > 1 && int.TryParse(action.Arguments[1], out int count) ? count : 1).
                                                             All(o => ((ICharacter)o).MissingHp <= 0))
                                                         this.ModifyIndex(-1, true);
-                                                }, "DutySpecificCode-MerchantsTale-Path5");
+                                                }, "DutySpecificCode-MerchantsTale");
                             taskManager.EnqueueDelay(500);
+                            break;
+                        case "2":
+                            
+                            taskManager.Enqueue(() =>
+                                                {
+                                                    this.Rotation(false);
+                                                    Plugin.stopForCombat = false;
+                                                }, "DutySpecificCode-MerchantsTale-2-Setup");
+                            taskManager.EnqueueDelay(500);
+                            taskManager.Enqueue(() =>
+                                                {
+                                                    IGameObject? target = ObjectHelper.GetObjectByDataId(uint.Parse(action.Arguments[1]));
+                                                    if (target != null)
+                                                    {
+                                                        if(!InCombat && !VNavmesh_IPCSubscriber.Path_IsRunning)
+                                                            VNavmesh_IPCSubscriber.SimpleMove_PathfindAndMoveTo(target.Position, false);
+
+                                                        
+                                                        if(Player.Object != null && Player.Object.Health < 0.75f)
+                                                            BossMod_IPCSubscriber.SetPreset("AutoDuty", Resources.AutoDutyPreset);
+                                                        else
+                                                            BossMod_IPCSubscriber.SetPreset("AutoDuty Passive", Resources.AutoDutyPassivePreset);
+                                                        return false;
+                                                    }
+                                                    return true;
+                                                }, "DutySpecificCode-MerchantsTale", new TaskManagerConfiguration(300000));
+                            taskManager.EnqueueDelay(500);
+                            taskManager.Enqueue(() =>
+                                                {
+                                                    this.Rotation(true);
+                                                    Plugin.stopForCombat = true;
+                                                }, "DutySpecificCode-MerchantsTale-RotationOn");
                             break;
                     }
                     break;
