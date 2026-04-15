@@ -545,6 +545,8 @@ namespace AutoDuty.Managers
             
             Plugin.action = $"Killing in {range}y";
 
+            taskManager.Enqueue(() => BossMod_IPCSubscriber.SetMovement(true), "KillInRange-StopForCombat");
+
             taskManager.Enqueue(() =>
                                 {
                                     if (!EzThrottler.Throttle("KillInRange"))
@@ -571,6 +573,11 @@ namespace AutoDuty.Managers
 
                                     return false;
                                 }, "KillInRange-Main", new TaskManagerConfiguration(int.MaxValue));
+            taskManager.Enqueue(() =>
+                                {
+                                    if(!Plugin.stopForCombat)
+                                        BossMod_IPCSubscriber.SetMovement(false);
+                                }, "KillInRange-StopForCombat");
             taskManager.Enqueue(() => Plugin.action = "");
         }
 
