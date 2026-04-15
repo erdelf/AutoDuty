@@ -97,6 +97,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -255,6 +269,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -389,6 +417,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -416,19 +458,27 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 285,
+    "CreatedAt": 106,
     "Changelog": [
       {
-        "Version": 297,
-        "Change": ""
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "Version": 298,
-        "Change": ""
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
+      },
+      {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
       },
       {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Added Treasure steps."
       }
     ],
     "Notes": []

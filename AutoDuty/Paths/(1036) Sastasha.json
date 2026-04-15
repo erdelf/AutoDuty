@@ -207,6 +207,18 @@
       "Note": "Chopper"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
@@ -230,6 +242,20 @@
       },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -2.61113,
+        "Y": 23.704987,
+        "Z": 25.600103
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -287,15 +313,27 @@
       "Note": ""
     },
     {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -163.60359,
+        "Y": 19.3208,
+        "Z": 124.48099
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": -90.908455,
-        "Y": 13.848019,
-        "Z": 141.71765
+        "X": -92.70103,
+        "Y": 13.84802,
+        "Z": 142.95366
       },
       "Arguments": [
-        "25"
+        "13"
       ],
       "Conditions": [],
       "Note": ""
@@ -313,6 +351,46 @@
       ],
       "Conditions": [],
       "Note": "Captain's Quarters Key"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": -39.84539,
+        "Y": 16.09964,
+        "Z": 160.07915
+      },
+      "Arguments": [
+        "2000256"
+      ],
+      "Conditions": [],
+      "Note": "Key to the Hole"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2000232"
+      ],
+      "Conditions": [],
+      "Note": "The Hole"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -0.3900931,
+        "Y": 15.305544,
+        "Z": 177.06567
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "None",
@@ -366,7 +444,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- The two Chests around here are skipped because one is very out of the way... -->"
+      "Note": "<-- The other Chest around here is skipped because it's surrounded... -->"
     },
     {
       "Tag": "Comment",
@@ -378,7 +456,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- ...and the other is surrounded by a lot of enemies which makes it dangerous for min-iLvl Tanks. -->"
+      "Note": "<-- ...by a lot of enemies which makes it dangerous for min-iLvl Tanks. -->"
     },
     {
       "Tag": "Comment",
@@ -421,6 +499,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -300.03293,
+        "Y": 5.576687,
+        "Z": 275.29684
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -448,19 +540,39 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 285,
+    "CreatedAt": 122,
     "Changelog": [
       {
-        "Version": 297,
-        "Change": ""
+        "Version": 132,
+        "Change": " "
       },
       {
-        "Version": 298,
-        "Change": ""
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
+      },
+      {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 230,
+        "Change": "Adjusted boss loot search"
+      },
+      {
+        "Version": 231,
+        "Change": "Re-added last boss step."
+      },
+	  {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps (primarily before the first boss). Added KillInRange steps. Added Treasure steps (and a note about the missing one)."
       }
     ],
     "Notes": []

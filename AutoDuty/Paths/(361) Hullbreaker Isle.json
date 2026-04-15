@@ -1,229 +1,260 @@
 {
   "Actions": [
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Movement aims to avoid traps and hug the right wall to avoid unnecessary enemies. -->"
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 317.355,
-        "Y": 9.548618,
-        "Z": 275.77045
+        "X": 294.99548,
+        "Y": 16.313765,
+        "Z": 252.58513
       },
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 297.50223,
-        "Y": 14.561203,
-        "Z": 257.94617
+        "X": 283.4091,
+        "Y": 19.231483,
+        "Z": 240.68501
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 301.33392,
+        "Y": 23.66272,
+        "Z": 227.54895
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 302.6937,
+        "Y": 26.558386,
+        "Z": 210.82622
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 302.19125,
+        "Y": 28.217915,
+        "Z": 202.49355
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 298.85745,
+        "Y": 29.265917,
+        "Z": 193.0775
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 317.12006,
+        "Y": 49.090977,
+        "Z": 134.57588
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 299.18103,
+        "Y": 51.28027,
+        "Z": 137.3506
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 232.52084,
+        "Y": 61.068104,
+        "Z": 125.170654
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 219.82472,
+        "Y": 64.47893,
+        "Z": 81.149734
       },
       "Arguments": [
-        ""
+        "20"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 281.2496,
-        "Y": 19.357006,
-        "Z": 241.60918
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        ""
+        "TRUE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 278.60736,
-        "Y": 22.635952,
-        "Z": 226.77061
-      },
-      "Arguments": [
-        ""
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 274.8705,
-        "Y": 25.867708,
-        "Z": 210.43217
-      },
-      "Arguments": [
-        ""
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 310.52362,
-        "Y": 33.252056,
-        "Z": 179.83899
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 221.66136,
-        "Y": 64.0295,
-        "Z": 110.279465
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 220.95499,
-        "Y": 65.03987,
-        "Z": 98.64096
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 220.42618,
-        "Y": 64.74997,
-        "Z": 38.847862
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 221.58186,
-        "Y": 64.76198,
-        "Z": 9.116077
-      },
-      "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 220.6,
-        "Y": 64.61956,
-        "Z": -15.08
+        "X": 220.287,
+        "Y": 64.69081,
+        "Z": -17.824682
       },
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": "Sasquatch"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 219.85655,
-        "Y": 64.6908,
-        "Z": -29.932491
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 219.96754,
-        "Y": 67.05615,
-        "Z": -92.931206
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 216.78372,
-        "Y": 63.170475,
-        "Z": -133.24901
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 203.17941,
-        "Y": 65.66713,
-        "Z": -138.06348
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 228.24257,
-        "Y": 62.587807,
-        "Z": -142.35904
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 231.76184,
-        "Y": 65.72262,
-        "Z": -144.42972
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "2004075"
-      ],
-      "Note": "Treasure Coffer"
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- First Area w/ 1 Tablet -->"
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": 216.86488,
+        "Y": 63.211674,
+        "Z": -131.85686
       },
       "Arguments": [
         "2004074"
       ],
-      "Note": "Treasure Coffer"
+      "Conditions": [],
+      "Note": "Goes to one of the Mimics that can drop the Tablet."
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Waits a sec for the Tablet to drop."
     },
     {
       "Tag": "None",
@@ -236,114 +267,230 @@
       "Arguments": [
         "2004054"
       ],
-      "Note": "Stone Tablet"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004054,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000986,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you have the Tablet."
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 162.94,
-        "Y": 52.61,
-        "Z": -185.57
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004075"
+      ],
+      "Conditions": [],
+      "Note": "Goes to the other Mimic if it didn't drop."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004054"
+      ],
+      "Conditions": [],
+      "Note": "Picks up the Stone Tablet."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "275"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 203.89372,
+        "Y": 63.07751,
+        "Z": -144.8294
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 203.15,
+            "Y": 65.67,
+            "Z": -138.72
+          },
+          "operatorValue": "<",
+          "distance": 5.0
+        }
+      ],
+      "Note": "Walks off the wooden platform (if you're on it)."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 223.88036,
+        "Y": 62.92385,
+        "Z": -145.14252
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 231.75,
+            "Y": 65.83,
+            "Z": -143.91
+          },
+          "operatorValue": "<",
+          "distance": 3.0
+        }
+      ],
+      "Note": "Walks off the other wooden platform (if you're on it)."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 167.16737,
+        "Y": 53.21712,
+        "Z": -182.91377
       },
       "Arguments": [
         "2004057"
       ],
+      "Conditions": [],
       "Note": "Stone Pedestal"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Second Area w/ 2 Tablets -->"
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 164.0397,
-        "Y": 52.23026,
-        "Z": -192.20755
+        "X": 87.37335,
+        "Y": 52.01735,
+        "Z": -206.70805
       },
       "Arguments": [],
+      "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Loop Start: Checks the Chests nearby and opens them, if relevant. -->"
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 82.25805,
-        "Y": 53.829166,
-        "Z": -225.50804
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 82.33147,
-        "Y": 53.7926,
-        "Z": -225.22066
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 66.94492,
-        "Y": 53.56103,
-        "Z": -213.60599
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 67.83361,
-        "Y": 53.715935,
-        "Z": -210.27649
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
+      "Name": "ModifyIndex",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "2004079"
+        "+3"
       ],
-      "Note": "Treasure Coffer"
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "2004078"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 2004076,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 70.0
+        }
       ],
-      "Note": "Treasure Coffer"
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "2004077"
-      ],
-      "Note": "Treasure Coffer"
+      "Note": "Skips ahead if the Coffer below is not in range."
     },
     {
       "Tag": "None",
@@ -356,7 +503,22 @@
       "Arguments": [
         "2004076"
       ],
+      "Conditions": [],
       "Note": "Treasure Coffer"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Waits a sec for the Tablet to drop."
     },
     {
       "Tag": "None",
@@ -369,7 +531,15 @@
       "Arguments": [
         "2004055"
       ],
-      "Note": "Stone Tablet"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004055,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
     },
     {
       "Tag": "None",
@@ -382,100 +552,706 @@
       "Arguments": [
         "2004056"
       ],
-      "Note": "Stone Tablet"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004056,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
     },
     {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
+      "Tag": "None",
+      "Name": "ModifyIndex",
       "Position": {
-        "X": 41.319855,
-        "Y": 44.516823,
-        "Z": -131.19429
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "Arguments": [],
-      "Note": ""
+      "Arguments": [
+        "+4"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 2004077,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 70.0
+        }
+      ],
+      "Note": "Skips ahead if the Coffer below is not in range."
     },
     {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
+      "Tag": "None",
+      "Name": "ModifyIndex",
       "Position": {
-        "X": 39.2607,
-        "Y": 44.18918,
-        "Z": -128.04016
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 18.298824,
-        "Y": 44.914265,
-        "Z": -136.44756
-      },
-      "Arguments": [],
-      "Note": ""
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000986,
+          "quantity": 1,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you already have both Tablets."
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": -33.95,
-        "Y": 45.0,
-        "Z": -117.84
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004077"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Waits a sec for the Tablet to drop."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004055"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004055,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004056"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004056,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+4"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 2004078,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 70.0
+        }
+      ],
+      "Note": "Skips ahead if the Coffer below is not in range."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000986,
+          "quantity": 1,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you already have both Tablets."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004078"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Waits a sec for the Tablet to drop."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004055"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004055,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004056"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004056,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+4"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 2004079,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 70.0
+        }
+      ],
+      "Note": "Skips ahead if the Coffer below is not in range."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000986,
+          "quantity": 1,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you already have both Tablets."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004079"
+      ],
+      "Conditions": [],
+      "Note": "Treasure Coffer"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Waits a sec for the Tablet to drop."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004055"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004055,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2004056"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004056,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Picks up the Stone Tablet if it dropped."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "276"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 276,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 30.0
+        },
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 276,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "277"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 277,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 30.0
+        },
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 277,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 29.67519,
+        "Y": 44.491837,
+        "Z": -135.54549
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 29.694,
+            "Y": 44.491,
+            "Z": -135.453
+          },
+          "operatorValue": ">",
+          "distance": 50.0
+        }
+      ],
+      "Note": "Moves to the second set of chests if you're at the first."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 29.67519,
+        "Y": 44.491837,
+        "Z": -135.54549
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 65.11,
+            "Y": 45.69,
+            "Z": -167.64
+          },
+          "operatorValue": "<",
+          "distance": 35.0
+        }
+      ],
+      "Note": "Continues moving to the second set of chests if you're interrupted by combat."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-27"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000986,
+          "quantity": 2,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you still need Tablets."
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Loop End -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "276"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 276,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Checks for Coffers (necessary if you reached the second area with both Tablets already)."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "277"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 277,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Checks for Coffers (necessary if you reached the second area with both Tablets already)."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -6.676483,
+        "Y": 44.783947,
+        "Z": -121.9065
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps prevent slightly janky pathing."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -30.19638,
+        "Y": 44.99698,
+        "Z": -118.93908
       },
       "Arguments": [
         "2004058"
       ],
+      "Conditions": [],
       "Note": "Stone Pedestal"
     },
     {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": -34.11,
-        "Y": 44.95,
-        "Z": -129.14
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2004059"
       ],
+      "Conditions": [],
       "Note": "Stone Pedestal"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -79.22,
-        "Y": 44.13,
-        "Z": -125.04
+        "X": -83.46338,
+        "Y": 44.292454,
+        "Z": -124.962395
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Sjoorm"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": -95.159035,
-        "Y": 44.099987,
-        "Z": -122.81799
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -160.94048,
-        "Y": 51.47259,
-        "Z": -111.44082
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "Arguments": [],
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -487,19 +1263,7 @@
         "Z": -92.38618
       },
       "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "AutoMoveFor",
-      "Position": {
-        "X": -166.57,
-        "Y": 53.21,
-        "Z": -92.39
-      },
-      "Arguments": [
-        "5000"
-      ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -510,142 +1274,343 @@
         "Y": 6.2297144,
         "Z": -63.128864
       },
-      "Arguments": [],
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -190.54526,
-        "Y": 1.331907,
-        "Z": -43.336372
+        "X": -217.2487,
+        "Y": -0.092779815,
+        "Z": -6.719791
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -294.4687,
+        "Y": 6.2242146,
+        "Z": -44.80849
       },
       "Arguments": [],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -204.76231,
-        "Y": -0.29996932,
-        "Z": -26.52392
+        "X": -307.06815,
+        "Y": 4.408697,
+        "Z": 13.05799
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": -216.54259,
-        "Y": 0.018636107,
-        "Z": -7.9207945
+        "X": -310.54346,
+        "Y": 3.2623932,
+        "Z": 28.600208
       },
-      "Arguments": [],
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
       "Position": {
-        "X": -234.87856,
-        "Y": 0.026432276,
-        "Z": -11.858812
+        "X": -327.499,
+        "Y": 1.9,
+        "Z": 48.055
       },
-      "Arguments": [],
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "Wait",
       "Position": {
-        "X": -249.96439,
-        "Y": 4.7244587,
-        "Z": -24.808735
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -268.3963,
-        "Y": 4.782939,
-        "Z": -6.0264993
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -292.79187,
-        "Y": 4.381178,
-        "Z": 0.5918892
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -307.0562,
-        "Y": 4.421956,
-        "Z": 13.294272
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -310.40903,
-        "Y": 2.8166792,
-        "Z": 30.593014
-      },
-      "Arguments": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -318.38843,
+        "X": -324.61453,
         "Y": 1.8999999,
-        "Z": 34.741104
+        "Z": 30.438917
       },
-      "Arguments": [],
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -332.4389,
+        "Y": 1.8999999,
+        "Z": 31.00106
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Jumps to second platform."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -344.2823,
+        "Y": 1.8999999,
+        "Z": -2.559887
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -353.50266,
+        "Y": 1.8999999,
+        "Z": 3.3251295
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -353.74768,
+        "Y": 1.8999999,
+        "Z": 11.325661
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Jumps to third platform."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -386.25073,
+        "Y": 1.8999999,
+        "Z": 23.929285
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -375.78555,
+        "Y": 1.8999999,
+        "Z": 15.275795
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -372.12366,
+        "Y": 1.8999999,
+        "Z": 32.50931
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Jumps to fourth platform."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -363.03156,
+        "Y": 1.8999999,
+        "Z": 65.83215
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -350.264,
+        "Y": 1.8999999,
+        "Z": 60.45063
+      },
+      "Arguments": [
+        "2000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -349.614,
+        "Y": 1.8999999,
+        "Z": 52.574
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Jumps back to the first platform"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": -324.60135,
+        "Y": 1.8999999,
+        "Z": 38.187275
+      },
+      "Arguments": [
+        "18000"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -318.39,
-        "Y": 1.9,
-        "Z": 34.74
+        "X": -324.60135,
+        "Y": 1.8999999,
+        "Z": 38.187275
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -326.9179,
-        "Y": 1.8999999,
-        "Z": 35.083134
-      },
-      "Arguments": [],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Kraken"
     }
   ],
   "Meta": {
@@ -666,6 +1631,10 @@
       {
         "Version": 231,
         "Change": "Minor pathing rework of the 1st section"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Overhauled Tablet areas with various Conditions. Added steps to complete the third boss (Unsynced). Added missing Treasure Chest. Replaced AutoMoveFor with MoveTo:FALSE. Removed excess MoveTo steps."
       }
     ],
     "Notes": []

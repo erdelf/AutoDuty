@@ -1,40 +1,32 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -0.1,
-        "Y": -0.13,
-        "Z": -1.69
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1.0
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": 0.03,
-        "Y": -0.09,
-        "Z": -12.14
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Conditions": [],
+      "Note": "The Ultima Weapon"
     }
   ],
-  "meta": {
-    "createdAt": 170,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 170,
+    "Changelog": [
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Boss name. Removed unnecessary TreasureCoffer step."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

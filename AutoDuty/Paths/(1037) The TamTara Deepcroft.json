@@ -69,6 +69,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 22.371103,
+        "Y": 30.240396,
+        "Z": -20.538242
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -157,6 +171,20 @@
         "Z": 75.44724
       },
       "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -2.8821445,
+        "Y": 23.689388,
+        "Z": 44.011898
+      },
+      "Arguments": [
+        "TRUE"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -376,19 +404,27 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 285,
+    "CreatedAt": 106,
     "Changelog": [
       {
-        "Version": 297,
-        "Change": ""
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "Version": 298,
-        "Change": ""
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+	  {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+	  {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Removed excess MoveTo steps."
       }
     ],
     "Notes": []

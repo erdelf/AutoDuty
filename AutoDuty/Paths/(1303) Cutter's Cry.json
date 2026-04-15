@@ -153,6 +153,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -48.440857,
+        "Y": 5.845995,
+        "Z": 158.52216
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
@@ -565,6 +579,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -178.03215,
+        "Y": 0.2636969,
+        "Z": -159.2436
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -598,7 +626,7 @@
       },
       {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing Treasure Chests."
       }
     ],
     "Notes": []

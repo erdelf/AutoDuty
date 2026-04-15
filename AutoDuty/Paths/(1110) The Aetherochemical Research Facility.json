@@ -140,18 +140,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": -135.10828,
-        "Y": 394.8184,
-        "Z": -297.0849
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -213,7 +201,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Walks into the transition barrier."
     },
     {
       "Tag": "Revival",
@@ -259,12 +247,26 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 29.4095,
-        "Y": 211.8407,
-        "Z": 217.25298
+        "X": 28.118292,
+        "Y": 211.63792,
+        "Z": 224.27837
       },
       "Arguments": [
-        "25"
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -273,12 +275,12 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 108.65994,
-        "Y": 221.43398,
-        "Z": 270.61905
+        "X": 115.787544,
+        "Y": 221.89915,
+        "Z": 272.07303
       },
       "Arguments": [
-        "25"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -287,9 +289,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 228.626,
-        "Y": 225.06686,
-        "Z": 271.4475
+        "X": 225.22733,
+        "Y": 225.04034,
+        "Z": 271.8125
       },
       "Arguments": [],
       "Conditions": [],
@@ -357,7 +359,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Walks into the transition barrier."
     },
     {
       "Tag": "None",
@@ -476,7 +478,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Walks into the transition barrier."
     },
     {
       "Tag": "Comment",
@@ -572,7 +574,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Walks into the transition barrier."
     },
     {
       "Tag": "None",
@@ -711,8 +713,29 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 299,
-    "Changelog": [],
+    "CreatedAt": 106,
+    "Changelog": [
+      {
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
+      },
+      {
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
+      },
+      {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added W2W & Unsynced steps. Added WaitFor:IsReady during transitions. Added Conditions for if you die during the Elevator somehow. Replaced ForceAttack steps with KillInRange steps. Removed AutoMoveFor steps."
+      }
+    ],
     "Notes": []
   }
 }

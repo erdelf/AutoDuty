@@ -1,277 +1,517 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -196.31,
-        "Y": -4.44,
-        "Z": -40.47
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -196.29869,
+        "Y": -4.4382524,
+        "Z": -40.42138
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -196.89935,
+        "Y": -0.79998934,
+        "Z": -85.79372
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -9.805888,
+        "Y": 0.0,
+        "Z": -75.263824
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -43.63595,
+        "Y": -2.3841858E-07,
+        "Z": -69.752174
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -122.05013,
+        "Y": -1.6000001,
+        "Z": -22.540047
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -124.18175,
+        "Y": -2.800006,
+        "Z": 6.4320207
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Anchag"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -43.66,
-        "Y": -0,
-        "Z": -69.76
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -98.05344,
+        "Y": 1.8369937,
+        "Z": 38.353184
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -124.56,
-        "Y": -2.8,
-        "Z": 5.33
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 99.612495,
+        "Y": 44.0,
+        "Z": 17.568457
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 118.97984,
+        "Y": 44.0,
+        "Z": -0.2813651
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 222.53134,
+        "Y": 44.1374,
+        "Z": -23.873434
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 200.84491,
+        "Y": 44.0,
+        "Z": -100.077644
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 200.08849,
+        "Y": 44.0,
+        "Z": -149.95596
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Boogyman"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -124.56,
-        "Y": -2.8,
-        "Z": 5.33
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -107.61,
-        "Y": -2,
-        "Z": 52.87
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 199.50026,
+        "Y": 44.171883,
+        "Z": -176.42532
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "AutoMoveFor",
-      "position": {
-        "X": -98.07,
-        "Y": 0.36,
-        "Z": 42.84
-      },
-      "arguments": [
-        "6000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 119.01,
-        "Y": 44,
-        "Z": -0.29
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 198.65,
-        "Y": 44,
-        "Z": -100.27
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 200.17,
-        "Y": 44,
-        "Z": -152.28
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 197.42,
-        "Y": 44,
-        "Z": -164.49
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 197.44,
-        "Y": 44,
-        "Z": -164.3
-      },
-      "arguments": [
+      "Arguments": [
         "2004705"
       ],
-      "note": "Aetherial Flow"
+      "Conditions": [],
+      "Note": "Aetherial Flow"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 199.73,
-        "Y": -0,
-        "Z": -1.16
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 199.74,
-        "Y": -0,
-        "Z": -1.36
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 200.13626,
+        "Y": -7.6293945E-06,
+        "Z": -2.4436793
       },
-      "arguments": [
+      "Arguments": [
         "2004706"
       ],
-      "note": "Fell Orb"
+      "Conditions": [],
+      "Note": "Fell Orb"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 199.73,
-        "Y": -0,
-        "Z": -1.16
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "20000"
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 200.0,
+        "Y": -7.6293945E-06,
+        "Z": 1.0
+      },
+      "Arguments": [
+        "25"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "20000"
+      "Arguments": [
+        "250"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 199.85,
-        "Y": -0,
-        "Z": -1.03
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "-2"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2004707,
+          "property": "EventState",
+          "value": 7
+        }
+      ],
+      "Note": "Goes back if the Aetherial Flow hasn't appeared yet."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2004707"
       ],
-      "note": "Aetherial Flow"
+      "Conditions": [],
+      "Note": "Aetherial Flow"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "4000"
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 200.08,
-        "Y": -0,
-        "Z": 232.89
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 200.0911,
+        "Y": -6.0796738E-06,
+        "Z": 232.83817
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 200.13,
-        "Y": -0,
-        "Z": 235.34
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Ferdiad"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 106,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 182,
-        "change": "Updated Interaction ids"
+        "Version": 182,
+        "Change": "Updated Interaction ids"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Added Treasure steps. Added KillInRange steps. Added WaitFor:IsReady after transitions. Added appropriate Revival steps. Replaced Waits in the Gauntlet before the third boss with a Condition. Removed AutoMoveFor. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

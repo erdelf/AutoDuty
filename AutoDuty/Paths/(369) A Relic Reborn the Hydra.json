@@ -1,27 +1,32 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -259.89,
-        "Y": 16.96,
-        "Z": 17.89
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -270.0,
+        "Y": 17.225,
+        "Z": 18.85
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Hydra"
     }
   ],
-  "meta": {
-    "createdAt": 170,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 170,
+    "Changelog": [
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Boss name. Adjusted Coordinates to be within the boss' aggro radius."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

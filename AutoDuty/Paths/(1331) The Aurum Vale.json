@@ -149,6 +149,20 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -40.702755,
+        "Y": -16.160746,
+        "Z": -103.60631
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
@@ -246,7 +260,7 @@
           "job": "Tanks"
         }
       ],
-      "Note": ""
+      "Note": "Carried over from original path. Use unclear. May be detrimental when Synced."
     },
     {
       "Tag": "Synced, W2W",
@@ -284,6 +298,20 @@
           "job": "Tanks"
         }
       ],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -119.47577,
+        "Y": -30.565554,
+        "Z": -134.15749
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -377,6 +405,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -373.42502,
+        "Y": -32.265903,
+        "Z": -140.9248
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -412,7 +454,7 @@
       },
       {
         "Version": 299,
-        "Change": "Katsu format edits, to be consistent with other paths. Adjusted the W2W section."
+        "Change": "Added Trash/Boss Comments. Added KillInRange steps. Added missing Treasure Chest. Adjusted the W2W section and added the Tank Condition."
       }
     ],
     "Notes": []

@@ -1,6 +1,20 @@
 {
   "Actions": [
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "None",
       "Name": "BLULoad",
       "Position": {
@@ -9,10 +23,11 @@
         "Z": 0.0
       },
       "Arguments": [
-        "false",
+        "FALSE",
         "92"
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Removes Ultravibration from your loadout so AutoRotation doesn't use it too soon."
     },
     {
       "Tag": "None",
@@ -25,7 +40,22 @@
       "Arguments": [
         "2012811"
       ],
+      "Conditions": [],
       "Note": "Magitek Terminal"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "None",
@@ -38,6 +68,7 @@
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -49,21 +80,39 @@
         "Z": -30.059208
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- BLU-Specific Actions: Start -->"
+    },
+    {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "Rotation",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "Job;Blue_Mage",
-        "Rotation;off"
+        "OFF"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
       ],
       "Note": ""
     },
@@ -76,36 +125,122 @@
         "Z": 0.0
       },
       "Arguments": [
-        "true",
+        "TRUE",
         "92"
       ],
+      "Conditions": [],
+      "Note": "Adds Ultravibration back to your loadout."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 175.41,
+        "Y": 154.68,
+        "Z": -68.05
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
       "Tag": "W2W",
-      "Name": "ConditionAction",
+      "Name": "Wait",
       "Position": {
-        "X": 175.41466,
-        "Y": 154.67581,
-        "Z": -68.05216
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        "ActionStatus;Action;23282;573",
-        "Wait;2500"
+        "2500"
       ],
-      "Note": ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionActionStatus, AutoDuty",
+          "type": "Action",
+          "id": 23282,
+          "statusCode": 573
+        }
+      ],
+      "Note": "Checks if Hydropull is available. Waits 2.5sec if not."
     },
     {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "Action",
       "Position": {
         "X": 181.5,
         "Y": 154.1,
         "Z": -72.2
       },
       "Arguments": [
-        "Job;Blue_Mage",
-        "Action;Action;7559"
+        "Action",
+        "7559"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
+      "Note": "Surecast"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Action",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "Action",
+        "23282"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
+      "Note": "Hydro Pull"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "ConditionFlag;Casting;FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
       ],
       "Note": ""
     },
@@ -120,21 +255,33 @@
       "Arguments": [
         "IsReady"
       ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "Action",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "Job;Blue_Mage",
-        "Action;Action;23282"
+        "Action",
+        "11419"
       ],
-      "Note": ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
+      "Note": "The Ram's Voice"
     },
     {
       "Tag": "None",
@@ -145,34 +292,13 @@
         "Z": 0.0
       },
       "Arguments": [
-        "ConditionFlag;Casting;false"
+        "ConditionFlag;Casting;FALSE"
       ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "ConditionAction",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "Job;Blue_Mage",
-        "Action;Action;11419"
-      ],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "WaitFor",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "ConditionFlag;Casting;false"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
       ],
       "Note": ""
     },
@@ -187,21 +313,33 @@
       "Arguments": [
         "IsReady"
       ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "Action",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "Job;Blue_Mage",
-        "Action;Action;23277"
+        "Action",
+        "23277"
       ],
-      "Note": ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
+      ],
+      "Note": "Ultravibration"
     },
     {
       "Tag": "None",
@@ -212,23 +350,46 @@
         "Z": 0.0
       },
       "Arguments": [
-        "ConditionFlag;Casting;false"
+        "ConditionFlag;Casting;FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
       ],
       "Note": ""
     },
     {
       "Tag": "None",
-      "Name": "ConditionAction",
+      "Name": "Rotation",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "Job;Blue_Mage",
-        "Rotation;on"
+        "ON"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Blue_Mage"
+        }
       ],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- BLU-Specific Actions: End -->"
     },
     {
       "Tag": "W2W",
@@ -239,8 +400,9 @@
         "Z": -66.33374
       },
       "Arguments": [
-        "true"
+        "TRUE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -254,20 +416,48 @@
       "Arguments": [
         "2012813"
       ],
+      "Conditions": [],
       "Note": "Magitek Transporter"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
     },
     {
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 191.97,
+        "X": 192.0,
         "Y": 76.0,
-        "Z": 0.02
+        "Z": 0.0
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Mark II Magitek Colossus"
     },
     {
       "Tag": "None",
@@ -280,7 +470,34 @@
       "Arguments": [
         "2012815"
       ],
+      "Conditions": [],
       "Note": "Magitek Terminal"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Mecha-Piloting Section: Start -->"
     },
     {
       "Tag": "None",
@@ -293,6 +510,7 @@
       "Arguments": [
         "1"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -306,6 +524,7 @@
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -319,6 +538,21 @@
       "Arguments": [
         ""
       ],
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -332,6 +566,7 @@
       "Arguments": [
         "500"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -345,6 +580,7 @@
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -358,6 +594,7 @@
       "Arguments": [
         "500"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -371,6 +608,7 @@
       "Arguments": [
         "500"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -384,6 +622,7 @@
       "Arguments": [
         "500"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -395,8 +634,9 @@
         "Z": 0.08
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -410,6 +650,7 @@
       "Arguments": [
         "500"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -421,9 +662,22 @@
         "Z": 0.0
       },
       "Arguments": [
-        "true"
+        "TRUE"
       ],
+      "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Mecha-Piloting Section: End -->"
     },
     {
       "Tag": "None",
@@ -436,6 +690,7 @@
       "Arguments": [
         "1"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -449,6 +704,7 @@
       "Arguments": [
         "IsReady"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -462,6 +718,7 @@
       "Arguments": [
         "10"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -473,8 +730,9 @@
         "Z": -0.08
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -488,7 +746,20 @@
       "Arguments": [
         "2"
       ],
+      "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
       "Tag": "None",
@@ -496,12 +767,25 @@
       "Position": {
         "X": -164.13,
         "Y": -104.4,
-        "Z": -0.09
+        "Z": 0.0
       },
       "Arguments": [
         ""
       ],
-      "Note": ""
+      "Conditions": [],
+      "Note": "Nero tol Scaeva"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Movement / 動き -->"
     },
     {
       "Tag": "None",
@@ -514,6 +798,7 @@
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -525,8 +810,9 @@
         "Z": -0.63
       },
       "Arguments": [
-        "false"
+        "FALSE"
       ],
+      "Conditions": [],
       "Note": ""
     },
     {
@@ -540,7 +826,34 @@
       "Arguments": [
         "2012817"
       ],
+      "Conditions": [],
       "Note": "Magitek Terminal"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
       "Tag": "None",
@@ -548,56 +861,25 @@
       "Position": {
         "X": -566.27,
         "Y": -268.0,
-        "Z": 219.83
+        "Z": 220.0
       },
       "Arguments": [
         ""
       ],
+      "Conditions": [],
       "Note": "Gaius van Baelsar"
     }
   ],
   "Meta": {
-    "CreatedAt": 269,
+    "CreatedAt": 273,
     "Changelog": [
       {
-        "Version": 114,
-        "Change": "Added ForceAttack for Cermet Door as fallback (No DutySpecCode) and Added a Wait and MoveTo before final boss to prevent leaving early."
+        "Version": 276,
+        "Change": "Seperate the move and wait steps to keep party together for healing"
       },
       {
-        "Version": 135,
-        "Change": "Added Duty Specific Code for Magitek stage"
-      },
-      {
-        "Version": 161,
-        "Change": "Converted to new JSON Structure"
-      },
-      {
-        "Version": 163,
-        "Change": "Converted to newer JSON Structure"
-      },
-      {
-        "Version": 164,
-        "Change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "Version": 189,
-        "Change": "Adjusted tags to string values"
-      },
-      {
-        "Version": 241,
-        "Change": "Wait before b2 adjusted"
-      },
-      {
-        "Version": 246,
-        "Change": "Replaced old automove instruction"
-      },
-      {
-        "Version": 262,
-        "Change": "Added W2W and replaced mech arms WaitFor Combat with simple Waits"
-      },
-      {
-        "Version": 269,
-        "Change": "Adjusting Wait W2W steps"
+        "Version": 299,
+        "Change": "Added Various Comment steps. Added Boss names for the first two bosses. Added Notes to some of the BLU steps & made sure they all had the BLU Class Condition. Added WaitFor:IsReady during transitions & after Hydropull."
       }
     ],
     "Notes": []

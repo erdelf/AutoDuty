@@ -41,6 +41,46 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 130.3926,
+        "Y": -18.0,
+        "Z": 434.8658
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid slightly janky pathing."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 133.2651,
+        "Y": -17.935743,
+        "Z": 377.2036
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 180.50516,
+        "Y": -14.200506,
+        "Z": 277.7388
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
@@ -62,6 +102,20 @@
       },
       "Arguments": [
         "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -115,7 +169,14 @@
       "Arguments": [
         "2001123"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001123,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Nymian Device"
     },
     {
@@ -129,7 +190,12 @@
       "Arguments": [
         "FALSE"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks, Healers, Samurai, Maiming, Scouting, Aiming, Casters"
+        }
+      ],
       "Note": ""
     },
     {
@@ -253,9 +319,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 78.41629,
+        "X": 84.93956,
         "Y": -10.16426,
-        "Z": 27.985952
+        "Z": 21.122929
       },
       "Arguments": [
         ""
@@ -387,6 +453,27 @@
     },
     {
       "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "+8"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001125,
+          "property": "IsTargetable",
+          "value": 0
+        }
+      ],
+      "Note": "Skips ahead if the Nymian Devices aren't targetable (presumably if you died)."
+    },
+    {
+      "Tag": "None",
       "Name": "KillInRange",
       "Position": {
         "X": 46.30574,
@@ -398,20 +485,6 @@
       ],
       "Conditions": [],
       "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "2002789"
-      ],
-      "Conditions": [],
-      "Note": "Lantern Oil"
     },
     {
       "Tag": "None",
@@ -443,7 +516,42 @@
         "Z": 0.0
       },
       "Arguments": [
-        "-17"
+        "+2"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001071,
+          "quantity": 2,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you already have three Lantern Oils."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 76.751854,
+        "Y": -5.05,
+        "Z": -14.7844715
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [],
+      "Note": "Checks again for Lantern Oil along the path."
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-19"
       ],
       "Conditions": [
         {
@@ -466,7 +574,14 @@
       "Arguments": [
         "2001124"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001124,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Rusted Nymian Device"
     },
     {
@@ -480,7 +595,14 @@
       "Arguments": [
         "2001125"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001125,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Rusted Nymian Device"
     },
     {
@@ -494,8 +616,34 @@
       "Arguments": [
         "2001126"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001126,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Rusted Nymian Device"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Monk"
+        }
+      ],
+      "Note": ""
     },
     {
       "Tag": "None",
@@ -508,7 +656,14 @@
       "Arguments": [
         "2001127"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001127,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Nymian Device"
     },
     {
@@ -525,45 +680,31 @@
     },
     {
       "Tag": "None",
-      "Name": "Interactable",
+      "Name": "KillInRange",
       "Position": {
-        "X": 42.94773,
+        "X": 42.947887,
         "Y": 0.0,
-        "Z": -146.08058
+        "Z": -146.04628
       },
       "Arguments": [
-        "2002789"
+        "20"
       ],
       "Conditions": [],
-      "Note": "Lantern Oil"
+      "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "Interactable",
+      "Tag": "Synced",
+      "Name": "StopForCombat",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "2002789"
+        "FALSE"
       ],
       "Conditions": [],
-      "Note": "Lantern Oil"
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 80.74909,
-        "Y": 1.9073486E-06,
-        "Z": -146.08894
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
+      "Note": "Allows interacting even while in 'combat' with a Stalker."
     },
     {
       "Tag": "None",
@@ -584,6 +725,20 @@
           "value": 1
         }
       ],
+      "Note": "Lantern Oil"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002789"
+      ],
+      "Conditions": [],
       "Note": "Lantern Oil"
     },
     {
@@ -608,6 +763,20 @@
       "Note": "Goes back if you do not have two Lantern Oils."
     },
     {
+      "Tag": "Synced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 113.87902,
+        "Y": -0.29999864,
+        "Z": -145.81627
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
@@ -618,7 +787,14 @@
       "Arguments": [
         "2001128"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001128,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Rusted Nymian Device"
     },
     {
@@ -644,8 +820,29 @@
       "Arguments": [
         "2001129"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2001129,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
       "Note": "Rusted Nymian Device"
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 43.197037,
+        "Y": 1.9999979,
+        "Z": -200.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "Comment",
@@ -712,6 +909,20 @@
       "Note": ""
     },
     {
+      "Tag": "Synced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 45.2623,
+        "Y": 4.950057,
+        "Z": -316.84857
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Allows interacting even while in 'combat' with a Stalker."
+    },
+    {
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
@@ -769,27 +980,6 @@
     },
     {
       "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "2002789"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
-          "baseId": 2002789,
-          "property": "IsTargetable",
-          "value": 1
-        }
-      ],
-      "Note": "Lantern Oil"
-    },
-    {
-      "Tag": "None",
       "Name": "ModifyIndex",
       "Position": {
         "X": 0.0,
@@ -839,14 +1029,14 @@
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 58.019855,
-        "Y": 5.9999933,
-        "Z": -406.15042
+        "X": 58.020756,
+        "Y": 5.9999924,
+        "Z": -406.04742
       },
       "Arguments": [
-        ""
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -891,7 +1081,7 @@
       },
       {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced & Synced steps. Added KillInRange steps. Added various Checks and Conditions for Lantern Oil. Added various Conditions to Interactables between first and second boss so that they're skipped if already done. Removed excess MoveTo steps."
       }
     ],
     "Notes": []

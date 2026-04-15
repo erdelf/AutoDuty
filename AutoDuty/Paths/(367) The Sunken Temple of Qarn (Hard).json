@@ -1,563 +1,601 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -63.57,
-        "Y": -12,
-        "Z": -57.2
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -63.508232,
+        "Y": -12.000006,
+        "Z": -54.00587
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2004380"
       ],
-      "note": "Sun Sphere"
+      "Conditions": [],
+      "Note": "Sun Sphere"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -58.23,
-        "Y": -18,
-        "Z": -0.01
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -63.08951,
+        "Y": -12.000009,
+        "Z": -43.946114
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Avoids getting stuck in the doorway."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -53.15,
-        "Y": -18,
-        "Z": 0.17
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -55.09928,
+        "Y": -18.0,
+        "Z": 0.012871159
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2004382"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -12.17,
-        "Y": -18,
-        "Z": -0.01
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -15.512111,
+        "Y": -17.999992,
+        "Z": -0.065654725
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "10"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "AutoMoveFor",
-      "position": {
-        "X": -3.98,
-        "Y": -18,
-        "Z": -0.02
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "3500"
+      "Arguments": [
+        "TRUE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -23.21,
-        "Y": -51,
-        "Z": -0.8
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -4.3112497,
+        "Y": -18.000023,
+        "Z": -1.2274007
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 5.75563,
+        "Y": -48.228645,
+        "Z": -1.2578169
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": -47.12,
-        "Y": -51,
+        "Y": -51.0,
         "Z": 1.13
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Damaged Adjudicator"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -35.1,
-        "Y": -51,
-        "Z": -13.04
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "-1"
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 65.41,
-        "Y": -41.19,
-        "Z": -53.8
-      },
-      "arguments": [
-        ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2002735,
+          "property": "EventState",
+          "value": 0
+        }
       ],
-      "note": ""
+      "Note": "Goes back if the fight hasn't finished yet (waiting for the boss to reform)."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 85.53,
-        "Y": -35.02,
-        "Z": 64.32
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 85.53,
-        "Y": -35.02,
-        "Z": 64.32
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 52.955635,
+        "Y": -49.1473,
+        "Z": 4.1426096
       },
-      "arguments": [
-        "200"
+      "Arguments": [
+        "15"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 90.844185,
+        "Y": -33.45303,
+        "Z": 67.15193
       },
-      "arguments": [
+      "Arguments": [
+        "30"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2004387"
       ],
-      "note": "Moon Sphere"
+      "Conditions": [],
+      "Note": "Moon Sphere"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 106.85,
-        "Y": -33.21,
-        "Z": 64.53
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 165.3694,
+        "Y": -44.999996,
+        "Z": 1.5857221
       },
-      "arguments": [
-        "200"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
-        "2004387"
-      ],
-      "note": "Moon Sphere"
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 166.95,
-        "Y": -45,
-        "Z": 0.12
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2004388"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 210.15,
-        "Y": -45.09,
-        "Z": -0.62
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 201.71999,
+        "Y": -46.228897,
+        "Z": -0.6688864
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 223.42851,
+        "Y": -38.94356,
+        "Z": -0.43220353
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
     },
     {
-      "tag": "None",
-      "name": "AutoMoveFor",
-      "position": {
-        "X": 218.67,
-        "Y": -41.58,
-        "Z": -0.56
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "3000"
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 258.19,
-        "Y": -3.78,
-        "Z": 0.43
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": 238.07,
-        "Y": -4,
+        "Y": -4.0,
         "Z": 0.34
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Sabotender Emperatriz"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 223.26,
-        "Y": -4,
-        "Z": 2.39
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 190.43509,
+        "Y": -4.000017,
+        "Z": -69.776215
+      },
+      "Arguments": [
+        "10"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 223.19,
-        "Y": -4,
-        "Z": -2.6
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 190.17,
-        "Y": -4,
-        "Z": -73.62
-      },
-      "arguments": [
-        "3000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2004390"
       ],
-      "note": "Star Sphere"
+      "Conditions": [],
+      "Note": "Star Sphere"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 167.43,
-        "Y": -4,
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 174.93903,
+        "Y": -4.00001,
+        "Z": -73.26707
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Avoids getting stuck in the doorway."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 161.12961,
+        "Y": -4.0,
         "Z": -73.7
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
     },
     {
-      "tag": "None",
-      "name": "AutoMoveFor",
-      "position": {
-        "X": 164.67,
-        "Y": -4,
-        "Z": -73.72
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "3001"
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": -37.31,
-        "Y": -19,
-        "Z": -57.37
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -32.04849,
+        "Y": -19.000004,
+        "Z": -54.55062
       },
-      "arguments": [
-        "2000"
+      "Arguments": [
+        "20"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 6.38,
-        "Y": -19,
-        "Z": -30.8
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 7.55249,
+        "Y": -19.000004,
+        "Z": -34.480103
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 10.187944,
+        "Y": -19.000015,
+        "Z": -27.862041
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Avoids getting stuck in the doorway."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 79.17,
-        "Y": -18,
-        "Z": -36.32
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 77.12765,
+        "Y": -17.999943,
+        "Z": -33.481174
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "2004398"
       ],
-      "note": "Magicked Pedestal"
+      "Conditions": [],
+      "Note": "Magicked Pedestal"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 79.23,
-        "Y": -18,
-        "Z": 36.28
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.01334,
+        "Y": -18.000006,
+        "Z": 19.143215
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Avoids getting stuck in the doorway."
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 77.075165,
+        "Y": -17.999943,
+        "Z": 32.615086
       },
-      "arguments": [
+      "Arguments": [
         "2004400"
       ],
-      "note": "Magicked Pedestal"
+      "Conditions": [],
+      "Note": "Magicked Pedestal"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 53.29,
-        "Y": -18,
-        "Z": 0.02
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.01334,
+        "Y": -18.000006,
+        "Z": 19.143215
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Avoids getting stuck in the doorway."
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 51.50313,
+        "Y": -18.243769,
+        "Z": 0.68690777
       },
-      "arguments": [
+      "Arguments": [
         "2004396"
       ],
-      "note": "Magicked Pedestal"
+      "Conditions": [],
+      "Note": "Magicked Pedestal"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 74.95,
-        "Y": -11,
-        "Z": -0.04
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 116.670265,
+        "Y": -3.998425,
+        "Z": 0.0
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
-        "1500"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 95.01,
-        "Y": -4,
-        "Z": -17.05
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 118.55,
-        "Y": -4,
-        "Z": 2.71
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 124.4,
-        "Y": -4,
-        "Z": -0.22
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Vicegerent to the Warden"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 106,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 179,
-        "change": "Updated ItemIds"
+        "Version": 179,
+        "Change": "Updated ItemIds"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Added WaitFor:IsReady after transitions. Added Condition to not leave the 1st boss fight early. Removed AutoMoveFor steps. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

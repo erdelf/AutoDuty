@@ -1,355 +1,544 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 125.51,
-        "Y": -14.05,
-        "Z": 245.51
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 130.47493,
+        "Y": -18.0,
+        "Z": 437.26266
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid slightly janky pathing."
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 134.96367,
+        "Y": -17.935743,
+        "Z": 379.12088
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 173.95222,
+        "Y": -17.999998,
+        "Z": 386.11414
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 184.83685,
+        "Y": -18.0,
+        "Z": 345.63425
+      },
+      "Arguments": [
+        "25"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 128.27753,
+        "Y": -14.000002,
+        "Z": 248.99156
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 124.92504,
+        "Y": -12.0,
+        "Z": 103.000984
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Frumious Koheel Ja"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 124.93,
-        "Y": -12,
-        "Z": 102.9
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 78.87937,
+        "Y": -10.164261,
+        "Z": 28.093897
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 46.082302,
+        "Y": -0.16426003,
+        "Z": -17.374756
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -21.399336,
+        "Y": -0.3000009,
+        "Z": -38.64673
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -25.46638,
+        "Y": -0.16426003,
+        "Z": -145.25893
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 43.180584,
+        "Y": 0.0,
+        "Z": -143.63083
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 27.930973,
+        "Y": 0.0,
+        "Z": -156.06789
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 42.99518,
+        "Y": 0.0,
+        "Z": -235.33804
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Slithy Zolool Ja"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 125.11,
-        "Y": -12.05,
-        "Z": 92.02
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 77.39,
-        "Y": -10.16,
-        "Z": 28.32
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 76.05722,
+        "Y": -12.0,
+        "Z": -315.22153
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "15"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "StopForCombat",
-      "position": {
-        "X": 79.26,
-        "Y": -10.16,
-        "Z": 27.07
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "true"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 43.84,
-        "Y": -0.16,
-        "Z": -16.95
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -24.84,
-        "Y": -0.3,
-        "Z": -38.27
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -26.67,
-        "Y": -0.16,
-        "Z": -144.68
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 43.41,
-        "Y": -0.01,
-        "Z": -237.47
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 37.87,
-        "Y": 0,
-        "Z": -248.99
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 76.67,
-        "Y": -12,
-        "Z": -317.85
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 76.63,
-        "Y": -12,
-        "Z": -317.66
-      },
-      "arguments": [
+      "Arguments": [
         "2004549"
       ],
-      "note": "Asylum Key"
+      "Conditions": [],
+      "Note": "Asylum Key"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 70.92,
-        "Y": -12,
-        "Z": -312.26
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 73.89,
-        "Y": -12,
-        "Z": -316.15
-      },
-      "arguments": [
+      "Arguments": [
         "2004556"
       ],
-      "note": "Asylum Cell"
+      "Conditions": [],
+      "Note": "Asylum Cell"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 71.16,
-        "Y": -12,
-        "Z": -324.09
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 93.70403,
+        "Y": -11.996978,
+        "Z": -336.42322
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 73.89,
-        "Y": -12,
-        "Z": -316.15
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
         "2004557"
       ],
-      "note": "Asylum Cell"
+      "Conditions": [],
+      "Note": "Asylum Cell"
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Note: The wall's EventState doesn't change. Potentially revisit this in the future if a Condition is found to replace the static Wait. -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
         "X": 93.03,
         "Y": -11.88,
         "Z": -311.96
       },
-      "arguments": [
-        "6000"
+      "Arguments": [
+        "5500"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 123.89,
-        "Y": -11.98,
-        "Z": -340.46
-      },
-      "arguments": [
-        ""
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 123.76,
-        "Y": -12,
+        "Y": -12.0,
         "Z": -340.31
       },
-      "arguments": [
+      "Arguments": [
         "2004562"
       ],
-      "note": "Drainage Valve"
+      "Conditions": [],
+      "Note": "Drainage Valve"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 156.95,
-        "Y": -7.88,
-        "Z": -351.16
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 192.98555,
+        "Y": -11.994777,
+        "Z": -325.95126
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 157.14,
-        "Y": -8,
+        "Y": -8.0,
         "Z": -351.02
       },
-      "arguments": [
+      "Arguments": [
         "2004565"
       ],
-      "note": "Nymian Device"
+      "Conditions": [],
+      "Note": "Nymian Device"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 72.07,
-        "Y": 9.98,
-        "Z": -395.48
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 73.777,
+        "Y": 10.390437,
+        "Z": -379.68466
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "TRUE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
         "X": 90.68,
-        "Y": 6,
+        "Y": 6.0,
         "Z": -407.25
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 73.46,
-        "Y": 6,
-        "Z": -442.36
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 72.86,
-        "Y": 6,
-        "Z": -461.79
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 73.86033,
+        "Y": 6.0,
+        "Z": -445.25558
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Manxome Molaa Ja Ja"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 106,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 182,
-        "change": "Updated interaction ids and added WaitForCombat step"
+        "Version": 182,
+        "Change": "Updated interaction ids and added WaitForCombat step"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Added Treasure steps. Added KillInRange steps. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

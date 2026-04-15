@@ -1,251 +1,398 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 225.21,
-        "Y": 40.06,
-        "Z": -166.83
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 188.06,
-        "Y": 31.07,
-        "Z": -25.83
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 180.92,
-        "Y": 32.95,
-        "Z": -25
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 184.13,
-        "Y": 32.16,
-        "Z": -25.09
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 263.87634,
+        "Y": 46.217773,
+        "Z": -197.83858
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 188.17432,
+        "Y": 31.050657,
+        "Z": -26.460064
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 181.45453,
+        "Y": 32.951565,
+        "Z": -25.2099
+      },
+      "Arguments": [
         "2004406"
       ],
-      "note": "Drainage Pump"
+      "Conditions": [],
+      "Note": "Drainage Pump"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 162.94,
-        "Y": 13.92,
-        "Z": -78.76
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 163.78206,
+        "Y": 13.932294,
+        "Z": -79.27993
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Karlabos"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 111.13,
-        "Y": 13.62,
-        "Z": -59.18
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 117.341995,
+        "Y": 13.976811,
+        "Z": -64.55117
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 75.22,
-        "Y": 14.19,
-        "Z": -81.11
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 96.16993,
+        "Y": 13.965421,
+        "Z": -70.081
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Helps avoid janky pathing."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -23.79,
-        "Y": 12.19,
-        "Z": -26.42
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 92.33333,
+        "Y": 14.027532,
+        "Z": -70.88373
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "10"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -90.44,
-        "Y": 7.38,
-        "Z": 10.05
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -35.861015,
+        "Y": 12.144197,
+        "Z": -20.83487
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "15"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -96.55,
-        "Y": 15.45,
-        "Z": 88.79
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -86.17543,
+        "Y": 7.3445835,
+        "Z": 11.743915
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "15"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -97.63,
-        "Y": 15.5,
-        "Z": 89.16
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -96.44141,
+        "Y": 14.254637,
+        "Z": 85.968254
+      },
+      "Arguments": [
         "2004424"
       ],
-      "note": "Door to Dead Man\u0027s Drink"
+      "Conditions": [],
+      "Note": "Door to Dead Man's Drink"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -102.73,
-        "Y": 15.6,
-        "Z": 122.99
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -103.19332,
+        "Y": 15.631216,
+        "Z": 139.10887
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Captain Madison"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -107.01,
-        "Y": 15.63,
-        "Z": 137.6
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -162.72,
-        "Y": 7.79,
-        "Z": 183.02
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -182.02,
-        "Y": 6.44,
-        "Z": 248.98
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -184.46541,
+        "Y": 6.489211,
+        "Z": 245.91776
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "10"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -289.47,
-        "Y": 5.58,
-        "Z": 267.48
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -182.90012,
+        "Y": 7.321932,
+        "Z": 253.06952
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -299.5597,
+        "Y": 5.576687,
+        "Z": 273.7889
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": -299.5597,
+        "Y": 5.576687,
+        "Z": 273.7889
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": -328.37,
         "Y": 4.81,
         "Z": 313.09
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Kraken"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 106,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 182,
-        "change": "Updated Interaction ids"
+        "Version": 182,
+        "Change": "Updated Interaction ids"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

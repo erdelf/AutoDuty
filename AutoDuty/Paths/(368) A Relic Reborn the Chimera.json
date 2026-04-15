@@ -1,27 +1,32 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 535.81,
-        "Y": 348.65,
-        "Z": -739.21
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 543.5,
+        "Y": 348.4,
+        "Z": -745.0
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Dhorme Chimera"
     }
   ],
-  "meta": {
-    "createdAt": 170,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 170,
+    "Changelog": [
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Boss name. Adjusted Coordinates to be within the boss' aggro radius."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

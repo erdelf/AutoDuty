@@ -314,7 +314,7 @@
       },
       {
         "Version": 299,
-        "Change": ""
+        "Change": "Added Trash/Boss Comments & Boss names. Added Treasure steps. Added WaitFor:IsReady during transitions. Removed AutoMoreFor steps. Removed excess MoveTo steps."
       }
     ],
     "Notes": []

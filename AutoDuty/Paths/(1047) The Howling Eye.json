@@ -1,39 +1,44 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 0.3,
-        "Y": -1.86,
-        "Z": -6.43
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 1.0,
+        "Y": -1.8766085,
+        "Z": -10.0
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Garuda"
     }
   ],
-  "meta": {
-    "createdAt": 127,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 127,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Boss name."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

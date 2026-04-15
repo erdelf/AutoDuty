@@ -1,524 +1,729 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 42.008,
-        "Y": 10.25,
-        "Z": -0.49030906
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 41.230347,
-        "Y": 17,
-        "Z": -20.537533
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 40.591167,
+        "Y": 17.0,
+        "Z": -66.8464
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 41.879612,
-        "Y": 17,
-        "Z": -71.81737
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 16.526417,
+        "Y": 17.298271,
+        "Z": -57.431343
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 16.764359,
-        "Y": 16.999998,
-        "Z": -77.94284
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 16.162899,
-        "Y": 17,
-        "Z": -55.84244
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 16.16,
-        "Y": 17,
-        "Z": -55.79
-      },
-      "arguments": [
+      "Arguments": [
         "2003312"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 16.66,
-        "Y": 17,
-        "Z": -83.89
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 16.839502,
+        "Y": 17.0,
+        "Z": -82.103264
       },
-      "arguments": [
+      "Arguments": [
         "2003315"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 16.711708,
-        "Y": 17,
-        "Z": -95.74159
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 16.232418,
+        "Y": 16.999998,
+        "Z": -98.21982
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 16.73,
-        "Y": 17,
-        "Z": -99.11
-      },
-      "arguments": [
+      "Arguments": [
         "2003314"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0.68,
-        "Y": 17,
-        "Z": -96.53
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 2.9550574,
+        "Y": 17.0,
+        "Z": -96.88787
       },
-      "arguments": [
+      "Arguments": [
         "2003316"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -17.231945,
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -15.865035,
         "Y": 16.999998,
-        "Z": -96.75239
+        "Z": -96.59879
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -17.23,
-        "Y": 17,
-        "Z": -96.75
-      },
-      "arguments": [
+      "Arguments": [
         "2003430"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -16.24,
-        "Y": 17,
-        "Z": -85.15
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -16.236698,
+        "Y": 17.0,
+        "Z": -87.57579
       },
-      "arguments": [
+      "Arguments": [
         "2003317"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -16.977074,
-        "Y": 17,
-        "Z": -76.92111
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -39.43456,
-        "Y": 17,
-        "Z": -76.970665
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -41.74093,
+        "Y": 17.0,
+        "Z": 15.835686
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -41.25918,
-        "Y": 16.999998,
-        "Z": -48.089794
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -29.221996,
+        "Y": 17.0,
+        "Z": -0.109320626
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -41.82301,
-        "Y": 17,
-        "Z": -19.653454
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -41.70165,
-        "Y": 17,
-        "Z": 15.358435
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 5.937689,
+        "Y": 17.0,
+        "Z": 0.19052373
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -23.532467,
-        "Y": 17,
-        "Z": -0.056501746
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -0.57,
-        "Y": 17,
-        "Z": -0.3
-      },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Manor Jester"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 12.497504,
-        "Y": 17,
-        "Z": 0.43798807
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 29.64,
-        "Y": 17,
-        "Z": 0.24
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 26.6466,
+        "Y": 17.0,
+        "Z": 0.265266
       },
-      "arguments": [
+      "Arguments": [
         "2002916"
       ],
-      "note": "Crystal Ball"
+      "Conditions": [],
+      "Note": "Crystal Ball"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 39.154236,
-        "Y": 0,
-        "Z": -75.8486
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 40.92853,
-        "Y": 0,
-        "Z": -63.09047
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 36.28,
-        "Y": 0,
-        "Z": -74.88
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": "<-- Checks periodically for the Key. -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 36.67704,
+        "Y": 0.0,
+        "Z": -72.05485
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2003313"
       ],
-      "note": "Tiny Key"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2003313,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 41.367123,
-        "Y": 0,
-        "Z": -20.994411
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 41.34946,
+        "Y": 0.0,
+        "Z": -56.485535
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 48.22013,
-        "Y": 0,
-        "Z": -35.39576
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "2003313"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2003313,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 48.22,
-        "Y": 0,
-        "Z": -35.4
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 42.426086,
+        "Y": 0.0,
+        "Z": -36.053944
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2003313"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2003313,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Tiny Key"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 42.426086,
+        "Y": 0.0,
+        "Z": -36.053944
+      },
+      "Arguments": [
+        "+3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001189,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Skips ahead if you already have the Key."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 41.683388,
+        "Y": 0.0,
+        "Z": -22.622936
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Moves to the far end of the hallway."
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2003313"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2003313,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Tiny Key"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-9"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2001189,
+          "quantity": 1,
+          "operatorValue": "<"
+        }
+      ],
+      "Note": "Goes back if you do not have the Key."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2003320"
       ],
-      "note": "Locked Door"
+      "Conditions": [],
+      "Note": "Locked Door"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 69.643745,
-        "Y": 0,
-        "Z": -48.41338
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Prevents starting to run away after opening the door."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 42.19138,
-        "Y": 0,
-        "Z": -33.913033
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 70.11433,
+        "Y": 0.0,
+        "Z": -48.9113
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 29.817268,
-        "Y": 0,
-        "Z": -1.3322512
+      "Tag": "None",
+      "Name": "Target",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "247"
+      ],
+      "Conditions": [],
+      "Note": "Untargets the Manor Sentry to avoid potential jank during the next step."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 22.092804,
-        "Y": 0,
-        "Z": 0.08364535
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 28.03183,
+        "Y": 0.0,
+        "Z": -2.8250136
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "250"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 1.37,
-        "Y": 0,
-        "Z": -0.32
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "-1"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2370,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Waits for the Manor Sentry to unlock the door before moving on."
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -9.094768,
+        "Y": 0.0,
+        "Z": -0.03962124
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Ash"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -43.587284,
-        "Y": 0,
-        "Z": 13.980467
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -43.59,
-        "Y": 0,
-        "Z": 13.98
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": -41.50105,
+        "Y": 0.0,
+        "Z": 11.415955
       },
-      "arguments": [
+      "Arguments": [
         "2002941"
       ],
-      "note": "Crystal Ball"
+      "Conditions": [],
+      "Note": "Crystal Ball"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 25.850798,
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 33.075687,
         "Y": -18.799997,
-        "Z": 29.44701
+        "Z": -26.411097
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 43.463158,
-        "Y": -18.816898,
-        "Z": 22.04017
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 44.61071,
-        "Y": -18.8,
-        "Z": 2.8899183
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 42.428925,
-        "Y": -18.8,
-        "Z": -27.350576
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -28.554186,
-        "Y": -18.79999,
-        "Z": -28.024107
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -32.171726,
-        "Y": -18.799988,
-        "Z": 1.3669995
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -21.249823,
-        "Y": -18.800003,
-        "Z": 0.3779285
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 2.29,
-        "Y": -18.78,
-        "Z": 0.26
-      },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 13.474837,
-        "Y": -18.678322,
-        "Z": -0.13540451
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -16.91039,
+        "Y": -18.79999,
+        "Z": -27.806791
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -21.462912,
+        "Y": -18.8,
+        "Z": 47.881813
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -43.091175,
+        "Y": -18.799992,
+        "Z": 47.29558
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -27.591085,
+        "Y": -18.79999,
+        "Z": -26.016666
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -26.45627,
+        "Y": -18.79999,
+        "Z": -0.982552
+      },
+      "Arguments": [
+        "38"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 9.421596,
+        "Y": -18.800003,
+        "Z": 0.034774996
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Halicarnassus"
     }
   ],
-  "meta": {
-    "createdAt": 188,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 188,
+    "Changelog": [
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added KillInRange steps. Added WaitFor:IsReady during transitions. Added a set of checks/conditions for the Key after the first boss. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

@@ -55,70 +55,16 @@
       "Note": ""
     },
     {
-      "Tag": "Synced",
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 128.21317,
-        "Y": -2.7288835,
-        "Z": 27.183329
-      },
-      "Arguments": [
-        "FALSE"
-      ],
-      "Conditions": [],
-      "Note": "Has a chance to skip the enemies in the middle of the room."
-    },
-    {
-      "Tag": "Synced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 124.595665,
-        "Y": -3.7119107,
-        "Z": 66.68335
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Synced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 92.88048,
-        "Y": -3.5624468,
-        "Z": 82.622375
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Synced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 78.25955,
-        "Y": 1.8193996,
-        "Z": 87.974434
+        "X": 22.592537,
+        "Y": 1.5844924,
+        "Z": 98.82864
       },
       "Arguments": [
         "TRUE"
       ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 19.768585,
-        "Y": 0.9252167,
-        "Z": 100.14889
-      },
-      "Arguments": [],
       "Conditions": [],
       "Note": ""
     },
@@ -403,6 +349,20 @@
       "Note": "Chance to spawn after using a Winch."
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -177.57599,
+        "Y": -12.407101,
+        "Z": -106.77886
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -604,15 +564,19 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 285,
+    "CreatedAt": 175,
     "Changelog": [
       {
-        "Version": 297,
-        "Change": ""
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
       },
       {
-        "Version": 298,
-        "Change": ""
+        "Version": 290,
+        "Change": "Removed trying to avoid patrol"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing Treasure Chests. Added appropriate Revival steps. Removed excess MoveTo steps."
       }
     ],
     "Notes": []

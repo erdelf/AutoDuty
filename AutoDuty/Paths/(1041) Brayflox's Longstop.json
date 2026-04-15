@@ -271,7 +271,7 @@
       "Note": ""
     },
     {
-      "Tag": "None",
+      "Tag": "Synced",
       "Name": "StopForCombat",
       "Position": {
         "X": 42.787643,
@@ -282,7 +282,7 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Carried over from previous iteration. Unsure of efficacy."
     },
     {
       "Tag": "Treasure",
@@ -325,6 +325,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 9.604291,
+        "Y": 6.1299295,
+        "Z": -68.84272
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Comment",
       "Name": "<-- Comment -->",
       "Position": {
@@ -351,15 +365,41 @@
       "Note": "Inferno Drake"
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -17.354776,
+        "Y": 1.9247377,
+        "Z": -53.81048
+      },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -103.7997,
+        "Y": -1.7477114,
+        "Z": -7.9069514
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -391,18 +431,16 @@
       "Note": "Hellbender"
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "FALSE"
-      ],
+      "Arguments": [],
       "Conditions": [],
-      "Note": ""
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
       "Tag": "None",
@@ -417,6 +455,34 @@
       ],
       "Conditions": [],
       "Note": "Longstop Gutgate"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -49.366234,
+        "Y": 35.322758,
+        "Z": -233.58548
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "Comment",
@@ -446,8 +512,37 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 299,
-    "Changelog": [],
+    "CreatedAt": 130,
+    "Changelog": [
+      {
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
+      },
+      {
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
+      },
+      {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 289,
+        "Change": "Added chests"
+      },
+      {
+        "Version": 291,
+        "Change": "fixed chest before b2"
+      },
+	  {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing TreasureCoffer steps before the 2nd boss."
+      }
+    ],
     "Notes": []
   }
 }

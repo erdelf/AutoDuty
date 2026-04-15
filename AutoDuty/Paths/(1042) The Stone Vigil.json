@@ -1,6 +1,18 @@
 {
   "Actions": [
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
       "Tag": "Unsynced",
       "Name": "WaitFor",
       "Position": {
@@ -24,6 +36,20 @@
       },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 4.0590477,
+        "Z": 138.4567
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -109,14 +135,16 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "MoveTo",
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 28.02376,
-        "Y": 3.950031,
-        "Z": -78.59163
+        "X": 24.688843,
+        "Y": 4.0000305,
+        "Z": -78.722206
       },
-      "Arguments": [],
+      "Arguments": [
+        "TRUE"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -167,7 +195,7 @@
         "Z": 0.0
       },
       "Arguments": [
-        "-4"
+        "-2"
       ],
       "Conditions": [
         {
@@ -203,6 +231,20 @@
       },
       "Arguments": [
         ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 2.1930215,
+        "Y": -0.05000162,
+        "Z": -201.18227
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -249,8 +291,37 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 299,
-    "Changelog": [],
-    "Notes": []
+    "CreatedAt": 106,
+    "Changelog": [
+      {
+        "Version": 131,
+        "Change": ""
+      },
+      {
+        "Version": 131,
+        "Change": "added TreasureCoffers"
+      },
+      {
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
+      },
+      {
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
+      },
+      {
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
+      },
+      {
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+	  {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps."
+      }
+    ],
+    "notes": []
   }
 }

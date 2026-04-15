@@ -1,664 +1,650 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 237.01012,
-        "Y": 98,
-        "Z": -26.740469
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 235.41133,
-        "Y": 82.03819,
-        "Z": -67.78369
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 248.78723,
-        "Y": 82.34745,
-        "Z": -69.09175
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 248.20143,
-        "Y": 82.2875,
-        "Z": -87.39726
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 216.11916,
-        "Y": 82.2875,
-        "Z": -88.64176
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 212.08826,
-        "Y": 82,
-        "Z": -73.60893
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 207.03831,
-        "Y": 74,
-        "Z": -39.440514
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 206.92328,
-        "Y": 74,
-        "Z": -22.216913
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 145.99527,
-        "Y": 66.32349,
-        "Z": -31.117682
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 142.6259,
-        "Y": 58.227356,
-        "Z": 3.7474692
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 157.58195,
-        "Y": 58.1875,
-        "Z": 16.945791
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 158.84396,
-        "Y": 58.2375,
-        "Z": 35.507984
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 136.79953,
-        "Y": 58,
-        "Z": 35.837
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 129.91917,
-        "Y": 58,
-        "Z": 24.34255
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 125.35786,
-        "Y": 58.258553,
-        "Z": 24.063427
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 125.36,
-        "Y": 58.26,
-        "Z": 24.06
-      },
-      "arguments": [
-        "2003800"
+      "Arguments": [
+        "1000"
       ],
-      "note": "Treasure Coffer"
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 125.08659,
-        "Y": 58.25937,
-        "Z": 18.910107
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 111.63824,
-        "Y": 54.04114,
-        "Z": 21.786842
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 98.5792,
-        "Y": 47.364586,
-        "Z": 10.29293
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 206.99141,
+        "Y": 74.0,
+        "Z": -22.553558
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 98.210106,
-        "Y": 42.2212,
-        "Z": -3.469608
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 146.045,
+        "Y": 66.324615,
+        "Z": -31.185524
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 98.37,
-        "Y": 42.11,
-        "Z": -27.07
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 130.70549,
+        "Y": 57.999992,
+        "Z": 23.36824
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 125.02139,
+        "Y": 58.259335,
+        "Z": 18.745754
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 97.89584,
+        "Y": 42.114998,
+        "Z": -36.48481
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Decaying Gourmand"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 87.128296,
-        "Y": 42.299995,
-        "Z": -48.947514
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 84.58855,
-        "Y": 42.749935,
-        "Z": -66.09443
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 72.45678,
-        "Y": 44.000008,
-        "Z": -72.705864
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 68.05384,
-        "Y": 44.000015,
-        "Z": -86.35366
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 50.81243,
-        "Y": 39.441242,
-        "Z": -104.38949
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 31.999144,
-        "Y": 37.36457,
-        "Z": -90.63179
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 5.7783813,
-        "Y": 33.999996,
-        "Z": -91.598946
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 9.438063,
-        "Y": 33.698273,
-        "Z": -70.99692
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 12.872141,
-        "Y": 27.28003,
-        "Z": -29.939987
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -5.4718876,
-        "Y": 23.621634,
-        "Z": -24.552723
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -26.540026,
-        "Y": 20.83596,
-        "Z": -21.874739
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -33.002144,
-        "Y": 19.755068,
-        "Z": -4.5983615
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -32.900196,
-        "Y": 19.22944,
-        "Z": -1.772759
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -38.688763,
-        "Y": 18.723082,
-        "Z": -1.8275266
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -38.69,
-        "Y": 18.72,
-        "Z": -1.83
-      },
-      "arguments": [
-        "2003801"
+      "Arguments": [
+        "FALSE"
       ],
-      "note": "Treasure Coffer"
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -38.40611,
-        "Y": 10.8028345,
-        "Z": 27.136318
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 4.315135,
+        "Y": 34.06603,
+        "Z": -92.968414
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "7"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 9.240361,
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -35.311172,
+        "Y": 20.026505,
+        "Z": -11.580646
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -32.739456,
+        "Y": 19.2435,
+        "Z": -1.8628308
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 7.086731,
         "Y": 5.1045923,
-        "Z": 21.24474
+        "Z": 19.660124
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 26.092741,
-        "Y": 6.9990654,
-        "Z": 56.485836
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 14.138445,
-        "Y": 11.199818,
-        "Z": 70.531006
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 1.230874,
-        "Y": 12.099995,
-        "Z": 70.054474
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -19.525158,
-        "Y": 11.991597,
-        "Z": 70.975914
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -19.53,
-        "Y": 11.99,
-        "Z": 70.98
-      },
-      "arguments": [
-        ""
+      "Arguments": [
+        "7"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -38.14722,
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Attempts to make sure the initial Ramoura is facing you, to start the fight smoothly. -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Target",
+      "Position": {
+        "X": 14.661676,
+        "Y": 11.145814,
+        "Z": 68.222595
+      },
+      "Arguments": [
+        "2702"
+      ],
+      "Conditions": [],
+      "Note": "Ranch Wamoura"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "OFF"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -7.069338,
+        "Y": 12.1167,
+        "Z": 69.89002
+      },
+      "Arguments": [
+        "/ac Addle"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Casters"
+        }
+      ],
+      "Note": "Uses Addle on the Wamoura to aggro it."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -7.0406737,
+        "Y": 12.1167,
+        "Z": 69.889915
+      },
+      "Arguments": [
+        "/ac \"Foot Graze\""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Aiming"
+        }
+      ],
+      "Note": "Uses Foot Graze on the Wamoura to aggro it."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -7.069338,
+        "Y": 12.1167,
+        "Z": 69.89002
+      },
+      "Arguments": [
+        "/ac Provoke"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Uses Provoke on the Wamoura to aggro it."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": -7.069338,
+        "Y": 12.1167,
+        "Z": 69.89002
+      },
+      "Arguments": [
+        "/ac Repose"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers"
+        }
+      ],
+      "Note": "Uses Repose on the Wamoura to aggro it."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -15.222314,
         "Y": 11.999999,
-        "Z": 72.04487
+        "Z": 70.05471
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -69.75092,
-        "Y": 9.987983,
-        "Z": 69.86102
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "AutoMoveFor",
-      "position": {
-        "X": -69.75,
-        "Y": 9.99,
-        "Z": 69.86
-      },
-      "arguments": [
-        "3000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -32.703934,
-        "Y": -240.64998,
-        "Z": -59.979336
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 1.1143591,
-        "Y": -252.60008,
-        "Z": -65.1371
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 15.394769,
-        "Y": -252.50302,
-        "Z": -61.685764
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 33.66459,
-        "Y": -252.71036,
-        "Z": -56.86222
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 71.949745,
-        "Y": -260.9826,
-        "Z": -18.973228
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 65.954254,
-        "Y": -261.10004,
-        "Z": 0.9775772
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 55.92911,
-        "Y": -272.36417,
-        "Z": 34.23213
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 43.589638,
-        "Y": -272.2235,
-        "Z": 47.18543
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 30.317547,
-        "Y": -272.29648,
-        "Z": 48.257843
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 9.9746065,
-        "Y": -279.99,
-        "Z": 20.42172
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 2.63,
-        "Y": -279.99,
-        "Z": 4.25
-      },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Melee"
+        }
+      ],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -5.492093,
-        "Y": -279.99,
-        "Z": -12.951529
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -11.320017,
+        "Y": 12.116695,
+        "Z": 70.04595
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Player",
+          "originId": 0,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Object",
+          "targetId": 2702,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 5.0
+        },
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Melee"
+        }
+      ],
+      "Note": "Moves back a bit if the Wamoura is close to you as a Melee."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "ChatCommand",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "/ac Feint"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Melee"
+        }
+      ],
+      "Note": "Uses Feint on the Wamoura to aggro it."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks, DPS"
+        }
+      ],
+      "Note": "Waits for the Ramoura to face you."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers"
+        }
+      ],
+      "Note": "Waits for the cast to finish and for the Ramoura to face you."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Rotation",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "4000"
+      ],
+      "Conditions": [],
+      "Note": "Waits for the Ramoura to die."
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -20.0,
+        "Y": 11.869776,
+        "Z": 70.0
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Arioch"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -73.26651,
+        "Y": 10.090473,
+        "Z": 70.12509
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 11.013068,
+        "Y": -252.60004,
+        "Z": -63.000694
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 71.868034,
+        "Y": -260.9826,
+        "Z": -19.242327
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 47.301476,
+        "Y": -272.19998,
+        "Z": 42.99953
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -2.8119974,
+        "Y": -279.99,
+        "Z": -6.9079356
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Diabolos"
     }
   ],
-  "meta": {
-    "createdAt": 188,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 188,
+    "Changelog": [
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added WaitFor:IsReady during the transition. Added KillInRange. Added a set of steps to properly engage the b2 boss. Removed AutoMoveFor. Removed excess MoveTo steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

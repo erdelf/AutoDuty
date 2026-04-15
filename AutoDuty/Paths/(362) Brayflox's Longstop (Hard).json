@@ -1,292 +1,793 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -3.68,
-        "Y": -2.38,
-        "Z": -5.96
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "2002325"
-      ],
-      "note": "Tiny Key"
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -74.31452,
+        "Y": -2.3816218,
+        "Z": 15.643902
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -39.61969,
+        "Y": -2.381622,
+        "Z": 49.460503
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -6.6398506,
+        "Y": -1.9953375,
+        "Z": -3.5507069
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "2002325"
+      ],
+      "Conditions": [],
+      "Note": "Tiny Key"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
         "X": 64.57,
         "Y": 3.41,
         "Z": -9.9
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 97.097305,
+        "Y": 0.29224586,
+        "Z": 14.5264225
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 104.01,
         "Y": -0.08,
         "Z": 12.5
       },
-      "arguments": [
+      "Arguments": [
         "2002182"
       ],
-      "note": "Runstop Headgate"
+      "Conditions": [],
+      "Note": "Runstop Headgate"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": 111.8,
         "Y": -2.55,
         "Z": -36.46
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Illuminati Commander"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 89.52,
-        "Y": 4.72,
-        "Z": -100.15
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 87.201454,
+        "Y": 4.7498045,
+        "Z": -102.424324
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 87.201454,
+        "Y": 4.7498045,
+        "Z": -102.424324
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 66.66775,
+        "Y": 3.7253087,
+        "Z": -57.231525
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 36.46703,
+        "Y": 6.2624807,
+        "Z": -90.03085
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Climbs the stairs for the Chest at the top. -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 45.021038,
+        "Y": 5.897621,
+        "Z": -89.041954
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "WaitFor",
-      "position": {
-        "X": 83.04,
-        "Y": 4.73,
-        "Z": -102.25
+      "Tag": "Treasure",
+      "Name": "Jump",
+      "Position": {
+        "X": 55.728527,
+        "Y": 5.88799,
+        "Z": -87.84473
       },
-      "arguments": [
-        "Combat"
+      "Arguments": [
+        "500"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 39.34,
-        "Y": 5.9,
-        "Z": -92.07
+      "Tag": "Treasure",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "800"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 34.5,
-        "Y": 7.05,
-        "Z": -125.09
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 61.33684,
+        "Y": 7.609131,
+        "Z": -85.428955
       },
-      "arguments": [
-        ""
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 65.06434,
+        "Y": 9.212453,
+        "Z": -82.98944
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.73384,
+        "Y": 10.835994,
+        "Z": -85.59015
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 68.15565,
+        "Y": 12.349798,
+        "Z": -89.78165
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 64.39469,
+        "Y": 13.755702,
+        "Z": -91.2419
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 61.198536,
+        "Y": 15.353199,
+        "Z": -88.083275
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 62.736233,
+        "Y": 16.95222,
+        "Z": -84.022575
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 66.25553,
+        "Y": 18.00405,
+        "Z": -83.487854
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 65.12098,
+        "Y": 18.324112,
+        "Z": -87.11021
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 65.092064,
+        "Y": 18.324118,
+        "Z": -86.89558
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 66.30037,
+        "Y": 18.00405,
+        "Z": -83.76544
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 62.97595,
+        "Y": 17.090572,
+        "Z": -83.72665
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 54.678413,
+        "Y": 5.7924614,
+        "Z": -88.8358
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 29.479128,
+        "Y": 7.0196753,
+        "Z": -121.38472
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
         "X": 46.92,
         "Y": 7.14,
         "Z": -127.1
       },
-      "arguments": [
-        "15000"
+      "Arguments": [
+        "250"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 45.85255,
-        "Y": 7.0103893,
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-1"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2781,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Waits for Brayflox to open the tunnel before moving on."
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 45.853,
+        "Y": 7.01,
         "Z": -129.5
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
         "X": 44.4,
         "Y": 7.01,
-        "Z": -133
+        "Z": -133.0
       },
-      "arguments": [
-        "false"
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Walks into the transition barrier."
     },
     {
-      "tag": "None",
-      "name": "Wait",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "1000"
-      ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "WaitFor",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
+      "Arguments": [
         "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -13.9,
-        "Y": 25.41,
-        "Z": -171.53
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -15.889156,
+        "Y": 25.4114,
+        "Z": -171.78058
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Magitek Vangob G-III"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": -41.32,
-        "Y": 18.65,
-        "Z": -119.77
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -42.316456,
+        "Y": 18.490324,
+        "Z": -119.09707
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -88.1,
-        "Y": 13.67,
-        "Z": -125.75
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -85.27636,
+        "Y": 14.214475,
+        "Z": -127.07781
       },
-      "arguments": [
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2002642"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": -95.86,
         "Y": 13.02,
         "Z": -123.64
       },
-      "arguments": [
+      "Arguments": [
         "2002184"
       ],
-      "note": "Swiftmake Checkgate"
+      "Conditions": [],
+      "Note": "Swiftmake Checkgate"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": -101.39,
-        "Y": 20.74,
-        "Z": -178.08
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -105.69382,
+        "Y": 18.280949,
+        "Z": -149.20427
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -100.96949,
+        "Y": 20.736542,
+        "Z": -181.08087
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "2002644"
       ],
-      "note": "Tiny Key"
+      "Conditions": [],
+      "Note": "Tiny Key"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": -101.31,
         "Y": 21.31,
         "Z": -188.72
       },
-      "arguments": [
+      "Arguments": [
         "2002884"
       ],
-      "note": "Swiftmake Checkgate"
+      "Conditions": [],
+      "Note": "Swiftmake Checkgate"
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -27.24,
-        "Y": 35.5,
-        "Z": -236.09
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -29.372797,
+        "Y": 35.21062,
+        "Z": -229.51747
+      },
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Gobmachine G-VI"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 106,
+    "Changelog": [
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
+        "Version": 161,
+        "Change": "Converted to new JSON Structure"
       },
       {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
+        "Version": 163,
+        "Change": "Converted to newer JSON Structure"
       },
       {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
+        "Version": 164,
+        "Change": "Converted to JSON Structure with Tags"
       },
       {
-        "version": 171,
-        "change": "Replaced interactable names with DataID\u0027s, Added extra waitfor for gobbies to spawn"
+        "Version": 171,
+        "Change": "Replaced interactable names with DataID's, Added extra waitfor for gobbies to spawn"
       },
       {
-        "version": 182,
-        "change": "Adjusted pre 2nd boss area transition"
+        "Version": 182,
+        "Change": "Adjusted pre 2nd boss area transition"
       },
       {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
+      },
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Added steps for the missing Treasure Chests. Added KillInRange steps. Adjusted the WaitFor:Combat. Adjusted the wait before the second boss."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

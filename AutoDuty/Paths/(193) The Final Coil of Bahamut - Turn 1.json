@@ -1,12 +1,40 @@
 {
   "Actions": [
     {
-      "Tag": "Unsynced",
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.019999996,
+        "Y": 0.48,
+        "Z": 167.0802
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Helps make sure you don't walk into the port back to the previous area while targeting enemies."
+    },
+    {
+      "Tag": "None",
       "Name": "WaitFor",
       "Position": {
-        "X": -0.22866067,
-        "Y": -2.9802322E-06,
-        "Z": 178.44711
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "IsReady"
@@ -15,82 +43,26 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Tag": "None",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 0.019999996,
-        "Y": 0.18,
-        "Z": 165.98013
+        "X": 2.6317458,
+        "Y": -20.000004,
+        "Z": 133.07559
       },
       "Arguments": [
-        ""
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 2.5186815,
-        "Y": -19.931221,
-        "Z": 140.62509
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 20.277357,
-        "Y": -20.0,
-        "Z": 120.30451
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 21.60231,
-        "Y": -19.999996,
-        "Z": 97.47488
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 1.2295529,
-        "Y": -20.0,
-        "Z": 95.77714
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
+      "Tag": "None",
       "Name": "MoveTo",
       "Position": {
         "X": -0.07044729,
-        "Y": -20.0,
-        "Z": 76.277435
+        "Y": -19.599998,
+        "Z": 79.47739
       },
       "Arguments": [
         ""
@@ -99,53 +71,53 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Tag": "None",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 6.7099476,
-        "Y": -30.0,
-        "Z": 30.417242
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
-        ""
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Helps make sure you don't walk into the port back to the previous area while targeting enemies."
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Tag": "None",
+      "Name": "StopForCombat",
       "Position": {
-        "X": 21.966839,
+        "X": 18.498104,
         "Y": -29.999998,
-        "Z": 28.603163
+        "Z": 20.187124
       },
       "Arguments": [
-        ""
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 20.432076,
-        "Y": -29.999996,
-        "Z": 11.195478
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
+      "Tag": "None",
       "Name": "MoveTo",
       "Position": {
         "X": -0.69515115,
-        "Y": -29.817951,
+        "Y": -29.71795,
         "Z": 9.553051
       },
       "Arguments": [
@@ -155,7 +127,33 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 2.8740585,
+        "Y": -5.0,
+        "Z": -156.63664
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
       "Name": "MoveTo",
       "Position": {
         "X": -0.12323623,
@@ -169,7 +167,21 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
       "Name": "MoveTo",
       "Position": {
         "X": 0.3343301,
@@ -183,15 +195,15 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
+      "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": -1.0962937,
+        "X": -0.069610015,
         "Y": -1.1920929E-06,
-        "Z": -291.7352
+        "Z": -306.76794
       },
       "Arguments": [
-        "3288"
+        ""
       ],
       "Conditions": [],
       "Note": "Imdugud"
@@ -199,7 +211,12 @@
   ],
   "Meta": {
     "CreatedAt": 298,
-    "Changelog": [],
+    "Changelog": [
+      {
+        "Version": 299,
+        "Change": "Added WaitFor:IsReady during forced movement. Added short StopForCombat segments to avoid accidentally stepping on the back-teleporters. Removed excess MoveTo steps. Removed Unsynced tags since it should work perfectly fine while Synced?"
+      }
+    ],
     "Notes": []
   }
 }

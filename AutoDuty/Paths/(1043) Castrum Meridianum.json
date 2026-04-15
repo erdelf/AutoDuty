@@ -1,280 +1,753 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 224.32,
-        "Y": 88.6,
-        "Z": -94.18
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        "true"
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 #1 & 2 -->"
+    },
+    {
+      "Tag": "W2W",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 130.00374,
-        "Y": 90.31388,
-        "Z": -67.056755
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 36.381397,
-        "Y": 72.13117,
-        "Z": -45.53322
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 193.32555,
+        "Y": 91.94204,
+        "Z": -92.54172
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [],
+      "Note": "Waits for tanks to get aggro."
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
+      "Tag": "W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 155.06857,
+        "Y": 93.36474,
+        "Z": -76.902504
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Runs to aggro the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 144.2651,
+        "Y": 92.25318,
+        "Z": -71.37197
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Gives Tanks time to AoE the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 165.80698,
+        "Y": 94.409195,
+        "Z": -85.646286
+      },
+      "Arguments": [
+        "5000"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Runs back in range of the healer."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 190.01843,
+        "Y": 92.46458,
+        "Z": -92.531746
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "Runs back to the tank."
+    },
+    {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 #3 & 4 -->"
+    },
+    {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "May not trigger before the next set of enemies runs at you depending on where the previous battle finished."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 132.23985,
+        "Y": 90.664986,
+        "Z": -68.90083
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [],
+      "Note": "Waits for tanks to get aggro."
+    },
+    {
+      "Tag": "W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 74.50823,
+        "Y": 77.37998,
+        "Z": -53.305397
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Runs to aggro the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 65.13527,
+        "Y": 76.32824,
+        "Z": -51.41942
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Gives Tanks time to AoE the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 85.90365,
+        "Y": 79.63522,
+        "Z": -56.787212
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Runs back in range of the healer."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": 79.64908,
+        "Y": 78.2688,
+        "Z": -54.896145
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Faces the pack away from the group."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 117.5578,
+        "Y": 88.53181,
+        "Z": -64.80005
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "Runs back to the tank."
+    },
+    {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
         "X": 17.66,
         "Y": 70.17,
         "Z": -40.17
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "The Black Eft"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 41.65,
-        "Y": 71.25,
-        "Z": -11.35
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
-        ""
-      ],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 #5 & 6 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
+        "X": 40.205788,
+        "Y": 70.83453,
+        "Z": -12.818129
       },
-      "arguments": [
+      "Arguments": [
         "2000597"
       ],
-      "note": "Disposal Chute"
+      "Conditions": [],
+      "Note": "Disposal Chute"
     },
     {
-      "tag": "None",
-      "name": "WaitFor",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
         "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -59.3487,
-        "Y": 72.62593,
-        "Z": 182.84897
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -46.592396,
-        "Y": 73.753395,
-        "Z": 135.69669
+      "Tag": "Synced, W2W",
+      "Name": "BossMod",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [],
+      "Note": " Allows BossMod AI to dodge AoEs while waiting."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -26.48639,
-        "Y": 74.245285,
-        "Z": 108.95167
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -47.64706,
+        "Y": 67.92068,
+        "Z": 217.24043
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [],
+      "Note": "Waits for tanks to get aggro."
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -7.2955933,
-        "Y": 70.321594,
-        "Z": 57.358044
+      "Tag": "W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -54.10514,
+        "Y": 73.5336,
+        "Z": 158.95633
       },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -12.56,
-        "Y": 70.09,
-        "Z": 34.26
-      },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Runs to aggro the second pack."
     },
     {
-      "tag": "None",
-      "name": "StopForCombat",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -53.52084,
+        "Y": 73.45177,
+        "Z": 151.62589
       },
-      "arguments": [
-        "false"
+      "Arguments": [
+        "2500"
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 7.7214556,
-        "Y": 70.172455,
-        "Z": -66.46675
-      },
-      "arguments": [],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "StopForCombat",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
-      },
-      "arguments": [
-        "true"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
       ],
-      "note": ""
+      "Note": "Gives Tanks time to AoE the second pack."
     },
     {
-      "tag": "None",
-      "name": "StopForCombat",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -54.23309,
+        "Y": 73.26647,
+        "Z": 175.09642
       },
-      "arguments": [
-        "false"
+      "Arguments": [
+        ""
       ],
-      "note": ""
-    },
-    {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -58.45,
-        "Y": 68.37,
-        "Z": -57.43
-      },
-      "arguments": [
-        "true"
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
       ],
-      "note": ""
+      "Note": "Runs back in range of the healer."
     },
     {
-      "tag": "None",
-      "name": "StopForCombat",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -56.00349,
+        "Y": 70.967926,
+        "Z": 196.29924
       },
-      "arguments": [
-        "true"
+      "Arguments": [
+        "FALSE"
       ],
-      "note": ""
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "Runs back to the tank."
     },
     {
-      "tag": "None",
-      "name": "WaitFor",
-      "position": {
-        "X": 0,
-        "Y": 0,
-        "Z": 0
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 #7 & 8 -->"
+    },
+    {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "May not trigger before the next set of enemies runs at you depending on where the previous battle finished."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "BossMod",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "ON"
+      ],
+      "Conditions": [],
+      "Note": " Allows BossMod AI to dodge AoEs while waiting."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -48.67391,
+        "Y": 73.72921,
+        "Z": 141.81943
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [],
+      "Note": "Waits for tanks to get aggro."
+    },
+    {
+      "Tag": "W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -16.61858,
+        "Y": 74.05736,
+        "Z": 91.1976
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Runs to aggro the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "Wait",
+      "Position": {
+        "X": -11.682873,
+        "Y": 73.45868,
+        "Z": 86.47968
+      },
+      "Arguments": [
+        "2500"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Gives Tanks time to AoE the second pack."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -23.196875,
+        "Y": 74.26662,
+        "Z": 104.31726
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Tanks"
+        }
+      ],
+      "Note": "Runs back in range of the healer."
+    },
+    {
+      "Tag": "Synced, W2W",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -42.40234,
+        "Y": 73.80433,
+        "Z": 127.2497
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionJob, AutoDuty",
+          "job": "Healers, DPS"
+        }
+      ],
+      "Note": "Runs back to the tank."
+    },
+    {
+      "Tag": "W2W",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -12.990764,
+        "Y": 70.1,
+        "Z": 31.97942
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Magitek Vanguard F-1"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 3.412572,
+        "Y": 70.36156,
+        "Z": -81.26944
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -58.438267,
+        "Y": 68.36759,
+        "Z": -57.467014
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "1000"
+      ],
+      "Conditions": [],
+      "Note": "Gives a sec for the second set of enemies to spawn."
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
         "IsReady"
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -100.38,
-        "Y": 72,
-        "Z": -32.47
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -97.99982,
+        "Y": 71.99999,
+        "Z": -33.0
       },
-      "arguments": [
+      "Arguments": [
         ""
       ],
-      "note": ""
+      "Conditions": [],
+      "Note": "Livia sas Junius"
     }
   ],
-  "meta": {
-    "createdAt": 106,
-    "changelog": [
+  "Meta": {
+    "CreatedAt": 179,
+    "Changelog": [
       {
-        "version": 114,
-        "change": "Added StopForCombat to avoid potentially getting stuck on Fence, and a Wait step for before the boss to avoid leaving duty early"
+        "Version": 189,
+        "Change": "Adjusted tags to string values"
       },
       {
-        "version": 161,
-        "change": "Converted to new JSON Structure"
-      },
-      {
-        "version": 163,
-        "change": "Converted to newer JSON Structure"
-      },
-      {
-        "version": 164,
-        "change": "Converted to JSON Structure with Tags"
-      },
-      {
-        "version": 179,
-        "change": "Updated to newer standards"
-      },
-      {
-        "version": 189,
-        "change": "Adjusted tags to string values"
+        "Version": 299,
+        "Change": "Merged the Regular & W2W paths. Added Trash/Boss Comments & Boss names. Adjusted and expanded the W2W steps."
       }
     ],
-    "notes": []
+    "Notes": []
   }
 }

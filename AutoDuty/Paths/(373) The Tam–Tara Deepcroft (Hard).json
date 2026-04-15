@@ -1,237 +1,504 @@
 {
-  "actions": [
+  "Actions": [
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -57.082607,
-        "Y": 44.378345,
-        "Z": -79.43368
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 11.0968075,
-        "Y": 29.766638,
-        "Z": -17.26853
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -9.429698,
-        "Y": 23.498175,
-        "Z": 33.033974
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": -17.30768,
-        "Y": 23.34082,
-        "Z": 40.064457
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -48.470882,
+        "Y": 44.37835,
+        "Z": -89.01802
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 34.46099,
+      "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -41.75999,
+        "Y": 42.120636,
+        "Z": -85.28036
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 8.340107,
+        "Y": 29.747614,
+        "Z": -17.379728
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -11.394645,
+        "Y": 23.419563,
+        "Z": 34.24331
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -18.025879,
+        "Y": 23.350609,
+        "Z": 40.407238
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #1 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 35.897793,
         "Y": 16.283735,
-        "Z": 92.025566
+        "Z": 93.68349
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Liavinne"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": 80.45018,
-        "Y": 16.418499,
-        "Z": 139.93646
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 81.97482,
+        "Y": 16.409752,
+        "Z": 140.19354
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 79.35395,
         "Y": 17.793236,
         "Z": 148.62628
       },
-      "arguments": [
+      "Arguments": [
         "2004090"
       ],
-      "note": "Defiled Coffin"
+      "Conditions": [],
+      "Note": "Defiled Coffin"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 86.39106,
-        "Y": 16.278233,
-        "Z": 90.39626
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 72.054016,
+        "Y": 16.518417,
+        "Z": 138.74574
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 74.20715,
         "Y": 18.378536,
         "Z": 48.960712
       },
-      "arguments": [
+      "Arguments": [
         "2004091"
       ],
-      "note": "Defiled Coffin"
+      "Conditions": [],
+      "Note": "Defiled Coffin"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 103.70011,
-        "Y": 16.36594,
-        "Z": 66.243546
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 74.72382,
+        "Y": 16.884855,
+        "Z": 64.02305
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": 132.78822,
-        "Y": 16.447414,
-        "Z": 78.63995
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": 132.33266,
+        "Y": 16.448122,
+        "Z": 78.867
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 147.13266,
         "Y": 17.999992,
         "Z": 67.24258
       },
-      "arguments": [
+      "Arguments": [
         "2004092"
       ],
-      "note": "Defiled Coffin"
+      "Conditions": [],
+      "Note": "Defiled Coffin"
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": 98.2151,
-        "Y": 17.334892,
-        "Z": 47.106094
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 132.23978,
+        "Y": 16.376793,
+        "Z": 67.865875
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": 87.42144,
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #2 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 87.73187,
         "Y": 22.1,
-        "Z": -39.165085
+        "Z": -41.859154
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Spare Body"
     },
     {
-      "tag": "None",
-      "name": "Interactable",
-      "position": {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Trash Packs / 雑魚 -->"
+    },
+    {
+      "Tag": "None",
+      "Name": "Interactable",
+      "Position": {
         "X": 93.28349,
         "Y": 22.1,
         "Z": -49.031143
       },
-      "arguments": [
+      "Arguments": [
         "2004095"
       ],
-      "note": "Aetherial Flow"
+      "Conditions": [],
+      "Note": "Aetherial Flow"
     },
     {
-      "tag": "Treasure",
-      "name": "TreasureCoffer",
-      "position": {
-        "X": -150.57936,
-        "Y": 15.770657,
-        "Z": 92.03536
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -128.84354,
-        "Y": 16.0257,
-        "Z": 91.56823
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -98.22843,
-        "Y": 14.793076,
-        "Z": 47.50894
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "MoveTo",
-      "position": {
-        "X": -105.407776,
-        "Y": 13.850068,
-        "Z": 21.695337
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -150.90598,
+        "Y": 15.770683,
+        "Z": 91.21432
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
     },
     {
-      "tag": "None",
-      "name": "Boss",
-      "position": {
-        "X": -58.24336,
-        "Y": 14.054999,
-        "Z": -6.5979557
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -105.36718,
+        "Y": 13.850155,
+        "Z": 21.746346
       },
-      "arguments": [],
-      "note": ""
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- Boss / ボス #3 -->"
+    },
+    {
+      "Tag": "Revival",
+      "Name": "Revival",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -55.337437,
+        "Y": 14.055,
+        "Z": -8.348314
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Avere Bravearm"
     }
   ],
-  "meta": {
-    "createdAt": 224,
-    "changelog": [],
-    "notes": []
+  "Meta": {
+    "CreatedAt": 224,
+    "Changelog": [
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Added appropriate Revival steps. Removed excess MoveTo steps."
+      }
+    ],
+    "Notes": []
   }
 }

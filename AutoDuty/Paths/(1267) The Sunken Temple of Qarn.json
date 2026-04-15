@@ -58,12 +58,12 @@
       "Tag": "Treasure",
       "Name": "KillInRange",
       "Position": {
-        "X": -135.39299,
-        "Y": -17.732855,
-        "Z": -9.479457
+        "X": -135.85783,
+        "Y": -17.875036,
+        "Z": -11.138184
       },
       "Arguments": [
-        "25"
+        "18"
       ],
       "Conditions": [],
       "Note": ""
@@ -95,6 +95,20 @@
       ],
       "Conditions": [],
       "Note": "The Gem of Affluence"
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -102.35817,
+        "Y": -9.000038,
+        "Z": -60.644756
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "Comment",
@@ -149,6 +163,48 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -62.80971,
+        "Y": -12.00001,
+        "Z": -45.376003
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "To avoid getting stuck in the doorway."
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -17.198425,
+        "Y": -18.012014,
+        "Z": -0.38783738
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 5.282711,
+        "Y": -19.0,
+        "Z": 15.12803
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "MoveTo",
       "Position": {
@@ -160,7 +216,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Helps avoid slightly janky pathing."
+      "Note": "To avoid getting stuck in the doorway."
     },
     {
       "Tag": "Treasure",
@@ -175,6 +231,20 @@
       ],
       "Conditions": [],
       "Note": "The Flame of Magic"
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 8.979861,
+        "Y": -19.0,
+        "Z": -11.399259
+      },
+      "Arguments": [
+        "10"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "Treasure",
@@ -194,15 +264,15 @@
       "Tag": "Treasure",
       "Name": "MoveTo",
       "Position": {
-        "X": 10.61312,
-        "Y": -19.000078,
-        "Z": -27.9708
+        "X": 10.620081,
+        "Y": -19.00007,
+        "Z": -26.478024
       },
       "Arguments": [
         ""
       ],
       "Conditions": [],
-      "Note": "Helps avoid slightly janky pathing."
+      "Note": "To avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
@@ -226,6 +296,20 @@
       },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 68.49598,
+        "Y": -44.54775,
+        "Z": -36.89082
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -283,6 +367,20 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 50.512653,
+        "Y": -19.000051,
+        "Z": 13.847521
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
@@ -322,7 +420,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Helps avoid slightly janky pathing."
+      "Note": "To avoid getting stuck in the doorway."
     },
     {
       "Tag": "Treasure",
@@ -377,6 +475,20 @@
       "Note": ""
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 114.566536,
+        "Y": -4.0000095,
+        "Z": -7.366951
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
@@ -420,9 +532,9 @@
       "Tag": "Treasure",
       "Name": "MoveTo",
       "Position": {
-        "X": 126.39331,
-        "Y": -3.9999428,
-        "Z": -19.40426
+        "X": 125.043724,
+        "Y": -4.000003,
+        "Z": -17.897562
       },
       "Arguments": [
         ""
@@ -485,12 +597,26 @@
       "Note": "Helps avoid slightly janky pathing."
     },
     {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 186.1008,
+        "Y": -4.000045,
+        "Z": -0.19343238
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 187.00888,
-        "Y": -4.000032,
-        "Z": -0.12032705
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "TRUE"
@@ -569,7 +695,7 @@
       "Note": "The Scales of Judgment"
     },
     {
-      "Tag": "None",
+      "Tag": "Treasure",
       "Name": "ModifyIndex",
       "Position": {
         "X": 0.0,
@@ -653,8 +779,13 @@
     }
   ],
   "Meta": {
-    "CreatedAt": 299,
-    "Changelog": [],
+    "CreatedAt": 203,
+    "Changelog": [
+      {
+        "Version": 299,
+        "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added KillInRanged steps. Removed SelectYesNo step."
+      }
+    ],
     "Notes": []
   }
 }
