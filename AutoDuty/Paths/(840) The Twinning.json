@@ -93,20 +93,6 @@
       "Note": ""
     },
     {
-      "Tag": "None",
-      "Name": "AutoMoveFor",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "1000"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "W2W",
       "Name": "StopForCombat",
       "Position": {
