@@ -41,6 +41,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced, Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -138.89442,
+        "Y": -9.000015,
+        "Z": 61.952087
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
@@ -81,6 +95,20 @@
       ],
       "Conditions": [],
       "Note": "Treasure Coffer - Listed as Interactable since it's position is not static."
+    },
+    {
+      "Tag": "Unsynced, Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -142.6626,
+        "Y": -10.708776,
+        "Z": -59.2824
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
     },
     {
       "Tag": "Treasure",
@@ -149,20 +177,6 @@
       "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "FALSE"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
@@ -175,34 +189,6 @@
       ],
       "Conditions": [],
       "Note": "To avoid getting stuck in the doorway."
-    },
-    {
-      "Tag": "None",
-      "Name": "KillInRange",
-      "Position": {
-        "X": -17.198425,
-        "Y": -18.012014,
-        "Z": -0.38783738
-      },
-      "Arguments": [
-        "10"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "KillInRange",
-      "Position": {
-        "X": 5.282711,
-        "Y": -19.0,
-        "Z": 15.12803
-      },
-      "Arguments": [
-        "10"
-      ],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "Treasure",
@@ -234,20 +220,6 @@
     },
     {
       "Tag": "Treasure",
-      "Name": "KillInRange",
-      "Position": {
-        "X": 8.979861,
-        "Y": -19.0,
-        "Z": -11.399259
-      },
-      "Arguments": [
-        "10"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
         "X": 8.983742,
@@ -275,6 +247,20 @@
       "Note": "To avoid getting stuck in the doorway."
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 33.706665,
+        "Y": -19.000145,
+        "Z": -21.823263
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
@@ -298,7 +284,75 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Hops over the ledge."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 45.786453,
+        "Y": -43.42574,
+        "Z": -60.90093
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Object",
+          "originId": 1768,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 45.786,
+            "Y": -43.426,
+            "Z": -60.901
+          },
+          "operatorValue": "<",
+          "distance": 20.0
+        }
+      ],
+      "Note": "Ensures The Condemned is killed for the GC Hunting Log (if it's to the right side of the area)."
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 91.90675,
+        "Y": -43.49106,
+        "Z": -34.729485
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
+          "origin": "Object",
+          "originId": 1768,
+          "originLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "target": "Location",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 91.907,
+            "Y": -43.491,
+            "Z": -34.729
+          },
+          "operatorValue": "<",
+          "distance": 20.0
+        }
+      ],
+      "Note": "Ensures The Condemned is killed for the GC Hunting Log (if it's to the left side of the area)."
     },
     {
       "Tag": "Unsynced",
@@ -365,6 +419,20 @@
       ],
       "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 67.43445,
+        "Y": -38.619816,
+        "Z": 59.271297
+      },
+      "Arguments": [
+        "30"
+      ],
+      "Conditions": [],
+      "Note": "Ensures The Condemned is killed for the GC Hunting Log."
     },
     {
       "Tag": "None",
@@ -478,9 +546,9 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 114.566536,
-        "Y": -4.0000095,
-        "Z": -7.366951
+        "X": 116.55319,
+        "Y": -3.998668,
+        "Z": 0.15220636
       },
       "Arguments": [
         "15"
@@ -719,9 +787,9 @@
       "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
-        "X": 196.33774,
+        "X": 195.89056,
         "Y": -4.000017,
-        "Z": -37.119
+        "Z": -37.39741
       },
       "Arguments": [],
       "Conditions": [],
@@ -784,6 +852,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added KillInRanged steps. Removed SelectYesNo step."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced KillInRange before Interactables. Added Unsynced KillInRange steps before and after the second boss to help ensure enough ghosts are killed for the GC Hunting Log. Removed unnecessary KillInRange steps after the first boss and adjusted the position of the Unsynced StopForCombat:False there."
       }
     ],
     "Notes": []

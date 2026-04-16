@@ -442,12 +442,12 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
+        "X": -360.19034,
+        "Y": -299.98392,
+        "Z": -249.84454
       },
       "Arguments": [
-        "25"
+        "15"
       ],
       "Conditions": [],
       "Note": "In case you die during the fight on the lift and the enemies don't engage automatically when you load back in."
@@ -734,6 +734,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added W2W & Unsynced steps. Added WaitFor:IsReady during transitions. Added Conditions for if you die during the Elevator somehow. Replaced ForceAttack steps with KillInRange steps. Removed AutoMoveFor steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Coords to the KillInRange on the Elevator."
       }
     ],
     "Notes": []

@@ -13,34 +13,6 @@
       "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
-      "Tag": "Unsynced",
-      "Name": "WaitFor",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "IsReady"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "FALSE"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
@@ -106,20 +78,6 @@
       },
       "Arguments": [
         "10"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -594,6 +552,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Added WaitFor:IsReady after transitions. Added Condition to not leave the 1st boss fight early. Removed AutoMoveFor steps. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Removed somewhat pointless Unsynced steps at the start."
       }
     ],
     "Notes": []

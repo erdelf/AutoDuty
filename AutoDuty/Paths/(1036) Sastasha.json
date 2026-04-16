@@ -339,6 +339,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
@@ -570,9 +584,13 @@
         "Version": 231,
         "Change": "Re-added last boss step."
       },
-	  {
+      {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps (primarily before the first boss). Added KillInRange steps. Added Treasure steps (and a note about the missing one)."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced StopForCombat:True before Interactables."
       }
     ],
     "Notes": []

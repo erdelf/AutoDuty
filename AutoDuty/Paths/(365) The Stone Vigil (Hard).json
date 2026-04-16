@@ -150,6 +150,20 @@
     },
     {
       "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 2.1314,
+        "Y": 5.9604645E-06,
+        "Z": -58.43811
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
         "X": 3.0425086,
@@ -636,6 +650,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added KillInRange steps. Added Conditions/Loop to complete the Bertha-clicking encounter. Added Condition to not leave the 3rd boss fight early. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced KillInRange to ensure the transforming enemy is killed before moving on."
       }
     ],
     "Notes": []

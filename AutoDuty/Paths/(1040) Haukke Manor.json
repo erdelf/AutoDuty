@@ -123,6 +123,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced, Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": -52.527733,
+        "Y": 0.0,
+        "Z": 25.399944
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
@@ -346,6 +360,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced, Treasure",
+      "Name": "KillInRange",
+      "Position": {
+        "X": -0.41079447,
+        "Y": -18.799992,
+        "Z": -28.63737
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
@@ -396,6 +424,20 @@
         "Z": -7.714097
       },
       "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced, Treasure",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 31.047821,
+        "Y": -18.8,
+        "Z": 30.363655
+      },
+      "Arguments": [
+        "TRUE"
+      ],
       "Conditions": [],
       "Note": ""
     },
@@ -623,20 +665,6 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "FALSE"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
@@ -693,20 +721,6 @@
       },
       "Arguments": [
         "25"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -769,9 +783,13 @@
         "Version": 241,
         "Change": ""
       },
-	  {
+      {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added more thorough Treasure steps. Removed excess MoveTo steps. Removed unnecessary Revival steps (the Revival placed after the Aetherial Flow was incorrect since AD will take the Revival Portal there and put you in front of the Flow)."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced StopForCombat:True and KillInRange before Interactables. Removed unnecessary Unsynced StopForCombat steps between second and third bosses."
       }
     ],
     "Notes": []

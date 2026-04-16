@@ -628,6 +628,20 @@
     },
     {
       "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 47.845745,
+        "Y": 7.83574,
+        "Z": -93.911095
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
         "X": 0.0,
@@ -763,7 +777,7 @@
       "Note": "Goes back if you do not have two Lantern Oils."
     },
     {
-      "Tag": "Synced",
+      "Tag": "None",
       "Name": "KillInRange",
       "Position": {
         "X": 113.87902,
@@ -771,7 +785,7 @@
         "Z": -145.81627
       },
       "Arguments": [
-        "20"
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -1082,6 +1096,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced & Synced steps. Added KillInRange steps. Added various Checks and Conditions for Lantern Oil. Added various Conditions to Interactables between first and second boss so that they're skipped if already done. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced KillInRange before Interactable."
       }
     ],
     "Notes": []

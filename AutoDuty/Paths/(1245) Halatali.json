@@ -203,6 +203,20 @@
       "Note": "Chance to spawn after using a Winch."
     },
     {
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 45.9766,
+        "Y": -11.153701,
+        "Z": -88.850266
+      },
+      "Arguments": [
+        "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
@@ -252,6 +266,20 @@
       },
       "Arguments": [
         "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 10.026308,
+        "Y": -11.139838,
+        "Z": -184.75627
+      },
+      "Arguments": [
+        "15"
       ],
       "Conditions": [],
       "Note": ""
@@ -577,6 +605,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing Treasure Chests. Added appropriate Revival steps. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Unsynced KillInRange before Interactables."
       }
     ],
     "Notes": []

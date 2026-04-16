@@ -271,18 +271,18 @@
       "Note": ""
     },
     {
-      "Tag": "Treasure",
+      "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 28.10787,
-        "Y": 13.501427,
-        "Z": -54.929825
+        "X": 28.122221,
+        "Y": 13.502937,
+        "Z": -54.971577
       },
       "Arguments": [
         "15"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Kills the Comet Chasers to avoid potential targeting issues during the next boss fight."
     },
     {
       "Tag": "Treasure",
@@ -513,6 +513,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing TreasureCoffer steps before the 2nd boss. Removed StopForCombat:False before the second boss."
+      },
+	  {
+        "Version": 300,
+        "Change": "Removed the Treasure Tag from the KillInRange before the second boss, so that the enemies on the cliff are always killed to avoid targeting issues during the second boss."
       }
     ],
     "Notes": []
