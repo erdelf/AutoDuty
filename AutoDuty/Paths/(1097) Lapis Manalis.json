@@ -108,15 +108,15 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -17.0,
+        "X": -18.200005,
         "Y": 398.26816,
-        "Z": -824.6001
+        "Z": -827.8993
       },
       "Arguments": [
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Walks into the transition barrier."
     },
     {
       "Tag": "None",
@@ -315,6 +315,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Treasure steps. Added WaitFor:IsReady during transitions. Removed AutoMoreFor steps. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Adjusted the Coords of the MoveTo in the transition wall to be farther in said wall."
       }
     ],
     "Notes": []

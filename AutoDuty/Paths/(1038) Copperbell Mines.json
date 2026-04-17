@@ -180,7 +180,7 @@
         "Z": -208.1908
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": "Helps avoid janky pathing when stepping out of the elevator."
@@ -456,7 +456,7 @@
         "Z": 28.431131
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": "Helps avoid janky pathing when stepping out of the elevator."
@@ -699,9 +699,9 @@
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": -97.07582,
-        "Y": -58.65485,
-        "Z": 29.958168
+        "X": -93.780014,
+        "Y": -57.28597,
+        "Z": 62.19011
       },
       "Arguments": [
         "TRUE"
@@ -762,6 +762,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added KillInRange steps. Added missing Treasure Chest. Added Conditions for if you die and need to call the Elevator back up."
+      },
+      {
+        "Version": 300,
+        "Change": "Added False on MoveTo steps after the elevators to prevent the possibility of skipping them. Adjusted the step before the final boss so that it won't be skipped by anyone watching the cutscene."
       }
     ],
     "Notes": []

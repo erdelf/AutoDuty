@@ -84,9 +84,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -23.839842,
-        "Y": 4.207086,
-        "Z": -20.443363
+        "X": -27.839857,
+        "Y": 5.0070853,
+        "Z": -18.243355
       },
       "Arguments": [
         ""
@@ -257,8 +257,8 @@
       "Name": "MoveTo",
       "Position": {
         "X": -41.4643,
-        "Y": 62.971684,
-        "Z": 0.14466834
+        "Y": 63.571674,
+        "Z": -3.4553306
       },
       "Arguments": [
         ""
@@ -322,9 +322,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -43.220154,
-        "Y": 91.34091,
-        "Z": 30.875927
+        "X": -39.020218,
+        "Y": 92.1409,
+        "Z": 33.57591
       },
       "Arguments": [
         ""
@@ -472,9 +472,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 17.054615,
-        "Y": 142.36914,
-        "Z": -33.861584
+        "X": 20.254627,
+        "Y": 143.16919,
+        "Z": -32.06161
       },
       "Arguments": [
         ""
@@ -533,6 +533,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added WaitFor:IsReady during transitions. Removed AutoMoveFor steps. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Adjusted the Coords of MoveTo's in transition walls to be farther in the wall."
       }
     ],
     "Notes": []

@@ -338,7 +338,7 @@
         "275"
       ],
       "Conditions": [],
-      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+      "Note": "Treasure Coffer - AD will attempt to click it until it despawns because it's an Interactable step (since it's position is not static)."
     },
     {
       "Tag": "None",
@@ -975,7 +975,7 @@
           "value": 1
         }
       ],
-      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+      "Note": "Treasure Coffer - AD will attempt to click it until it despawns because it's an Interactable step (since it's position is not static)."
     },
     {
       "Tag": "Treasure",
@@ -1015,7 +1015,7 @@
           "value": 1
         }
       ],
-      "Note": "Treasure Coffer - Listed as Interactable since it's position can vary."
+      "Note": "Treasure Coffer - AD will attempt to click it until it despawns because it's an Interactable step (since it's position is not static)."
     },
     {
       "Tag": "None",
@@ -1278,7 +1278,7 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Jumps down the cliff."
     },
     {
       "Tag": "Unsynced",
@@ -1362,6 +1362,20 @@
     },
     {
       "Tag": "Unsynced",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -325.15616,
+        "Y": 1.8999999,
+        "Z": 45.359856
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Extra step in case one is skipped while watching the Boss cutscene."
+    },
+    {
+      "Tag": "Unsynced",
       "Name": "KillInRange",
       "Position": {
         "X": -327.499,
@@ -1390,17 +1404,17 @@
     },
     {
       "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Name": "Wait",
       "Position": {
-        "X": -332.4389,
+        "X": -331.3778,
         "Y": 1.8999999,
-        "Z": 31.00106
+        "Z": 30.369276
       },
       "Arguments": [
-        ""
+        "500"
       ],
       "Conditions": [],
-      "Note": "Jumps to second platform."
+      "Note": "Jumps to the second platform."
     },
     {
       "Tag": "Unsynced",
@@ -1446,17 +1460,17 @@
     },
     {
       "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Name": "Wait",
       "Position": {
-        "X": -353.74768,
+        "X": -353.53384,
         "Y": 1.8999999,
-        "Z": 11.325661
+        "Z": 9.557248
       },
       "Arguments": [
-        ""
+        "500"
       ],
       "Conditions": [],
-      "Note": "Jumps to third platform."
+      "Note": "Jumps to the third platform."
     },
     {
       "Tag": "Unsynced",
@@ -1502,17 +1516,17 @@
     },
     {
       "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Name": "Wait",
       "Position": {
-        "X": -372.12366,
+        "X": -372.46136,
         "Y": 1.8999999,
-        "Z": 32.50931
+        "Z": 30.657341
       },
       "Arguments": [
-        ""
+        "500"
       ],
       "Conditions": [],
-      "Note": "Jumps to fourth platform."
+      "Note": "Jumps to the fourth platform."
     },
     {
       "Tag": "Unsynced",
@@ -1558,17 +1572,17 @@
     },
     {
       "Tag": "Unsynced",
-      "Name": "MoveTo",
+      "Name": "Wait",
       "Position": {
-        "X": -349.614,
+        "X": -349.70306,
         "Y": 1.8999999,
-        "Z": 52.574
+        "Z": 54.379314
       },
       "Arguments": [
-        ""
+        "500"
       ],
       "Conditions": [],
-      "Note": "Jumps back to the first platform"
+      "Note": "Jumps back to the first platform."
     },
     {
       "Tag": "Unsynced",
@@ -1635,6 +1649,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Overhauled Tablet areas with various Conditions. Added steps to complete the third boss (Unsynced). Added missing Treasure Chest. Replaced AutoMoveFor with MoveTo:FALSE. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added an extra step before the final boss so that nothing important is skipped by anyone watching the cutscene. Adjusted the MoveTo's in the geysers in the final boss fight to short Waits for better consistency."
       }
     ],
     "Notes": []

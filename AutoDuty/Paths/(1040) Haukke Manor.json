@@ -293,14 +293,14 @@
     },
     {
       "Tag": "None",
-      "Name": "Wait",
+      "Name": "WaitFor",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
       "Arguments": [
-        "1500"
+        "ConditionFlag;Jumping;FALSE"
       ],
       "Conditions": [],
       "Note": ""
@@ -363,9 +363,9 @@
       "Tag": "Unsynced, Treasure",
       "Name": "KillInRange",
       "Position": {
-        "X": -0.41079447,
+        "X": -0.022066668,
         "Y": -18.799992,
-        "Z": -28.63737
+        "Z": -31.602577
       },
       "Arguments": [
         "15"
@@ -687,6 +687,20 @@
     },
     {
       "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 28.935125,
+        "Y": 17.0,
+        "Z": 76.508316
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Extra step in case one is skipped while watching the Boss cutscene."
+    },
+    {
+      "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
         "X": 16.402058,
@@ -789,7 +803,7 @@
       },
       {
         "Version": 300,
-        "Change": "Added Unsynced StopForCombat:True and KillInRange before Interactables. Removed unnecessary Unsynced StopForCombat steps between second and third bosses."
+        "Change": "Added Unsynced StopForCombat:True and KillInRange before Interactables. Removed unnecessary Unsynced StopForCombat steps between second and third bosses. Adjusted the Wait after the first boss to an appropriate WaitFor. Added an extra step before the final boss so that nothing important is skipped by anyone watching the cutscene."
       }
     ],
     "Notes": []

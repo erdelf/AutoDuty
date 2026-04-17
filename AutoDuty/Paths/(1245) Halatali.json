@@ -200,7 +200,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Chance to spawn after using a Winch."
+      "Note": "Chance to spawn after using the Winch."
     },
     {
       "Tag": "Unsynced",
@@ -240,7 +240,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "Chance to spawn after using a Winch."
+      "Note": "Chance to spawn after using the Winch."
     },
     {
       "Tag": "Unsynced",
@@ -308,7 +308,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "Chance to spawn after using a Winch."
+      "Note": "Chance to spawn after using the Winch."
     },
     {
       "Tag": "Treasure",
@@ -348,7 +348,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "Chance to spawn after using a Winch."
+      "Note": "Chance to spawn after using the Winch."
     },
     {
       "Tag": "None",
@@ -374,7 +374,7 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "Chance to spawn after using a Winch."
+      "Note": "Chance to spawn after using the Winch."
     },
     {
       "Tag": "Unsynced",

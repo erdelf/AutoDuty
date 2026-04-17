@@ -193,9 +193,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -49.825554,
-        "Y": 388.8703,
-        "Z": -243.20508
+        "X": -49.925552,
+        "Y": 387.67023,
+        "Z": -238.80481
       },
       "Arguments": [
         ""
@@ -351,7 +351,7 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 329.01123,
+        "X": 335.0116,
         "Y": 222.20404,
         "Z": 272.83258
       },
@@ -470,12 +470,12 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -364.92807,
+        "X": -366.62817,
         "Y": -299.984,
-        "Z": -258.51205
+        "Z": -261.71225
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": "Walks into the transition barrier."
@@ -536,6 +536,20 @@
     },
     {
       "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 192.45018,
+        "Y": -58.572212,
+        "Z": 174.75702
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Ensures nothing is skipped if vnav has issues pathing off the elevator early."
+    },
+    {
+      "Tag": "None",
       "Name": "Interactable",
       "Position": {
         "X": 228.77,
@@ -566,12 +580,12 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 227.06197,
+        "X": 226.86195,
         "Y": -90.161606,
-        "Z": 47.021088
+        "Z": 42.121162
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": "Walks into the transition barrier."
@@ -737,7 +751,7 @@
       },
       {
         "Version": 300,
-        "Change": "Added Coords to the KillInRange on the Elevator."
+        "Change": "Added Coords to the KillInRange on the Elevator. Added False on MoveTo steps after the elevators to prevent the possibility of skipping them. Adjusted the Coords of MoveTo's in transition walls to be farther in the wall."
       }
     ],
     "Notes": []

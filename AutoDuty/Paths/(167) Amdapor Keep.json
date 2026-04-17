@@ -93,6 +93,30 @@
       "Note": "<-- Boss / ボス #1 -->"
     },
     {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- If you're having troubles with RSR not finishing this boss off, use the following: -->"
+    },
+    {
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "<-- /rotation Settings FilterOneHpInvincible False -->"
+    },
+    {
       "Tag": "Revival",
       "Name": "Revival",
       "Position": {
@@ -479,6 +503,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added missing Treasure Chest before the first boss. Added KillInRange steps. Added appropriate Revival steps. Replaced Waits during load screens with WaitFor:IsReady."
+      },
+      {
+        "Version": 300,
+        "Change": "Added Note for RSR users before first boss."
       }
     ],
     "Notes": []

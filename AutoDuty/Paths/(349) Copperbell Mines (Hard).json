@@ -143,6 +143,20 @@
     },
     {
       "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -169.21951,
+        "Y": -7.7020273,
+        "Z": -208.8677
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": "Ensures nothing is skipped if vnav has issues pathing off the elevator early."
+    },
+    {
+      "Tag": "None",
       "Name": "KillInRange",
       "Position": {
         "X": -50.309425,
@@ -547,6 +561,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added Condition steps for the Lift & the second Boss. Added Synced steps for safety before the first boss. Replaced AutoMoveFor with MoveTo:FALSE. Replaced ForceAttack with KillInRange. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Added a MoveTo:False after the elevator to prevent vnav having issues navigating while it's still descending."
       }
     ],
     "Notes": []

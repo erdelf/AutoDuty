@@ -542,7 +542,7 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -73.26651,
+        "X": -76.96645,
         "Y": 10.090473,
         "Z": 70.12509
       },
@@ -643,6 +643,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added WaitFor:IsReady during the transition. Added KillInRange. Added a set of steps to properly engage the b2 boss. Removed AutoMoveFor. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Adjusted the Coords of the MoveTo in the transition wall to be farther in said wall."
       }
     ],
     "Notes": []

@@ -248,45 +248,26 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 36.67704,
-        "Y": 0.0,
-        "Z": -72.05485
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "None",
-      "Name": "Interactable",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "2003313"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
-          "baseId": 2003313,
-          "property": "IsTargetable",
-          "value": 1
-        }
-      ],
-      "Note": "Tiny Key"
-    },
-    {
-      "Tag": "None",
-      "Name": "MoveTo",
-      "Position": {
         "X": 41.34946,
         "Y": 0.0,
         "Z": -56.485535
       },
       "Arguments": [
         ""
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -421,20 +402,6 @@
         }
       ],
       "Note": "Goes back if you do not have the Key."
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "StopForCombat",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "TRUE"
-      ],
-      "Conditions": [],
-      "Note": ""
     },
     {
       "Tag": "None",
@@ -634,30 +601,6 @@
       "Note": ""
     },
     {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": -21.462912,
-        "Y": -18.8,
-        "Z": 47.881813
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": -43.091175,
-        "Y": -18.799992,
-        "Z": 47.29558
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
@@ -682,6 +625,30 @@
       "Arguments": [
         "38"
       ],
+      "Conditions": [],
+      "Note": "Ensures the last patrolling enemy is killed."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -21.462912,
+        "Y": -18.8,
+        "Z": 47.881813
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "TreasureCoffer",
+      "Position": {
+        "X": -43.091175,
+        "Y": -18.799992,
+        "Z": 47.29558
+      },
+      "Arguments": [],
       "Conditions": [],
       "Note": ""
     },
@@ -722,6 +689,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added Treasure steps. Added KillInRange steps. Added WaitFor:IsReady during transitions. Added a set of checks/conditions for the Key after the first boss. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Removed unnecessary steps during the check-for-key section. Moved various Unsynced StopForCombat steps to better spots within the path."
       }
     ],
     "Notes": []

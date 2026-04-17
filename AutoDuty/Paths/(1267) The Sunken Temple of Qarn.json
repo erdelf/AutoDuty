@@ -41,34 +41,6 @@
       "Note": ""
     },
     {
-      "Tag": "Unsynced, Treasure",
-      "Name": "KillInRange",
-      "Position": {
-        "X": -138.89442,
-        "Y": -9.000015,
-        "Z": 61.952087
-      },
-      "Arguments": [
-        "15"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "Interactable",
-      "Position": {
-        "X": -150.22012,
-        "Y": -9.000017,
-        "Z": 61.941837
-      },
-      "Arguments": [
-        "2000418"
-      ],
-      "Conditions": [],
-      "Note": "The Helm of Might"
-    },
-    {
       "Tag": "Treasure",
       "Name": "KillInRange",
       "Position": {
@@ -94,35 +66,7 @@
         "135"
       ],
       "Conditions": [],
-      "Note": "Treasure Coffer - Listed as Interactable since it's position is not static."
-    },
-    {
-      "Tag": "Unsynced, Treasure",
-      "Name": "KillInRange",
-      "Position": {
-        "X": -142.6626,
-        "Y": -10.708776,
-        "Z": -59.2824
-      },
-      "Arguments": [
-        "15"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "Interactable",
-      "Position": {
-        "X": -149.56227,
-        "Y": -11.610185,
-        "Z": -61.80998
-      },
-      "Arguments": [
-        "2000417"
-      ],
-      "Conditions": [],
-      "Note": "The Gem of Affluence"
+      "Note": "Treasure Coffer - AD will attempt to click it until it despawns because it's an Interactable step (since it's position is not static)."
     },
     {
       "Tag": "Unsynced",
@@ -188,7 +132,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "To avoid getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "Treasure",
@@ -202,7 +146,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "To avoid getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "Treasure",
@@ -244,7 +188,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "To avoid getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "Unsynced",
@@ -438,107 +382,13 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 50.512653,
-        "Y": -19.000051,
-        "Z": 13.847521
+        "X": 55.5679,
+        "Y": -18.452265,
+        "Z": 5.2054386
       },
       "Arguments": [
         "15"
       ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "Interactable",
-      "Position": {
-        "X": 58.97133,
-        "Y": -18.000013,
-        "Z": 20.693117
-      },
-      "Arguments": [
-        "2000423"
-      ],
-      "Conditions": [],
-      "Note": "Stone Pedestal"
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "SelectString",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "1"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 68.721924,
-        "Y": -18.000006,
-        "Z": 20.33614
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": "To avoid getting stuck in the doorway."
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 89.153854,
-        "Y": -14.999944,
-        "Z": 53.556858
-      },
-      "Arguments": [],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "Interactable",
-      "Position": {
-        "X": 60.546787,
-        "Y": -18.000008,
-        "Z": -19.517649
-      },
-      "Arguments": [
-        "2000425"
-      ],
-      "Conditions": [],
-      "Note": "Stone Pedestal"
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "SelectString",
-      "Position": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Arguments": [
-        "0"
-      ],
-      "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
-      "Position": {
-        "X": 89.21593,
-        "Y": -14.999941,
-        "Z": -53.522285
-      },
-      "Arguments": [],
       "Conditions": [],
       "Note": ""
     },
@@ -546,9 +396,9 @@
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": 116.55319,
-        "Y": -3.998668,
-        "Z": 0.15220636
+        "X": 115.325386,
+        "Y": -4.000001,
+        "Z": 7.634002
       },
       "Arguments": [
         "15"
@@ -557,58 +407,28 @@
       "Note": ""
     },
     {
-      "Tag": "Treasure",
-      "Name": "Interactable",
-      "Position": {
-        "X": 115.53184,
-        "Y": -4.0000043,
-        "Z": -21.766165
-      },
-      "Arguments": [
-        "2000419"
-      ],
-      "Conditions": [],
-      "Note": "Stone Pedestal"
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "SelectString",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
         "X": 0.0,
         "Y": 0.0,
         "Z": 0.0
       },
-      "Arguments": [
-        "2"
-      ],
+      "Arguments": [],
       "Conditions": [],
-      "Note": ""
+      "Note": "<-- The other Treasure Coffers around here are skipped... -->"
     },
     {
-      "Tag": "Treasure",
-      "Name": "TreasureCoffer",
+      "Tag": "Comment",
+      "Name": "<-- Comment -->",
       "Position": {
-        "X": 151.68494,
-        "Y": -0.99994665,
-        "Z": -46.649555
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": ""
-    },
-    {
-      "Tag": "Treasure",
-      "Name": "MoveTo",
-      "Position": {
-        "X": 125.043724,
-        "Y": -4.000003,
-        "Z": -17.897562
-      },
-      "Arguments": [
-        ""
-      ],
-      "Conditions": [],
-      "Note": "To avoid getting stuck in the doorway."
+      "Note": "<-- ...because they only contain Elemental Shards. -->"
     },
     {
       "Tag": "Treasure",
@@ -633,10 +453,24 @@
         "Z": 0.0
       },
       "Arguments": [
-        "3"
+        "1"
       ],
       "Conditions": [],
       "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 123.25183,
+        "Y": -4.0,
+        "Z": 20.591078
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "Treasure",
@@ -654,12 +488,12 @@
       "Tag": "Treasure",
       "Name": "MoveTo",
       "Position": {
-        "X": 135.09444,
-        "Y": -3.999943,
-        "Z": 28.241337
+        "X": 124.13914,
+        "Y": -4.0000005,
+        "Z": 16.836395
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
       "Note": "Helps avoid slightly janky pathing."
@@ -715,7 +549,7 @@
         "Z": 0.0
       },
       "Arguments": [
-        "3"
+        "1"
       ],
       "Conditions": [],
       "Note": ""
@@ -724,9 +558,9 @@
       "Tag": "Treasure",
       "Name": "Interactable",
       "Position": {
-        "X": 188.36029,
-        "Y": -4.0000153,
-        "Z": -0.0977401
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2000427"
@@ -743,7 +577,7 @@
         "Z": 0.0
       },
       "Arguments": [
-        "2"
+        "0"
       ],
       "Conditions": [],
       "Note": ""
@@ -752,15 +586,36 @@
       "Tag": "None",
       "Name": "Interactable",
       "Position": {
-        "X": 189.58,
-        "Y": -4.0,
-        "Z": 0.05
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "2000658"
       ],
       "Conditions": [],
       "Note": "The Scales of Judgment"
+    },
+    {
+      "Tag": "None",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-1"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionObjectData, AutoDuty",
+          "baseId": 2000658,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "Note": "Goes back if The Scales of Judgment weren't properly interacted with."
     },
     {
       "Tag": "Treasure",
@@ -771,7 +626,7 @@
         "Z": 0.0
       },
       "Arguments": [
-        "+4"
+        "+5"
       ],
       "Conditions": [
         {
@@ -785,11 +640,25 @@
     },
     {
       "Tag": "Treasure",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 194.14586,
+        "Y": -4.000017,
+        "Z": -35.71277
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "Note": "Extra step in case one is skipped while watching the Boss cutscene."
+    },
+    {
+      "Tag": "Treasure",
       "Name": "TreasureCoffer",
       "Position": {
-        "X": 195.89056,
+        "X": 196.32959,
         "Y": -4.000017,
-        "Z": -37.39741
+        "Z": -37.085686
       },
       "Arguments": [],
       "Conditions": [],
@@ -855,7 +724,7 @@
       },
       {
         "Version": 300,
-        "Change": "Added Unsynced KillInRange before Interactables. Added Unsynced KillInRange steps before and after the second boss to help ensure enough ghosts are killed for the GC Hunting Log. Removed unnecessary KillInRange steps after the first boss and adjusted the position of the Unsynced StopForCombat:False there."
+        "Change": "Added Unsynced KillInRange steps to ensure ghosts are killed for the GC Hunting Log. Added an extra step before the final boss so that nothing important is skipped by anyone watching the cutscene. Added failsafe for the Scales of Judgment. Removed unnecessary KillInRange steps after the first boss. Removed the Treasure steps required for any Coffer that only gives Elemental Shards."
       }
     ],
     "Notes": []

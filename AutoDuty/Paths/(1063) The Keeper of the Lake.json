@@ -122,9 +122,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -11.699984,
-        "Y": 20.200003,
-        "Z": -0.09999748
+        "X": -14.499994,
+        "Y": 19.7,
+        "Z": 1.4000027
       },
       "Arguments": [
         ""
@@ -192,9 +192,9 @@
       "Tag": "None",
       "Name": "StopForCombat",
       "Position": {
-        "X": -99.54,
-        "Y": 333.85,
-        "Z": -147.9
+        "X": -101.11643,
+        "Y": 333.84998,
+        "Z": -147.23312
       },
       "Arguments": [
         "FALSE"
@@ -366,9 +366,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 6.7000003,
-        "Y": 343.9001,
-        "Z": -112.099724
+        "X": 7.4999995,
+        "Y": 343.10004,
+        "Z": -108.99977
       },
       "Arguments": [
         ""
@@ -459,6 +459,20 @@
       "Note": ""
     },
     {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "Wait",
       "Position": {
@@ -525,6 +539,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Added TreasureCoffer steps. Added KillInRange steps. Added WaitFor:IsReady after transitions."
+      },
+      {
+        "Version": 300,
+        "Change": "Adjusted the Coords of MoveTo's in transition walls to be farther in the wall."
       }
     ],
     "Notes": []

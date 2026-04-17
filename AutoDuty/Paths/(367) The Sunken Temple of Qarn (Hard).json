@@ -13,15 +13,57 @@
       "Note": "<-- Trash Packs / 雑魚 -->"
     },
     {
+      "Tag": "Unsynced",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "FALSE"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
       "Tag": "None",
       "Name": "KillInRange",
       "Position": {
-        "X": -63.508232,
-        "Y": -12.000006,
-        "Z": -54.00587
+        "X": -68.14541,
+        "Y": -12.000003,
+        "Z": -54.205536
       },
       "Arguments": [
         "15"
+      ],
+      "Conditions": [],
+      "Note": ""
+    },
+    {
+      "Tag": "Unsynced",
+      "Name": "StopForCombat",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "TRUE"
       ],
       "Conditions": [],
       "Note": ""
@@ -52,7 +94,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Avoids getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
@@ -106,7 +148,7 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "Jumps down the hole."
     },
     {
       "Tag": "Comment",
@@ -255,8 +297,8 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 223.42851,
-        "Y": -38.94356,
+        "X": 228.52882,
+        "Y": -37.443584,
         "Z": -0.43220353
       },
       "Arguments": [
@@ -357,13 +399,13 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Avoids getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": 161.12961,
+        "X": 155.42926,
         "Y": -4.0,
         "Z": -73.7
       },
@@ -427,7 +469,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Avoids getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
@@ -455,7 +497,7 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Avoids getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
@@ -480,10 +522,10 @@
         "Z": 19.143215
       },
       "Arguments": [
-        ""
+        "FALSE"
       ],
       "Conditions": [],
-      "Note": "Avoids getting stuck in the doorway."
+      "Note": "Helps avoid getting stuck in the doorway."
     },
     {
       "Tag": "None",
@@ -555,7 +597,7 @@
       },
       {
         "Version": 300,
-        "Change": "Removed somewhat pointless Unsynced steps at the start."
+        "Change": "Adjusted the Coords of MoveTo's in transition walls to be farther in the wall."
       }
     ],
     "Notes": []

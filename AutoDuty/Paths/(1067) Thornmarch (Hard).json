@@ -6,7 +6,7 @@
       "Position": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": -1.0
+        "Z": -2.0
       },
       "Arguments": [
         ""
@@ -37,6 +37,10 @@
       {
         "Version": 299,
         "Change": "Added Boss name."
+      },
+      {
+        "Version": 300,
+        "Change": ""
       }
     ],
     "Notes": []

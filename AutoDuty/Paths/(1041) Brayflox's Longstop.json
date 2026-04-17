@@ -216,7 +216,7 @@
         "105"
       ],
       "Conditions": [],
-      "Note": "Treasure Coffer - Listed as Interactable since it's position is not static."
+      "Note": "Treasure Coffer - AD will attempt to click it until it despawns because it's an Interactable step (since it's position is not static)."
     },
     {
       "Tag": "Treasure",
@@ -446,9 +446,9 @@
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": -49.366234,
-        "Y": 35.322758,
-        "Z": -233.58548
+        "X": -90.75622,
+        "Y": 27.342485,
+        "Z": -221.55406
       },
       "Arguments": [
         "TRUE"
@@ -508,15 +508,15 @@
       },
       {
         "Version": 291,
-        "Change": "fixed chest before b2."
+        "Change": "fixed chest before b2"
       },
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss names. Added Unsynced steps. Added missing TreasureCoffer steps before the 2nd boss. Removed StopForCombat:False before the second boss."
       },
-	  {
+      {
         "Version": 300,
-        "Change": "Removed the Treasure Tag from the KillInRange before the second boss, so that the enemies on the cliff are always killed to avoid targeting issues during the second boss."
+        "Change": "Removed the Treasure Tag from the KillInRange before the second boss, so that the enemies on the cliff are always killed (to avoid targeting issues during the second boss). Adjusted the step before the final boss so that it won't be skipped by anyone watching the cutscene."
       }
     ],
     "Notes": []

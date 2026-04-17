@@ -160,9 +160,9 @@
       "Tag": "None",
       "Name": "MoveTo",
       "Position": {
-        "X": -98.05344,
-        "Y": 1.8369937,
-        "Z": 38.353184
+        "X": -95.25348,
+        "Y": 3.2369926,
+        "Z": 37.153202
       },
       "Arguments": [
         ""
@@ -510,6 +510,10 @@
       {
         "Version": 299,
         "Change": "Added Trash/Boss Comments & Boss Names. Added Unsynced Steps. Added Treasure steps. Added KillInRange steps. Added WaitFor:IsReady after transitions. Added appropriate Revival steps. Replaced Waits in the Gauntlet before the third boss with a Condition. Removed AutoMoveFor. Removed excess MoveTo steps."
+      },
+      {
+        "Version": 300,
+        "Change": "Adjusted the Coords of the MoveTo in the transition wall to be farther in said wall."
       }
     ],
     "Notes": []

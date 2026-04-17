@@ -18,9 +18,9 @@
       "Tag": "None",
       "Name": "Boss",
       "Position": {
-        "X": 0.0,
+        "X": 2.0000002,
         "Y": 0.0,
-        "Z": 1.0
+        "Z": -2.0000005
       },
       "Arguments": [
         ""
@@ -76,6 +76,10 @@
       {
         "Version": 299,
         "Change": "Added a Boss step with a loop Condition. Removed excess MoveTo steps and the Wait steps."
+      },
+      {
+        "Version": 300,
+        "Change": ""
       }
     ],
     "Notes": []
