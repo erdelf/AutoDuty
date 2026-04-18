@@ -234,77 +234,23 @@
       "Tag": "Unsynced",
       "Name": "KillInRange",
       "Position": {
-        "X": 45.786453,
-        "Y": -43.42574,
-        "Z": -60.90093
+        "X": 77.17064,
+        "Y": -40.23155,
+        "Z": -53.88696
       },
       "Arguments": [
-        "20"
+        "48"
       ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
-          "origin": "Object",
-          "originId": 1768,
-          "originLoc": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "target": "Location",
-          "targetId": 0,
-          "targetLoc": {
-            "X": 45.786,
-            "Y": -43.426,
-            "Z": -60.901
-          },
-          "operatorValue": "<",
-          "distance": 20.0
-        }
-      ],
-      "Note": "Ensures The Condemned is killed for the GC Hunting Log (if it's to the right side of the area)."
-    },
-    {
-      "Tag": "Unsynced",
-      "Name": "KillInRange",
-      "Position": {
-        "X": 91.90675,
-        "Y": -43.49106,
-        "Z": -34.729485
-      },
-      "Arguments": [
-        "20"
-      ],
-      "Conditions": [
-        {
-          "$type": "AutoDuty.Data.Classes+PathActionConditionDistance, AutoDuty",
-          "origin": "Object",
-          "originId": 1768,
-          "originLoc": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "target": "Location",
-          "targetId": 0,
-          "targetLoc": {
-            "X": 91.907,
-            "Y": -43.491,
-            "Z": -34.729
-          },
-          "operatorValue": "<",
-          "distance": 20.0
-        }
-      ],
-      "Note": "Ensures The Condemned is killed for the GC Hunting Log (if it's to the left side of the area)."
+      "Conditions": [],
+      "Note": "Ensures The Condemned is killed for the GC Hunting Log."
     },
     {
       "Tag": "Unsynced",
       "Name": "StopForCombat",
       "Position": {
-        "X": 68.49598,
-        "Y": -44.54775,
-        "Z": -36.89082
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
       },
       "Arguments": [
         "TRUE"
@@ -373,7 +319,7 @@
         "Z": 59.271297
       },
       "Arguments": [
-        "30"
+        "35"
       ],
       "Conditions": [],
       "Note": "Ensures The Condemned is killed for the GC Hunting Log."
@@ -551,8 +497,50 @@
       "Arguments": [
         "1"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000566,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
       "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "200"
+      ],
+      "Conditions": [],
+      "Note": "Gives a moment for the item to actually leave your inventory."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000566,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Goes back if you still have the Fruit of Knowledge."
     },
     {
       "Tag": "Treasure",
@@ -579,8 +567,50 @@
       "Arguments": [
         "0"
       ],
-      "Conditions": [],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000565,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
       "Note": ""
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "Wait",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "200"
+      ],
+      "Conditions": [],
+      "Note": "Gives a moment for the item to actually leave your inventory."
+    },
+    {
+      "Tag": "Treasure",
+      "Name": "ModifyIndex",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "-3"
+      ],
+      "Conditions": [
+        {
+          "$type": "AutoDuty.Data.Classes+PathActionConditionItemCount, AutoDuty",
+          "itemId": 2000565,
+          "quantity": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Goes back if you still have the Flame of Knowledge."
     },
     {
       "Tag": "None",
@@ -724,7 +754,7 @@
       },
       {
         "Version": 300,
-        "Change": "Added Unsynced KillInRange steps to ensure ghosts are killed for the GC Hunting Log. Added an extra step before the final boss so that nothing important is skipped by anyone watching the cutscene. Added failsafe for the Scales of Judgment. Removed unnecessary KillInRange steps after the first boss. Removed the Treasure steps required for any Coffer that only gives Elemental Shards."
+        "Change": "Added Unsynced KillInRange steps to ensure ghosts are killed for the GC Hunting Log. Added an extra step before the final boss so that nothing important is skipped by anyone watching the cutscene. Added failsafes for the Interacts at the end. Removed unnecessary KillInRange steps after the first boss. Removed the Treasure steps required for any Coffer that only gives Elemental Shards."
       }
     ],
     "Notes": []
