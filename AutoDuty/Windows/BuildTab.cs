@@ -415,6 +415,8 @@ namespace AutoDuty.Windows
                 int delIndex = -1;
                 for (int index = 0; index < _conditions.Count; index++)
                 {
+                    using ImRaii.Id _ = ImRaii.PushId($"BuildTab_Condition_{index}");
+
                     PathActionCondition condition = _conditions[index];
                     if (ImGuiComponents.IconButton(FontAwesomeIcon.TrashAlt))
                         delIndex = index;
