@@ -1,21 +1,21 @@
 {
   "Common": {
-    "Start": "Start",
-    "Stop": "Stop",
-    "Pause": "Pause",
+    "Start": "開始",
+    "Stop": "停止",
+    "Pause": "一時停止",
     "Resume": "再開",
-    "Save": "Save",
-    "Cancel": "Cancel",
-    "Close": "Close",
-    "Refresh": "Refresh",
+    "Save": "保存",
+    "Cancel": "キャンセル",
+    "Close": "閉じる",
+    "Refresh": "更新",
     "Add": "追加",
-    "Delete": "Delete",
-    "Edit": "Edit",
-    "Copy": "Copy",
-    "Clear": "Clear",
-    "Open": "Open",
-    "Load": "Load",
-    "Run": "Run",
-    "Build": "Build"
+    "Delete": "削除",
+    "Edit": "編集",
+    "Copy": "コピー",
+    "Clear": "クリア",
+    "Open": "開く",
+    "Load": "読み込み",
+    "Run": "実行",
+    "Build": "作成"
   }
 }

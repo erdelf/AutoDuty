@@ -3,7 +3,7 @@
     "Tabs": {
       "Main": "メイン",
       "Build": "ビルド",
-      "Paths": "パス",
+      "Paths": "経路",
       "Config": "設定",
       "Info": "情報",
       "Logs": "ログ",
@@ -17,13 +17,13 @@
       "FlagMarker": "フラグマーカー",
       "SummoningBell": "呼び鈴",
       "Apartment": "アパルトメント",
-      "PersonalHome": "個人ハウス",
+      "PersonalHome": "個人宅",
       "FCEstate": "FCハウス",
-      "TripleTriadTrader": "ﾄﾘﾌﾟﾙﾄﾗｲｱﾄﾞ交換員"
+      "TripleTriadTrader": "トリプルトライアド交換員"
     },
     "TT": {
-      "RegisterCards": "TTｶｰﾄﾞ登録",
-      "SellCards": "TTｶｰﾄﾞ売却"
+      "RegisterCards": "トリプルトライアドカード登録",
+      "SellCards": "トリプルトライアドカード売却"
     }
   }
 }

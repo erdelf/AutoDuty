@@ -10,7 +10,7 @@
       "MakeDefaultHelp": "既定にする\nCtrl長押しで現在キャラの既定に設定\nCtrl+Shiftで現在キャラの既定を解除",
       "Delete": "設定を削除",
       "DeleteHelp": "設定を削除\nCtrl長押しで有効",
-      "BareProfileNote": "BareプロファイルはDuty実行専用です。必要なら複製して編集してください。",
+      "BareProfileNote": "Bareプロファイルはコンテンツ実行のみを行う設定です。編集が必要な場合は複製してください。",
       "NewProfileName": "新しいプロファイル名",
       "ChangeProfileName": "プロファイル名を変更"
     },
@@ -19,10 +19,10 @@
     "Overlay": {
       "Header": "ウィンドウ / オーバーレイ設定",
       "ShowOverlay": "オーバーレイを表示",
-      "ShowOverlayHelp": "クイックアクションボタン（TurnIn/Desynthなど）は対応設定が有効な場合のみ使えます。\nまたはOverride Overlay Buttonsを有効にしてください",
+      "ShowOverlayHelp": "クイックアクションボタン（GC納品/分解など）は、対応する設定が有効な場合のみ使えます。\nまたはオーバーレイボタンの個別指定を有効にしてください",
       "HideWhenStopped": "停止中は非表示",
       "LockOverlay": "オーバーレイをロック",
-      "ShowDutyLoopText": "Duty/Loopテキストを表示",
+      "ShowDutyLoopText": "コンテンツ/ループ数テキストを表示",
       "TransparentBG": "背景を透過",
       "ShowActionText": "ADアクションテキストを表示",
       "AnchorBottom": "下端に固定",
@@ -32,12 +32,12 @@
       "SliderInputs": "スライダー入力"
     },
     "Duty": {
-      "Header": "Duty設定",
-      "AutoLeaveDuty": "最終ループで自動退出",
-      "AutoLeaveDutyHelp": "パス完了後にダンジョンから自動退出します。",
-      "BlockLeavingDuty": "完了までDuty退出をブロック",
+      "Header": "コンテンツ設定",
+      "AutoLeaveDuty": "最終ループでコンテンツから自動退出",
+      "AutoLeaveDutyHelp": "経路完了後にダンジョンから自動退出します。",
+      "BlockLeavingDuty": "完了までコンテンツ退出をブロック",
       "AutoManageRotation": "ローテーションプラグイン状態を自動管理",
-      "AutoManageRotationHelp": "各Duty開始時にAutodutyがローテーションプラグインを有効化します\\n*AutoDutyはリスト順に使用を試みます",
+      "AutoManageRotationHelp": "各コンテンツ開始時にAutoDutyがローテーションプラグインを有効化します\\n*AutoDutyはリスト順に使用を試みます",
       "Wrath": {
         "Header": "> Wrath Combo 設定 <",
         "AutoSetupJobs": "自動ローテ用にジョブを自動設定",
@@ -52,7 +52,7 @@
         "TargetingNonTank": "ターゲット | 非タンク: "
       },
       "AutoManageBMAI": "BossMod AI設定を自動管理",
-      "AutoManageBMAIHelp": "各Duty開始時にAutodutyがBMAIと設定したオプションを有効化します。",
+      "AutoManageBMAIHelp": "各コンテンツ開始時にAutoDutyがBMAIと設定したオプションを有効化します。",
       "BMAI": {
         "Header": "> BMAI 設定 <",
         "UpdatePresets": "プリセット更新",
@@ -67,26 +67,26 @@
         "UseDefaultSettingsHelp": "クリックでBMAI設定をAD向けの既定（推奨）値にリセットします"
       },
       "AutoManageVnavCamera": "VnavのAlignCameraを自動管理",
-      "AutoManageVnavCameraHelp": "各Duty開始時にAutodutyがVNavのAlignCameraを有効化し、元々無効なら終了時に戻します。",
+      "AutoManageVnavCameraHelp": "各コンテンツ開始時にAutoDutyがVNavのAlignCameraを有効化し、元々無効だった場合は終了時に戻します。",
       "LootTreasure": "宝箱を回収",
       "SelectMethod": "方式選択: ",
       "LootBossTreasureOnly": "ボス宝箱のみ回収",
-      "LootBossTreasureOnlyHelp": "非ボス宝箱は回避して、ボス宝箱のみ回収します。\\nすべてのパスで対応しているとは限りません。",
+      "LootBossTreasureOnlyHelp": "非ボス宝箱は回避して、ボス宝箱のみ回収します。\\nすべての経路で対応しているとは限りません。",
       "MinStuckTime": "スタック判定までの最小時間 (ms)",
       "ResetStuckOnStep": "次のステップ到達時のみスタックカウントをリセット",
       "RebuildNavmeshOnStuck": "スタック時にNavmeshを再構築",
       "RebuildNavmeshTimes": "回",
-      "UseReturnWhenStuck": "スタック時にReturnを使用",
+      "UseReturnWhenStuck": "スタック時にデジョンを使用",
       "ReturnTimes": "回",
-      "DrawPath": "次のパスを描画",
+      "DrawPath": "次の経路を描画",
       "DrawPathSteps": "描画するステップ数",
       "W2W": {
         "Header": "> W2W 設定 <",
         "TreatUnsyncAsW2W": "制限解除をW2Wとして扱う",
-        "TreatUnsyncAsW2WHelp": "ステップにW2Wタグがあるパスでのみ有効"
+        "TreatUnsyncAsW2WHelp": "ステップにW2Wタグがある経路でのみ有効"
       },
       "OverridePartyValidation": "パーティ検証を上書き",
-      "OverridePartyValidationHelp": "Duty申請時にパーティ構成チェックを無視します\\nマルチボックス専用です\\n*他プレイヤーとの利用は推奨しません*",
+      "OverridePartyValidationHelp": "コンテンツ申請時にパーティ構成チェックを無視します\\nマルチボックス専用です\\n*他プレイヤーとの利用は推奨しません*",
       "Advanced": {
         "Header": "詳細設定",
         "UsingAltRotation": "別のローテーションプラグインを使用",
@@ -101,19 +101,19 @@
       "Header": "ループ前初期化設定",
       "Enable": "有効",
       "ExecuteCommands": "全ループ開始時にコマンド実行",
-      "BetweenLoopNote": "以下はBetween Loop有効時、ループ間にも実行されます（現在 {0}）",
-      "RetireTo": "リタイア先 ",
+      "BetweenLoopNote": "ループ間設定が有効な場合、以下はループ間にも実行されます（現在 {0}）",
+      "RetireTo": "退避先 ",
       "AddCurrentPosition": "現在位置を追加",
       "HomePathHelp": "多くの家ではテレポ位置からドアまで直進できるため不要です。まれにドアまで経路が必要な場合はここで作成できます。ドアが他より遠い場合はドア前で「現在位置を追加」を押してください",
       "AutoEquipGear": "おすすめ装備を自動装備",
-      "GearSourceHelp": "Vanilla - アーマリーチェスト内のみ使用\\nGearsetter - gearsetterに問い合わせ、古い装備を所持品へ移動可能\\nStylist - stylist設定を使用",
+      "GearSourceHelp": "標準 - アーマリーチェスト内の装備のみ使用\\nGearsetter - Gearsetterに問い合わせ、古い装備を所持品へ移動可能\\nStylist - Stylist設定を使用",
       "MoveOldToInventory": "古い装備を所持品へ移動",
       "MoveOldToInventoryHelp": "武器以外の置換対象装備を所持品へ移動します。",
       "RequiresGearsetterOrStylist": "* アーマリーチェスト外の装備にはGearsetterまたはStylistが必要です",
       "AutoRepair": "自動修理",
       "Self": "自己",
       "SelfHelp": "ダークマターで自己修理します（クラフター育成が必要）",
-      "CityNpc": "都市NPC",
+      "CityNpc": "都市内NPC",
       "CityNpcHelp": "設定した修理NPCを利用します。",
       "TriggerAt": "発動しきい値 @",
       "PreferredRepairNPC": "優先修理NPC: ",
@@ -136,19 +136,19 @@
       "WaitTime": "(秒) ループ間の待機時間",
       "WaitTimeHelp": "ループ間処理をX秒遅延させます。",
       "ExecuteCommands": "全ループ間でコマンド実行",
-      "AutoExtract": "自動精製",
+      "AutoExtract": "マテリア自動精製",
       "Equipped": "装備中",
       "All": "すべて",
       "AutoOpenCoffers": "装備箱を自動開封",
-      "AutoOpenCoffersHelp": "各ループ間で装備箱（例: paladin arms）を自動開封します",
+      "AutoOpenCoffersHelp": "各ループ間で装備箱（例: ナイト武器箱）を自動開封します",
       "OpenCoffersWithGearset": "開封時のギアセット: ",
       "CurrentGearset": "現在のギアセット",
       "UseBlacklist": "ブラックリストを使用",
       "UseBlacklistHelp": "自動開封しない箱を指定できます。",
-      "SelectCoffer": "箱を選択",
-      "CofferName": "箱名",
-      "CofferNameHint": "箱名を入力して検索",
-      "AddCoffer": "箱を追加",
+      "SelectCoffer": "装備箱を選択",
+      "CofferName": "装備箱名",
+      "CofferNameHint": "装備箱名を入力して検索",
+      "AddCoffer": "装備箱を追加",
       "DiscardItems": "アイテム破棄",
       "Desynth": {
         "NQOnly": "NQ結果を保証"
@@ -159,11 +159,11 @@
       "ItemLevelLimitHelp": "分解スキルが「アイテムレベル + この値」に達すると、そのアイテムの分解を停止します。",
       "ProtectGearsets": "ギアセット保護",
       "DesynthCategories": "分解カテゴリ",
-      "AutoGCTurnin": "GC納品を自動化",
+      "AutoGCTurnin": "GC納品を自動実行",
       "InventorySlotsLeft": "所持品の空き枠が @ 以下で",
       "UseGCAetheryteTicket": "転送網利用券（GC）を使用",
-      "RegisterTripleTriadCards": "ﾄﾘﾌﾟﾙﾄﾗｲｱﾄﾞｶｰﾄﾞを登録",
-      "SellTripleTriadCards": "ﾄﾘﾌﾟﾙﾄﾗｲｱﾄﾞｶｰﾄﾞを売却",
+      "RegisterTripleTriadCards": "トリプルトライアドカードを登録",
+      "SellTripleTriadCards": "トリプルトライアドカードを売却",
       "SlotsOccupied": "使用枠",
       "CardCount": "カード枚数",
       "EnableAutoRetainer": "AutoRetainer連携を有効化",
@@ -187,8 +187,8 @@
       "Quantity": "数量",
       "AddItem": "アイテム追加",
       "StopOnlyWhenAllItems": "全アイテム取得時のみ停止",
-      "StopBLUSpell": "BLU魔法習得時に停止",
-      "SelectBLUSpell": "BLU魔法を選択",
+      "StopBLUSpell": "青魔法習得時に停止",
+      "SelectBLUSpell": "青魔法を選択",
       "StopOnlyWhenAllSpells": "全魔法習得時のみ停止",
       "ExecuteCommandsOnTermination": "全ループ終了時にコマンド実行",
       "PlaySoundOnCompletion": "全ループ完了時に音を鳴らす: ",
@@ -199,29 +199,29 @@
       "Header": "マルチボックス",
       "ExperimentalWarning": "非常に実験的",
       "Step1": "手順1: 同一データセンターの4クライアントをログインし、パーティ未参加でADを開いた状態にします",
-      "Step2": "手順2: 1クライアントをホストにします。ホストが他を先導します。ホストにしたいクライアントで下のHostを選択",
-      "Step3": "手順3: 接続方式をNamed PipesかTCPから選択。どちらでも動作しますが、同一PCならPipes推奨、別PCならTCP推奨。",
-      "NamedPipes": "Named Pipes",
-      "Step4Pipes": "手順4: Pipe名はクライアントとホストで一致させてください",
-      "Step5Pipes": "手順5: クライアント側のServer名で別PC上のホストへ接続できます。既定の \".\" はローカルPCです。",
+      "Step2": "手順2: 1クライアントをホストにします。ホストが他を先導します。ホストにしたいクライアントで下のホストを選択",
+      "Step3": "手順3: 接続方式をNamed PipeまたはTCPから選択。どちらでも動作しますが、同一PCならNamed Pipe推奨、別PCならTCP推奨。",
+      "NamedPipes": "Named Pipe",
+      "Step4Pipes": "手順4: パイプ名はクライアントとホストで一致させてください",
+      "Step5Pipes": "手順5: クライアント側のサーバー名で別PC上のホストへ接続できます。既定の \".\" はローカルPCです。",
       "TCP": "TCP",
       "Step4TCP": "手順4: ポート番号はクライアントとホストで一致させてください",
-      "Step5TCP": "手順5: クライアント側のServerアドレスを変更すると別PC上のホストへ接続できます。",
+      "Step5TCP": "手順5: クライアント側のサーバーアドレスを変更すると別PC上のホストへ接続できます。",
       "UACWarning": "UACでネットワークアクセス許可を求められる場合があります",
-      "Step6": "手順6: ホスト側でMultiboxを選択",
-      "Step7": "手順7: 3クライアント側でもMultiboxを選択。各キャラがパーティに招待されます。下に現在情報が表示され、\"no info\" は未接続です",
-      "Step8": "手順8: ホストで実行するダンジョンと回数を選び、Runをクリック",
+      "Step6": "手順6: ホスト側でマルチボックスを選択",
+      "Step7": "手順7: 3クライアント側でもマルチボックスを選択。各キャラがパーティに招待されます。下に現在情報が表示され、\"情報なし\" は未接続です",
+      "Step8": "手順8: ホストで実行するダンジョンと回数を選び、実行をクリック",
       "TransportType": "通信方式",
       "TransportTypeHelp": "Named Pipe: 接続可否はシステム設定に依存\\nTCP: 接続可否はファイアウォール設定に依存\\n通常はNamed Pipeが設定変更なしで動作します。",
-      "PipeName": "Pipe名",
-      "ServerName": "Server名",
-      "ServerAddress": "Serverアドレス",
-      "ServerPort": "Serverポート",
+      "PipeName": "パイプ名",
+      "ServerName": "サーバー名",
+      "ServerAddress": "サーバーアドレス",
+      "ServerPort": "サーバーポート",
       "Reset": "リセット",
       "Host": "ホスト",
-      "SynchronizePaths": "パスを同期",
-      "SynchronizePathsHelp": "ホストのパスをクライアントへ送信します",
-      "Blocking": "ブロッキング: {0}",
+      "SynchronizePaths": "経路を同期",
+      "SynchronizePathsHelp": "ホストの経路をクライアントへ送信します",
+      "Blocking": "ブロック中: {0}",
       "ScrambleNames": "名前を匿名化",
       "Name": "名前",
       "InParty": "パーティ中?",
@@ -237,14 +237,14 @@
       "RetireLocation": {
         "Inn": "宿屋",
         "Apartment": "アパルトメント",
-        "Personal_Home": "個人ハウス",
+        "Personal_Home": "個人宅",
         "FC_Estate": "FCハウス",
-        "GC_Barracks": "GC兵舎"
+        "GC_Barracks": "グランドカンパニー兵舎"
       },
       "SummoningBellLocations": {
         "Inn": "宿屋",
         "Apartment": "アパルトメント",
-        "Personal_Home": "個人ハウス",
+        "Personal_Home": "個人宅",
         "FC_Estate": "FCハウス",
         "Limsa_Lominsa_Lower_Decks": "リムサ・ロミンサ：下甲板層",
         "Old_Gridania": "グリダニア：旧市街",
@@ -260,14 +260,14 @@
         "Tuliyollal": "トライヨラ",
         "Nexus_Arcade": "ネクサス・アーケード"
       },
-      "DesynthCategory": {
-        "Inventory_Equipment": "所持品: 装備",
-        "Inventory_Housing": "所持品: ハウジング",
-        "Armoury_Main_Off": "アーマリー: 主/副",
-        "Armoury_Head_Body_Hands": "アーマリー: 頭/胴/手",
-        "Armoury_Legs_Feet": "アーマリー: 脚/足",
-        "Armoury_Neck_Ears": "アーマリー: 首/耳",
-        "Armoury_Wrists_Rings": "アーマリー: 腕/指",
+      "SalvageItemCategory": {
+        "InventoryEquipment": "所持品: 装備品",
+        "InventoryHousing": "所持品: ハウジング",
+        "ArmouryMainOff": "アーマリーチェスト: メイン/サブ",
+        "ArmouryHeadBodyHands": "アーマリーチェスト: 頭/胴/手",
+        "ArmouryLegsFeet": "アーマリーチェスト: 脚/足",
+        "ArmouryNeckEars": "アーマリーチェスト: 首/耳",
+        "ArmouryWristsRings": "アーマリーチェスト: 腕/指",
         "Equipped": "装備中"
       },
       "TerminationMode": {
@@ -288,7 +288,7 @@
         "Striking": "ストライカー",
         "Maiming": "スレイヤー",
         "Scouting": "スカウト",
-        "Aiming": "レンジ",
+        "Aiming": "レンジャー",
         "Casters": "キャスター",
         "Paladin": "ナイト",
         "Warrior": "戦士",
@@ -304,7 +304,7 @@
         "Reaper": "リーパー",
         "Ninja": "忍者",
         "Viper": "ヴァイパー",
-        "Bard": "詩人",
+        "Bard": "吟遊詩人",
         "Machinist": "機工士",
         "Dancer": "踊り子",
         "Black_Mage": "黒魔道士",
@@ -312,72 +312,23 @@
         "Red_Mage": "赤魔道士",
         "Pictomancer": "ピクトマンサー",
         "Blue_Mage": "青魔道士"
-      }
-    },
-    "Dev": {
-      "Header": "開発設定",
-      "UpdatePathsOnStartup": "起動時にパス更新",
-      "PrintModList": "Mod一覧を出力",
-      "InvitedBy": "招待者: ",
-      "DutySupport": {
-        "Header": "利用可能なDuty Support",
-        "Selected": "選択中: ",
-        "Cnt": "件数: "
       },
-      "Squadron": {
-        "Header": "利用可能なSquadron情報",
-        "Duties": "Duties",
-        "AvailableMembers": "利用可能メンバー",
-        "Columns": {
-          "Enabled": "有効?",
-          "Completed": "完了",
-          "Name": "名前",
-          "Level": "レベル",
-          "Synced": "同期",
-          "Selected": "選択",
-          "Class": "クラス",
-          "ClassId": "クラスID",
-          "Physical": "物理",
-          "Mental": "精神",
-          "Tactical": "戦術",
-          "Chemistry": "ケミストリー",
-          "Tactics": "戦術"
-        }
+      "ConditionType": {
+        "VariantPath": "経路",
+        "Distance": "距離",
+        "ObjectData": "オブジェクト",
+        "ItemCount": "アイテム",
+        "Job": "ジョブ",
+        "ActionStatus": "アクション状態"
       },
-      "TTCards": {
-        "Header": "利用可能TTｶｰﾄﾞ",
-        "Cnt": "件数: "
+      "ObjectDataProperty": {
+        "EventState": "イベント状態",
+        "IsTargetable": "ターゲット可否"
       },
-      "Partycheck": {
-        "Header": "パーティチェック",
-        "PartySize": "パーティ人数: ",
-        "Valid": "有効: "
-      },
-      "BLU": {
-        "Header": "BLUロードアウト",
-        "NothingLoaded": "未ロード",
-        "Unload": "解除",
-        "Load": "読込"
-      },
-      "RetainerPrices": {
-        "Header": "リテイナー所持品価格"
-      },
-      "Buddy": {
-        "Header": "バディチェック"
-      },
-      "Actions": {
-        "CheckAction": "Action確認",
-        "CheckAction2": "Action確認2",
-        "Return": "Return?",
-        "RotationOn": "ローテーションON",
-        "RotationOff": "ローテーションOFF",
-        "BetweenLoopActions": "ループ間Action",
-        "BossLootTest": "ボス戦利品テスト"
-      },
-      "Teleport": {
-        "Header": "テレポート検証",
-        "Warps": "ワープ",
-        "LevelTest": "レベルテスト"
+      "DistanceLocationTypes": {
+        "Player": "プレイヤー",
+        "Object": "オブジェクト",
+        "Location": "座標"
       }
     }
   }
