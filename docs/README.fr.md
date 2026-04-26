@@ -1,8 +1,8 @@
-<a href="README.md"><img src="https://flagcdn.com/24x18/gb.png" alt="EN"> English</a> · <a href="README.fr.md"><img src="https://flagcdn.com/24x18/fr.png" alt="FR"> Français</a> · <a href="README.ja.md"><img src="https://flagcdn.com/24x18/jp.png" alt="JA"> 日本語</a> · <a href="README.zh-CN.md"><img src="https://flagcdn.com/24x18/cn.png" alt="ZH-CN"> 简体中文</a> · <a href="README.zh-TW.md"><img src="https://flagcdn.com/24x18/tw.png" alt="ZH-TW"> 繁體中文</a>
+<a href="../README.md"><img src="https://flagcdn.com/24x18/gb.png" alt="EN"> English</a> · <a href="README.fr.md"><img src="https://flagcdn.com/24x18/fr.png" alt="FR"> Français</a> · <a href="README.ja.md"><img src="https://flagcdn.com/24x18/jp.png" alt="JA"> 日本語</a> · <a href="README.zh-CN.md"><img src="https://flagcdn.com/24x18/cn.png" alt="ZH-CN"> 简体中文</a> · <a href="README.zh-TW.md"><img src="https://flagcdn.com/24x18/tw.png" alt="ZH-TW"> 繁體中文</a>
 
 # AutoDuty
 
-<img align="right" width="150" height="150" src="logo.png">
+<img align="right" width="150" height="150" src="../logo.png">
 
 AutoDuty (AD) est un plugin Dalamud pour FFXIV qui sert d'outil pour créer et suivre des chemins à travers les donjons et missions. Il est conçu pour permettre le bouclage automatique de contenu instancié avec le Soutien, les Adelphes ou les Escouades.
 
@@ -12,7 +12,7 @@ _Code non licencié, qui suit la [loi sur le droit d'auteur par défaut](https:/
 
 # Chemins de donjon
 
-<img align="right" height="250" src="Assets/paths.png">
+<img align="right" height="250" src="../Assets/paths.png">
 
 Chaque donjon supporté par AutoDuty possède un chemin préconfiguré qui devrait compléter le donjon sans problème. Si vous rencontrez des soucis, n'hésitez pas à nous contacter sur le [Discord de support](https://discord.gg/punishxiv).
 
@@ -22,7 +22,7 @@ La création de chemins est aussi possible et facile à réaliser dans AutoDuty 
 
 # Montée de niveau automatique
 
-<img align="right" height="250" src="Assets/leveling.png">
+<img align="right" height="250" src="../Assets/leveling.png">
 
 AutoDuty possède une fonctionnalité de montée de niveau qui vous fait parcourir en continu le "bon" donjon pour progresser. Le donjon est généralement déterminé par la qualité du chemin, le support des combats de boss, et évidemment le niveau du donjon.
 
