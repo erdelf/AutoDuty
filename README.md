@@ -1,3 +1,5 @@
+<a href="README.md"><img src="https://flagcdn.com/24x18/gb.png" alt="EN"> English</a> · <a href="docs/README.fr.md"><img src="https://flagcdn.com/24x18/fr.png" alt="FR"> Français</a> · <a href="docs/README.ja.md"><img src="https://flagcdn.com/24x18/jp.png" alt="JA"> 日本語</a> · <a href="docs/README.zh-CN.md"><img src="https://flagcdn.com/24x18/cn.png" alt="ZH-CN"> 简体中文</a> · <a href="docs/README.zh-TW.md"><img src="https://flagcdn.com/24x18/tw.png" alt="ZH-TW"> 繁體中文</a>
+
 # AutoDuty
 
 <img align="right" width="150" height="150" src="logo.png">
