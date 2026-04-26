@@ -1,4 +1,4 @@
-[English](README.md) | [Français](README.fr.md)
+🇬🇧 [English](README.md) | 🇫🇷 [Français](README.fr.md) | 🇯🇵 [日本語](README.ja.md) | 🇨🇳 [简体中文](README.zh-CN.md) | 🇹🇼 [繁體中文](README.zh-TW.md)
 
 # AutoDuty
 
