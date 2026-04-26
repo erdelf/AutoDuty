@@ -3,6 +3,7 @@ using FFXIVClientStructs.FFXIV.Client.UI.Misc;
 using AutoDuty.IPC;
 using Dalamud.Plugin.Services;
 using ECommons.Throttlers;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -38,7 +39,7 @@ namespace AutoDuty.Helpers
         private GearsetUpdateSource source;
 
         protected override string Name        => nameof(AutoEquipHelper);
-        protected override string DisplayName => "Auto Equip";
+        protected override string DisplayName => Loc.Get("Overlay.Actions.AutoEquip");
 
         protected override int TimeOut { get; set; }
 

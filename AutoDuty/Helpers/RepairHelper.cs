@@ -8,6 +8,7 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using Dalamud.Game.ClientState.Conditions;
 using ECommons;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -95,7 +96,7 @@ namespace AutoDuty.Helpers
             if (GotoHelper.State == ActionState.Running)
                 return;
 
-            Plugin.action = "Repairing";
+            Plugin.action = Loc.Get("Overlay.Actions.Repairing");
 
             if (Configuration.AutoRepairSelf)
             {

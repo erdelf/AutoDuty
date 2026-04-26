@@ -7,6 +7,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using global::AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -32,7 +33,7 @@ namespace AutoDuty.Helpers
             _dutyMode = DutyMode.None;
             Svc.Log.Info("Queueing: Accepting only");
             Instance.Start();
-            Plugin.action = "Queueing: Waiting to accept";
+            Plugin.action = Loc.Get("Overlay.Actions.QueueingWaiting");
         }
 
         internal static void Invoke(Content? content, DutyMode dutyMode)
@@ -44,7 +45,7 @@ namespace AutoDuty.Helpers
                 Svc.Log.Info($"Queueing: {dutyMode}: {content.Name}");
 
                 Instance.Start();
-                Plugin.action = $"Queueing {_dutyMode}: {content.Name}";
+                Plugin.action = Loc.Get("Overlay.Actions.Queueing", _dutyMode, content.Name ?? "");
             }
         }
 

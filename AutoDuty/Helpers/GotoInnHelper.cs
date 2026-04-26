@@ -3,6 +3,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
 using Dalamud.Game.ClientState.Objects.Types;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -108,7 +109,7 @@ namespace AutoDuty.Helpers
             if (GotoHelper.State == ActionState.Running)
                 return;
 
-            Plugin.action = "Retiring to Inn";
+            Plugin.action = Loc.Get("Overlay.Actions.RetiringToInn");
 
             if (Svc.ClientState.TerritoryType == InnTerritoryType(whichGrandCompany))
             {

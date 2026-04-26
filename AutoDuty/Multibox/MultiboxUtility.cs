@@ -1,3 +1,5 @@
+using global::AutoDuty.Managers;
+
 namespace AutoDuty.Multibox;
 
 using System;
@@ -99,7 +101,7 @@ public static class MultiboxUtility
             if(stepBlock)
                 if (Config.Host)   
                 {
-                    Plugin.action = "Waiting for clients";
+                    Plugin.action = Loc.Get("Overlay.Actions.WaitingForClients");
                     Server.CheckStepProgress();
                 }
                 else
@@ -668,7 +670,7 @@ public static class MultiboxUtility
                 DebugLog("Client not connected, cannot send step completed.");
                 return;
             }
-            Plugin.action = "Waiting for others";
+            Plugin.action = Loc.Get("Overlay.Actions.WaitingForOthers");
             clientSS.WriteString(STEP_COMPLETED);
             DebugLog("Step completed sent to server.");
         }

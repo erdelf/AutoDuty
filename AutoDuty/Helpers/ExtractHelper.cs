@@ -5,13 +5,14 @@ using ECommons.Throttlers;
 using ECommons.UIHelpers.AddonMasterImplementations;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
     internal class ExtractHelper : ActiveHelperBase<ExtractHelper>
     {
         protected override string Name        => nameof(ExtractHelper);
-        protected override string DisplayName => "Extracting Materia";
+        protected override string DisplayName => Loc.Get("Overlay.Actions.ExtractingMateria");
 
         public override string[]? Commands { get; init; } = ["extract"];
         public override string? CommandDescription { get; init; } = "Extract's materia from equipment";
@@ -56,7 +57,7 @@ namespace AutoDuty.Helpers
                 return;
             }
 
-            Plugin.action = "Extracting Materia";
+            Plugin.action = Loc.Get("Overlay.Actions.ExtractingMateria");
 
             if (InventoryManager.Instance()->GetEmptySlotsInBag() < 1)
             {

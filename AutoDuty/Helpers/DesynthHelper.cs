@@ -6,6 +6,7 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -18,7 +19,7 @@ namespace AutoDuty.Helpers
     internal class DesynthHelper : ActiveHelperBase<DesynthHelper>
     {
         protected override string Name        => nameof(DesynthHelper);
-        protected override string DisplayName => "Desynthing";
+        protected override string DisplayName => Loc.Get("Overlay.Actions.Desynthing");
 
         public override string[]? Commands { get; init; } = ["desynth"];
         public override string? CommandDescription { get; init; } = "Desynth's items in your inventory";
@@ -49,7 +50,7 @@ namespace AutoDuty.Helpers
                 return;
             }
 
-            Plugin.action = "Desynthing Inventory";
+            Plugin.action = Loc.Get("Overlay.Actions.DesynthingInventory");
 
             if (InventoryManager.Instance()->GetEmptySlotsInBag() < 1)
             {

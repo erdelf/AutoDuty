@@ -3,6 +3,7 @@ using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Plugin.Services;
 using ECommons;
 using ECommons.DalamudServices;
+using AutoDuty.Managers;
 using ECommons.Throttlers;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using System.Numerics;
@@ -106,7 +107,7 @@ namespace AutoDuty.Helpers
 
             EzThrottler.Throttle("Goto", 50);
 
-            Plugin.action = $"Going to {TerritoryName.GetTerritoryName(territoryType)}{(moveLocations.Count > 0 ? $" at {moveLocations[^1]}" : "")}";
+            Plugin.action = Loc.Get("Overlay.Actions.GoingTo", TerritoryName.GetTerritoryName(territoryType));
 
             if (!Player.Available)
                 return;

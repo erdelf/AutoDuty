@@ -23,6 +23,31 @@
     "Popup": {
       "MissingPlugin": "プラグイン不足",
       "MissingQuestCompletion": "クエスト未完了"
+    },
+    "HideLabel": "非表示",
+    "Loops": "ループ",
+    "LoopsOf": "/",
+    "Actions": {
+      "ExtractingMateria": "マテリア精製中",
+      "Desynthing": "分解中",
+      "DesynthingInventory": "所持品を分解中",
+      "Repairing": "修理中",
+      "ExitingDuty": "コンテンツ退出中",
+      "AutoEquip": "自動装備",
+      "GCTurnin": "GC納品",
+      "GCTurningIn": "GC納品中",
+      "RetiringToBarracks": "バラックへ移動中",
+      "RetiringToInn": "宿屋へ移動中",
+      "RetiringTo": "{0}へ移動中",
+      "QueueingWaiting": "申請中: 承認待ち",
+      "Queueing": "申請中 {0}: {1}",
+      "WaitingForClients": "クライアント待機中",
+      "WaitingForOthers": "他のプレイヤー待機中",
+      "GoingTo": "{0}へ移動中",
+      "Jumping": "ジャンプ中",
+      "JumpingTo": "{0}へジャンプ中",
+      "Boss": "ボス: {0}",
+      "KillingInRange": "{0}y範囲内で戦闘中"
     }
   }
 }

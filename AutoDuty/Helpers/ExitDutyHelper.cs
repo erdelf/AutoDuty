@@ -3,13 +3,14 @@ using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using ECommons;
 using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
     internal class ExitDutyHelper : ActiveHelperBase<ExitDutyHelper>
     {
         protected override string Name        => nameof(ExitDutyHelper);
-        protected override string DisplayName => "Exiting Duty";
+        protected override string DisplayName => Loc.Get("Overlay.Actions.ExitingDuty");
 
         public override string[]? Commands           { get; init; } = ["exitduty"];
         public override string?   CommandDescription { get; init; } = "Exits the current duty if you are not in combat";

@@ -2,6 +2,7 @@ using AutoDuty.Helpers;
 using Dalamud.Interface.Utility.Raii;
 using Dalamud.Interface.Utility;
 using Dalamud.Interface.Windowing;
+using global::AutoDuty.Managers;
 using ECommons.DalamudServices;
 using Dalamud.Bindings.ImGui;
 using System.Numerics;
@@ -105,7 +106,7 @@ public unsafe class Overlay : Window
                                     if (Plugin.Stage == 0)
                                     {
                                         if (!Plugin.states.HasFlag(PluginState.Navigating) && !Plugin.states.HasFlag(PluginState.Looping))
-                                            if (ImGui.Button("Start"))
+                                            if (ImGui.Button(Loc.Get("Common.Start")))
                                             {
                                                 Plugin.LoadPath();
                                                 Plugin.Run(Svc.ClientState.TerritoryType);
@@ -147,16 +148,16 @@ public unsafe class Overlay : Window
                                         Configuration.Save();
                                     }
 
-                                    hideText = ImGui.IsItemHovered() ? "Hide" : string.Empty;
+                                    hideText = ImGui.IsItemHovered() ? Loc.Get("Overlay.HideLabel") : string.Empty;
 
                                     ImGui.SameLine(0, 5);
 
                                     if (Plugin.states.HasFlag(PluginState.Navigating) || Plugin.states.HasFlag(PluginState.Navigating))
                                         loopsText =
-                                            $"{(Plugin.CurrentTerritoryContent?.Name!.Length > 20 ? Plugin.CurrentTerritoryContent?.Name![..17] + "..." : Plugin.CurrentTerritoryContent?.Name)}{(Plugin.states.HasFlag(PluginState.Navigating) ? $": {Plugin.currentLoop} of {AutoDuty.Configuration.LoopTimes} Loops" : "")}";
+                                            $"{(Plugin.CurrentTerritoryContent?.Name!.Length > 20 ? Plugin.CurrentTerritoryContent?.Name![..17] + "..." : Plugin.CurrentTerritoryContent?.Name)}{(Plugin.states.HasFlag(PluginState.Navigating) ? $": {Plugin.currentLoop} {Loc.Get("Overlay.LoopsOf")} {AutoDuty.Configuration.LoopTimes} {Loc.Get("Overlay.Loops")}" : "")}";
                                     else
                                         loopsText =
-                                            $"{(Plugin.CurrentTerritoryContent?.Name!.Length > 40 ? Plugin.CurrentTerritoryContent?.Name![..37] + "..." : Plugin.CurrentTerritoryContent?.Name)}{(Plugin.states.HasFlag(PluginState.Navigating) ? $": {Plugin.currentLoop} of {AutoDuty.Configuration.LoopTimes} Loops" : "")}";
+                                            $"{(Plugin.CurrentTerritoryContent?.Name!.Length > 40 ? Plugin.CurrentTerritoryContent?.Name![..37] + "..." : Plugin.CurrentTerritoryContent?.Name)}{(Plugin.states.HasFlag(PluginState.Navigating) ? $": {Plugin.currentLoop} {Loc.Get("Overlay.LoopsOf")} {AutoDuty.Configuration.LoopTimes} {Loc.Get("Overlay.Loops")}" : "")}";
 
                                     ImGui.TextColored(new Vector4(93 / 255f, 226 / 255f, 231 / 255f, 1), loopsText);
                                 });
@@ -175,7 +176,7 @@ public unsafe class Overlay : Window
                                         Configuration.Save();
                                     }
 
-                                    hideTextAction = ImGui.IsItemHovered() ? "Hide" : "";
+                                    hideTextAction = ImGui.IsItemHovered() ? Loc.Get("Overlay.HideLabel") : "";
 
                                     ImGui.SameLine(0, 5);
                                     ImGui.TextColored(new Vector4(0, 255f, 0, 1), Plugin.action.Length > 40 ? Plugin.action[..37] + "..." : Plugin.action);

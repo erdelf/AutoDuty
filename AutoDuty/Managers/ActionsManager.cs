@@ -321,7 +321,7 @@ namespace AutoDuty.Managers
 
         public unsafe void Jump(PathAction action)
         {
-            Plugin.action = $"Jumping";
+            Plugin.action = Loc.Get("Overlay.Actions.Jumping");
 
             if (int.TryParse(action.Arguments[0], out int wait) && wait > 0)
             {
@@ -342,7 +342,7 @@ namespace AutoDuty.Managers
 
         public unsafe void JumpTo(PathAction action)
         {
-            Plugin.action = $"Jumping To {action.Arguments[0]}";
+            Plugin.action = Loc.Get("Overlay.Actions.JumpingTo", action.Arguments[0]);
             if (!action.Arguments[0].TryGetVector3(out Vector3 position))
                 return;
             int wait = 100;
@@ -543,7 +543,7 @@ namespace AutoDuty.Managers
             if (!uint.TryParse(action.Arguments[0], out uint range))
                 return;
             
-            Plugin.action = $"Killing in {range}y";
+            Plugin.action = Loc.Get("Overlay.Actions.KillingInRange", range);
 
             taskManager.Enqueue(() => BossMod_IPCSubscriber.SetMovement(true), "KillInRange-StopForCombat");
 
@@ -773,7 +773,7 @@ namespace AutoDuty.Managers
             taskManager.Enqueue(() => BossMoveCheck(action.Position), "Boss-MoveCheck");
             if (Plugin.bossObject == null)
                 taskManager.Enqueue(() => (Plugin.bossObject = GetBossObject()) != null, "Boss-GetBossObject");
-            taskManager.Enqueue(() => Plugin.action      = $"Boss: {Plugin.bossObject?.Name.TextValue ?? ""}", "Boss-SetActionVar");
+            taskManager.Enqueue(() => Plugin.action = Loc.Get("Overlay.Actions.Boss", Plugin.bossObject?.Name.TextValue ?? ""), "Boss-SetActionVar");
             taskManager.Enqueue(() => Svc.Targets.Target = Plugin.bossObject,                                  "Boss-SetTarget");
             taskManager.Enqueue(() => Svc.Condition[ConditionFlag.InCombat],                                   "Boss-WaitInCombat");
             taskManager.Enqueue(() => BossCheck(),                                                             "Boss-BossCheck", new TaskManagerConfiguration(int.MaxValue));

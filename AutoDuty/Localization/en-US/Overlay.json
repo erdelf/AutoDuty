@@ -23,6 +23,31 @@
     "Popup": {
       "MissingPlugin": "Missing Plugin",
       "MissingQuestCompletion": "Missing Quest Completion"
+    },
+    "HideLabel": "Hide",
+    "Loops": "Loops",
+    "LoopsOf": "of",
+    "Actions": {
+      "ExtractingMateria": "Extracting Materia",
+      "Desynthing": "Desynthing",
+      "DesynthingInventory": "Desynthing Inventory",
+      "Repairing": "Repairing",
+      "ExitingDuty": "Exiting Duty",
+      "AutoEquip": "Auto Equip",
+      "GCTurnin": "GC Turnin",
+      "GCTurningIn": "GC Turning In",
+      "RetiringToBarracks": "Retiring to Barracks",
+      "RetiringToInn": "Retiring to Inn",
+      "RetiringTo": "Retiring to {0}",
+      "QueueingWaiting": "Queueing: Waiting to accept",
+      "Queueing": "Queueing {0}: {1}",
+      "WaitingForClients": "Waiting for clients",
+      "WaitingForOthers": "Waiting for others",
+      "GoingTo": "Going to {0}",
+      "Jumping": "Jumping",
+      "JumpingTo": "Jumping To {0}",
+      "Boss": "Boss: {0}",
+      "KillingInRange": "Killing in {0}y"
     }
   }
 }

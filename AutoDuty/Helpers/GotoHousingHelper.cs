@@ -3,6 +3,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using Dalamud.Game.ClientState.Objects.Types;
 using System.Numerics;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -115,7 +116,7 @@ namespace AutoDuty.Helpers
             if (GotoHelper.State == ActionState.Running)
                 return;
 
-            Plugin.action = $"Retiring to {whichHousing}";
+            Plugin.action = Loc.Get("Overlay.Actions.RetiringTo", whichHousing);
 
             if (InPrivateHouse(whichHousing))
             {

@@ -4,6 +4,7 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
+using AutoDuty.Managers;
 
 namespace AutoDuty.Helpers
 {
@@ -12,7 +13,7 @@ namespace AutoDuty.Helpers
     internal class GCTurninHelper : ActiveHelperBase<GCTurninHelper>
     {
         protected override string Name        { get; } = nameof(GCTurninHelper);
-        protected override string DisplayName { get; } = "GC Turnin";
+        protected override string DisplayName => Loc.Get("Overlay.Actions.GCTurnin");
 
         public override string[]? Commands { get; init; } = ["turnin", "gcturnin"];
         public override string? CommandDescription { get; init; } = "Automatically turns in items into the Grand Company Supply";
@@ -107,7 +108,7 @@ namespace AutoDuty.Helpers
             if (GotoHelper.State == ActionState.Running)
                 //DebugLog("Goto Running");
                 return;
-            Plugin.action = "GC Turning In";
+            Plugin.action = Loc.Get("Overlay.Actions.GCTurningIn");
 
             if (GotoHelper.State != ActionState.Running && Svc.ClientState.TerritoryType != PlayerHelper.GetGrandCompanyTerritoryType(PlayerHelper.GetGrandCompany()))
             {

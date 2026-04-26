@@ -23,6 +23,31 @@
     "Popup": {
       "MissingPlugin": "缺少插件",
       "MissingQuestCompletion": "缺少任务完成"
+    },
+    "HideLabel": "隐藏",
+    "Loops": "次循环",
+    "LoopsOf": "/",
+    "Actions": {
+      "ExtractingMateria": "正在精制魔晶石",
+      "Desynthing": "正在分解",
+      "DesynthingInventory": "正在分解背包物品",
+      "Repairing": "正在修理",
+      "ExitingDuty": "正在退出副本",
+      "AutoEquip": "自动装备",
+      "GCTurnin": "军票上缴",
+      "GCTurningIn": "正在上缴军票",
+      "RetiringToBarracks": "正在前往军营",
+      "RetiringToInn": "正在前往旅馆",
+      "RetiringTo": "正在前往{0}",
+      "QueueingWaiting": "排队中：等待接受",
+      "Queueing": "排队中 {0}：{1}",
+      "WaitingForClients": "等待客户端",
+      "WaitingForOthers": "等待其他玩家",
+      "GoingTo": "正在前往{0}",
+      "Jumping": "跳跃中",
+      "JumpingTo": "跳跃至{0}",
+      "Boss": "Boss: {0}",
+      "KillingInRange": "在{0}y范围内击杀"
     }
   }
 }
