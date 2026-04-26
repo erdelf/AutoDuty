@@ -1,0 +1,15 @@
+{
+  "PathsTab": {
+    "Title": "Fichiers de chemins",
+    "OpenFolder": "Ouvrir le dossier",
+    "OpenFile": "Ouvrir le fichier",
+    "DoNotOverwrite": "Ne pas écraser lors de la mise à jour",
+    "ClearCachedJobs": "Effacer toutes les classes en cache",
+    "CollapseAll": "Tout réduire",
+    "RevealAll": "Tout déplier",
+    "DownloadPaths": "Télécharger les chemins",
+    "BrokenStatus": "CASSÉ",
+    "Separator": " => ",
+    "ClearJobSelection": "Effacer la sélection de classe pour cette mission"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Overlay": {
+    "Button": {
+      "Goto": "Aller à",
+      "TurnIn": "Livraison",
+      "Desynth": "Recyclage",
+      "Extract": "Extraction",
+      "Repair": "Réparation",
+      "Equip": "Équiper",
+      "Coffers": "Coffres",
+      "TripleTriad": "Triple Triade"
+    },
+    "Tooltip": {
+      "TurnIn": "Cliquez pour aller à la livraison CG et invoquer la livraison CG d'AutoRetainer",
+      "TurnInMissing": "La livraison CG nécessite le plugin AutoRetainer. Obtenez-le sur https://love.puni.sh/ment.json",
+      "Desynth": "Cliquez pour recycler tous les objets de l'inventaire",
+      "Extract": "Cliquez pour extraire la matéria",
+      "ExtractMissing": "L'extraction de matéria nécessite d'avoir complété la quête : Forger l'esprit",
+      "Repair": "Cliquez pour réparer",
+      "Equip": "Cliquez pour équiper l'équipement",
+      "Coffers": "Cliquez pour ouvrir les coffres"
+    },
+    "Popup": {
+      "MissingPlugin": "Plugin manquant",
+      "MissingQuestCompletion": "Quête non complétée"
+    },
+    "HideLabel": "Masquer",
+    "Loops": "Boucles",
+    "LoopsOf": "sur",
+    "Actions": {
+      "ExtractingMateria": "Extraction de matéria",
+      "Desynthing": "Recyclage",
+      "DesynthingInventory": "Recyclage de l'inventaire",
+      "Repairing": "Réparation en cours",
+      "ExitingDuty": "Sortie de la mission",
+      "AutoEquip": "Équipement automatique",
+      "GCTurnin": "Livraison CG",
+      "GCTurningIn": "Livraison CG en cours",
+      "RetiringToBarracks": "Retrait vers la caserne",
+      "RetiringToInn": "Retrait vers l'auberge",
+      "RetiringTo": "Retrait vers {0}",
+      "QueueingWaiting": "File d'attente : En attente d'acceptation",
+      "Queueing": "File d'attente {0} : {1}",
+      "WaitingForClients": "En attente des clients",
+      "WaitingForOthers": "En attente des autres joueurs",
+      "GoingTo": "En route vers {0}",
+      "Jumping": "Saut",
+      "JumpingTo": "Saut vers {0}",
+      "Boss": "Boss : {0}",
+      "KillingInRange": "Élimination dans un rayon de {0}y"
+    }
+  }
+}

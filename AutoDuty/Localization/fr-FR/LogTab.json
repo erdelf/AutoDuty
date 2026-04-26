@@ -1,0 +1,42 @@
+{
+  "LogTab": {
+    "AutoScroll": "Défilement automatique",
+    "ClearLog": "Effacer le journal",
+    "CopyLog": "Copier l'intégralité du journal dans le presse-papiers",
+    "CreateIssue": "Créer un ticket",
+    "CreateIssueTooltip": "Cliquez pour ouvrir la fenêtre de création de ticket (après authentification sur GitHub) pour remplir le formulaire et soumettre un ticket au dépôt",
+    "FilterLogLevel": "Filtrer le niveau du journal",
+    "DebugLevelWarning": "AutoDuty ne peut pas modifier le niveau de journal utilisé par Dalamud. Pour voir les éléments de débogage, vous devez aller dans le journal Dalamud \"/xllog\" et définir le niveau approprié en haut à gauche.",
+
+    "Auth": {
+      "PollingGithub": "Interrogation de GitHub pour l'autorisation utilisateur : {0}",
+      "WaitingResponse": "En attente de la réponse de GitHub",
+      "ClickHere": "Cliquez ici",
+      "ToCopy": " pour copier ",
+      "ToClipboard": " dans le presse-papiers et :",
+      "OpenGithub": "Ouvrir GitHub",
+      "InBrowserPaste": " dans votre navigateur et collez-le"
+    },
+
+    "IssueForm": {
+      "Submitting": "Soumission du ticket",
+      "Title": "Ticket : Rapport de bug",
+      "AddTitle": "Ajouter un titre",
+      "DuplicateWarning": "Veuillez vous assurer que personne d'autre n'a signalé le même bug en allant sur la page des tickets et en recherchant un ticket similaire. Si vous trouvez un ticket similaire, réagissez au message initial avec un pouce en l'air pour augmenter sa priorité.",
+      "WhatHappened": "Que s'est-il passé ?",
+      "WhatHappenedHelp": "Aussi, qu'attendiez-vous qu'il se passe ? Veuillez mettre ici toute capture d'écran que vous pouvez partager.",
+      "ReproSteps": "Étapes pour reproduire l'erreur",
+      "ReproStepsHelp": "Listez toutes les étapes que nous pouvons suivre pour reproduire cette erreur.",
+      "Submit": "Soumettre le ticket"
+    },
+
+    "LogLevels": {
+      "Verbose": "Détaillé",
+      "Debug": "Débogage",
+      "Information": "Information",
+      "Warning": "Avertissement",
+      "Error": "Erreur",
+      "Fatal": "Fatal"
+    }
+  }
+}

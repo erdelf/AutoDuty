@@ -1,0 +1,29 @@
+{
+  "MainWindow": {
+    "Tabs": {
+      "Main": "Principal",
+      "Build": "Création",
+      "Paths": "Chemins",
+      "Config": "Configuration",
+      "Info": "Infos",
+      "Logs": "Journaux",
+      "Stats": "Statistiques",
+      "Support": "Soutenir AutoDuty"
+    },
+    "Goto": {
+      "Barracks": "Caserne",
+      "Inn": "Auberge",
+      "GCSupply": "Ravitaillement CG",
+      "FlagMarker": "Marqueur drapeau",
+      "SummoningBell": "Cloche d'invocation",
+      "Apartment": "Appartement",
+      "PersonalHome": "Maison personnelle",
+      "FCEstate": "Domaine de CL",
+      "TripleTriadTrader": "Marchand Triple Triade"
+    },
+    "TT": {
+      "RegisterCards": "Enregistrer les cartes TT",
+      "SellCards": "Vendre les cartes TT"
+    }
+  }
+}

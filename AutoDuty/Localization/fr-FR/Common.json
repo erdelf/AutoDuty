@@ -1,0 +1,21 @@
+{
+  "Common": {
+    "Start": "Démarrer",
+    "Stop": "Arrêter",
+    "Pause": "Pause",
+    "Resume": "Reprendre",
+    "Save": "Sauvegarder",
+    "Cancel": "Annuler",
+    "Close": "Fermer",
+    "Refresh": "Actualiser",
+    "Add": "Ajouter",
+    "Delete": "Supprimer",
+    "Edit": "Modifier",
+    "Copy": "Copier",
+    "Clear": "Effacer",
+    "Open": "Ouvrir",
+    "Load": "Charger",
+    "Run": "Lancer",
+    "Build": "Construire"
+  }
+}
