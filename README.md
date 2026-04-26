@@ -1,3 +1,5 @@
+[English](README.md) | [Français](README.fr.md)
+
 # AutoDuty
 
 <img align="right" width="150" height="150" src="logo.png">
