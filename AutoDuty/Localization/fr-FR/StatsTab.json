@@ -1,0 +1,22 @@
+{
+  "StatsTab": {
+    "ClearStatistics": "Effacer les statistiques",
+    "ClearStatisticsHelp": "Maintenez ctrl pour supprimer les statistiques définitivement",
+    "DutiesRun": "Missions effectuées : {0}",
+    "TimeSpent": "Temps passé : {0}",
+    "DutiesRunHeader": "Missions effectuées",
+    "ScrambleNames": "Brouiller les noms",
+    "SelectedMultiCount": "{0} sélectionné(s)",
+    "FilterOnlySelected": "uniquement sélectionnés",
+    "Unknown": "Inconnu ({0})",
+    "Columns": {
+      "CompletedAt": "Terminé le",
+      "Duration": "Durée",
+      "Duty": "Mission",
+      "Char": "Perso",
+      "ilvl": "ilvl",
+      "Job": "Classe",
+      "Deaths": "Morts"
+    }
+  }
+}

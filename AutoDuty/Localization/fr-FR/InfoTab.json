@@ -1,0 +1,30 @@
+{
+  "InfoTab": {
+    "Title": "Infos",
+    "SetupGuideIntro": "Pour obtenir de l'aide sur la configuration générale d'AutoDuty et de ses dépendances, consultez le guide de configuration ci-dessous pour plus d'informations :",
+    "InformationAndSetup": "Information et Configuration",
+    "PathStatusInfo": "Le guide ci-dessus contient également des informations sur l'état de chaque chemin, comme la maturité du chemin, la maturité du module et la fiabilité générale de chaque chemin. Vous pouvez aussi consulter des notes ou considérations supplémentaires nécessaires de votre part pour des boucles réussies. Pour les demandes, problèmes ou contributions à AD, veuillez utiliser le GitHub d'AutoDuty pour ouvrir un ticket :",
+    "GitHubIssues": "Tickets GitHub",
+    "DiscordInvite": "Pour tout le reste, rejoignez le Discord !",
+    "PunishDiscord": "Discord Punish",
+    "Install": "Installer",
+    "RequiredPlugins": "Plugins requis",
+    "CombatPlugins": "Plugins de combat",
+    "CombatPluginsNote": "Sujet très débattu, choisissez votre favori. Vous pouvez le configurer dans la configuration",
+    "RecommendedPlugins": "Plugins recommandés",
+    "PluginDesc": {
+      "BossModFights": "gère les combats de boss pour vous",
+      "VNavMovement": "peut vous déplacer",
+      "BossModRotations": "possède des rotations intégrées",
+      "WrathCombo": "plugin de rotation dédié de Puni.sh",
+      "RotationSolverReborn": "plugin de rotation de Reborn",
+      "AntiAFK": "vous empêche d'être marqué comme absent",
+      "AutoRetainer": "peut être déclenché, fait la livraison CG et le tri",
+      "Avarice": "est lu pour les positionnements",
+      "Lifestream": "téléportation extrêmement complète",
+      "Pandora": "ramassage de coffres + posture du tank",
+      "Gearsetter": "recommande l'équipement à porter",
+      "Stylist": "recommande l'équipement à porter"
+    }
+  }
+}
