@@ -12,9 +12,9 @@
     "Columns": {
       "CompletedAt": "完了日時",
       "Duration": "所要時間",
-      "Duty": "Duty",
+      "Duty": "コンテンツ",
       "Char": "キャラ",
-      "ilvl": "ilvl",
+      "ilvl": "IL",
       "Job": "ジョブ",
       "Deaths": "戦闘不能"
     }

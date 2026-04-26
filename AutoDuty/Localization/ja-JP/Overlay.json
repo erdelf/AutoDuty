@@ -1,24 +1,24 @@
 {
   "Overlay": {
     "Button": {
-      "Goto": "Goto",
+      "Goto": "移動",
       "TurnIn": "GC納品",
       "Desynth": "分解",
       "Extract": "精製",
       "Repair": "修理",
       "Equip": "装備更新",
-      "Coffers": "箱開封",
-      "TripleTriad": "ﾄﾘﾌﾟﾙﾄﾗｲｱﾄﾞ"
+      "Coffers": "装備箱",
+      "TripleTriad": "トリプルトライアド"
     },
     "Tooltip": {
-      "TurnIn": "クリックでGC納品場所へ移動し、AutoRetainerのGC納品を実行します",
+      "TurnIn": "クリックでグランドカンパニー納品場所へ移動し、AutoRetainerのGC納品を実行します",
       "TurnInMissing": "GC納品にはAutoRetainerプラグインが必要です: https://love.puni.sh/ment.json",
       "Desynth": "クリックで所持品をすべて分解します",
       "Extract": "クリックでマテリア精製します",
-      "ExtractMissing": "マテリア精製にはクエスト「Forging the Spirit」の完了が必要です",
+      "ExtractMissing": "マテリア精製にはクエスト「想いを束ねる力」の完了が必要です",
       "Repair": "クリックで修理します",
       "Equip": "クリックで装備を更新します",
-      "Coffers": "クリックで宝箱を開きます"
+      "Coffers": "クリックで装備箱を開きます"
     },
     "Popup": {
       "MissingPlugin": "プラグイン不足",
