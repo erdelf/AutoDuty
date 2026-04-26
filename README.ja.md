@@ -1,4 +1,4 @@
-[![EN](https://img.shields.io/badge/lang-EN-blue)](README.md) [![FR](https://img.shields.io/badge/lang-FR-blue)](README.fr.md) [![JA](https://img.shields.io/badge/lang-JA-blue)](README.ja.md) [![ZH-CN](https://img.shields.io/badge/lang-简体中文-blue)](README.zh-CN.md) [![ZH-TW](https://img.shields.io/badge/lang-繁體中文-blue)](README.zh-TW.md)
+**EN** [English](README.md) | **FR** [Français](README.fr.md) | **JA** [日本語](README.ja.md) | **ZH** [简体中文](README.zh-CN.md) | **ZH** [繁體中文](README.zh-TW.md)
 
 # AutoDuty
 
