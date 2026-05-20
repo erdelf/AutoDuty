@@ -26,9 +26,9 @@ namespace AutoDuty.IPC
     {
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("AutoRetainer");
 
-        internal static bool IsBusy() => 
+        internal static bool IsBusy() =>
             AutoRetainer.IsBusy();
-        internal static bool AreAnyRetainersAvailableForCurrentChara() => 
+        internal static bool AreAnyRetainersAvailableForCurrentChara() =>
             AutoRetainer.AreAnyRetainersAvailableForCurrentChara();
 
         internal static void AbortAllTasks() =>
@@ -149,14 +149,14 @@ namespace AutoDuty.IPC
         }
     }
 
-    
+
     internal static class YesAlready_IPCSubscriber
     {
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("YesAlready");
 
         public static bool IsPluginEnabled => YesAlready.IsPluginEnabled();
 
-        public static void SetState(bool on) => 
+        public static void SetState(bool on) =>
             YesAlready.SetPluginEnabled(on);
     }
 
@@ -218,7 +218,7 @@ namespace AutoDuty.IPC
         private static Guid? _curLease;
 
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("WrathCombo");
-        
+
         /// <summary>
         ///     Checks if the current job has a Single and Multi-Target combo configured
         ///     that are enabled in Auto-Mode.
@@ -265,7 +265,7 @@ namespace AutoDuty.IPC
             }
         }
 
-        internal static bool SetJobAutoReady() => 
+        internal static bool SetJobAutoReady() =>
             Register() && DoThing(() => WrathIPCWrapper.SetCurrentJobAutoRotationReady(_curLease!.Value));
 
         internal static void SetAutoMode(bool on)
@@ -289,6 +289,7 @@ namespace AutoDuty.IPC
                     WrathIPCWrapper.SetAutoRotationConfigState(_curLease.Value, AutoRotationConfigOption.HealerRotationMode, HealerRotationMode.Lowest_Current);
                     WrathIPCWrapper.SetAutoRotationConfigState(_curLease.Value, AutoRotationConfigOption.DPSAlwaysHardTarget, true);
                     WrathIPCWrapper.SetAutoRotationConfigState(_curLease.Value, AutoRotationConfigOption.HealerAlwaysHardTarget, true);
+                    WrathIPCWrapper.SetAutoRotationConfigState(_curLease.Value, AutoRotationConfigOption.UnTargetAndDisableForPenalty, true);
                 }
             }
         }
@@ -370,7 +371,7 @@ namespace AutoDuty.IPC
     {
         internal static bool IsEnabled => IPCSubscriber_Common.IsReady("Skippy") && Skippy.IsEnabled();
         public static Dictionary<string, bool> GetConfig() => Skippy.GetConfig();
-        public static bool MSQSkipEnabled() => 
+        public static bool MSQSkipEnabled() =>
             IsEnabled && Skippy.GetSkippedCategories().Contains(SkippyIPC.SkippedCategory.SkipMSQRoulette);
     }
 
