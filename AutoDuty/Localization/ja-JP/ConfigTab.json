@@ -80,6 +80,8 @@
       "ReturnTimes": "回",
       "DrawPath": "次の経路を描画",
       "DrawPathSteps": "描画するステップ数",
+      "DisableRenderWhileActive": "描画を無効化",
+      "DisableRenderWhileActiveHelp": "AutoDuty実行中は3Dワールドの描画を無効化します",
       "W2W": {
         "Header": "> W2W 設定 <",
         "TreatUnsyncAsW2W": "制限解除をW2Wとして扱う",
@@ -162,6 +164,8 @@
       "AutoGCTurnin": "GC納品を自動実行",
       "InventorySlotsLeft": "所持品の空き枠が @ 以下で",
       "UseGCAetheryteTicket": "転送網利用券（GC）を使用",
+      "ArmoireEntrust": "愛蔵品キャビネットへ預ける",
+      "ArmoireEntrustHelp": "ループ間に所持品内のアイテムを愛蔵品キャビネットへ預けます。",
       "RegisterTripleTriadCards": "トリプルトライアドカードを登録",
       "SellTripleTriadCards": "トリプルトライアドカードを売却",
       "SlotsOccupied": "使用枠",
@@ -319,7 +323,10 @@
         "ObjectData": "オブジェクト",
         "ItemCount": "アイテム",
         "Job": "ジョブ",
-        "ActionStatus": "アクション状態"
+        "ActionStatus": "アクション状態",
+        "Not": "否定",
+        "Or": "または",
+        "And": "かつ"
       },
       "ObjectDataProperty": {
         "EventState": "イベント状態",
