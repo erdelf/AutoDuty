@@ -8,7 +8,8 @@
       "Repair": "修理",
       "Equip": "装備更新",
       "Coffers": "装備箱",
-      "TripleTriad": "トリプルトライアド"
+      "TripleTriad": "トリプルトライアド",
+      "Armoire": "愛蔵品キャビネット"
     },
     "Tooltip": {
       "TurnIn": "クリックでグランドカンパニー納品場所へ移動し、AutoRetainerのGC納品を実行します",
