@@ -244,6 +244,12 @@
       "ResynchronizeStep": "ステップ再同期"
     },
     "Enums": {
+      "Positional": {
+        "Any": "指定なし",
+        "Flank": "側面",
+        "Rear": "背面",
+        "Front": "正面"
+      },
       "RetireLocation": {
         "Inn": "宿屋",
         "Apartment": "アパルトメント",
