@@ -2812,7 +2812,7 @@ public static class ConfigTab
 
         static void MakeCommands(string checkbox, ref bool execute, ref List<string> commands, ref string curCommand, string id)
         {
-            if (ImGui.Checkbox(Loc.Get(checkbox), ref execute))
+            if (ImGui.Checkbox($"{Loc.Get(checkbox)}{(execute ? ":" : string.Empty)} ", ref execute))
                 Configuration.Save();
 
             ImGuiComponents.HelpMarker(Loc.Get(checkbox + "Help", "/echo test"));
