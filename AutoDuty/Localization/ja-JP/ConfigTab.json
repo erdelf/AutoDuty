@@ -200,7 +200,8 @@
       "StopBLUSpell": "青魔法習得時に停止",
       "SelectBLUSpell": "青魔法を選択",
       "StopOnlyWhenAllSpells": "全魔法習得時のみ停止",
-      "StopWhenInventoryFull": "所持品がいっぱいになったら停止",
+      "StopWhenInventoryFull": "所持品の空き枠が少なくなったら停止",
+      "StopWhenInventoryFullSlots": "停止する空き枠数：",
 
       "ExecuteCommandsOnTermination": "ループ処理終了時にコマンドを実行",
       "ExecuteCommandsOnTerminationHelp": "一連のループ処理が終了したときに、登録したコマンドを実行します。\n例：{0}",
