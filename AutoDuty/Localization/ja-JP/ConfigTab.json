@@ -102,7 +102,8 @@
     "PreLoop": {
       "Header": "ループ前初期化設定",
       "Enable": "有効",
-      "ExecuteCommands": "全ループ開始時にコマンド実行",
+      "ExecuteCommands": "ループ処理開始前にコマンドを実行",
+      "ExecuteCommandsHelp": "一連のループ処理を開始する前に、登録したコマンドを実行します。\n例：{0}",
       "BetweenLoopNote": "ループ間設定が有効な場合、以下はループ間にも実行されます（現在 {0}）",
       "RetireTo": "退避先 ",
       "AddCurrentPosition": "現在位置を追加",
@@ -137,7 +138,8 @@
       "RunOnLastLoop": "最終ループでも実行",
       "WaitTime": "(秒) ループ間の待機時間",
       "WaitTimeHelp": "ループ間処理をX秒遅延させます。",
-      "ExecuteCommands": "全ループ間でコマンド実行",
+      "ExecuteCommands": "ループ間にコマンドを実行",
+      "ExecuteCommandsHelp": "ループ間処理の実行時に、登録したコマンドを実行します。\n例：{0}",
       "AutoExtract": "マテリア自動精製",
       "Equipped": "装備中",
       "All": "すべて",
@@ -200,7 +202,8 @@
       "StopOnlyWhenAllSpells": "全魔法習得時のみ停止",
       "StopWhenInventoryFull": "所持品がいっぱいになったら停止",
 
-      "ExecuteCommandsOnTermination": "全ループ終了時にコマンド実行",
+      "ExecuteCommandsOnTermination": "ループ処理終了時にコマンドを実行",
+      "ExecuteCommandsOnTerminationHelp": "一連のループ処理が終了したときに、登録したコマンドを実行します。\n例：{0}",
       "PlaySoundOnCompletion": "全ループ完了時に音を鳴らす: ",
       "OnCompletionOfAllLoops": "全ループ完了時: ",
       "KeepTerminationActive": "実行後も終了オプションを維持 "
