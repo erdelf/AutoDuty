@@ -163,6 +163,8 @@
       "ItemLevelLimit": "Item Level Limit",
       "ItemLevelLimitHelp": "Stops desynthesising an item once your desynthesis skill reaches the Item Level + this limit.",
       "ProtectGearsets": "Protect Gearsets",
+      "ProtectGearsetterUpgrades": "Protect Gearsetter upgrades from Auto Desynth",
+      "ProtectGearsetterUpgradesHelp": "Also protects items that Gearsetter recommends as an upgrade for any of your gearsets, even if they aren't equipped in one yet. Requires the Gearsetter plugin.",
       "DesynthCategories": "Desynth Categories",
       "AutoGCTurnin": "Auto GC Turnin",
       "InventorySlotsLeft": "Inventory Slots Left @",
