@@ -121,6 +121,7 @@
       "TriggerAt": "발동 임계값 @",
       "PreferredRepairNPC": "선호 수리 NPC: ",
       "PreferredRepairNPCHelp": "가능하면 수리 NPC를 소환 벨이나 귀환 위치와 맞추는 것을 권장합니다",
+      "RepairNPCSearchHint": "NPC 이름 또는 지역명을 입력하여 검색",
       "GrandCompanyInn": "그랜드 컴퍼니 막사",
       "AutoConsume": "소비 아이템 자동 사용",
       "AutoConsumeHelp": "실행 중 및 각 반복 작업 간에 대상 상태가 없는 경우 이 아이템들을 사용합니다",

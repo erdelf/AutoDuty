@@ -859,6 +859,8 @@ public static class ConfigTab
     private static string         consumableItemsItemNameInput = "";
     private static ConsumableItem consumableItemsSelectedItem  = new();
 
+    private static string preferredRepairNPCSearchInput = "";
+
     private static string profileRenameInput = "";
 
     private static readonly Sounds[] validSounds = [..((Sounds[])Enum.GetValues(typeof(Sounds))).Where(s => s is not Sounds.None and not Sounds.Unknown)];
@@ -1907,13 +1909,19 @@ public static class ConfigTab
                                                  $"{CultureInfo.InvariantCulture.TextInfo.ToTitleCase(Configuration.PreferredRepairNPC.Name.ToLowerInvariant())} ({Svc.Data.GetExcelSheet<TerritoryType>()?.GetRowOrDefault(Configuration.PreferredRepairNPC.TerritoryType)?.PlaceName.ValueNullable?.Name.ToString()})  ({MapHelper.ConvertWorldXZToMap(Configuration.PreferredRepairNPC.Position.ToVector2(), Svc.Data.GetExcelSheet<TerritoryType>().GetRow(Configuration.PreferredRepairNPC.TerritoryType).Map.Value!).X.ToString("0.0", CultureInfo.InvariantCulture)}, {MapHelper.ConvertWorldXZToMap(Configuration.PreferredRepairNPC.Position.ToVector2(), Svc.Data.GetExcelSheet<TerritoryType>().GetRow(Configuration.PreferredRepairNPC.TerritoryType).Map.Value).Y.ToString("0.0", CultureInfo.InvariantCulture)})" :
                                                  Loc.Get("ConfigTab.PreLoop.GrandCompanyInn")))
                         {
+                            ImGui.SetNextItemWidth(ImGui.GetContentRegionAvail().X);
+                            ImGui.InputTextWithHint("##PreferredRepairSearch", Loc.Get("ConfigTab.PreLoop.RepairNPCSearchHint"), ref preferredRepairNPCSearchInput, 100);
+
                             if (ImGui.Selectable(Loc.Get("ConfigTab.PreLoop.GrandCompanyInn"), Configuration.PreferredRepairNPC == null))
                             {
                                 Configuration.PreferredRepairNPC = null;
                                 Configuration.Save();
                             }
 
-                            foreach (RepairNpcData repairNPC in RepairNPCs)
+                            foreach (RepairNpcData repairNPC in RepairNPCs.Where(x =>
+                                         string.IsNullOrEmpty(preferredRepairNPCSearchInput) ||
+                                         x.Name.Contains(preferredRepairNPCSearchInput, StringComparison.InvariantCultureIgnoreCase) ||
+                                         (Svc.Data.GetExcelSheet<TerritoryType>()?.GetRowOrDefault(x.TerritoryType)?.PlaceName.ValueNullable?.Name.ToString().Contains(preferredRepairNPCSearchInput, StringComparison.InvariantCultureIgnoreCase) ?? false)))
                             {
                                 if (repairNPC.TerritoryType <= 0)
                                 {
