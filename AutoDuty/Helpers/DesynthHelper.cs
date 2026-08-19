@@ -6,6 +6,7 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.IPC;
 
 namespace AutoDuty.Helpers
 {
@@ -28,11 +29,55 @@ namespace AutoDuty.Helpers
         internal override void Start()
         {
             this._maxDesynthLevel = PlayerHelper.GetMaxDesynthLevel();
+            this._gearsetterProtectedSlots = this.BuildGearsetterProtectedSlots();
             if(this.NextCategory(true))
                 base.Start();
         }
 
         private float _maxDesynthLevel = 1;
+
+        private HashSet<(InventoryType InventoryType, int Slot)> _gearsetterProtectedSlots = [];
+
+        private unsafe HashSet<(InventoryType, int)> BuildGearsetterProtectedSlots()
+        {
+            HashSet<(InventoryType, int)> protectedSlots = [];
+
+            if (!Configuration.AutoDesynthProtectGearsetterUpgrades || !Gearsetter_IPCSubscriber.IsEnabled)
+                return protectedSlots;
+
+            try
+            {
+                RaptureGearsetModule* gearsetModule = RaptureGearsetModule.Instance();
+
+                for (int gearsetId = 0; gearsetId < gearsetModule->NumGearsets; gearsetId++)
+                {
+                    if (!gearsetModule->GetGearset(gearsetId)->Flags.HasFlag(RaptureGearsetModule.GearsetFlag.Exists))
+                        continue;
+
+                    List<(uint ItemId, InventoryType? SourceInventory, byte? SourceInventorySlot, RaptureGearsetModule.GearsetItemIndex TargetSlot)>? recommendations =
+                        Gearsetter_IPCSubscriber.GetRecommendationsForGearset((byte)gearsetId);
+
+                    if (recommendations == null)
+                        continue;
+
+                    foreach ((uint recItemId, InventoryType? sourceInventory, byte? sourceInventorySlot, _) in recommendations)
+                    {
+                        if (sourceInventory == null || sourceInventorySlot == null)
+                            continue;
+
+                        if (protectedSlots.Add((sourceInventory.Value, sourceInventorySlot.Value)))
+                            this.DebugLog($"Gearsetter protects item {recItemId} in {sourceInventory} slot {sourceInventorySlot} (recommended for gearset {gearsetId}) from Auto Desynth");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Svc.Log.Warning($"[AutoDesynth] Gearsetter IPC call failed while collecting upgrade protection, falling back to gearset-only protection for this run: {ex.Message}");
+                protectedSlots.Clear();
+            }
+
+            return protectedSlots;
+        }
 
         private AgentSalvage.SalvageItemCategory curCategory;
 
@@ -134,6 +179,12 @@ namespace AutoDuty.Helpers
 
                                 if (gearsetItemIds.Contains(inventoryItem->GetItemId()))
                                     continue;
+                            }
+
+                            if (this._gearsetterProtectedSlots.Contains((item.InventoryType, (int)item.InventorySlot)))
+                            {
+                                this.DebugLog($"Skipping Item({i}): {itemSheetRow.Value.Name} - protected by Gearsetter as an upgrade for another gearset");
+                                continue;
                             }
 
                             this.DebugLog($"Salvaging Item({i}): {itemSheetRow.Value.Name} {inventoryItem->ItemId} {inventoryItem->GetItemId()} {inventoryItem->GetBaseItemId()} with iLvl {itemLevel} because our desynth level is {desynthLevel}");
