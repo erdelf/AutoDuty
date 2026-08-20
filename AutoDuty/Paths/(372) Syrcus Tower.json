@@ -1,0 +1,620 @@
+{
+  "Actions": [
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 15.344939,
+        "Y": -886.00006,
+        "Z": 294.49814
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 29.682554,
+        "Y": -882.8575,
+        "Z": 282.13718
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 34.18506,
+        "Y": -881.2095,
+        "Z": 282.3034
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -0.055412088,
+        "Y": -700.2048,
+        "Z": 84.25958
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.06654787,
+        "Y": -700.0,
+        "Z": 69.97226
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Yellow Dragon",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.39954698,
+        "Y": -700.05,
+        "Z": 18.448027
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -20.396833,
+        "Y": -688.06384,
+        "Z": -31.682634
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -35.85873,
+        "Y": -682.5968,
+        "Z": -34.097664
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -41.514385,
+        "Y": -680.52673,
+        "Z": -34.232037
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -0.044489447,
+        "Y": -590.41766,
+        "Z": -149.34818
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -0.10562389,
+        "Y": -589.7084,
+        "Z": -165.41469
+      },
+      "Arguments": [
+        "<0, -590, -230>"
+      ],
+      "Conditions": [],
+      "Note": "Scylla",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.0,
+        "Y": -590.0,
+        "Z": -230.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.018741956,
+        "Y": -581.81976,
+        "Z": -252.01866
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -0.028454967,
+        "Y": -579.75214,
+        "Z": -257.1877
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 32.981323,
+        "Y": -400.35992,
+        "Z": -199.58435
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 15.0,
+        "Y": -400.0,
+        "Z": -200.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Green Dragon",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -60.0128,
+        "Y": -396.0,
+        "Z": -203.09372
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -66.64529,
+        "Y": -395.2702,
+        "Z": -215.42038
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -66.3398,
+        "Y": -394.08524,
+        "Z": -221.63805
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -0.65746135,
+        "Y": -3.8000522,
+        "Z": -135.99239
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -185.0
+      },
+      "Arguments": [
+        "<0, 0, -227>"
+      ],
+      "Conditions": [],
+      "Note": "Glasya Labolas",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -227.00012
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -15.896951,
+        "Y": 4.8327036,
+        "Z": -266.96924
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -21.603739,
+        "Y": 5.9011955,
+        "Z": -266.5752
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -0.14161822,
+        "Y": 199.90001,
+        "Z": -233.34743
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 0.0,
+        "Y": 200.0,
+        "Z": -220.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "Red Dragon",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -1.9719491,
+        "Y": 204.0,
+        "Z": -137.52875
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -15.750795,
+        "Y": 204.7899,
+        "Z": -135.00815
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -21.876629,
+        "Y": 206.01947,
+        "Z": -136.12106
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 18.179108,
+        "Y": 599.6308,
+        "Z": -172.70616
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": 10.52097,
+        "Y": 600.0,
+        "Z": -184.24487
+      },
+      "Arguments": [
+        "<-28,600,-200>"
+      ],
+      "Conditions": [],
+      "Note": "Amon",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -28.0,
+        "Y": 599.99994,
+        "Z": -200.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -58.0,
+        "Y": 602.69995,
+        "Z": -200.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -65.0,
+        "Y": 602.69995,
+        "Z": -200.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -360.0,
+        "Y": 498.9999,
+        "Z": -200.0
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "Note": "Cutscene Buffer",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "Boss",
+      "Position": {
+        "X": -380.0,
+        "Y": 500.0,
+        "Z": -200.0
+      },
+      "Arguments": [
+        "<-405, 500, -200>"
+      ],
+      "Conditions": [],
+      "Note": "Xande",
+      "Flags": "None"
+    }
+  ],
+  "Meta": {
+    "CreatedAt": 335,
+    "Changelog": [],
+    "Notes": []
+  }
+}
