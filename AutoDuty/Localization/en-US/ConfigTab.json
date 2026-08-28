@@ -122,6 +122,7 @@
       "TriggerAt": "Trigger @",
       "PreferredRepairNPC": "Preferred Repair NPC: ",
       "PreferredRepairNPCHelp": "It's a good idea to match the Repair NPC with Summoning Bell and if possible Retire Location",
+      "RepairNPCSearchHint": "Start typing NPC or zone name to search",
       "GrandCompanyInn": "Grand Company Inn",
       "AutoConsume": "Auto Consume",
       "AutoConsumeHelp": "AutoDuty will consume these items on run and between each loop (if status does not exist)",
