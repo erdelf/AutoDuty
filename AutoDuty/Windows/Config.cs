@@ -744,10 +744,11 @@ public class Configuration
                 this.AutoDesynth = false;
         }
     }
-    public int   AutoDesynthSkillUpLimit = 50;
-    public bool  AutoDesynthNQOnly       = false;
-    public bool  AutoDesynthNoGearset    = true;
-    public ulong AutoDesynthCategories   = 0x1;
+    public int   AutoDesynthSkillUpLimit              = 50;
+    public bool  AutoDesynthNQOnly                    = false;
+    public bool  AutoDesynthNoGearset                 = true;
+    public bool  AutoDesynthProtectGearsetterUpgrades = false;
+    public ulong AutoDesynthCategories                = 0x1;
 
     internal bool autoGCTurnin            = false;
     public bool AutoGCTurnin
@@ -2223,6 +2224,13 @@ public static class ConfigTab
 
                     if (ImGui.Checkbox($"{Loc.Get("ConfigTab.BetweenLoop.ProtectGearsets")}##Desynth{nameof(Configuration.AutoDesynthNoGearset)}", ref Configuration.AutoDesynthNoGearset))
                         Configuration.Save();
+
+                    using (ImGuiHelper.RequiresPlugin(ExternalPlugin.Gearsetter, "DesynthGearsetter", inline: true))
+                    {
+                        if (ImGui.Checkbox($"{Loc.Get("ConfigTab.BetweenLoop.ProtectGearsetterUpgrades")}##Desynth{nameof(Configuration.AutoDesynthProtectGearsetterUpgrades)}", ref Configuration.AutoDesynthProtectGearsetterUpgrades))
+                            Configuration.Save();
+                    }
+                    ImGuiComponents.HelpMarker(Loc.Get("ConfigTab.BetweenLoop.ProtectGearsetterUpgradesHelp"));
 
                     if (ImGui.CollapsingHeader(Loc.Get("ConfigTab.BetweenLoop.DesynthCategories")))
                     {
