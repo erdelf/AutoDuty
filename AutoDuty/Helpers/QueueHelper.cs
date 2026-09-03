@@ -218,19 +218,21 @@ namespace AutoDuty.Helpers
             }
 
             GenericHelpers.TryGetAddonByName("ContentsFinder", out this._addonContentsFinder);
-            if (!this._allConditionsMetToJoin && (this._addonContentsFinder == null || !GenericHelpers.IsAddonReady((AtkUnitBase*)this._addonContentsFinder)))
+            if (this._addonContentsFinder == null || !GenericHelpers.IsAddonReady((AtkUnitBase*)this._addonContentsFinder))
             {
-                if (!AgentHUD.Instance()->IsMainCommandEnabled(33))
-                    return;
-                Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content!.Name}");
-                AgentContentsFinder.Instance()->OpenRegularDuty(_content.ContentFinderCondition);
+                if (!this._allConditionsMetToJoin && AgentHUD.Instance()->IsMainCommandEnabled(33))
+                {
+                    Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content!.Name}");
+                    AgentContentsFinder.Instance()->OpenRegularDuty(_content.ContentFinderCondition);
+                }
                 return;
             }
 
-            if (this._addonContentsFinder->DutyList->Items.LongCount == 0)
+            AtkComponentTreeList* dutyList = this._addonContentsFinder->DutyList;
+            if (dutyList == null || dutyList->Items.LongCount == 0)
                 return;
 
-            StdVector<Pointer<AtkComponentTreeListItem>> vectorDutyListItems           = this._addonContentsFinder->DutyList->Items;
+            StdVector<Pointer<AtkComponentTreeListItem>> vectorDutyListItems           = dutyList->Items;
             List<AtkComponentTreeListItem>               listAtkComponentTreeListItems = [];
             if (vectorDutyListItems.Count == 0)
                 return;
@@ -239,7 +241,7 @@ namespace AutoDuty.Helpers
 
             if (!this._allConditionsMetToJoin && AgentContentsFinder.Instance()->SelectedDuty.Id != _content!.ContentFinderCondition)
             {
-                Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content.Name} because we have the wrong selection of {listAtkComponentTreeListItems[(int)this._addonContentsFinder->DutyList->SelectedItemIndex].Renderer->GetTextNodeById(5)->GetAsAtkTextNode()->NodeText.ToString().Replace("...", "")}");
+                Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content.Name} because we have the wrong selection of {listAtkComponentTreeListItems[(int)dutyList->SelectedItemIndex].Renderer->GetTextNodeById(5)->GetAsAtkTextNode()->NodeText.ToString().Replace("...", "")}");
                 AgentContentsFinder.Instance()->OpenRegularDuty(_content.ContentFinderCondition);
                 EzThrottler.Throttle("QueueHelper", 500, true);
                 return;
