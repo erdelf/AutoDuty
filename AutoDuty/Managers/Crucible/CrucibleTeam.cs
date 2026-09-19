@@ -58,12 +58,21 @@ namespace AutoDuty.Managers
                 if (sheetNames != null)
                     return sheetNames;
 
-                sheetNames = [];
-                ExcelSheet<Pet> pets = Svc.Data.GetExcelSheet<Pet>();
-                foreach (XBMPet familiar in Svc.Data.GetExcelSheet<XBMPet>())
-                    if (familiar.RowId > 0 && pets.TryGetRow((uint)familiar.Unknown4, out Pet pet) && pet.Name.ExtractText() is { Length: > 0 } name)
-                        sheetNames[familiar.RowId] = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(name);
-                return sheetNames;
+                SortedDictionary<uint, string> names = [];
+                try
+                {
+                    ExcelSheet<Pet> pets = Svc.Data.GetExcelSheet<Pet>();
+                    foreach (RawRow familiar in Svc.Data.GetExcelSheet<RawRow>(name: "XBMPet"))
+                        if (familiar.RowId > 0 && pets.TryGetRow((uint)familiar.ReadInt32Column(0), out Pet pet) && pet.Name.ExtractText() is { Length: > 0 } name)
+                            names[familiar.RowId] = CultureInfo.InvariantCulture.TextInfo.ToTitleCase(name);
+                }
+                catch (Exception ex)
+                {
+                    Svc.Log.Error(ex, "[Crucible] Couldn't read the XBMPet sheet; familiar names are unknown");
+                    names.Clear();
+                }
+
+                return sheetNames = names;
             }
         }
 

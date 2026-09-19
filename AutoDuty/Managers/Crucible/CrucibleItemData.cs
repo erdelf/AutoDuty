@@ -192,16 +192,14 @@ internal static class CrucibleItemData
 
     public static readonly uint[] TreasureOrder = ShopHealing.Concat(FightItems).Concat(ShopGear).Concat(ShopFeed).Distinct().ToArray();
 
-    private static ExcelSheet<XBMItem>? items;
-
-    private static ExcelSheet<XBMItem> Items => items ??= Svc.Data.GetExcelSheet<XBMItem>();
+    private static ExcelSheet<RawRow> Items => Svc.Data.GetExcelSheet<RawRow>(name: "XBMItem");
 
     public static string NameOf(uint row) =>
-        Items.TryGetRow(row, out XBMItem item) && item.Unknown2.ExtractText() is { Length: > 0 } name ? name : $"item {row}";
+        Items.TryGetRow(row, out RawRow item) && item.ReadStringColumn(11).ExtractText() is { Length: > 0 } name ? name : $"item {row}";
 
     public static uint ItemIn(string text) =>
         Items.Where(x => x.RowId > 0)
-             .Select(x => (x.RowId, Name: x.Unknown2.ExtractText()))
+             .Select(x => (x.RowId, Name: x.ReadStringColumn(11).ExtractText()))
              .Where(x => x.Name.Length > 0 && text.Contains(x.Name, StringComparison.OrdinalIgnoreCase))
              .OrderByDescending(x => x.Name.Length)
              .Select(x => x.RowId)
