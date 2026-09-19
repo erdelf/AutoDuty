@@ -202,7 +202,7 @@ namespace AutoDuty.Managers
 
                 // Picking nobody gives a 90% heal
                 this.restPicks = rows.Select((row, index) => (row, index))
-                                     .Where(x => x.row.Hp > 0 && (float)x.row.CurrentHp / x.row.Hp < RestBelow)
+                                     .Where(x => x.row.Hp > 0 && x.row.CurrentHp > 0 && (float)x.row.CurrentHp / x.row.Hp < RestBelow)
                                      .OrderBy(x => (float)x.row.CurrentHp / x.row.Hp)
                                      .Take(RestPicks)
                                      .Select(x => x.index)

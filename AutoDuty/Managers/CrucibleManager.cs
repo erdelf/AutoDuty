@@ -120,10 +120,12 @@ namespace AutoDuty.Managers
                                   ? row.ReadStringColumn(1).ExtractText().TrimEnd('.', '。', ' ')
                                   : string.Empty;
 
+        private static string? questAlternativeText;
+
         private static string QuestAlternativeText =>
-            challengeText ??= Svc.Data.GetExcelSheet<CustomTalk>().TryGetRow(721872, out CustomTalk row)
-                                  ? row.MainOption.ExtractText().TrimEnd('.', '。', ' ')
-                                  : string.Empty;
+            questAlternativeText ??= Svc.Data.GetExcelSheet<RawRow>(name: "CustomTalk").TryGetRow(721872, out RawRow row)
+                                         ? row.ReadStringColumn(64).ExtractText()
+                                         : string.Empty;
 
         private static unsafe void ChooseChallenge(AtkUnitBase* menu)
         {
@@ -176,7 +178,7 @@ namespace AutoDuty.Managers
 
                     string entry = MemoryHelper.ReadSeStringNullTerminated((nint)iconPopMenu.EntryNames[i].Value).TextValue;
                     
-                    if(entry.Contains(QuestAlternativeText, StringComparison.OrdinalIgnoreCase))
+                    if(QuestAlternativeText.Length > 0 && entry.Contains(QuestAlternativeText, StringComparison.OrdinalIgnoreCase))
                     {
                         AddonHelper.FireCallBack(iconMenu, true, i);
                         break;
