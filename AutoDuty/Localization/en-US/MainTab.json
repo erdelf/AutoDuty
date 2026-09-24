@@ -96,7 +96,7 @@
       },
       "Toggles": {
         "FightPicks": "Fight picks",
-        "Loot": "Loot & results",
+        "Loot": "Loot",
         "Treasure": "Treasure",
         "Shop": "Shop",
         "Rest": "Rest at camps",
@@ -105,7 +105,7 @@
       },
       "TogglesHelp": {
         "FightPicks": "Picks up to 3 familiars for each battle and commences it\nKnocked out familiars are skipped",
-        "Loot": "Takes all loot after a battle\nPresses Continue on the result screen",
+        "Loot": "Takes all loot after a battle",
         "Treasure": "Takes one treasure: healing first, then defense, then damage",
         "Shop": "Spends coins on healing items, then Beast Gear, then one feed\nLeaves the shop when done",
         "Rest": "Rests with up to 2 familiars under 60% HP\nWith none picked you get the 90% self heal instead",
