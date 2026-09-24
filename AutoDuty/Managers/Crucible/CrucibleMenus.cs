@@ -78,19 +78,22 @@ namespace AutoDuty.Managers
 
             this.UpdateItems(now);
 
-            if (now - this.confirmFrom <= ConfirmWindow && !this.FeedPending(now) && CrucibleUi.TryReady(CrucibleUi.YesNo, out AtkUnitBase* confirm))
+            if (now - this.confirmFrom <= ConfirmWindow && !this.FeedPending(now))
             {
-                if(this.yesNoCounter < 5)
-                    new AddonMaster.SelectYesno(confirm).Yes();
-                else
-                    new AddonMaster.SelectYesno(confirm).No();
+                if (CrucibleUi.TryReady(CrucibleUi.YesNo, out AtkUnitBase* confirm))
+                {
+                    if(this.yesNoCounter < 5)
+                        new AddonMaster.SelectYesno(confirm).Yes();
+                    else
+                        new AddonMaster.SelectYesno(confirm).No();
 
-                this.yesNoCounter++;
-                return;
+                    this.yesNoCounter++;
+                    return;
+                }
+
+                this.confirmFrom  = DateTime.MinValue;
+                this.yesNoCounter = 0;
             }
-
-            this.confirmFrom  = DateTime.MinValue;
-            this.yesNoCounter = 0;
 
             if (this.StartFight(now))
                 return;
