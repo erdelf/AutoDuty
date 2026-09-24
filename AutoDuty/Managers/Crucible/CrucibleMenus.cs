@@ -33,7 +33,8 @@ namespace AutoDuty.Managers
         private static readonly TimeSpan ItemGap       = TimeSpan.FromSeconds(10);
         private static readonly TimeSpan ItemMenuWait  = TimeSpan.FromMilliseconds(1500);
 
-        private DateTime confirmFrom = DateTime.MinValue;
+        private DateTime confirmFrom  = DateTime.MinValue;
+        private int      yesNoCounter = 0;
 
         private int      fightStep = -1;
         private DateTime fightNext;
@@ -72,22 +73,30 @@ namespace AutoDuty.Managers
         {
             DateTime now = DateTime.UtcNow;
 
+            if (!EzThrottler.Throttle("CrucibleMenus", 250))
+                return;
+
             this.UpdateItems(now);
 
             if (now - this.confirmFrom <= ConfirmWindow && !this.FeedPending(now) && CrucibleUi.TryReady(CrucibleUi.YesNo, out AtkUnitBase* confirm))
             {
-                Screens.Prompt.Yes(confirm);
-                this.confirmFrom = DateTime.MinValue;
+                if(this.yesNoCounter < 5)
+                    new AddonMaster.SelectYesno(confirm).Yes();
+                else
+                    new AddonMaster.SelectYesno(confirm).No();
+
+                this.yesNoCounter++;
                 return;
             }
+
+            this.confirmFrom  = DateTime.MinValue;
+            this.yesNoCounter = 0;
 
             if (this.StartFight(now))
                 return;
 
             this.UpdateShop(now);
 
-            if (!EzThrottler.Throttle("CrucibleMenus", 250) || CrucibleUi.IsOpen(CrucibleUi.YesNo))
-                return;
 
             if (Config.Rest && !this.FeedPending(now) && !CrucibleUi.IsOpen(CrucibleUi.ShopWindow) && !CrucibleUi.IsOpen(CrucibleUi.BoardLayout) &&
                 CrucibleUi.TryReady(CrucibleUi.TeamWindow, out AtkUnitBase* party))
@@ -115,7 +124,7 @@ namespace AutoDuty.Managers
 
                 ReaderXBMContentsBooty booty = new(loot);
 
-                if (!booty.LootCoinsTaken)
+                if (booty is { LootCoinsTaken: false, LootCoins: > 0 })
                 {
                     Screens.Booty.TakeCoins(loot);
                     this.confirmFrom = now;
@@ -127,7 +136,6 @@ namespace AutoDuty.Managers
 
                 IEnumerable<ReaderXBMContentsItemShop.ItemEntry> itemEntries = booty.ItemEntriesValid.ToList();
                 IEnumerable<ReaderXBMContentsItemShop.GearEntry> gearEntries = booty.OwnedEntriesOwned.ToList();
-
 
                 if (gearEntries.Count() < GearCap)
                     foreach (ReaderXBMContentsBooty.LootChoice gearChoice in choices)
