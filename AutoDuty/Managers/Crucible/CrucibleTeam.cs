@@ -78,7 +78,8 @@ namespace AutoDuty.Managers
                 CrucibleLevelingMode.Minus_3 => size - 3,
                 CrucibleLevelingMode.Only_3 => 3,
                 CrucibleLevelingMode.Full => size,
-                _ => size
+                CrucibleLevelingMode.Carry_Minus_2 => size - 2,
+                _ => throw new ArgumentOutOfRangeException(nameof(levelingMode))
             };
         }
 
@@ -175,10 +176,10 @@ namespace AutoDuty.Managers
             }
         }
 
-        public static List<uint> For(CrucibleTeamMode mode) => mode switch
+        public static List<uint> For(CrucibleTeamMode mode, bool sizeCap = true) => mode switch
         {
-            CrucibleTeamMode.Leveling    => Leveling(),
-            CrucibleTeamMode.Recommended => Recommended(),
+            CrucibleTeamMode.Leveling    => Leveling(sizeCap),
+            CrucibleTeamMode.Recommended => Recommended(sizeCap),
             _                            => Custom()
         };
 
@@ -218,18 +219,28 @@ namespace AutoDuty.Managers
         public static bool DependsOnCache(CrucibleTeamMode mode) =>
             mode is CrucibleTeamMode.Leveling or CrucibleTeamMode.Recommended;
 
-        public static List<uint> Recommended()
+        public static List<uint> Recommended(bool sizeCap)
         {
             IReadOnlyDictionary<uint, CrucibleFamiliar> cached = Familiars;
             return Owned().OrderByDescending(x => cached.TryGetValue(x, out CrucibleFamiliar? f) ? f.Rank : -1)
                           .ThenByDescending(x => cached.TryGetValue(x, out CrucibleFamiliar? f) ? f.Score() : -1)
                           .ThenBy(x => x)
-                          .Take(TeamSize())
+                          .Take(sizeCap ? TeamSize() : int.MaxValue)
                           .ToList();
         }
 
-        public static List<uint> Leveling() =>
-            Owned().OrderBy(x => LevelingKey(x)).ThenBy(x => x).Take(TeamSize()).ToList();
+        public static List<uint> Leveling(bool sizeCap)
+        {
+            CrucibleLevelingMode levelingMode = ConfigurationMain.Instance.GetCurrentConfig.Meta.Crucible.LevelingMode;
+
+            IOrderedEnumerable<uint> levelingFamiliars = Owned().OrderBy(x => LevelingKey(x)).ThenBy(x => x);
+
+            return levelingMode switch
+            {
+                CrucibleLevelingMode.Carry_Minus_2 => Recommended(sizeCap).Take(3).Concat(levelingFamiliars.Take(sizeCap ? TeamSize() - 3 : int.MaxValue)).Distinct().ToList(),
+                _ => levelingFamiliars.Take(sizeCap ? TeamSize() : int.MaxValue).ToList()
+            };
+        }
 
         public static (int Rank, float Exp) LevelingKey(uint number, int liveRank = 0)
         {

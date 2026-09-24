@@ -87,11 +87,13 @@
       "LevelingModes": {
         "Full": "Full team",
         "Minus_3": "-3 Cap",
-        "Only_3": "Only 3"
+        "Only_3": "Only 3",
+        "Carry_Minus_2":  "Carry -2 Cap"
       },
       "LevelingModesHelp": {
         "Full": "Uses the entire team size",
         "Minus_3": "Uses 3 less than the maximum amount",
+        "Carry_Minus_2": "Uses your 3 highest familiars, then fills the rest with your lowest.\nUses 2 less than maximum amount.",
         "Only_3": "Only uses 3 familiars at a time"
       },
       "Toggles": {
