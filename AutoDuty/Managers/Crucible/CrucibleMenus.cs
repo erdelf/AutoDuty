@@ -202,13 +202,15 @@ namespace AutoDuty.Managers
                 Screens.PetParty.Pick(party, row);
                 this.fightStep++;
                 this.fightNext = now + PickInterval;
-                this.Status    = $"Picking familiar {this.fightStep} of {alive.Count} ({team[row].Name})";
+                Svc.Log.Debug($"Crucible: Picking familiar {this.fightStep} of {alive.Count} ({team[row].Name})");
                 return true;
             }
 
             Screens.StageDetail.Confirm(layout);
-            this.fightNext = now + CommenceRetry;
-            this.Status    = "Commencing the battle";
+            this.fightNext   = now + CommenceRetry;
+            this.confirmFrom = now;
+            Svc.Log.Debug("Crucible: Commencing the battle");
+            this.Status = "Commencing the battle";
             return true;
         }
 
