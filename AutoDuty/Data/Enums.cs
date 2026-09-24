@@ -220,7 +220,8 @@
         {
             Full = 0,
             Minus_3 = 1,
-            Only_3 = 2
+            Only_3 = 2,
+            Carry_Minus_2 = 3
         }
 
 

@@ -964,10 +964,8 @@ namespace AutoDuty.Windows
 
             IEnumerable<uint> rows = crucible.TeamMode switch
             {
-                CrucibleTeamMode.Leveling    => owned.OrderBy(x => CrucibleTeam.LevelingKey(x)).ThenBy(x => x),
-                CrucibleTeamMode.Recommended => owned.OrderByDescending(x => cached.TryGetValue(x, out CrucibleFamiliar? f) ? f.Rank : -1)
-                                                     .ThenByDescending(x => cached.TryGetValue(x, out CrucibleFamiliar? f) ? f.Score() : -1)
-                                                     .ThenBy(x => x),
+                CrucibleTeamMode.Leveling    => CrucibleTeam.Leveling(false),
+                CrucibleTeamMode.Recommended => CrucibleTeam.Recommended(false),
                 _ => owned
             };
 
