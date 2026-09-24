@@ -474,7 +474,7 @@ public static class ConfigTab
                                 ImGui.Text("Pets:");
                                 ImGui.Indent();
                                 foreach (ReaderXBMPetParty.MonsterEntry entry in x.TeamEntries)
-                                    ImGui.Text($"Pet: {entry.Rank} | {entry.Name.GetText()} | {entry.Number} | {entry.Unk1} | {entry.Disabled}");
+                                    ImGui.Text($"Pet: {entry.Rank} | {entry.Name.GetText()} | {entry.Number} | {entry.Unk1} | {entry.Disabled} | {entry.FedCurrent}/{entry.FedMax}");
                                 ImGui.Unindent();
 
                             }

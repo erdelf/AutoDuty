@@ -421,7 +421,7 @@ namespace AutoDuty.Managers
                 if (CrucibleUi.Team(petParty) is not { Count: > 0 } team)
                     return;
 
-                team = team.Where(x => !x.Disabled).ToList();
+                team = team.Where(x => !x.Disabled && x.FedCurrent < x.FedMax).ToList();
                 this.feedOrder = CrucibleTeam.FightOrder(team);
             }
 
