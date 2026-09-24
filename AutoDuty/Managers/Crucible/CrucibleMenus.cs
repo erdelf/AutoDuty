@@ -9,9 +9,8 @@ namespace AutoDuty.Managers
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using ECommons;
+    using ECommons.Throttlers;
     using ECommons.UIHelpers.AddonMasterImplementations;
-    using Helpers;
     using Screens = CrucibleUi.Screens;
 
     internal sealed unsafe class CrucibleMenus
@@ -35,7 +34,6 @@ namespace AutoDuty.Managers
         private static readonly TimeSpan ItemMenuWait  = TimeSpan.FromMilliseconds(1500);
 
         private DateTime confirmFrom = DateTime.MinValue;
-        private DateTime next;
 
         private int      fightStep = -1;
         private DateTime fightNext;
@@ -88,7 +86,7 @@ namespace AutoDuty.Managers
 
             this.UpdateShop(now);
 
-            if (now < this.next || CrucibleUi.IsOpen(CrucibleUi.YesNo))
+            if (!EzThrottler.Throttle("CrucibleMenus", 250) || CrucibleUi.IsOpen(CrucibleUi.YesNo))
                 return;
 
             if (Config.Rest && !this.FeedPending(now) && !CrucibleUi.IsOpen(CrucibleUi.ShopWindow) && !CrucibleUi.IsOpen(CrucibleUi.BoardLayout) &&
@@ -106,18 +104,52 @@ namespace AutoDuty.Managers
                 return;
             }
 
-            if (!Config.Loot)
-                return;
-
             if (CrucibleUi.TryReady(CrucibleUi.LootWindow, out AtkUnitBase* loot))
             {
-                if (Screens.Booty.TakeAll(loot))
+                if (!Config.Loot)
                 {
+                    Screens.Booty.Close(loot);
                     this.confirmFrom = now;
-                    this.Status      = "Taking the loot";
+                    return;
                 }
 
-                this.next = now + Retry;
+                ReaderXBMContentsBooty booty = new(loot);
+
+                if (!booty.LootCoinsTaken)
+                {
+                    Screens.Booty.TakeCoins(loot);
+                    this.confirmFrom = now;
+                    return;
+                }
+
+
+                IEnumerable<ReaderXBMContentsBooty.LootChoice> choices = booty.LootChoices.Where(lc => !lc.Taken);
+
+                IEnumerable<ReaderXBMContentsItemShop.ItemEntry> itemEntries = booty.ItemEntriesValid.ToList();
+                IEnumerable<ReaderXBMContentsItemShop.GearEntry> gearEntries = booty.OwnedEntriesOwned.ToList();
+
+
+                if (gearEntries.Count() < GearCap)
+                    foreach (ReaderXBMContentsBooty.LootChoice gearChoice in choices)
+                    {
+                        if (CrucibleItemData.ShopGear.Contains(gearChoice.Item))
+                            if (gearEntries.All(ge => ge.Id != gearChoice.Item))
+                            {
+                                Screens.Booty.Take(loot, gearChoice.lootIndex);
+                                this.confirmFrom = now;
+                                return;
+                            }
+
+                        if (itemEntries.All(ge => ge.Id != gearChoice.Item))
+                        {
+                            Screens.Booty.Take(loot, gearChoice.lootIndex);
+                            this.confirmFrom = now;
+                            return;
+                        }
+                    }
+
+                Screens.Booty.Close(loot);
+                this.confirmFrom = now;
                 return;
             }
 
@@ -125,9 +157,8 @@ namespace AutoDuty.Managers
             {
                 if (ConfigurationMain.Instance.GetCurrentConfig.DutyConfig.AutoExitDuty || Plugin.currentLoop < ConfigurationMain.Instance.GetCurrentConfig.Meta.LoopTimes)
                 {
-                this.Status = "Finishing the board";
-                Screens.Result.Continue(result);
-                this.next = now + Retry;
+                    this.Status = "Finishing the board";
+                    Screens.Result.Continue(result);
                 } else
                 {
                     Plugin.Stage = Stage.Stopped;
@@ -183,8 +214,6 @@ namespace AutoDuty.Managers
 
         private void PickTreasure(AtkUnitBase* treasure, DateTime now)
         {
-            this.next = now + Retry;
-
             ReaderXBMContentsTreasure xbmTreasure = new(treasure);
 
             if (!Config.Treasure)
@@ -249,7 +278,7 @@ namespace AutoDuty.Managers
             {
                 Screens.PetParty.Pick(party, this.restPicks[this.restStep]);
                 this.restStep++;
-                this.next = now + PickInterval;
+                EzThrottler.Throttle("CrucibleMenus", 400);
                 return;
             }
 
@@ -258,8 +287,6 @@ namespace AutoDuty.Managers
                 this.confirmFrom = now;
                 this.Status      = "Resting at the campsite";
             }
-
-            this.next = now + Retry;
         }
 
         private bool FeedPending(DateTime now) =>

@@ -398,7 +398,10 @@ namespace AutoDuty.Managers
 
             internal static class Booty
             {
-                public static bool TakeAll(AtkUnitBase* loot) => ClickButton(loot, 46);
+                public static void Close(AtkUnitBase* loot)            => AddonHelper.FireCallBack(loot, true, 0);
+                public static void TakeCoins(AtkUnitBase* loot)            => AddonHelper.FireCallBack(loot, true, 3);
+                public static void Take(AtkUnitBase*      loot, int index) => AddonHelper.FireCallBack(loot, true, 4, index);
+                public static bool TakeAll(AtkUnitBase*   loot) => ClickButton(loot, 46);
             }
 
             internal static class Treasure

@@ -67,11 +67,18 @@ namespace AutoDuty.Managers
                 _ => 10
             };
 
-            return (levelingMode ?? ConfigurationMain.Instance.GetCurrentConfig.Meta.Crucible.LevelingMode) switch
+
+            ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible = ConfigurationMain.Instance.GetCurrentConfig.Meta.Crucible;
+
+            if (crucible.TeamMode != CrucibleTeamMode.Leveling)
+                return size;
+
+            return (levelingMode ?? crucible.LevelingMode) switch
             {
                 CrucibleLevelingMode.Minus_3 => size - 3,
                 CrucibleLevelingMode.Only_3 => 3,
-                CrucibleLevelingMode.Full => size
+                CrucibleLevelingMode.Full => size,
+                _ => size
             };
         }
 

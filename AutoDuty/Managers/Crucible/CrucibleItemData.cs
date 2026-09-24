@@ -190,6 +190,7 @@ internal static class CrucibleItemData
         80  // G1 Crucible Ash
     ];
 
+    public static readonly uint[] ItemOrder = ShopHealing.Concat(FightItems).Concat(ShopFeed).Distinct().ToArray();
     public static readonly uint[] TreasureOrder = ShopHealing.Concat(FightItems).Concat(ShopGear).Concat(ShopFeed).Distinct().ToArray();
 
     private static ExcelSheet<XBMItem>? items;
