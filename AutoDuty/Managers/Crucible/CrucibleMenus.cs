@@ -138,20 +138,21 @@ namespace AutoDuty.Managers
                 IEnumerable<ReaderXBMContentsBooty.LootChoice> choices = booty.LootChoices.Where(lc => !lc.Taken);
 
                 IEnumerable<ReaderXBMContentsItemShop.GearEntry> gearEntries = booty.OwnedEntriesOwned.ToList();
+                IEnumerable<ReaderXBMContentsItemShop.ItemEntry> itemEntries = booty.ItemEntriesValid.ToList();
 
-                if (gearEntries.Count() < GearCap)
+                if (gearEntries.Count() < GearCap || itemEntries.Count() < ItemCap)
                     foreach (ReaderXBMContentsBooty.LootChoice gearChoice in choices)
                     {
                         if (CrucibleItemData.ShopGear.Contains(gearChoice.Item))
                         {
-                            if (gearEntries.All(ge => ge.Id != gearChoice.Item))
+                            if (gearEntries.All(ge => ge.Id != gearChoice.Item) && gearEntries.Count() < GearCap)
                             {
                                 Screens.Booty.Take(loot, gearChoice.lootIndex);
                                 this.confirmFrom = now;
                                 return;
                             }
                         }
-                        else
+                        else if(itemEntries.Count() < ItemCap)
                         {
                             Screens.Booty.Take(loot, gearChoice.lootIndex);
                             this.confirmFrom = now;
