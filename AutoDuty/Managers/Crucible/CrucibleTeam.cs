@@ -255,7 +255,7 @@ namespace AutoDuty.Managers
                 alive = alive.OrderBy(row => LevelingKey(NumberFor(team[row].Name), team[row].Rank)).ThenBy(row => row);
             */
 
-            return team.Where(me => me.MaxHP == 0 || me.HP > 0).OrderByDescending(me => (me.Number, me.Rank)).ThenBy(row => row).ToList();
+            return team.Where(me => me.MaxHP == 0 || me.HP > 0).OrderByDescending(me => me.Rank).ThenBy(row => Familiars[row.Number].Score()).ToList();
         }
 
         public static void UpdateCache()
