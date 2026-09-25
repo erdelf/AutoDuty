@@ -474,9 +474,10 @@ public static class ConfigTab
                                 ImGui.Text("Pets:");
                                 ImGui.Indent();
                                 foreach (ReaderXBMPetParty.MonsterEntry entry in x.TeamEntries)
-                                    ImGui.Text($"Pet: {entry.Rank} | {entry.Name.GetText()} | {entry.Number} | {entry.Unk1} | {entry.Disabled} | {entry.FedCurrent}/{entry.FedMax}");
+                                    ImGui.Text($"Pet: {entry.Rank} | {entry.Name.GetText()} | {entry.Number} | {entry.IconId} | {entry.Disabled} | {entry.FedCurrent}/{entry.FedMax} | {string.Join(", ", entry.FedItems.Select(fe => fe.ItemId))}");
                                 ImGui.Unindent();
 
+                                ImGui.Text("Feed Item: " + x.FeedItem.ItemId);
                             }
                         }
 
