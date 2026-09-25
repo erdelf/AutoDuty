@@ -137,26 +137,28 @@ namespace AutoDuty.Managers
 
                 IEnumerable<ReaderXBMContentsBooty.LootChoice> choices = booty.LootChoices.Where(lc => !lc.Taken);
 
-                IEnumerable<ReaderXBMContentsItemShop.ItemEntry> itemEntries = booty.ItemEntriesValid.ToList();
                 IEnumerable<ReaderXBMContentsItemShop.GearEntry> gearEntries = booty.OwnedEntriesOwned.ToList();
+                IEnumerable<ReaderXBMContentsItemShop.ItemEntry> itemEntries = booty.ItemEntriesValid.ToList();
 
-                if (gearEntries.Count() < GearCap)
+                if (gearEntries.Count() < GearCap || itemEntries.Count() < ItemCap)
                     foreach (ReaderXBMContentsBooty.LootChoice gearChoice in choices)
                     {
                         if (CrucibleItemData.ShopGear.Contains(gearChoice.Item))
-                            if (gearEntries.All(ge => ge.Id != gearChoice.Item))
+                        {
+                            if (gearEntries.All(ge => ge.Id != gearChoice.Item) && gearEntries.Count() < GearCap)
                             {
                                 Screens.Booty.Take(loot, gearChoice.lootIndex);
                                 this.confirmFrom = now;
                                 return;
                             }
-
-                        if (itemEntries.All(ge => ge.Id != gearChoice.Item))
+                        }
+                        else if(itemEntries.Count() < ItemCap)
                         {
                             Screens.Booty.Take(loot, gearChoice.lootIndex);
                             this.confirmFrom = now;
                             return;
                         }
+                        
                     }
 
                 Screens.Booty.Close(loot);
@@ -246,7 +248,7 @@ namespace AutoDuty.Managers
 
             List<ReaderXBMContentsTreasure.TreasureChoice> choices = treasureChoices.Where(tc => !tc.Bought                                                                                             && 
                                                                                                             (!CrucibleItemData.ShopGear.Contains(tc.Item)    || (gear.Count < GearCap && !gear.Contains(tc.Item))) &&
-                                                                                                            (!CrucibleItemData.ShopHealing.Contains(tc.Item) || (items.Count < ItemCap && !items.Contains(tc.Item)))).ToList();
+                                                                                                            (!CrucibleItemData.ShopHealing.Contains(tc.Item) || (items.Count < ItemCap))).ToList();
             if (choices.Count == 0)
             {
                 Screens.Treasure.Close(treasure);
