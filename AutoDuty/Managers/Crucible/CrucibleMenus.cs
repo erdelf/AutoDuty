@@ -255,7 +255,7 @@ namespace AutoDuty.Managers
 
                 if(CrucibleItemData.ShopGear.Contains(choice.Item))
                 {
-                    if (gear.Count < GearCap && !gear.Contains(choice.Item))
+                    if (gear.Count < GearCap && !gear.Contains(choice.Item) && !CrucibleItemData.BlockedGear(choice.Item, gear))
                         choices.Add(choice);
 
                     continue;
@@ -424,7 +424,7 @@ namespace AutoDuty.Managers
             if (held.Count < ItemCap && FirstInStock(stock, CrucibleItemData.ShopHealing, held) is { } healing)
                 return healing;
 
-            if (ownedGear.Count < GearCap && FirstInStock(stock.Where(x => !ownedGear.Contains(x.Item)), CrucibleItemData.ShopGear, held) is { } gear)
+            if (ownedGear.Count < GearCap && FirstInStock(stock.Where(x => !ownedGear.Contains(x.Item) && !CrucibleItemData.BlockedGear(x.Item, ownedGear)), CrucibleItemData.ShopGearOrder, held) is { } gear)
                 return gear;
 
             return this.fedThisVisit ? null : FirstInStock(stock, CrucibleItemData.ShopFeed, held);

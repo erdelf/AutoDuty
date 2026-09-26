@@ -950,6 +950,9 @@ namespace AutoDuty.Windows
                     DrawCrucibleFamiliarTable(crucible, team, cached, owned);
             }
 
+            if (ImGui.CollapsingHeader($"{Loc.Get("MainTab.Crucible.ShopGearOrder")}###CrucibleShopGearOrder"))
+                DrawCrucibleShopGearOrder(crucible);
+
             if (ImGui.CollapsingHeader($"{Loc.Get("MainTab.Crucible.Menus")}###CrucibleMenus"))
                 DrawCrucibleMenuToggles();
         }
@@ -1063,6 +1066,107 @@ namespace AutoDuty.Windows
             }
         }
 
+        private static ImGuiEx.RealtimeDragDrop<uint>? _crucibleGearDragDrop;
+        private static (uint Row, int Position)? _crucibleGearTyped;
+
+        private static void DrawCrucibleShopGearOrder(ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible)
+        {
+            if (!crucible.ShopGearOrder.SequenceEqual(CrucibleItemData.ShopGearOrder))
+                crucible.ShopGearOrder = CrucibleItemData.ShopGearOrder.ToList();
+
+            using (ImRaii.Disabled(!ImGui.GetIO().KeyCtrl || crucible.ShopGearOrder.SequenceEqual(CrucibleItemData.ShopGear)))
+                if (ImGui.SmallButton(Loc.Get("MainTab.Crucible.ClearShopGearOrder")))
+                {
+                    crucible.ShopGearOrder = CrucibleItemData.ShopGear.ToList();
+                    ConfigurationProfileV2.Save();
+                }
+
+            if (ImGui.IsItemHovered(ImGuiHoveredFlags.AllowWhenDisabled))
+                ImGui.SetTooltip(Loc.Get("MainTab.Crucible.ClearShopGearOrderHelp"));
+
+            CrucibleShopGearTable(crucible.ShopGearOrder);
+
+            ImGui.TextColored(CrucibleFaded, Loc.Get("MainTab.Crucible.ShopGearOrderHelp"));
+        }
+
+        private static void CrucibleShopGearTable(List<uint> order)
+        {
+            _crucibleGearDragDrop ??= new ImGuiEx.RealtimeDragDrop<uint>(
+                "CrucibleShopGearDragDrop",
+                (row) => row.ToString(),
+                smallButton: false
+            );
+
+            uint[] before = order.ToArray();
+
+            int moveFromIndex = -1;
+            int moveToIndex   = -1;
+
+            _crucibleGearDragDrop.Begin();
+
+            using (var gearTable = ImRaii.Table("Crucible Shop Gear Table", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.SizingFixedFit | ImGuiTableFlags.RowBg))
+            {
+                if (gearTable)
+                {
+                    ImGui.TableSetupColumn("##Reorder");
+                    ImGui.TableSetupColumn("#");
+                    ImGui.TableSetupColumn(Loc.Get("MainTab.Crucible.GearItem"), ImGuiTableColumnFlags.WidthStretch);
+
+                    ImGui.TableHeadersRow();
+
+                    for (int i = 0; i < order.Count; i++)
+                    {
+                        ImGui.PushID(i);
+
+                        uint row = order[i];
+
+                        ImGui.TableNextRow();
+                        _crucibleGearDragDrop.NextRow();
+                        _crucibleGearDragDrop.SetRowColor(row);
+
+                        ImGui.TableSetColumnIndex(0);
+                        _crucibleGearDragDrop.DrawButtonDummy(row, order, i);
+
+                        ImGui.TableNextColumn();
+                        ImGui.SetNextItemWidth(40 * ImGuiHelpers.GlobalScale);
+                        int position = _crucibleGearTyped?.Row == row ? _crucibleGearTyped.Value.Position : i + 1;
+                        if (ImGui.InputInt("##Position", ref position, 0, 0)) _crucibleGearTyped = (row, position);
+
+                        if (ImGui.IsItemDeactivated())
+                        {
+                            if (_crucibleGearTyped?.Row == row)
+                            {
+                                int typedPosition = Math.Clamp(_crucibleGearTyped.Value.Position, 1, order.Count);
+
+                                moveFromIndex = i;
+                                moveToIndex   = typedPosition - 1;
+                                _crucibleGearTyped = null;
+                            }
+                        }
+
+                        ImGui.TableNextColumn();
+                        ImGui.AlignTextToFramePadding();
+                        ImGui.TextUnformatted(CrucibleItemData.NameOf(row));
+
+                        ImGui.PopID();
+                    }
+                }
+            }
+
+            _crucibleGearDragDrop.End();
+
+            bool typedNewPosition = moveFromIndex >= 0 && moveFromIndex != moveToIndex;
+            if (typedNewPosition)
+            {
+                uint movedItem = order[moveFromIndex];
+                order.RemoveAt(moveFromIndex);
+                order.Insert(moveToIndex, movedItem);
+            }
+
+            if (!order.SequenceEqual(before)) 
+                ConfigurationProfileV2.Save();
+        }
+
         private static void DrawCrucibleFamiliarTooltip(uint number, CrucibleFamiliar? familiar)
         {
             ImGui.BeginTooltip();
@@ -1119,6 +1223,9 @@ namespace AutoDuty.Windows
             Toggle("Rest", crucible.Rest, v => crucible.Rest = v);
             ImGui.SameLine();
             Toggle("Items", crucible.Items, v => crucible.Items = v);
+            Toggle("PreventDoubleAxes", crucible.PreventDoubleAxes, v => crucible.PreventDoubleAxes = v);
+            ImGui.SameLine();
+            Toggle("PreventDoomHelmet", crucible.PreventDoomHelmet, v => crucible.PreventDoomHelmet = v);
             return;
 
             static void Toggle(string key, bool value, Action<bool> set)

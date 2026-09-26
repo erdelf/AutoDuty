@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using AutoDuty.Configurations;
 using System.Linq;
 using ECommons.DalamudServices;
 using Lumina.Excel;
@@ -99,6 +101,16 @@ internal static class CrucibleItemData
         4   // Chemist's Satchel
     ];
 
+    public static readonly uint[] ElemntalAxes =
+    [
+        38, // Flame-wreathed Axe
+        39, // Icebitten Axe
+        40, // Thunderstruck Axe
+        41, // Earthcrushed Axe
+        42, // Deepdrowned Axe
+        43  // Windblown Axe
+    ];
+
     public static readonly uint[] ShopFeed =
     [
         144, // G1 Primafodder
@@ -191,11 +203,29 @@ internal static class CrucibleItemData
     ];
 
     public static readonly uint[] ItemOrder = ShopHealing.Concat(FightItems).Concat(ShopFeed).Distinct().ToArray();
-    public static readonly uint[] TreasureOrder = ShopHealing.Concat(FightItems).Concat(ShopGear).Concat(ShopFeed).Distinct().ToArray();
+
+    public static uint[] TreasureOrder => ShopHealing.Concat(FightItems).Concat(ShopGearOrder).Concat(ShopFeed).Distinct().ToArray();
+
+    public static uint[] ShopGearOrder => AutoDuty.Configuration.Meta.Crucible.ShopGearOrder.Where(ShopGear.Contains).Concat(ShopGear).Distinct().ToArray();
 
     private static ExcelSheet<XBMItem>? items;
 
     private static ExcelSheet<XBMItem> Items => items ??= Svc.Data.GetExcelSheet<XBMItem>();
+
+    public static readonly Dictionary<uint, uint[]> GearRequires = new()
+    {
+        [71] = [29] // Demonic Helm - Soulreaper Armor
+    };
+
+    public static bool BlockedGear(uint row, IEnumerable<uint> ownedGear)
+    {
+        ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible = AutoDuty.Configuration.Meta.Crucible;
+
+        bool secondElementalAxe = crucible.PreventDoubleAxes && ElemntalAxes.Contains(row) && ownedGear.Any(ElemntalAxes.Contains);
+        bool missingRequirement = crucible.PreventDoomHelmet && GearRequires.TryGetValue(row, out uint[]? required) && !ownedGear.Any(required.Contains);
+
+        return secondElementalAxe || missingRequirement;
+    }
 
     public static string NameOf(uint row) =>
         Items.TryGetRow(row, out XBMItem item) && item.Unknown2.ExtractText() is { Length: > 0 } name ? name : $"item {row}";
@@ -213,4 +243,4 @@ internal static class CrucibleItemData
         int index = Array.IndexOf(TreasureOrder, row);
         return index < 0 ? int.MaxValue : index;
     }
-}
+}   
