@@ -246,9 +246,25 @@ namespace AutoDuty.Managers
             if (treasureChoices.Count == 0)
                 return;
 
-            List<ReaderXBMContentsTreasure.TreasureChoice> choices = treasureChoices.Where(tc => !tc.Bought                                                                                             && 
-                                                                                                            (!CrucibleItemData.ShopGear.Contains(tc.Item)    || (gear.Count < GearCap && !gear.Contains(tc.Item))) &&
-                                                                                                            (!CrucibleItemData.ShopHealing.Contains(tc.Item) || (items.Count < ItemCap))).ToList();
+            List<ReaderXBMContentsTreasure.TreasureChoice> choices = [];
+
+            foreach (ReaderXBMContentsTreasure.TreasureChoice choice in treasureChoices)
+            {
+                if (choice.Bought)
+                    continue;
+
+                if(CrucibleItemData.ShopGear.Contains(choice.Item))
+                {
+                    if (gear.Count < GearCap && !gear.Contains(choice.Item))
+                        choices.Add(choice);
+
+                    return;
+                }
+
+                if(items.Count < ItemCap)
+                    choices.Add(choice);
+            }
+
             if (choices.Count == 0)
             {
                 Screens.Treasure.Close(treasure);
