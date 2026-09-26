@@ -324,6 +324,16 @@ namespace AutoDuty.Managers
             set => scanningUntil = value ? DateTime.UtcNow.AddSeconds(2) : DateTime.MinValue;
         }
 
+        public static void UpdateFamiliar(uint number, uint rank, uint xp)
+        {
+            Dictionary<uint, CrucibleFamiliar> familiars = Mine(true)!.Familiars;
+            if (familiars.TryGetValue(number, out CrucibleFamiliar? familiar))
+            {
+                familiar.Rank = (int)rank;
+                familiar.Exp  = xp.ToString();
+            }
+        }
+
         public static bool RememberFamiliarUnsaved(CrucibleFamiliar seen) =>
             RememberFamiliar(seen);
 

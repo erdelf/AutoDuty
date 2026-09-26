@@ -516,6 +516,42 @@ public static class ConfigTab
                             }
                         }
 
+                    if (ImGui.CollapsingHeader("XBMResult"))
+                        unsafe
+                        {
+                            if (GenericHelpers.TryGetAddonByName("XBMResult", out AtkUnitBase* addon))
+                            {
+                                ReaderXBMResult x = new(addon);
+                                ImGui.Text("Results:");
+
+                                ImGui.Text("Performance: " + x.Performance);
+                                ImGui.Text("Moves: "       + x.MovesMadeScore);
+                                ImGui.Text("Enemy: "       + x.EnemyScore);
+                                ImGui.Text("Elite Enemy: " + x.EliteScore);
+                                ImGui.Text("Remaining HP: " + x.RemainingHP);
+                                ImGui.SameLine();
+                                ImGui.Text("| Score: " + x.RemainingHPScore);
+                                ImGui.NewLine();
+                                ImGui.Text("Bonus Score: " + x.BonusBoostScore);
+                                ImGui.Indent();
+                                foreach (ReaderXBMResult.BonusBoostEntry entry in x.BonusBoostEntries)
+                                    ImGui.Text($"Bonus Boost: {entry.Name} | {entry.Score}");
+                                ImGui.Unindent();
+
+                                ImGui.Text("Loot");
+                                ImGui.Indent();
+                                foreach (ReaderXBMResult.LootEntry entry in x.LootEntries)
+                                    ImGui.Text($"Bonus Boost: {entry.Name} | {entry.Count}x | {entry.ItemId}");
+                                ImGui.Unindent();
+
+                                ImGui.Text("Beasts");
+                                ImGui.Indent();
+                                foreach (ReaderXBMResult.BeastEntry entry in x.BeastEntries)
+                                    ImGui.Text($"Beast: {entry.Number} | XP: {entry.PrevXP} -> {entry.NewXP} | Rank: {entry.PrevRank} -> {entry.NewRank}");
+                                ImGui.Unindent();
+                            }
+                        }
+
                     ImGui.Unindent();
                 }
 
