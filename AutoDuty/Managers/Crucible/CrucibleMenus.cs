@@ -258,7 +258,7 @@ namespace AutoDuty.Managers
                     if (gear.Count < GearCap && !gear.Contains(choice.Item))
                         choices.Add(choice);
 
-                    return;
+                    continue;
                 }
 
                 if(items.Count < ItemCap)
