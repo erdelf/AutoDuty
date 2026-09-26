@@ -202,8 +202,7 @@ internal static class CrucibleItemData
         80  // G1 Crucible Ash
     ];
 
-    public static readonly uint[] ItemOrder = ShopHealing.Concat(FightItems).Concat(ShopFeed).Distinct().ToArray();
-
+    public static uint[] ItemOrder => ShopHealing.Concat(FightItems).Distinct().ToArray();
     public static uint[] TreasureOrder => ShopHealing.Concat(FightItems).Concat(ShopGearOrder).Concat(ShopFeed).Distinct().ToArray();
 
     public static uint[] ShopGearOrder => AutoDuty.Configuration.Meta.Crucible.ShopGearOrder.Where(ShopGear.Contains).Concat(ShopGear).Distinct().ToArray();
@@ -217,12 +216,12 @@ internal static class CrucibleItemData
         [71] = [29] // Demonic Helm - Soulreaper Armor
     };
 
-    public static bool BlockedGear(uint row, IEnumerable<uint> ownedGear)
+    public static bool BlockedGear(uint row, HashSet<uint> ownedGear)
     {
         ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible = AutoDuty.Configuration.Meta.Crucible;
 
-        bool secondElementalAxe = crucible.PreventDoubleAxes && ElemntalAxes.Contains(row) && ownedGear.Any(ElemntalAxes.Contains);
-        bool missingRequirement = crucible.PreventDoomHelmet && GearRequires.TryGetValue(row, out uint[]? required) && !ownedGear.Any(required.Contains);
+        bool secondElementalAxe = ElemntalAxes.Contains(row) && ownedGear.Any(ElemntalAxes.Contains);
+        bool missingRequirement = crucible.RespectGearRequirements && GearRequires.TryGetValue(row, out uint[]? required) && !ownedGear.Any(required.Contains);
 
         return secondElementalAxe || missingRequirement;
     }
@@ -242,5 +241,31 @@ internal static class CrucibleItemData
     {
         int index = Array.IndexOf(TreasureOrder, row);
         return index < 0 ? int.MaxValue : index;
+    }
+
+    [Flags]
+    public enum CrucibleItemCategory
+    {
+        None       = 0,
+        Gear       = 1 << 0,
+        HealItem   = 1 << 1,
+        CombatItem = 1 << 2,
+        BoardItem  = 1 << 3,
+        Item       = HealItem | CombatItem | BoardItem,
+        Feed       = 1 << 4
+    }
+
+    public static CrucibleItemCategory GetCategoryOf(uint item)
+    {
+        if (ShopGear.Contains(item))
+            return CrucibleItemCategory.Gear;
+
+        if (ShopHealing.Contains(item))
+            return CrucibleItemCategory.HealItem;
+
+        if (ShopFeed.Contains(item))
+            return CrucibleItemCategory.Feed;
+
+        return CrucibleItemCategory.None;
     }
 }   

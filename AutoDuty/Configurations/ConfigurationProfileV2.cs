@@ -95,8 +95,7 @@ public class ConfigurationProfileV2
             public bool Shop                { get; set; } = true;
             public bool Rest                { get; set; } = true;
             public bool Items               { get; set; } = true;
-            public bool PreventDoubleAxes   { get; set; } = true;
-            public bool PreventDoomHelmet   { get; set; } = true;
+            public bool RespectGearRequirements   { get; set; } = true;
         }
 
         public bool ShowMainWindowOnStartup { get; set; } = false;

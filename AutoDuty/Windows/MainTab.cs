@@ -950,11 +950,12 @@ namespace AutoDuty.Windows
                     DrawCrucibleFamiliarTable(crucible, team, cached, owned);
             }
 
-            if (ImGui.CollapsingHeader($"{Loc.Get("MainTab.Crucible.ShopGearOrder")}###CrucibleShopGearOrder"))
-                DrawCrucibleShopGearOrder(crucible);
-
             if (ImGui.CollapsingHeader($"{Loc.Get("MainTab.Crucible.Menus")}###CrucibleMenus"))
                 DrawCrucibleMenuToggles();
+
+            if(crucible.Shop)
+                if (ImGui.CollapsingHeader($"{Loc.Get("MainTab.Crucible.ShopSettings")}###CrucibleShopSettings"))
+                    DrawCrucibleShopSettings(crucible);
         }
 
         private static readonly Vector4 CruciblePickedRow = new(0.25f, 0.55f, 0.95f, 0.18f);
@@ -1069,24 +1070,39 @@ namespace AutoDuty.Windows
         private static ImGuiEx.RealtimeDragDrop<uint>? _crucibleGearDragDrop;
         private static (uint Row, int Position)? _crucibleGearTyped;
 
-        private static void DrawCrucibleShopGearOrder(ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible)
+        private static void DrawCrucibleShopSettings(ConfigurationProfileV2.MetaConfig.CrucibleConfig crucible)
         {
+            Toggle("RespectGearRequirements", crucible.RespectGearRequirements, v => crucible.RespectGearRequirements = v);
+
             if (!crucible.ShopGearOrder.SequenceEqual(CrucibleItemData.ShopGearOrder))
                 crucible.ShopGearOrder = CrucibleItemData.ShopGearOrder.ToList();
 
-            using (ImRaii.Disabled(!ImGui.GetIO().KeyCtrl || crucible.ShopGearOrder.SequenceEqual(CrucibleItemData.ShopGear)))
-                if (ImGui.SmallButton(Loc.Get("MainTab.Crucible.ClearShopGearOrder")))
-                {
-                    crucible.ShopGearOrder = CrucibleItemData.ShopGear.ToList();
-                    ConfigurationProfileV2.Save();
-                }
+            if(!crucible.ShopGearOrder.SequenceEqual(CrucibleItemData.ShopGear))
+                using (ImRaii.Disabled(!ImGui.GetIO().KeyCtrl))
+                    if (ImGui.SmallButton(Loc.Get("MainTab.Crucible.ClearShopGearOrder")))
+                    {
+                        crucible.ShopGearOrder = CrucibleItemData.ShopGear.ToList();
+                        ConfigurationProfileV2.Save();
+                    }
 
             if (ImGui.IsItemHovered(ImGuiHoveredFlags.AllowWhenDisabled))
                 ImGui.SetTooltip(Loc.Get("MainTab.Crucible.ClearShopGearOrderHelp"));
 
-            CrucibleShopGearTable(crucible.ShopGearOrder);
-
             ImGui.TextColored(CrucibleFaded, Loc.Get("MainTab.Crucible.ShopGearOrderHelp"));
+
+            CrucibleShopGearTable(crucible.ShopGearOrder);
+            return;
+
+            static void Toggle(string key, bool value, Action<bool> set)
+            {
+                if (ImGui.Checkbox(Loc.Get($"MainTab.Crucible.Toggles.{key}"), ref value))
+                {
+                    set(value);
+                    ConfigurationProfileV2.Save();
+                }
+                if (ImGui.IsItemHovered())
+                    ImGui.SetTooltip(Loc.Get($"MainTab.Crucible.TogglesHelp.{key}"));
+            }
         }
 
         private static void CrucibleShopGearTable(List<uint> order)
@@ -1104,7 +1120,7 @@ namespace AutoDuty.Windows
 
             _crucibleGearDragDrop.Begin();
 
-            using (var gearTable = ImRaii.Table("Crucible Shop Gear Table", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.SizingFixedFit | ImGuiTableFlags.RowBg))
+            using (ImRaii.TableDisposable gearTable = ImRaii.Table("Crucible Shop Gear Table", 3, ImGuiTableFlags.Borders | ImGuiTableFlags.SizingFixedFit | ImGuiTableFlags.RowBg))
             {
                 if (gearTable)
                 {
@@ -1130,7 +1146,8 @@ namespace AutoDuty.Windows
                         ImGui.TableNextColumn();
                         ImGui.SetNextItemWidth(40 * ImGuiHelpers.GlobalScale);
                         int position = _crucibleGearTyped?.Row == row ? _crucibleGearTyped.Value.Position : i + 1;
-                        if (ImGui.InputInt("##Position", ref position, 0, 0)) _crucibleGearTyped = (row, position);
+                        if (ImGui.InputInt("##Position", ref position, 0, 0)) 
+                            _crucibleGearTyped = (row, position);
 
                         if (ImGui.IsItemDeactivated())
                         {
@@ -1223,9 +1240,6 @@ namespace AutoDuty.Windows
             Toggle("Rest", crucible.Rest, v => crucible.Rest = v);
             ImGui.SameLine();
             Toggle("Items", crucible.Items, v => crucible.Items = v);
-            Toggle("PreventDoubleAxes", crucible.PreventDoubleAxes, v => crucible.PreventDoubleAxes = v);
-            ImGui.SameLine();
-            Toggle("PreventDoomHelmet", crucible.PreventDoomHelmet, v => crucible.PreventDoomHelmet = v);
             return;
 
             static void Toggle(string key, bool value, Action<bool> set)
