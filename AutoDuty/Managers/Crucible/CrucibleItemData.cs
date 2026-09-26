@@ -101,7 +101,6 @@ internal static class CrucibleItemData
         4   // Chemist's Satchel
     ];
 
-    // Only one of these is ever wanted
     public static readonly uint[] ElemntalAxes =
     [
         38, // Flame-wreathed Axe

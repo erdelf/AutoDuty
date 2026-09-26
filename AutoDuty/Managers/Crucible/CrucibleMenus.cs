@@ -246,7 +246,6 @@ namespace AutoDuty.Managers
             if (treasureChoices.Count == 0)
                 return;
 
-<<<<<<< Updated upstream
             List<ReaderXBMContentsTreasure.TreasureChoice> choices = [];
 
             foreach (ReaderXBMContentsTreasure.TreasureChoice choice in treasureChoices)
@@ -256,21 +255,16 @@ namespace AutoDuty.Managers
 
                 if(CrucibleItemData.ShopGear.Contains(choice.Item))
                 {
-                    if (gear.Count < GearCap && !gear.Contains(choice.Item))
+                    if (gear.Count < GearCap && !gear.Contains(choice.Item) && !CrucibleItemData.BlockedGear(choice.Item, gear))
                         choices.Add(choice);
 
-                    return;
+                    continue;
                 }
 
                 if(items.Count < ItemCap)
                     choices.Add(choice);
             }
 
-=======
-            List<ReaderXBMContentsTreasure.TreasureChoice> choices = treasureChoices.Where(tc => !tc.Bought                                                                                             && 
-                                                                                                            (!CrucibleItemData.ShopGear.Contains(tc.Item)    || (gear.Count < GearCap && !gear.Contains(tc.Item) && !CrucibleItemData.BlockedGear(tc.Item, gear))) &&
-                                                                                                            (!CrucibleItemData.ShopHealing.Contains(tc.Item) || (items.Count < ItemCap))).ToList();
->>>>>>> Stashed changes
             if (choices.Count == 0)
             {
                 Screens.Treasure.Close(treasure);
