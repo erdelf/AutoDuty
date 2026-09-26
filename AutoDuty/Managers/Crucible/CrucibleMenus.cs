@@ -101,6 +101,7 @@ namespace AutoDuty.Managers
             this.UpdateShop(now);
 
 
+
             if (Config.Rest && !this.FeedPending(now) && !CrucibleUi.IsOpen(CrucibleUi.ShopWindow) && !CrucibleUi.IsOpen(CrucibleUi.BoardLayout) &&
                 CrucibleUi.TryReady(CrucibleUi.TeamWindow, out AtkUnitBase* party))
             {
@@ -168,6 +169,11 @@ namespace AutoDuty.Managers
 
             if (CrucibleUi.TryReady(CrucibleUi.ResultWindow, out AtkUnitBase* result))
             {
+                ReaderXBMResult xbmResult = new(result);
+
+                foreach (ReaderXBMResult.BeastEntry entry in xbmResult.BeastEntries)
+                    CrucibleTeam.UpdateFamiliar(entry.Number, entry.NewRank, entry.NewXP);
+
                 if (ConfigurationMain.Instance.GetCurrentConfig.DutyConfig.AutoExitDuty || Plugin.currentLoop < ConfigurationMain.Instance.GetCurrentConfig.Meta.LoopTimes)
                 {
                     this.Status = "Finishing the board";
