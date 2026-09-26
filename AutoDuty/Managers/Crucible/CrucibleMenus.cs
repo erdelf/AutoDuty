@@ -246,6 +246,7 @@ namespace AutoDuty.Managers
             if (treasureChoices.Count == 0)
                 return;
 
+<<<<<<< Updated upstream
             List<ReaderXBMContentsTreasure.TreasureChoice> choices = [];
 
             foreach (ReaderXBMContentsTreasure.TreasureChoice choice in treasureChoices)
@@ -265,6 +266,11 @@ namespace AutoDuty.Managers
                     choices.Add(choice);
             }
 
+=======
+            List<ReaderXBMContentsTreasure.TreasureChoice> choices = treasureChoices.Where(tc => !tc.Bought                                                                                             && 
+                                                                                                            (!CrucibleItemData.ShopGear.Contains(tc.Item)    || (gear.Count < GearCap && !gear.Contains(tc.Item) && !CrucibleItemData.BlockedGear(tc.Item, gear))) &&
+                                                                                                            (!CrucibleItemData.ShopHealing.Contains(tc.Item) || (items.Count < ItemCap))).ToList();
+>>>>>>> Stashed changes
             if (choices.Count == 0)
             {
                 Screens.Treasure.Close(treasure);
@@ -424,7 +430,7 @@ namespace AutoDuty.Managers
             if (held.Count < ItemCap && FirstInStock(stock, CrucibleItemData.ShopHealing, held) is { } healing)
                 return healing;
 
-            if (ownedGear.Count < GearCap && FirstInStock(stock.Where(x => !ownedGear.Contains(x.Item)), CrucibleItemData.ShopGear, held) is { } gear)
+            if (ownedGear.Count < GearCap && FirstInStock(stock.Where(x => !ownedGear.Contains(x.Item) && !CrucibleItemData.BlockedGear(x.Item, ownedGear)), CrucibleItemData.ShopGearOrder, held) is { } gear)
                 return gear;
 
             return this.fedThisVisit ? null : FirstInStock(stock, CrucibleItemData.ShopFeed, held);

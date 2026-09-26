@@ -87,13 +87,16 @@ public class ConfigurationProfileV2
             public CrucibleTeamMode     TeamMode     { get; set; } = CrucibleTeamMode.Recommended;
             public CrucibleLevelingMode LevelingMode { get; set; } = CrucibleLevelingMode.Minus_3;
             public List<uint>           CustomTeam   { get; set; } = [];
+            public List<uint>           ShopGearOrder { get; set; } = [];
 
-            public bool FightPicks { get; set; } = true;
-            public bool Loot       { get; set; } = true;
-            public bool Treasure   { get; set; } = true;
-            public bool Shop       { get; set; } = true;
-            public bool Rest       { get; set; } = true;
-            public bool Items      { get; set; } = true;
+            public bool FightPicks          { get; set; } = true;
+            public bool Loot                { get; set; } = true;
+            public bool Treasure            { get; set; } = true;
+            public bool Shop                { get; set; } = true;
+            public bool Rest                { get; set; } = true;
+            public bool Items               { get; set; } = true;
+            public bool PreventDoubleAxes   { get; set; } = true;
+            public bool PreventDoomHelmet   { get; set; } = true;
         }
 
         public bool ShowMainWindowOnStartup { get; set; } = false;

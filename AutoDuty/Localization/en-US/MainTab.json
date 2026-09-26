@@ -71,6 +71,11 @@
       "ClearCustoms": "Clear custom familiars",
       "NoFamiliars": "No familiars known yet. Open the team or bestiary at Lauda so AutoDuty can read them.",
       "Menus": "Board Menus",
+      "ShopGearOrder": "Shop Gear Order",
+      "ShopGearOrderHelp": "Top is bought first · Drag the handle or type a new # to move an item",
+      "GearItem": "Gear",
+      "ClearShopGearOrder": "Clear order",
+      "ClearShopGearOrderHelp": "Go back to the default shop gear order\nHold Ctrl and click",
       "TableLegend": "Shaded: the team this mode takes · Hover a name for stats",
       "TableLegendCustom": "Ticked: the team you take · Hover a name for stats",
       "NotSeen": "Rank not read yet\nRead from the bestiary at the next team setup",
@@ -103,6 +108,8 @@
         "Shop": "Shop",
         "Rest": "Rest at camps",
         "Items": "Heal items",
+        "PreventDoubleAxes": "Prevent double elemental axes",
+        "PreventDoomHelmet": "Prevent doom helmet without doom resist chest",
         "MenusWithoutRun": "Run menus without AutoDuty (testing)"
       },
       "TogglesHelp": {
@@ -112,6 +119,8 @@
         "Shop": "Spends coins on healing items, then Beast Gear, then one feed\nLeaves the shop when done",
         "Rest": "Rests with up to 2 familiars under 60% HP\nWith none picked you get the 90% self heal instead",
         "Items": "Uses healing items when your HP is low\nIn battle: under 40%  ·  On the board: under 60%",
+        "PreventDoubleAxes": "Doesn't buy an elemental axe when you already have one",
+        "PreventDoomHelmet": "Doesn't buy the Demonic Helm until you have Soulreaper's Armor",
         "MenusWithoutRun": "For testing without paths\nTalking to Lauda sets up the team, challenges the board and commences\nOn a board, the menus above run while you walk it yourself"
       }
     },
