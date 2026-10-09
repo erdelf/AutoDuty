@@ -110,14 +110,35 @@ namespace AutoDuty.IPC
                 }
         }
 
+        private static bool basicSettingsTransient;
+
         public static void SetBasicSettings()
         {
-            BossMod.Configuration(["ActionTweaksConfig", "PreventMovingWhileCasting", "true"], false);
-            BossMod.Configuration(["ActionTweaksConfig", "GTMode", "2"],                       false);
-            BossMod.Configuration(["ActionTweaksConfig", "DashSafety", "true"],                false);
-            BossMod.Configuration(["ActionTweaksConfig", "DashSafetyExtra", "true"],           false);
-            BossMod.Configuration(["BossmoduleConfig", "AllowAutomaticActions", "true"],       false);
-            BossMod.Configuration(["BossmoduleConfig", "AllowAutomaticInteract", "true"],      true);
+            SetSetting("ActionTweaksConfig", "PreventMovingWhileCasting", "true");
+            SetSetting("ActionTweaksConfig", "GTMode",                    "2");
+            SetSetting("ActionTweaksConfig", "DashSafety",                "true");
+            SetSetting("ActionTweaksConfig", "DashSafetyExtra",           "true");
+            SetSetting("BossmoduleConfig",   "AllowAutomaticActions",     "true");
+            SetSetting("BossmoduleConfig",   "AllowAutomaticInteract",    "true");
+        }
+
+        public static void RestoreBasicSettings()
+        {
+            if (!basicSettingsTransient)
+                return;
+
+            basicSettingsTransient = false;
+            Svc.Log.Debug($"BossMod Restoring {BossModReborn.Configuration_ClearTransient()} Settings");
+        }
+
+        // Transient settings aren't saved to BMR's config and get restored by RestoreBasicSettings.
+        // Only BossMod Reborn has them; older versions and BossMod (vbm) return null, so fall back to a regular change there.
+        private static void SetSetting(string config, string field, string value)
+        {
+            if (BossModReborn.Configuration_SetTransient([config, field, value]) != null)
+                basicSettingsTransient = true;
+            else
+                BossMod.Configuration([config, field, value], false);
         }
 
         public static void SetRange(float range)

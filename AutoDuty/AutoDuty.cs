@@ -2131,6 +2131,7 @@ public sealed class AutoDuty : IDalamudPlugin
             this.currentLoop = 0;
         if (Configuration.DutyConfig.AutoManageBossModAISettings) 
             BossMod_IPCSubscriber.DisablePresets();
+        BossMod_IPCSubscriber.RestoreBasicSettings();
 
         this.actions?.Rotation(true, false);
 
