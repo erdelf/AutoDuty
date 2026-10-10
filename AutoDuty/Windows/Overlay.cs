@@ -29,7 +29,10 @@ public class Overlay : Window
     public override void PreDraw()
     {
         base.PreDraw();
-        
+　　　　　if (AutoDuty.Configuration.Overlay.NoBG)
+   　　　　 this.Flags |= ImGuiWindowFlags.NoBackground;
+　　　　　else
+   　　　　 this.Flags &= ~ImGuiWindowFlags.NoBackground;        
         int heightDiff = (this.lineHeight - this.lineHeightPrev);
 
         if (AutoDuty.Configuration.Overlay.AnchorBottom && heightDiff != 0)
