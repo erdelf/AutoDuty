@@ -12,6 +12,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -27,6 +29,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -42,6 +46,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -57,6 +63,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -72,6 +80,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -87,6 +97,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -102,6 +114,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -117,6 +131,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -130,6 +146,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -143,6 +161,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -156,6 +176,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "Chirurgeon General",
       "Flags": "None"
     },
@@ -169,6 +191,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -184,6 +208,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -197,6 +223,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -212,6 +240,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -227,6 +257,8 @@
         "IsReady"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -242,6 +274,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -257,6 +291,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -270,6 +306,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -285,6 +323,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -300,6 +340,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -315,6 +357,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -330,6 +374,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -343,6 +389,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -356,6 +404,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -371,6 +421,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -384,6 +436,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -397,6 +451,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -410,6 +466,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "Headsman",
       "Flags": "None"
     },
@@ -425,6 +483,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -440,6 +500,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -453,6 +515,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -468,6 +532,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -483,6 +549,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -496,6 +564,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -511,6 +581,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -526,6 +598,8 @@
         "IsReady"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -541,6 +615,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -556,6 +632,8 @@
         "2500"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -569,6 +647,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -582,6 +662,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -597,6 +679,8 @@
         "true"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -610,6 +694,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -625,6 +711,8 @@
         "false"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -638,6 +726,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -651,6 +741,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -666,6 +758,28 @@
         ""
       ],
       "Conditions": [],
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -0.44679523,
+            "Y": -388.95013,
+            "Z": 129.025
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 50.0
+        }
+      ],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -681,6 +795,8 @@
         "IsReady"
       ],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "",
       "Flags": "None"
     },
@@ -694,6 +810,8 @@
       },
       "Arguments": [],
       "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
       "Note": "Immortal Remains",
       "Flags": "None"
     }
@@ -716,6 +834,10 @@
       {
         "Version": 375,
         "Change": "B3 entrance smoothened"
+      },
+      {
+        "Version": 396,
+        "Change": "B3 entrance smoothened v2"
       }
     ],
     "Notes": []
