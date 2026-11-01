@@ -49,13 +49,32 @@ namespace AutoDuty.Data
             }
 
             if (pathAction.Conditions.Count != 0)
-            {
                 foreach (PathActionCondition condition in pathAction.Conditions)
                 {
                     results.Add((v4, " | "));
                     results.AddRange(condition.DrawStepEntry());
                 }
+
+            if (pathAction.ConditionsWhile.Count != 0)
+            {
+                results.Add((v4, " | While:"));
+                foreach (PathActionCondition condition in pathAction.ConditionsWhile)
+                {
+                    results.Add((v4, " | "));
+                    results.AddRange(condition.DrawStepEntry());
+                }
             }
+
+            if (pathAction.ConditionsUntil.Count != 0)
+            {
+                results.Add((v4, " | Until:"));
+                foreach (PathActionCondition condition in pathAction.ConditionsUntil)
+                {
+                    results.Add((v4, " | "));
+                    results.AddRange(condition.DrawStepEntry());
+                }
+            }
+
             return results;
         }
 

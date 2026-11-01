@@ -114,7 +114,20 @@ namespace AutoDuty.Data
 
             public List<string> Arguments { get; set; } = [];
 
+            /// <summary>
+            /// Will skip the action if this is not fulfilled on initial check
+            /// </summary>
             public List<PathActionCondition> Conditions { get; set; } = [];
+
+            /// <summary>
+            /// Will abort action if this is not fulfilled
+            /// </summary>
+            public List<PathActionCondition> ConditionsWhile { get; set; } = [];
+
+            /// <summary>
+            /// Won't leave action till this is fulfilled.
+            /// </summary>
+            public List<PathActionCondition> ConditionsUntil { get; set; } = [];
 
             public string Note { get; set; } = string.Empty;
             public PathActionFlags Flags { get; set; } = PathActionFlags.None;

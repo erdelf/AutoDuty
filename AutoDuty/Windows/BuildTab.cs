@@ -21,6 +21,7 @@ namespace AutoDuty.Windows
     using Dalamud.Utility.Numerics;
     using Newtonsoft.Json;
     using System;
+    using System.Collections.Generic;
     using System.Globalization;
     using System.IO;
     using System.Linq;
@@ -650,13 +651,29 @@ namespace AutoDuty.Windows
 
                     ImGui.Separator();
                     ImGui.Text(Loc.Get("BuildTab.Conditions"));
+                    DrawPathConditions(this.action.Conditions, "Before");
+
+                    ImGui.Separator();
+                    ImGui.Text(Loc.Get("BuildTab.ConditionsWhile"));
+                    DrawPathConditions(this.action.ConditionsWhile, "While");
+
+                    ImGui.Separator();
+                    ImGui.Text(Loc.Get("BuildTab.ConditionsUntil"));
+                    DrawPathConditions(this.action.ConditionsUntil, "Until");
+                }
+
+                return;
+
+                static void DrawPathConditions(List<PathActionCondition> conditions, string id)
+                {
+                    using ImRaii.IdDisposable _ = ImRaii.PushId($"BuildTab_Condition_{id}");
 
                     int delIndex = -1;
-                    for (int index = 0; index < this.action.Conditions.Count; index++)
+                    for (int index = 0; index < conditions.Count; index++)
                     {
-                        using ImRaii.IdDisposable _ = ImRaii.PushId($"BuildTab_Condition_{index}");
+                        using ImRaii.IdDisposable __ = ImRaii.PushId($"_{index}");
 
-                        PathActionCondition condition = this.action.Conditions[index];
+                        PathActionCondition condition = conditions[index];
                         if (ImGuiComponents.IconButton(FontAwesomeIcon.TrashAlt))
                             delIndex = index;
                         ImGui.SameLine();
@@ -671,15 +688,13 @@ namespace AutoDuty.Windows
                     }
 
                     if (delIndex >= 0)
-                        this.action.Conditions.RemoveAt(delIndex);
+                        conditions.RemoveAt(delIndex);
 
 
                     PathActionCondition? actionCondition = PathActionCondition.ConditionSelection();
                     if (actionCondition != null)
-                        this.action.Conditions.Add(actionCondition);
+                        conditions.Add(actionCondition);
                 }
-
-
             }
 
             public void DrawHelper(PctDrawList drawList)

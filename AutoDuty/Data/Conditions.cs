@@ -375,6 +375,9 @@ public class PathActionConditionDistance : PathActionCondition
                 ImGui.InputFloat("Z##origin_Z", ref z);
                 this.originLoc = new Vector3(x, y, z);
                 ImGui.PopItemWidth();
+                ImGui.SameLine();
+                if (ImGui.Button("Position##originPosition"))
+                    this.originLoc = Player.Position;
                 break;
             case DistanceLocationTypes.Player:
             default:
@@ -403,6 +406,9 @@ public class PathActionConditionDistance : PathActionCondition
                 ImGui.InputFloat("Z##target_Z", ref z);
                 this.targetLoc = new Vector3(x, y, z);
                 ImGui.PopItemWidth();
+                ImGui.SameLine();
+                if (ImGui.Button("Position##targetPosition"))
+                    this.targetLoc = Player.Position;
                 break;
             case DistanceLocationTypes.Player:
             default:

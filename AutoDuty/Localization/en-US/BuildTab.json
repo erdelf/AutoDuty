@@ -26,6 +26,8 @@
     "Note": "Note:",
     "Tag": "Tag:",
     "Conditions": "Conditions:",
+    "ConditionsWhile": "Execute while Conditions fulfilled:",
+    "ConditionsUntil": "Execute until Conditions fulfilled:",
     "Condition": "Condition: ",
     "AddNewCondition": "Add new Condition",
     "Add": "Add",
