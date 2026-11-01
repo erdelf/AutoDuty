@@ -21,6 +21,7 @@ using NightmareUI.Censoring;
 internal static class StatsTab
 {
     private static ConfigurationMain.StatData? filteredStats;
+    private static List<DutyDataRecord>?      sortedRecords;
 
     private static readonly List<uint> territoryFilter       = [];
 
@@ -101,54 +102,62 @@ internal static class StatsTab
         ImGui.TableSetupColumn(Loc.Get("StatsTab.Columns.Job"),  ImGuiTableColumnFlags.WidthFixed);
         ImGui.TableSetupColumn(Loc.Get("StatsTab.Columns.Deaths"),  ImGuiTableColumnFlags.WidthFixed);
 
-        IEnumerable<DutyDataRecord>         records        = stats.dutyRecords;
-        IOrderedEnumerable<DutyDataRecord>? recordsOrdered = null;
+        IEnumerable<DutyDataRecord> records = stats.dutyRecords;
 
         ImGuiTableSortSpecsPtr sortSpecs = ImGui.TableGetSortSpecs();
 
-        for (int i = 0; i < sortSpecs.SpecsCount; i++)
+        // Re-sort only when table data, filters, or specs change.
+        if (sortedRecords == null || refilter || sortSpecs.SpecsDirty)
         {
-            ImGuiTableColumnSortSpecs spec = sortSpecs.Specs[i];
+            IOrderedEnumerable<DutyDataRecord>? recordsOrdered = null;
 
-            if(spec.SortDirection == ImGuiSortDirection.None)
-                continue;
-
-            void Order(Func<DutyDataRecord, object> func)
+            for (int i = 0; i < sortSpecs.SpecsCount; i++)
             {
-                recordsOrdered = recordsOrdered != null ? 
-                                     (spec.SortDirection & ImGuiSortDirection.Ascending) != 0 ? recordsOrdered.ThenBy(func) : recordsOrdered.ThenByDescending(func) :
-                                     (spec.SortDirection & ImGuiSortDirection.Ascending) != 0 ? records.OrderBy(func) : records.OrderByDescending(func);
+                ImGuiTableColumnSortSpecs spec = sortSpecs.Specs[i];
+
+                if(spec.SortDirection == ImGuiSortDirection.None)
+                    continue;
+
+                void Order(Func<DutyDataRecord, object> func)
+                {
+                    recordsOrdered = recordsOrdered != null ?
+                                         (spec.SortDirection & ImGuiSortDirection.Ascending) != 0 ? recordsOrdered.ThenBy(func) : recordsOrdered.ThenByDescending(func) :
+                                         (spec.SortDirection & ImGuiSortDirection.Ascending) != 0 ? records.OrderBy(func) : records.OrderByDescending(func);
+                }
+
+                switch (spec.ColumnIndex)
+                {
+                    case 0:
+                        Order(ddr => ddr.CompletionTime);
+                        break;
+                    case 1:
+                        Order(ddr => ddr.Duration);
+                        break;
+                    case 2:
+                        Order(ddr => ddr.TerritoryId);
+                        break;
+                    case 3:
+                        Order(ddr => ddr.CID);
+                        break;
+                    case 4:
+                        Order(ddr => ddr.ilvl);
+                        break;
+                    case 5:
+                        Order(ddr => ddr.Job);
+                        break;
+                    case 6:
+                        Order(ddr => ddr.Deaths ?? -1);
+                        break;
+                }
             }
 
-            switch (spec.ColumnIndex)
-            {
-                case 0:
-                    Order(ddr => ddr.CompletionTime);
-                    break;
-                case 1:
-                    Order(ddr => ddr.Duration);
-                    break;
-                case 2:
-                    Order(ddr => ddr.TerritoryId);
-                    break;
-                case 3:
-                    Order(ddr => ddr.CID);
-                    break;
-                case 4:
-                    Order(ddr => ddr.ilvl);
-                    break;
-                case 5:
-                    Order(ddr => ddr.Job);
-                    break;
-                case 6:
-                    Order(ddr => ddr.Deaths ?? -1);
-                    break;
-            }
+            sortedRecords        = (recordsOrdered ?? records).ToList();
+            sortSpecs.SpecsDirty = false;
         }
 
         ImGui.TableHeadersRow();
 
-        records = recordsOrdered ?? records;
+        records = sortedRecords!;
     
     #region filters
         ConfigurationMain.StatData unfilteredRecords = ConfigurationMain.Instance.stats;
@@ -365,6 +374,7 @@ internal static class StatsTab
                                                                         ddr.CompletionTime >= dateTimeFilterMinDate && ddr.CompletionTime <= dateTimeFilterMaxDate &&
                                                                         ddr.Duration       >= durationFilterMin     && ddr.Duration       <= durationFilterMax     &&
                                                                         (ddr.Deaths == null || ddr.Deaths >= deathsFilterMin && ddr.Deaths <= deathsFilterMax));
+            sortedRecords = null;
             refilter = false;
         }
 
