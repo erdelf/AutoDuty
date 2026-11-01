@@ -325,7 +325,7 @@ public sealed class AutoDuty : IDalamudPlugin
             this.assemblyDirectoryInfo = this.assemblyFileInfo.Directory;
 
             this.Version = 
-                ((PluginInterface.IsDev     ? new Version(0,0,0, 387) :
+                ((PluginInterface.IsDev     ? new Version(0,0,0, 396) :
                   PluginInterface.IsTesting ? PluginInterface.Manifest.TestingAssemblyVersion ?? PluginInterface.Manifest.AssemblyVersion : PluginInterface.Manifest.AssemblyVersion)!).Revision;
 
             if (!this.configDirectory.Exists)
@@ -1526,12 +1526,15 @@ public sealed class AutoDuty : IDalamudPlugin
             }
         }
 
-        if ((!VNavmesh_IPCSubscriber.SimpleMove_PathfindInProgress && VNavmesh_IPCSubscriber.Path_NumWaypoints == 0) || (!this.pathAction.Name.IsNullOrEmpty() && this.pathAction.Position != Vector3.Zero && ObjectHelper.GetDistanceToPlayer(this.pathAction.Position) <= (this.pathAction.Name.EqualsIgnoreCase("Interactable") ? 2f : 0.25f)))
+        if (((!VNavmesh_IPCSubscriber.SimpleMove_PathfindInProgress && VNavmesh_IPCSubscriber.Path_NumWaypoints == 0) ||
+             (!this.pathAction.Name.IsNullOrEmpty() && this.pathAction.Position != Vector3.Zero && ObjectHelper.GetDistanceToPlayer(this.pathAction.Position) <= (this.pathAction.Name.EqualsIgnoreCase("Interactable") ? 2f : 0.25f))) &&
+            EzThrottler.Throttle("AdvanceStep" + this.indexer, 100))
         {
             if (this.pathAction.Name.IsNullOrEmpty() || this.pathAction.Name.Equals("MoveTo") || this.pathAction.Name.Equals("TreasureCoffer") || this.pathAction.Name.Equals("Revival"))
             {
                 this.Stage = Stage.Reading_Path;
-                this.indexer++;
+                if (this.pathAction.ConditionsUntil.Count == 0 || this.pathAction.ConditionsUntil.All(c => c.IsFulfilled()))
+                    this.indexer++;
             }
             else
             {
@@ -1548,13 +1551,15 @@ public sealed class AutoDuty : IDalamudPlugin
         if (this.indexer == -1 || this.indexer >= this.Actions.Count)
             return;
         
-        if (Configuration is { DutyConfig: { AutoManageRotationPluginState: true, UsingAlternativeRotationPlugin: false } } && !Svc.Condition[ConditionFlag.OccupiedInCutSceneEvent]) this.SetRotationPluginSettings(true);
+        if (Configuration is { DutyConfig: { AutoManageRotationPluginState: true, UsingAlternativeRotationPlugin: false } } && !Svc.Condition[ConditionFlag.OccupiedInCutSceneEvent])
+            this.SetRotationPluginSettings(true);
         
-        if (!this.taskManager.IsBusy)
+        if (!this.taskManager.IsBusy && EzThrottler.Throttle("AdvanceStep" + this.indexer, 100))
         {
             this.Stage = Stage.Reading_Path;
-            this.indexer++;
-            return;
+
+            if (this.pathAction.ConditionsUntil.Count == 0 || this.pathAction.ConditionsUntil.All(c => c.IsFulfilled()))
+                this.indexer++;
         }
     }
 
@@ -2007,24 +2012,23 @@ public sealed class AutoDuty : IDalamudPlugin
 
     private void PreStageChecks()
     {
-        if (this.Stage == Stage.Stopped)
-            return;
-
         this.CheckRetainerWindow();
 
         this.InteractablesCheck();
 
-        if (EzThrottler.Throttle("OverrideAFK") && this.States.HasFlag(PluginState.Navigating) && PlayerHelper.IsValid) this.overrideAfk.ResetTimers();
+        if (EzThrottler.Throttle("OverrideAFK") && this.States.HasFlag(PluginState.Navigating) && PlayerHelper.IsValid)
+            this.overrideAfk.ResetTimers();
 
-        if (!Player.Available) 
+        if (!Player.Available)
             return;
 
-        if (!InDungeon && this.CurrentTerritoryContent != null) this.GetJobAndLevelingCheck();
+        if (!InDungeon && this.CurrentTerritoryContent != null) 
+            this.GetJobAndLevelingCheck();
 
-        if (!PlayerHelper.IsValid || !BossMod_IPCSubscriber.IsEnabled || !VNavmesh_IPCSubscriber.IsEnabled) 
+        if (!PlayerHelper.IsValid || !BossMod_IPCSubscriber.IsEnabled || !VNavmesh_IPCSubscriber.IsEnabled)
             return;
 
-        if (!RSR_IPCSubscriber.IsEnabled && !BossMod_IPCSubscriber.IsEnabled && !Configuration.DutyConfig.UsingAlternativeRotationPlugin) 
+        if (!RSR_IPCSubscriber.IsEnabled && !BossMod_IPCSubscriber.IsEnabled && !Configuration.DutyConfig.UsingAlternativeRotationPlugin)
             return;
 
         if (this.currentTerritoryType == 0 && Svc.ClientState.TerritoryType != 0 && InDungeon) this.ClientState_TerritoryChanged(Svc.ClientState.TerritoryType);
@@ -2032,25 +2036,49 @@ public sealed class AutoDuty : IDalamudPlugin
         if (this.States.HasFlag(PluginState.Navigating) && Configuration.DutyConfig.LootTreasure && (!Configuration.DutyConfig.LootBossTreasureOnly || (this.pathAction?.Name == "Boss" && this.Stage == Stage.Action)) &&
             (this.treasureCofferGameObject = ObjectHelper.GetObjectsByObjectKind(ObjectKind.Treasure)?.FirstOrDefault(x =>
                                                                                                                       {
-                                                                                                                          unsafe { return !((Treasure*)x.Struct())->Flags.HasFlag(Treasure.TreasureFlags.Opened) && ObjectHelper.GetDistanceToPlayer(x) < 2; }
+                                                                                                                          unsafe
+                                                                                                                          {
+                                                                                                                              return !((Treasure*)x.Struct())->Flags.HasFlag(Treasure.TreasureFlags.Opened) &&
+                                                                                                                                     ObjectHelper.GetDistanceToPlayer(x) < 2;
+                                                                                                                          }
                                                                                                                       })) != null)
         {
             BossMod_IPCSubscriber.SetRange(30f);
             ObjectHelper.InteractWithObject(this.treasureCofferGameObject, false);
         }
 
-        if (this.indexer >= this.Actions.Count && this.Actions.Count > 0 && this.States.HasFlag(PluginState.Navigating)) this.DoneNavigating();
+        if (this.indexer >= this.Actions.Count && this.Actions.Count > 0 && this.States.HasFlag(PluginState.Navigating))
+            this.DoneNavigating();
 
-        if (this.Stage > Stage.Condition && !this.States.HasFlag(PluginState.Other)) this.action = this.Stage.ToCustomString();
+        if (this.Stage > Stage.Condition && !this.States.HasFlag(PluginState.Other))
+            this.action = this.Stage.ToCustomString();
     }
 
     public void Framework_Update(IFramework framework)
     {
+        if (this.Stage == Stage.Stopped)
+            return;
+
         this.PreStageChecks();
+
+        if (this.Stage == Stage.Stopped)
+            return;
 
         this.DutyData?.FrameworkUpdate(framework);
 
         this.crucibleManager.Update();
+
+        if (this.Stage is Stage.Moving or Stage.Action && this.pathAction.ConditionsWhile.Count != 0 && EzThrottler.Throttle("ConditionsWhile" + this.indexer, 100) && !this.pathAction.ConditionsWhile.All(c => c.IsFulfilled()))
+        {
+            if (VNavmesh_IPCSubscriber.Path_IsRunning)
+                VNavmesh_IPCSubscriber.Path_Stop();
+
+            this.taskManager.Abort();
+
+            this.Stage = Stage.Reading_Path;
+            this.indexer++;
+            return;
+        }
 
         switch (this.Stage)
         {
