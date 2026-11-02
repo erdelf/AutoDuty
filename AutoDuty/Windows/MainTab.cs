@@ -1993,7 +1993,7 @@ namespace AutoDuty.Windows
 
             static void Toggle(string key, bool value, Action<bool> set)
             {
-                if (ImGui.Checkbox(Loc.Get($"MainTab.Crucible.Toggles.{key}"), ref value))
+                if (ImGui.Checkbox($"{Loc.Get($"MainTab.Crucible.Toggles.{key}")}###CrucibleToggle{key}", ref value))
                 {
                     set(value);
                     ConfigurationProfileV2.Save();
