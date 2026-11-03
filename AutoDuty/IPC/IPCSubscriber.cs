@@ -123,6 +123,12 @@ internal static class BossMod_IPCSubscriber
         if (!IsEnabled || !Configuration.DutyConfig.AutoManageBossModAISettings)
             return;
 
+        if (restore && BossModReborn.Available)
+        {
+            BossModReborn.Configuration_ClearTransient();
+            return;
+        }
+
         static string SaveKey(string[] cfg) => string.Join(".", cfg);
 
         void SetBossModConfig(string[] cfg, string value, bool save)
@@ -141,6 +147,13 @@ internal static class BossMod_IPCSubscriber
 
             if (RestoreValues.ContainsKey(saveKey))
                 return;
+
+
+            if (BossModReborn.Available)
+            {
+                BossModReborn.Configuration_SetTransient([.. cfg, value]);
+                return;
+            }
 
             RestoreValues[saveKey] = BossMod.Configuration(cfg, false)?.FirstOrDefault();
             BossMod.Configuration([..cfg, value], save);
