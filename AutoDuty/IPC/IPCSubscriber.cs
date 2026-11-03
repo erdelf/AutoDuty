@@ -120,7 +120,7 @@ internal static class BossMod_IPCSubscriber
 
     public static void SetBasicSettings(bool restore)
     {
-        if (!IsEnabled || !Configuration.DutyConfig.AutoManageBossModAISettings)
+        if (!IsEnabled || (!restore && !Configuration.DutyConfig.AutoManageBossModAISettings))
             return;
 
         static string SaveKey(string[] cfg) => string.Join(".", cfg);
