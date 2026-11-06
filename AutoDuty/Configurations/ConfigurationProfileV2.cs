@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using Windows;
+using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using IPC;
@@ -68,11 +69,11 @@ public class ConfigurationProfileV2
             get => this.AutoDutyModeEnum switch
             {
                 AutoDutyMode.Playlist => Plugin.PlaylistCurrentEntry?.DutyMode ?? this.dutyModeEnum,
-                AutoDutyMode.Looping or _ => field
+                AutoDutyMode.Looping or _ => this.dutyModeEnum
             };
             set
             {
-                field                          = value;
+                this.dutyModeEnum              = value;
                 Plugin.CurrentTerritoryContent = null;
                 MainTab.DutySelected           = null;
                 Plugin.LevelingModeEnum        = LevelingMode.None;
