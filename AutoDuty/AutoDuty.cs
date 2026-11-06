@@ -1152,8 +1152,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                    Content? duty = LevelingHelper.SelectHighestLevelingRelevantDuty(this.LevelingModeEnum);
                                                                    if (duty != null)
                                                                    {
-                                                                       if (this.LevelingModeEnum      == LevelingMode.Support && Configuration.Meta.PreferTrustOverSupportLeveling &&
-                                                                           duty.ClassJobLevelRequired > 70)
+                                                                       if (this.LevelingModeEnum == LevelingMode.Support && Configuration.Meta.PreferTrustOverSupportLeveling && duty.ClassJobLevelRequired > 70)
                                                                        {
                                                                            this.levelingModeEnum           = LevelingMode.Trust_Solo;
                                                                            Configuration.Meta.dutyModeEnum = DutyMode.Trust;
@@ -1162,12 +1161,14 @@ public sealed class AutoDuty : IDalamudPlugin
 
                                                                            if (duty != dutyTrust)
                                                                            {
+                                                                               Svc.Log.Info("Trust can't run highest support duty");
+
                                                                                this.levelingModeEnum           = LevelingMode.Support;
                                                                                Configuration.Meta.dutyModeEnum = DutyMode.Support;
                                                                            }
                                                                        }
 
-                                                                       Svc.Log.Info("Next Leveling Duty: " + duty.Name);
+                                                                       Svc.Log.Info($"Next Leveling Duty: {duty.Name} with {Configuration.Meta.dutyModeEnum} {this.levelingModeEnum}");
                                                                        this.CurrentTerritoryContent = duty;
                                                                        ContentPathsManager.DictionaryPaths[duty.TerritoryType].SelectPath(out this.currentPath);
                                                                    }
@@ -1182,9 +1183,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                this.taskManager.Enqueue(() => Svc.Log.Debug($"Registering New Loop"));
 
                                                                this.Queue(this.CurrentTerritoryContent!);
-                                                               this.taskManager.Enqueue(() =>
-                                                                                            Svc.Log
-                                                                                               .Debug($"Incrementing LoopCount, Setting Action Var, Wait for CorrectTerritory, PlayerIsValid, DutyStarted, and NavIsReady"));
+                                                               this.taskManager.Enqueue(() => Svc.Log.Debug($"Incrementing LoopCount, Setting Action Var, Wait for CorrectTerritory, PlayerIsValid, DutyStarted, and NavIsReady"));
                                                                this.taskManager.Enqueue(() =>
                                                                                         {
                                                                                             if (Configuration.Meta.AutoDutyModeEnum == AutoDutyMode.Playlist)
@@ -1306,6 +1305,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     private void Queue(Content content)
     {
+        Svc.Log.Debug($"Queueing duty: {content.Name} with mode {Configuration.Meta.DutyModeEnum}");
         if (Configuration.Meta.DutyModeEnum == DutyMode.Variant)
         {
             this.variantManager.RegisterVariantDuty(content);
