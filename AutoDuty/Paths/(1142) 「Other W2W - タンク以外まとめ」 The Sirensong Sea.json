@@ -12,7 +12,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 1 & 2 -->"
+      "Note": "<-- Trash Packs / 雑魚 1 & 2 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -26,7 +27,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -40,7 +42,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -54,7 +57,8 @@
         "10000"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -68,7 +72,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Movement / 動き -->"
+      "Note": "<-- Movement / 動き -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -82,7 +87,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -96,7 +102,8 @@
         "8000"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -110,7 +117,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -124,7 +132,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 3 & 4 -->"
+      "Note": "<-- Trash Packs / 雑魚 3 & 4 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -138,7 +147,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Synced",
@@ -152,7 +162,8 @@
         "2200"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -166,7 +177,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Synced",
@@ -180,7 +192,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Unsynced",
@@ -194,7 +207,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -208,7 +222,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Boss / ボス 1 -->"
+      "Note": "<-- Boss / ボス 1 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -222,7 +237,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -236,7 +252,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 5 & 6 -->"
+      "Note": "<-- Trash Packs / 雑魚 5 & 6 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -250,7 +267,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -264,7 +282,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Synced",
@@ -278,7 +297,8 @@
         "Off"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Treasure",
@@ -292,7 +312,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -306,7 +327,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Synced",
@@ -320,7 +342,8 @@
         "On"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Synced",
@@ -334,7 +357,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Unsynced",
@@ -348,7 +372,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -362,7 +387,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Movement / 動き -->"
+      "Note": "<-- Movement / 動き -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -376,7 +402,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -390,7 +417,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Treasure",
@@ -404,7 +432,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -418,7 +447,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -432,21 +462,39 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Pack / 雑魚 7 -->"
+      "Note": "<-- Trash Pack / 雑魚 7 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
       "Name": "StopForCombat",
       "Position": {
-        "X": -56.64,
-        "Y": 18.35,
-        "Z": 14.17
+        "X": -60.054283,
+        "Y": 20.081657,
+        "Z": 8.056892
       },
       "Arguments": [
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "JumpTo",
+      "Position": {
+        "X": -58.549335,
+        "Y": 21.073624,
+        "Z": 9.829844
+      },
+      "Arguments": [
+        "-57.809,18.350,12.514",
+        "5"
+      ],
+      "Conditions": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -460,7 +508,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -474,7 +523,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Boss / ボス 2 -->"
+      "Note": "<-- Boss / ボス 2 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -488,7 +538,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -502,7 +553,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Pack / 雑魚 8 -->"
+      "Note": "<-- Trash Pack / 雑魚 8 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -516,7 +568,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -530,7 +583,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -544,7 +598,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Pack / 雑魚 9 -->"
+      "Note": "<-- Trash Pack / 雑魚 9 -->",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -558,7 +613,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Large Mob here moves around too much -->"
+      "Note": "<-- Large Mob here moves around too much -->",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -572,7 +628,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- makes double-pulling too inconsistent -->"
+      "Note": "<-- makes double-pulling too inconsistent -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -586,7 +643,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -600,7 +658,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Treasure",
@@ -614,7 +673,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -628,7 +688,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Pack / 雑魚 10 -->"
+      "Note": "<-- Trash Pack / 雑魚 10 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -642,7 +703,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -656,7 +718,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Treasure",
@@ -670,7 +733,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -684,7 +748,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Pack / 雑魚 11 -->"
+      "Note": "<-- Trash Pack / 雑魚 11 -->",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -698,7 +763,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Not double-pulling here cuz too far away -->"
+      "Note": "<-- Not double-pulling here cuz too far away -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -712,7 +778,8 @@
         "False"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -726,7 +793,8 @@
         "True"
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -740,7 +808,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Boss / ボス 3 -->"
+      "Note": "<-- Boss / ボス 3 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -754,7 +823,8 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "Note": "",
+      "Flags": "None"
     }
   ],
   "Meta": {
@@ -779,6 +849,10 @@
       {
         "Version": 304,
         "Change": "Version update"
+      },
+      {
+        "Version": 335,
+        "Change": "added jump to to fix standing whitout do things"
       }
     ],
     "Notes": []
