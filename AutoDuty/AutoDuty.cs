@@ -1558,7 +1558,9 @@ public sealed class AutoDuty : IDalamudPlugin
         {
             this.Stage = Stage.Reading_Path;
 
-            if (this.pathAction.ConditionsUntil.Count == 0 || this.pathAction.ConditionsUntil.All(c => c.IsFulfilled()))
+            PathAction? curAction = this.indexer < this.Actions.Count ? this.Actions[this.indexer] : null;
+
+            if (curAction == null || (curAction.ConditionsUntil.Count == 0 || curAction.ConditionsUntil.All(c => c.IsFulfilled())))
                 this.indexer++;
         }
     }
