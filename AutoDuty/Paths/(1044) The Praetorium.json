@@ -12,7 +12,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": "<-- Trash Packs / 雑魚 -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Trash Packs / 雑魚 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -27,7 +30,61 @@
         "92"
       ],
       "Conditions": [],
-      "Note": "Removes Ultravibration from your loadout so AutoRotation doesn't use it too soon."
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Removes Ultravibration from your loadout so AutoRotation doesn't use it too soon.",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 159.28735,
+        "Y": 185.77997,
+        "Z": -4.9541855
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 180.45258,
+        "Y": 186.0,
+        "Z": -30.333202
+      },
+      "Arguments": [
+        "20"
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 198.68544,
+        "Y": 186.49997,
+        "Z": -11.379148
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -41,7 +98,50 @@
         "2012811"
       ],
       "Conditions": [],
-      "Note": "Magitek Terminal"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 197.368,
+            "Y": 185.99942,
+            "Z": -6.008457
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 15.0
+        }
+      ],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 201.8467,
+            "Y": 156.49997,
+            "Z": 14.628802
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 10.0
+        }
+      ],
+      "Note": "Magitek Terminal",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -55,7 +155,10 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -69,7 +172,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "W2W",
@@ -83,7 +189,10 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -95,7 +204,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- BLU-Specific Actions: Start -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- BLU-Specific Actions: Start -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -114,7 +226,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -129,7 +244,10 @@
         "92"
       ],
       "Conditions": [],
-      "Note": "Adds Ultravibration back to your loadout."
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Adds Ultravibration back to your loadout.",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -143,7 +261,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "W2W",
@@ -164,7 +285,10 @@
           "statusCode": 573
         }
       ],
-      "Note": "Checks if Hydropull is available. Waits 2.5sec if not."
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Checks if Hydropull is available. Waits 2.5sec if not.",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -184,7 +308,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": "Surecast"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Surecast",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -203,7 +330,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -223,7 +353,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": "Hydro Pull"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Hydro Pull",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -242,7 +375,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -261,7 +397,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -281,7 +420,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": "The Ram's Voice"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "The Ram's Voice",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -300,7 +442,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -319,7 +464,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -339,7 +487,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": "Ultravibration"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Ultravibration",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -358,7 +509,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -377,7 +531,10 @@
           "job": "Blue_Mage"
         }
       ],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -389,7 +546,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- BLU-Specific Actions: End -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- BLU-Specific Actions: End -->",
+      "Flags": "None"
     },
     {
       "Tag": "W2W",
@@ -403,7 +563,53 @@
         "TRUE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "KillInRange",
+      "Position": {
+        "X": 175.69,
+        "Y": 154.77,
+        "Z": -75.33
+      },
+      "Arguments": [
+        "50"
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionNot, AutoDuty",
+          "condition": {
+            "$type": "AutoDuty.Data.PathActionConditionCollision, AutoDuty",
+            "type": "CollisionBox",
+            "id": 17944936338948096
+          }
+        }
+      ],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 169.49559,
+        "Y": 155.65077,
+        "Z": -31.715485
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -417,7 +623,50 @@
         "2012813"
       ],
       "Conditions": [],
-      "Note": "Magitek Transporter"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 171.5019,
+            "Y": 155.81766,
+            "Z": -28.090084
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 15.0
+        }
+      ],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 241.63052,
+            "Y": 71.5,
+            "Z": 0.5221153
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 10.0
+        }
+      ],
+      "Note": "Magitek Transporter",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -431,7 +680,10 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -443,7 +695,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Boss / ボス #1 -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Boss / ボス #1 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -457,7 +712,34 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Mark II Magitek Colossus"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionToDo, AutoDuty",
+          "index": 1,
+          "count": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Mark II Magitek Colossus",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": 179.72061,
+        "Y": 76.0,
+        "Z": 1.4753984
+      },
+      "Arguments": [
+        ""
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -471,7 +753,50 @@
         "2012815"
       ],
       "Conditions": [],
-      "Note": "Magitek Terminal"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 181.78464,
+            "Y": 76.0,
+            "Z": 1.7963086
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 15.0
+        }
+      ],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": 146.8566,
+            "Y": 101.99997,
+            "Z": -37.53311
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 15.0
+        }
+      ],
+      "Note": "Magitek Terminal",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -485,7 +810,10 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -497,7 +825,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Mecha-Piloting Section: Start -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Mecha-Piloting Section: Start -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -511,21 +842,41 @@
         "1"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionConditionFlag, AutoDuty",
+          "flag": "Mounted"
+        }
+      ],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
-      "Name": "MoveTo",
+      "Name": "KillInRange",
       "Position": {
-        "X": 241.73,
-        "Y": 66.38,
-        "Z": 86.07
+        "X": 201.11621,
+        "Y": 66.382935,
+        "Z": 97.19475
       },
       "Arguments": [
-        ""
+        "30"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionNot, AutoDuty",
+          "condition": {
+            "$type": "AutoDuty.Data.PathActionConditionCollision, AutoDuty",
+            "type": "CollisionBox",
+            "id": 17692941799653376
+          }
+        }
+      ],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -539,7 +890,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Walks into the transition barrier."
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "Walks into the transition barrier.",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -553,7 +907,10 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -567,7 +924,10 @@
         "500"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -581,7 +941,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -595,7 +958,10 @@
         "500"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -609,7 +975,10 @@
         "500"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -623,7 +992,10 @@
         "500"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -637,21 +1009,34 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
       "Name": "Wait",
       "Position": {
-        "X": -60.12,
-        "Y": -103.94,
-        "Z": 0.06
+        "X": -67.31767,
+        "Y": -103.81174,
+        "Z": 0.037933502
       },
       "Arguments": [
         "500"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionObjectData, AutoDuty",
+          "baseId": 14616,
+          "property": "IsTargetable",
+          "value": 1
+        }
+      ],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -665,7 +1050,10 @@
         "TRUE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -677,7 +1065,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Mecha-Piloting Section: End -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Mecha-Piloting Section: End -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -691,7 +1082,10 @@
         "1"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -705,7 +1099,25 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -69.73351,
+        "Y": -103.81174,
+        "Z": 0.14014706
+      },
+      "Arguments": [],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -719,7 +1131,10 @@
         "10"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -733,7 +1148,10 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -747,7 +1165,10 @@
         "2"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -759,7 +1180,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Boss / ボス #2 -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Boss / ボス #2 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -773,7 +1197,17 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Nero tol Scaeva"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionToDo, AutoDuty",
+          "index": 3,
+          "count": 0,
+          "operatorValue": ">"
+        }
+      ],
+      "Note": "Nero tol Scaeva",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -785,7 +1219,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Movement / 動き -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Movement / 動き -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -799,7 +1236,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -813,7 +1253,27 @@
         "FALSE"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "MoveTo",
+      "Position": {
+        "X": -236.43164,
+        "Y": -103.99738,
+        "Z": -18.344969
+      },
+      "Arguments": [
+        "false"
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -827,7 +1287,50 @@
         "2012817"
       ],
       "Conditions": [],
-      "Note": "Magitek Terminal"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -236.11496,
+            "Y": -103.99738,
+            "Z": -17.389162
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 10.0
+        }
+      ],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -235.9818,
+            "Y": -103.99738,
+            "Z": -17.417965
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 10.0
+        }
+      ],
+      "Note": "Magitek Terminal",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -841,7 +1344,10 @@
         "IsReady"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "Comment",
@@ -853,7 +1359,10 @@
       },
       "Arguments": [],
       "Conditions": [],
-      "Note": "<-- Boss / ボス #3 -->"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "<-- Boss / ボス #3 -->",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -867,7 +1376,67 @@
         ""
       ],
       "Conditions": [],
-      "Note": "Gaius van Baelsar"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -566.27,
+            "Y": -268.0,
+            "Z": 220.0
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 30.0
+        }
+      ],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -566.27,
+            "Y": -268.0,
+            "Z": 220.0
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": ">",
+          "distance": 30.0
+        }
+      ],
+      "Note": "Gaius van Baelsar",
+      "Flags": "None"
+    },
+    {
+      "Tag": "None",
+      "Name": "WaitFor",
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Arguments": [
+        "IsReady"
+      ],
+      "Conditions": [],
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "",
+      "Flags": "None"
     }
   ],
   "Meta": {
@@ -884,6 +1453,10 @@
       {
         "Version": 304,
         "Change": "Version update"
+      },
+      {
+        "Version": 398,
+        "Change": "Modernized Path"
       }
     ],
     "Notes": []
