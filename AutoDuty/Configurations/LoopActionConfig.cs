@@ -176,6 +176,8 @@ public abstract class LoopActionConfig<C> : LoopActionConfig where C : LoopActio
         if (!this.Enabled)
             return false;
 
+        ImGui.SameLine(0, 5);
+
         if (ImGui.GetWindowSize().X > 200 ? ImGuiEx.ButtonWrapped(this.OverlayName) : ImGui.Button(this.OverlayName))
         {
             bool queue = true;

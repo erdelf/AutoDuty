@@ -123,18 +123,19 @@ public sealed class MainWindow : Window, IDisposable
 
     internal static void GotoAndActions()
     {
+        ImGui.NewLine();
         if(Plugin.States.HasFlag(PluginState.Other))
-        {
             if(ImGui.Button("Stop###Stop1"))
                 StopAndReset();
-            ImGui.SameLine(0,5);
-        }
 
         using (ImRaii.Disabled(Plugin.States.HasAnyFlag(PluginState.Looping, PluginState.Navigating, PluginState.Other)))
         {
             if (AutoDuty.Configuration.Overlay.GoToActions)
+            {
+                ImGui.SameLine(0, 5);
                 if (ImGui.Button(Loc.Get("Overlay.Button.Goto")))
                     ImGui.OpenPopup("GotoPopup");
+            }
 
             if (ImGui.BeginPopup("GotoPopup"))
             {
@@ -152,14 +153,8 @@ public sealed class MainWindow : Window, IDisposable
                 ImGui.EndPopup();
             }
 
-            bool step = true;
-
             foreach (LoopActionConfig action in AutoDuty.Configuration.Overlay.LoopActions)
-            {
-                if(step)
-                    ImGui.SameLine(0, 5);
-                step = action.OnGUIButton();
-            }
+                action.OnGUIButton();
         }
 
     }
