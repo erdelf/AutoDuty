@@ -12,7 +12,30 @@
         ""
       ],
       "Conditions": [],
-      "Note": "The Ultima Weapon 14587"
+      "ConditionsWhile": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionDistance, AutoDuty",
+          "origin": "Location",
+          "originId": 0,
+          "originLoc": {
+            "X": -775.0,
+            "Y": -400.0,
+            "Z": -600.0
+          },
+          "target": "Player",
+          "targetId": 0,
+          "targetLoc": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "operatorValue": "<",
+          "distance": 100.0
+        }
+      ],
+      "ConditionsUntil": [],
+      "Note": "The Ultima Weapon 14587",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -26,7 +49,19 @@
         "1000"
       ],
       "Conditions": [],
-      "Note": ""
+      "ConditionsWhile": [],
+      "ConditionsUntil": [
+        {
+          "$type": "AutoDuty.Data.PathActionConditionNot, AutoDuty",
+          "condition": {
+            "$type": "AutoDuty.Data.PathActionConditionCollision, AutoDuty",
+            "type": "CollisionBox",
+            "id": 39034187885314048
+          }
+        }
+      ],
+      "Note": "",
+      "Flags": "None"
     },
     {
       "Tag": "None",
@@ -40,7 +75,10 @@
         ""
       ],
       "Conditions": [],
-      "Note": "The Ultima Weapon 14592"
+      "ConditionsWhile": [],
+      "ConditionsUntil": [],
+      "Note": "The Ultima Weapon 14592",
+      "Flags": "None"
     }
   ],
   "Meta": {
@@ -77,6 +115,10 @@
       {
         "Version": 325,
         "Change": "Stabilized.. I think"
+      },
+      {
+        "Version": 396,
+        "Change": "Stabilized P1 & P2 transition"
       }
     ],
     "Notes": []
