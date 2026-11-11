@@ -523,6 +523,34 @@ public static class ConfigTab
                             }
                         }
 
+                    if (ImGui.CollapsingHeader("XBMMonsterNotebook"))
+                        unsafe
+                        {
+                            if (GenericHelpers.TryGetAddonByName("XBMMonsterNotebook", out AtkUnitBase* addon))
+                            {
+                                if (addon->AtkValuesCount > 200)
+                                {
+                                    ReaderXBMMonsterNotebook x = new(addon);
+                                    ImGui.Text($"Page: {x.CurrentPage}/{x.PageCount}");
+                                    ImGui.Text($"Number: {x.CurrentNumber} selected {x.SelectedNumber}");
+                                    ImGui.Text($"Filtered: {x.Filtered}\tSelected: {x.Selected}");
+                                    ImGui.Text($"Name: {x.CurrentName} ({x.CurrentClassification})");
+                                    ImGui.Text($"Rank: {x.CurrentRank} Capped: {x.CurrentRankCapped} Real: {x.CurrentRankUncapped}");
+                                    ImGui.Text($"XP: {x.CurrentXP} | HP: {x.CurrentHP}/{x.CurrentMaxHP}");
+                                    ImGui.Text($"Strength: {x.CurrentStrength}\tPhyRes: {x.CurrentPhysResistance}\tCon: {x.CurrentConstitution}");
+                                    ImGui.Text($"Intelligence: {x.CurrentIntelligence}\tMagRes: {x.CurrentMagicResistance}");
+
+                                    ImGui.Text("Entries:");
+                                    ImGui.Indent();
+
+                                    foreach (ReaderXBMMonsterNotebook.MonsterEntry entry in x.CurrentPageEntries)
+                                        ImGui.Text($"Mob: {entry.Number} | {entry.Caught}");
+
+                                    ImGui.Unindent();
+                                }
+                            }
+                        }
+
                     if (ImGui.CollapsingHeader("XBMTreasure"))
                         unsafe
                         {
