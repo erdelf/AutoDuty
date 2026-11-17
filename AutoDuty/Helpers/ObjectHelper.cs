@@ -57,6 +57,57 @@ namespace AutoDuty.Helpers
 
         internal static IBattleChara? GetBossObject(int radius = 100, Vector3? position = null) => (position.HasValue ? GetObjectsByRadius(position.Value, radius) : GetObjectsByRadius(radius))?.OfType<IBattleChara>().FirstOrDefault(IsBoss);
 
+        private static readonly Dictionary<string, uint> bossNameIds = new(StringComparer.OrdinalIgnoreCase);
+
+        internal static string[] BossNamesForStep(PathAction step)
+        {
+            string hint = step.Note.Trim();
+            if (hint.Length == 0) return [];
+            if (!bossNameIds.TryGetValue(hint, out uint id))
+            {
+                id = Svc.Data.GetExcelSheet<BNpcName>(Dalamud.Game.ClientLanguage.English)
+                    .FirstOrDefault(row => string.Equals(row.Singular.ToString(), hint, StringComparison.OrdinalIgnoreCase)).RowId;
+                if (id == 0)
+                    id = Svc.Data.GetExcelSheet<BNpcName>().FirstOrDefault(row =>
+                        string.Equals(row.Singular.ToString(), hint, StringComparison.OrdinalIgnoreCase)).RowId;
+                bossNameIds[hint] = id;
+            }
+            return id == 0 ? [] : new[] { hint, Svc.Data.GetExcelSheet<BNpcName>().GetRowOrDefault(id)?.Singular.ToString() ?? "" }
+                .Where(name => !string.IsNullOrWhiteSpace(name)).Distinct().ToArray();
+        }
+
+        internal static IBattleChara[] BossCandidatesForStep(PathAction step, IEnumerable<IBattleChara> objects, int radius = 100)
+        {
+            Vector3 origin = step.Position == Vector3.Zero ? Player.Position : step.Position;
+            var nearby = objects.Where(o => o.ObjectKind == ObjectKind.BattleNpc
+                && Vector3.DistanceSquared(origin, o.Position) <= radius * radius && MathF.Abs(origin.Y - o.Position.Y) <= 10)
+                .OrderBy(o => Vector3.DistanceSquared(origin, o.Position)).ToArray();
+            var names = BossNamesForStep(step);
+            if (names.Length > 0)
+                return nearby.Where(o => names.Any(name => string.Equals(name, o.Name.TextValue, StringComparison.OrdinalIgnoreCase))).ToArray();
+            // For unnamed legacy steps use only the nearest ranked/module boss. Never arbitrary adds.
+            return nearby.Where(IsBoss).Take(1).ToArray();
+        }
+
+        internal static IBattleChara? GetBossForStep(PathAction step, int radius = 100) =>
+            BossCandidatesForStep(step, Svc.Objects.OfType<IBattleChara>(), radius)
+                .FirstOrDefault(o => o.CurrentHp > 0 && !o.IsDead && o.IsTargetable);
+
+        internal readonly record struct BossObjective(string Text, int Current, int Needed);
+        internal static unsafe BossObjective[] BossObjectives()
+        {
+            var director = FFXIVClientStructs.FFXIV.Client.Game.Event.EventFramework.Instance()->GetContentDirector();
+            var todos = director == null ? null : director->GetDirectorTodos();
+            if (todos == null) return [];
+            var result = new List<BossObjective>();
+            for (int i = 0; i < todos->Count; i++)
+            {
+                var item = (*todos)[i];
+                result.Add(new(item.Text.ToString(), item.CurrentCount, item.NeededCount));
+            }
+            return result.ToArray();
+        }
+
         internal static unsafe float GetDistanceToPosSquared(Vector3 pos, Vector3 target) => Vector3.DistanceSquared(pos, target);
         internal static unsafe float GetDistanceToPlayer(IGameObject gameObject) => GetDistanceToPlayer(gameObject.Position);
 

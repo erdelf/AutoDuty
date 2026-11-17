@@ -1,4 +1,4 @@
-global using AutoDuty.Managers;
+﻿global using AutoDuty.Managers;
 global using ECommons.GameHelpers;
 global using static AutoDuty.AutoDuty;
 global using static AutoDuty.Data.Classes;
@@ -58,7 +58,7 @@ using TaskManager = ECommons.Automation.NeoTaskManager.TaskManager;
 // Scrapped interable list, going to implement an internal list that when a interactable step end in fail, the Dataid gets add to the list and is scanned for from there on out, if found we goto it and get it, then remove from list.
 // Need to expand AutoRepair to include check for level and stuff to see if you are eligible for self repair. and check for dark matter
 
-public sealed class AutoDuty : IDalamudPlugin
+public sealed partial class AutoDuty : IDalamudPlugin
 {
     [PluginService]
     internal static IDalamudPluginInterface PluginInterface { get; private set; } = null!;
@@ -780,6 +780,8 @@ public sealed class AutoDuty : IDalamudPlugin
 
     private void DutyState_DutyStarted(IDutyStateEventArgs args)
     {
+        this.bossProgress.Reset();
+        this.unconfirmedBoss = null;
         this.dutyState         = DutyState.DutyStarted;
         this.lastDutyStart     = DateTime.UtcNow;
         DeathHelper.deathCount = 0;
@@ -891,6 +893,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     private void ClientState_TerritoryChanged(uint t)
     {
+        if (t != 0 && !ContentHelper.DictionaryContent.ContainsKey(t)) this.bossProgress.Reset();
         if (MultiboxUtility.Config.MultiBox)
         {
             bool isDuty = ContentHelper.DictionaryContent.ContainsKey(t);
@@ -1354,7 +1357,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
                 if (this.pathAction.Name.Equals("Boss") && this.pathAction.Position != Vector3.Zero && ObjectHelper.BelowDistanceToPlayer(this.pathAction.Position, 50, 10))
                 {
-                    if (ObjectHelper.GetBossObject(25) != null)
+                    if (ObjectHelper.GetBossForStep(this.pathAction, 50) != null)
                     {
                         if (MultiboxUtility.Config.Host)
                             MultiboxUtility.MultiboxBlockingNextStep = false;
@@ -1431,6 +1434,12 @@ public sealed class AutoDuty : IDalamudPlugin
         if(MultiboxUtility.Config.Host)
             MultiboxUtility.MultiboxBlockingNextStep = false;
 
+        if (this.pathAction.Name == "Boss" && this.BossAlreadyDefeated(this.pathAction))
+        {
+            this.Stage = Stage.Action;
+            return;
+        }
+
         if (this.pathAction.Position == Vector3.Zero)
         {
             this.Stage = Stage.Action;
@@ -1459,7 +1468,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
         if (EzThrottler.Throttle("BossChecker", 25) && this.pathAction.Name.Equals("Boss") && this.pathAction.Position != Vector3.Zero && ObjectHelper.BelowDistanceToPlayer(this.pathAction.Position, 50, 10))
         {
-            if (ObjectHelper.GetBossObject(25) != null)
+            if (ObjectHelper.GetBossForStep(this.pathAction, 50) != null)
             {
                 VNavmesh_IPCSubscriber.Path_Stop();
                 this.Stage = Stage.Action;
@@ -1578,7 +1587,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
         if (this.pathAction.Name.Equals("Boss") && this.pathAction.Position != Vector3.Zero && ObjectHelper.GetDistanceToPlayer(this.pathAction.Position) < 50)
         {
-            if (ObjectHelper.GetBossObject(25) != null)
+            if (ObjectHelper.GetBossForStep(this.pathAction, 50) != null)
             {
                 VNavmesh_IPCSubscriber.Path_Stop();
                 this.Stage = Stage.Action;
@@ -2062,6 +2071,8 @@ public sealed class AutoDuty : IDalamudPlugin
             return;
 
         this.PreStageChecks();
+        this.TickBossProgress();
+        this.TickUnconfirmedBoss();
 
         if (this.Stage == Stage.Stopped)
             return;
