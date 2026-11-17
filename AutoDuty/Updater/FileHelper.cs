@@ -8,20 +8,15 @@ namespace AutoDuty.Updater
 {
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Threading;
     using static Data.Classes;
     internal static class FileHelper
     {
         internal static readonly FileSystemWatcher FileSystemWatcher = new(Plugin.pathsDirectory.FullName)
         {
-            NotifyFilter = NotifyFilters.Attributes
-                                                                                        | NotifyFilters.CreationTime
-                                                                                        | NotifyFilters.DirectoryName
-                                                                                        | NotifyFilters.FileName
-                                                                                        | NotifyFilters.LastAccess
-                                                                                        | NotifyFilters.LastWrite
-                                                                                        | NotifyFilters.Security
-                                                                                        | NotifyFilters.Size,
+            // Route reads must not invalidate the catalog while it is being browsed.
+            NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.Size,
 
             Filter = "*.json",
             IncludeSubdirectories = true
@@ -30,6 +25,22 @@ namespace AutoDuty.Updater
         internal static readonly FileSystemWatcher fileWatcher = new();
 
         private static readonly Lock updateLock = new();
+        private static long refreshAfter;
+
+        internal static void Tick()
+        {
+            lock (updateLock)
+            {
+                if (refreshAfter == 0 || System.Environment.TickCount64 < refreshAfter) return;
+                refreshAfter = 0;
+            }
+            Update();
+        }
+
+        private static void RequestUpdate()
+        {
+            lock (updateLock) refreshAfter = System.Environment.TickCount64 + 300;
+        }
 
 
         public static byte[] CalculateMD5(string filename)
@@ -106,32 +117,32 @@ namespace AutoDuty.Updater
         {
             lock (updateLock)
             {
-                ContentPathsManager.DictionaryPaths = [];
-
-                MainTab.PathsUpdated();
-                PathsTab.PathsUpdated();
+                Dictionary<uint, ContentPathsManager.ContentPathContainer> updated = [];
 
                 foreach ((_, Content content) in ContentHelper.DictionaryContent)
                 {
-                    IEnumerable<FileInfo> files = Plugin.pathsDirectory.EnumerateFiles($"({content.TerritoryType})*.json", SearchOption.AllDirectories);
+                    IEnumerable<FileInfo> files = Plugin.pathsDirectory.EnumerateFiles($"({content.TerritoryType})*.json", SearchOption.AllDirectories).OrderBy(f => f.FullName, System.StringComparer.OrdinalIgnoreCase);
 
                     foreach (FileInfo file in files)
                     {
-                        if (!ContentPathsManager.DictionaryPaths.ContainsKey(content.TerritoryType))
-                            ContentPathsManager.DictionaryPaths.Add(content.TerritoryType, new ContentPathsManager.ContentPathContainer(content));
+                        if (!updated.ContainsKey(content.TerritoryType))
+                            updated.Add(content.TerritoryType, new ContentPathsManager.ContentPathContainer(content));
 
-                        ContentPathsManager.DictionaryPaths[content.TerritoryType].AddPath(file.FullName);
+                        updated[content.TerritoryType].AddPath(file.FullName);
                     }
                 }
+                ContentPathsManager.DictionaryPaths = updated;
+                MainTab.PathsUpdated();
+                PathsTab.PathsUpdated();
             }
         }
 
-        private static void OnChanged(object sender, FileSystemEventArgs e) => Update();
+        private static void OnChanged(object sender, FileSystemEventArgs e) => RequestUpdate();
 
-        private static void OnCreated(object sender, FileSystemEventArgs e) => Update();
+        private static void OnCreated(object sender, FileSystemEventArgs e) => RequestUpdate();
 
-        private static void OnDeleted(object sender, FileSystemEventArgs e) => Update();
+        private static void OnDeleted(object sender, FileSystemEventArgs e) => RequestUpdate();
 
-        private static void OnRenamed(object sender, RenamedEventArgs e) => Update();
+        private static void OnRenamed(object sender, RenamedEventArgs e) => RequestUpdate();
     }
 }

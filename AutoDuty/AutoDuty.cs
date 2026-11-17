@@ -2058,6 +2058,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     public void Framework_Update(IFramework framework)
     {
+        FileHelper.Tick();
         if (this.Stage == Stage.Stopped)
             return;
 

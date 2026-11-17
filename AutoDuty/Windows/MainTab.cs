@@ -71,10 +71,12 @@ namespace AutoDuty.Windows
 
             static void DrawPathSelection()
             {
-                if (Plugin.CurrentTerritoryContent == null || !PlayerHelper.IsReady)
+                if (Plugin.CurrentTerritoryContent == null)
                     return;
 
-                using ImRaii.DisabledDisposable? d = ImRaii.Disabled(InDungeon && Plugin is { Stage: > 0 });
+                // Readiness changes while the player is occupied. Keep the selector in
+                // the layout and disable interaction instead of removing a whole row.
+                using ImRaii.DisabledDisposable? d = ImRaii.Disabled(!PlayerHelper.IsReady || (InDungeon && Plugin is { Stage: > 0 }));
 
                 if (ContentPathsManager.DictionaryPaths.TryGetValue(Plugin.CurrentTerritoryContent.TerritoryType, out ContentPathsManager.ContentPathContainer? container))
                 {
@@ -2077,7 +2079,10 @@ namespace AutoDuty.Windows
             }
         }
 
-        internal static void PathsUpdated() => 
-            DutySelected = null;
+        internal static void PathsUpdated()
+        {
+            if (DutySelected != null)
+                DutySelected = ContentPathsManager.DictionaryPaths.GetValueOrDefault(DutySelected.ID);
+        }
     }
 }   
