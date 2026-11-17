@@ -1441,7 +1441,7 @@ public sealed class AutoDuty : IDalamudPlugin
             VNavmesh_IPCSubscriber.Path_Stop();
 
         Chat.ExecuteCommand("/automove off");
-        VNavmesh_IPCSubscriber.Path_SetTolerance(0.25f);
+        VNavmesh_IPCSubscriber.Path_SetTolerance(RouteArrival.WaypointTolerance);
         if (this.pathAction is { Name: "MoveTo", Arguments.Count: > 0 } && bool.TryParse(this.pathAction.Arguments[0], out bool useMesh) && !useMesh)
             VNavmesh_IPCSubscriber.Path_MoveTo([this.pathAction.Position], false);
         else
@@ -1456,6 +1456,9 @@ public sealed class AutoDuty : IDalamudPlugin
             return;
 
         this.action = $"{Plugin.Actions[this.indexer].ToCustomString()}";
+
+        // Destination acceptance must not loosen intermediate obstacle corners.
+        VNavmesh_IPCSubscriber.Path_SetTolerance(RouteArrival.WaypointTolerance);
 
         if (EzThrottler.Throttle("BossChecker", 25) && this.pathAction.Name.Equals("Boss") && this.pathAction.Position != Vector3.Zero && ObjectHelper.BelowDistanceToPlayer(this.pathAction.Position, 50, 10))
         {
@@ -1527,7 +1530,7 @@ public sealed class AutoDuty : IDalamudPlugin
         }
 
         if (((!VNavmesh_IPCSubscriber.SimpleMove_PathfindInProgress && VNavmesh_IPCSubscriber.Path_NumWaypoints == 0) ||
-             (!this.pathAction.Name.IsNullOrEmpty() && this.pathAction.Position != Vector3.Zero && ObjectHelper.GetDistanceToPlayer(this.pathAction.Position) <= (this.pathAction.Name.EqualsIgnoreCase("Interactable") ? 2f : 0.25f))) &&
+             (!this.pathAction.Name.IsNullOrEmpty() && this.pathAction.Position != Vector3.Zero && RouteArrival.HasArrived(this.pathAction.Name, this.pathAction.Position, Player.Position))) &&
             EzThrottler.Throttle("AdvanceStep" + this.indexer, 100))
         {
             if (this.pathAction.Name.IsNullOrEmpty() || this.pathAction.Name.Equals("MoveTo") || this.pathAction.Name.Equals("TreasureCoffer") || this.pathAction.Name.Equals("Revival"))
@@ -2181,7 +2184,7 @@ public sealed class AutoDuty : IDalamudPlugin
         if (Configuration.Overlay is { Show: true, HideWhenStopped: true })
             this.Overlay.IsOpen = false;
         if (VNavmesh_IPCSubscriber.IsEnabled && VNavmesh_IPCSubscriber.Path_GetTolerance > 0.25F)
-            VNavmesh_IPCSubscriber.Path_SetTolerance(0.25f);
+            VNavmesh_IPCSubscriber.Path_SetTolerance(RouteArrival.WaypointTolerance);
         FollowHelper.SetFollow(null);
 
         if (VNavmesh_IPCSubscriber.IsEnabled && VNavmesh_IPCSubscriber.Path_IsRunning)
