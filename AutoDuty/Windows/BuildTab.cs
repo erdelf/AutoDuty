@@ -423,11 +423,15 @@ namespace AutoDuty.Windows
 
             public ActionEditWindow() : base($"Add/Edit Action###AddActionUI")
             {
-                this.Flags  = ImGuiWindowFlags.AlwaysAutoResize | ImGuiWindowFlags.NoTitleBar;
+                // Full-width inputs depend on the current content width. Auto-resizing this
+                // window feeds that width back into its next frame and makes it keep growing.
+                this.Flags = ImGuiWindowFlags.NoTitleBar;
+                this.Size = new Vector2(760, 620);
+                this.SizeCondition = ImGuiCond.Appearing;
 
                 this.SizeConstraints = new WindowSizeConstraints
                                        {
-                                           MinimumSize = new Vector2(10,             10),
+                                           MinimumSize = new Vector2(620, 240),
                                            MaximumSize = new Vector2(float.MaxValue, float.MaxValue)
                                        };
             }
@@ -518,7 +522,9 @@ namespace AutoDuty.Windows
                     }
                 }
 
-                ImGui.SameLine(ImGui.GetContentRegionAvail().X - 10f.Scale());
+                float closeWidth = ImGui.CalcTextSize("X").X + ImGui.GetStyle().FramePadding.X * 2;
+                float closeX = ImGui.GetCursorPosX() + ImGui.GetContentRegionAvail().X - closeWidth;
+                ImGui.SameLine(Math.Max(ImGui.GetItemRectMax().X - ImGui.GetWindowPos().X + ImGui.GetStyle().ItemSpacing.X, closeX));
                 if (ImGui.Button("X"))
                 {
                     this.Close();
@@ -605,6 +611,7 @@ namespace AutoDuty.Windows
                     ImGui.InputFloat("Y##PositionY", ref actionPosition.Y, 0.1f, 1f);
                     ImGui.SameLine();
                     ImGui.InputFloat("Z##PositionZ", ref actionPosition.Z, 0.1f, 1f);
+                    ImGui.PopItemWidth();
 
                     this.action.Position = actionPosition;
                 }
