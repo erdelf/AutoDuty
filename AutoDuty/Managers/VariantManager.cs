@@ -4,6 +4,7 @@ using ECommons.Automation.NeoTaskManager;
 using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -17,8 +18,8 @@ namespace AutoDuty.Managers
         {
             if (content.VVDIndex < 0)
                 return;
-            _taskManager.Enqueue(() => Svc.Log.Info($"Queueing Duty: {content.Name}"),   "RegisterVariantDuty");
-            _taskManager.Enqueue(() => Svc.Log.Info($"Index#: {content.VVDIndex}"),      "RegisterVariantDuty");
+            _taskManager.Enqueue(() => ADLogging.Info($"Queueing Duty: {content.Name}"),   "RegisterVariantDuty");
+            _taskManager.Enqueue(() => ADLogging.Info($"Index#: {content.VVDIndex}"),      "RegisterVariantDuty");
             _taskManager.Enqueue(() => Plugin.action = $"Queueing Duty: {content.Name}", "RegisterVariantDuty");
             AtkUnitBase* addon = null;
             AtkUnitBase* yesno = null;
@@ -58,7 +59,7 @@ namespace AutoDuty.Managers
             AddonMaster.VVDVoteRoute voteRoute = new(addon);
             if (option >= voteRoute.EntryCount)
             {
-                Svc.Log.Error($"Failed to select path, option {option} is out of range. Entry count: {voteRoute.EntryCount}");
+                ADLogging.Error($"Failed to select path, option {option} is out of range. Entry count: {voteRoute.EntryCount}");
                 return true;
             }
 

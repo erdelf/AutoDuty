@@ -6,6 +6,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -122,7 +123,7 @@ namespace AutoDuty.Helpers
                     if (Plugin.indexer > 0 && isBoss)
                         return Plugin.indexer;
 
-                Svc.Log.Info($"Finding Revival Point starting at {Plugin.indexer}. Using Revival Action: {revivalFound}");
+                ADLogging.Info($"Finding Revival Point starting at {Plugin.indexer}. Using Revival Action: {revivalFound}");
                 for (int i = Plugin.indexer; i >= 0; i--)
                 {
                     string name = Plugin.Actions[i].Name;
@@ -136,7 +137,7 @@ namespace AutoDuty.Helpers
                     if (found && i != Plugin.indexer)
                     {
                         int waypoint = isBoss ? i : i + 1;
-                        Svc.Log.Debug($"Revival Point: {i}");
+                        ADLogging.Debug($"Revival Point: {i}");
                         return waypoint;
                     }
                 }
@@ -151,18 +152,18 @@ namespace AutoDuty.Helpers
             {
                 if (Environment.TickCount <= (findShortcutStartTime + 5000))
                 {
-                    Svc.Log.Debug($"OnRevive: Searching for shortcut");
+                    ADLogging.Debug($"OnRevive: Searching for shortcut");
                     SchedulerHelper.ScheduleAction("FindShortcut", FindShortcut, 500);
                     return;
                 }
 
-                Svc.Log.Debug($"OnRevive: Couldn't find shortcut");
+                ADLogging.Debug($"OnRevive: Couldn't find shortcut");
                 Plugin.indexer = 0;
                 //Stop();
                 //return;
             } else
             {
-                Svc.Log.Debug("OnRevive: Found shortcut");
+                ADLogging.Debug("OnRevive: Found shortcut");
             }
 
             Svc.Framework.Update += OnRevive;
@@ -176,7 +177,7 @@ namespace AutoDuty.Helpers
             BossMod_IPCSubscriber.SetMovement(true);
             Plugin.Stage = Stage.Idle;
             Plugin.Stage = Stage.Reading_Path;
-            Svc.Log.Debug("DeathHelper - Player is Alive, and we are done with Revived Actions, changing state to Alive");
+            ADLogging.Debug("DeathHelper - Player is Alive, and we are done with Revived Actions, changing state to Alive");
             deathState               = PlayerLifeState.Alive;
             Plugin.skipTreasureCoffer = false;
         }
@@ -197,7 +198,7 @@ namespace AutoDuty.Helpers
 
             if (!(shortcutObject?.IsTargetable ?? false) || (shortcutUseLocation != null && ObjectHelper.GetDistanceToPlayer(shortcutUseLocation.Value) > 5))
             {
-                Svc.Log.Debug("OnRevive: Done");
+                ADLogging.Debug("OnRevive: Done");
                 if(Plugin.indexer == 0)
                     Plugin.indexer = FindWaypoint();
                 Stop();
@@ -211,18 +212,18 @@ namespace AutoDuty.Helpers
             if (distanceToPlayer > 2)
             {
                 MovementHelper.Move(shortcutObject, 0.25f, 2);
-                Svc.Log.Debug($"OnRevive: Moving to {shortcutObject.Name} at: {shortcutObject.Position} which is {distanceToPlayer} away");
+                ADLogging.Debug($"OnRevive: Moving to {shortcutObject.Name} at: {shortcutObject.Position} which is {distanceToPlayer} away");
             }
             else
             {
                 shortcutUseLocation = Player.Position;
-                Svc.Log.Debug($"OnRevive: Interacting with {shortcutObject.Name} until SelectYesno Addon appears, and ClickingYes");
+                ADLogging.Debug($"OnRevive: Interacting with {shortcutObject.Name} until SelectYesno Addon appears, and ClickingYes");
                 ObjectHelper.InteractWithObjectUntilAddon(shortcutObject, "SelectYesno");
                 AddonHelper.ClickSelectYesno();
             }
         }
 
         private static void DebugLog(string s) => 
-            Svc.Log.Debug($"DeathHelper: {s}");
+            ADLogging.Debug($"DeathHelper: {s}");
     }
 }

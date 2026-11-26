@@ -1,6 +1,7 @@
 ﻿using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -33,7 +34,7 @@ namespace AutoDuty.Helpers
 
         private static void ScheduleAction(string name, List<Action> action, Func<bool>? condition, int timeMS, bool runOnce = true)
         {
-            Svc.Log.Debug($"Scheduler Helper - {name} enqueued for scheduling");
+            ADLogging.Debug($"Scheduler Helper - {name} enqueued for scheduling");
 
             _schedulesToAdd.Enqueue((name, new Schedule { Action = action, Condition = condition, TimeMS = timeMS > 0 ? Environment.TickCount + timeMS : 0, Interval = timeMS, RunOnce = runOnce }));
         }
@@ -50,7 +51,7 @@ namespace AutoDuty.Helpers
             foreach (KeyValuePair<string, Schedule> schedule in Schedules)
                 if (schedule.Value.TimeMS != 0 ? Environment.TickCount >= schedule.Value.TimeMS : schedule.Value.Condition?.Invoke() ?? false)
                 {
-                    Svc.Log.Debug($"SchedulerHelper - Executing action {schedule.Key}");
+                    ADLogging.Debug($"SchedulerHelper - Executing action {schedule.Key}");
                     schedule.Value.Action.ForEach(a => a.Invoke());
                     if (schedule.Value.RunOnce || schedule.Value.Condition != null)
                         _schedulesToRemove.Enqueue(schedule.Key);
@@ -63,7 +64,7 @@ namespace AutoDuty.Helpers
                 string? schedule = _schedulesToRemove.Dequeue();
                 if (schedule.IsNullOrEmpty())
                     return;
-                Svc.Log.Debug($"SchedulerHelper - {schedule} Removed from Scheduler");
+                ADLogging.Debug($"SchedulerHelper - {schedule} Removed from Scheduler");
                 Schedules.Remove(schedule);
             }
 
@@ -75,12 +76,12 @@ namespace AutoDuty.Helpers
 
                 if (!Schedules.TryAdd(name, schedule))
                 {
-                    Svc.Log.Debug($"SchedulerHelper - {name} already exists in Scheduler, updating");
+                    ADLogging.Debug($"SchedulerHelper - {name} already exists in Scheduler, updating");
                     Schedules[name] = schedule;
                 }
                 else
                 {
-                    Svc.Log.Debug($"SchedulerHelper - {name} Added to Scheduler");
+                    ADLogging.Debug($"SchedulerHelper - {name} Added to Scheduler");
                 }
             }
         }

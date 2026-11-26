@@ -2,6 +2,7 @@
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -45,7 +46,7 @@ namespace AutoDuty.Helpers
 
                 count = counter++;
                 index = Plugin.indexer;
-                Svc.Log.Debug($"Stuck pathfinding: " + count);
+                ADLogging.Debug($"Stuck pathfinding: " + count);
                 return true;
             }
 

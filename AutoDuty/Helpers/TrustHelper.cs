@@ -10,6 +10,7 @@ using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using Lumina.Excel.Sheets;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -89,7 +90,7 @@ namespace AutoDuty.Helpers
 
                 if (test)
                 {
-                    Svc.Log.Info("Leveling Trust Members retained from previous selection");
+                    ADLogging.Info("Leveling Trust Members retained from previous selection");
                     return true;
                 }
             }
@@ -100,8 +101,8 @@ namespace AutoDuty.Helpers
 
             JobRole playerJobRole = Player.Available ? Player.ClassJob.ValueNullable?.GetJobRole() ?? JobRole.None : JobRole.None;
 
-            Svc.Log.Info("Leveling Trust Members set start");
-            Svc.Log.Info("Trustmembers available: " + content.TrustMembers.Count);
+            ADLogging.Info("Leveling Trust Members set start");
+            ADLogging.Info("Trustmembers available: " + content.TrustMembers.Count);
 
             int index = 0;
 
@@ -111,11 +112,11 @@ namespace AutoDuty.Helpers
                               .OrderBy(tm => (mode != LevelingMode.Trust_Solo ? tm.Level : Members.First().Value.LevelCap - tm.Level) + (tm.Level < tm.LevelCap ? 0 : 100) + (playerRole == CombatRole.DPS ? playerJobRole == tm.Job?.GetJobRole() ? 0.5f : 0 : 0))];
                 foreach (TrustMember member in membersPossible)
                 {
-                    Svc.Log.Info("checking: " + member.Name);
+                    ADLogging.Info("checking: " + member.Name);
 
                     if (trustMembers.CanSelectMember(member, playerRole))
                     {
-                        Svc.Log.Info("check successful");
+                        ADLogging.Info("check successful");
                         trustMembers[index++] = member;
 
                         if (index >= 3)
@@ -125,7 +126,7 @@ namespace AutoDuty.Helpers
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex.ToString());
+                ADLogging.Error(ex.ToString());
             }
 
             if (trustMembers.All(tm => tm != null))
@@ -241,27 +242,27 @@ namespace AutoDuty.Helpers
 
             if (_getLevelsContent == null)
             {
-                Svc.Log.Debug($"Get Trust Levels: our content was null, returning");
+                ADLogging.Debug($"Get Trust Levels: our content was null, returning");
                 return;
             }
             if (_getLevelsContent.DawnIndex < 0)
             {
-                Svc.Log.Debug($"Get Trust Levels: our content was not dawn content, returning");
+                ADLogging.Debug($"Get Trust Levels: our content was not dawn content, returning");
                 return;
             }
             if (_getLevelsContent.TrustMembers.TrueForAll(tm => tm.LevelIsSet || !tm.Available))
             {
-                Svc.Log.Debug($"Get Trust Levels: we already have all our trust levels, returning");
+                ADLogging.Debug($"Get Trust Levels: we already have all our trust levels, returning");
                 return;
             }
 
             if (!_getLevelsContent.CanTrustRun(false))
             {
-                Svc.Log.Debug($"Get Trust Levels: this content CanTrustRun is false, returning");
+                ADLogging.Debug($"Get Trust Levels: this content CanTrustRun is false, returning");
                 return;
             }
-            Svc.Log.Info($"TrustHelper - Getting trust levels for expansion {_getLevelsContent.ExVersion} from {_getLevelsContent.EnglishName}");
-            Svc.Log.Info("Get Trust Levels: Level not set for: " + string.Join(" | ", _getLevelsContent.TrustMembers.Where(tm => tm is { LevelIsSet: false, Available: true }).Select(tm => tm.Name)));
+            ADLogging.Info($"TrustHelper - Getting trust levels for expansion {_getLevelsContent.ExVersion} from {_getLevelsContent.EnglishName}");
+            ADLogging.Info("Get Trust Levels: Level not set for: " + string.Join(" | ", _getLevelsContent.TrustMembers.Where(tm => tm is { LevelIsSet: false, Available: true }).Select(tm => tm.Name)));
 
             State = ActionState.Running;
             Svc.Framework.Update += GetLevelsUpdate;
@@ -274,7 +275,7 @@ namespace AutoDuty.Helpers
                 AgentModule.Instance()->GetAgentByInternalId(AgentId.Dawn)->Hide();
             Svc.Framework.Update -= GetLevelsUpdate;
             State = ActionState.None; 
-            Svc.Log.Info($"TrustHelper - Done getting trust levels for expansion {_getLevelsContent?.ExVersion}");
+            ADLogging.Info($"TrustHelper - Done getting trust levels for expansion {_getLevelsContent?.ExVersion}");
             _getLevelsContent = null;
             SchedulerHelper.DescheduleAction("CheckTrustLevelTimeout");
         }
@@ -298,14 +299,14 @@ namespace AutoDuty.Helpers
                 if (!EzThrottler.Throttle("OpenDawn", 2500))
                     return;
 
-                Svc.Log.Debug("Trust Helper - Opening Dawn");
+                ADLogging.Debug("Trust Helper - Opening Dawn");
                 RaptureAtkModule.Instance()->OpenDawn(_getLevelsContent.RowId);
                 return;
             }
 
             if (agentDawn->Data->ContentData.ExpansionCount < (_getLevelsContent.ExVersion - 2))
             {
-                Svc.Log.Debug($"Trust Helper - You do not have expansion: {_getLevelsContent.ExVersion} unlocked. stopping");
+                ADLogging.Debug($"Trust Helper - You do not have expansion: {_getLevelsContent.ExVersion} unlocked. stopping");
                 Stop();
                 return;
             }
@@ -316,7 +317,7 @@ namespace AutoDuty.Helpers
             {
                 if((entry.MemberId != 0 || entry.ClassJob != 0) && MembersByMemberId.TryGetValue(entry.MemberId, out TrustMember? member) && !member.LevelIsSet)
                 {
-                    Svc.Log.Debug($"TrustHelper - Setting {member.MemberName} aka {member.Name} {entry.MemberId} level to {entry.Level}");
+                    ADLogging.Debug($"TrustHelper - Setting {member.MemberName} aka {member.Name} {entry.MemberId} level to {entry.Level}");
                     member.SetLevel(entry.Level);
                     
                     if(LevelsSet())

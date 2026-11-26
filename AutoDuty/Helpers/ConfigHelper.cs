@@ -1,5 +1,6 @@
 ﻿using ECommons.DalamudServices;
 using System.Reflection;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -18,7 +19,7 @@ namespace AutoDuty.Helpers
             (PropertyInfo? property, object? instance)? config;
             if (!(config = FindConfig(configName)).HasValue || config?.property == null)
             {
-                Svc.Log.Error($"Unable to find config: {configName}, please type /autoduty cfg list to see all available configs");
+                ADLogging.Error($"Unable to find config: {configName}, please type /autoduty cfg list to see all available configs");
                 return string.Empty;
             }
 
@@ -60,13 +61,13 @@ namespace AutoDuty.Helpers
             switch (configName)
             {
                 case "leveling" when configValues.Length < 1:
-                    Svc.Log.Info("Leveling Mode not set, correct usage: /autoduty cfg leveling LevelingModeEnum");
+                    ADLogging.Info("Leveling Mode not set, correct usage: /autoduty cfg leveling LevelingModeEnum");
                     return false;
                 case "leveling":
                 {
                     if (!Enum.TryParse(configValues[0], true, out LevelingMode levelingMode))
                     {
-                        Svc.Log.Info($"Argument must be a LevelingMode Type, you inputted {configValues[0]}. Valid values are {string.Join("|", Enum.GetValues<LevelingMode>().Select(lm => lm.ToString()))}");
+                        ADLogging.Info($"Argument must be a LevelingMode Type, you inputted {configValues[0]}. Valid values are {string.Join("|", Enum.GetValues<LevelingMode>().Select(lm => lm.ToString()))}");
                         return false;
                     }
 
@@ -92,7 +93,7 @@ namespace AutoDuty.Helpers
             (PropertyInfo? property, object? instance)? config;
             if (!(config = FindConfig(configName)).HasValue || config?.property == null)
             {
-                Svc.Log.Error($"Unable to find config: {configName}, please type /autoduty cfg list to see all available configs");
+                ADLogging.Error($"Unable to find config: {configName}, please type /autoduty cfg list to see all available configs");
                 return false;
             }
             else if (config.Value.property.PropertyType.ToString().Contains("Dalamud.Plugin", StringComparison.InvariantCultureIgnoreCase))
@@ -103,7 +104,7 @@ namespace AutoDuty.Helpers
             {
                 void PrintError(string failReason)
                 {
-                    Svc.Log.Error($"Unable to set config setting: {config.Value.property.Name}: {failReason}");
+                    ADLogging.Error($"Unable to set config setting: {config.Value.property.Name}: {failReason}");
                 }
 
                 Type configType = config.Value.property.PropertyType;// ConfigType(field);
@@ -224,7 +225,7 @@ namespace AutoDuty.Helpers
             foreach (PropertyInfo property in properties)
             {
                 if (property.SetMethod != null && property.PropertyType.IsAssignableTo(typeof(string)))
-                    Svc.Log.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}");
+                    ADLogging.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}");
 
                 if (property.PropertyType.IsAssignableTo(typeof(IList)) && !property.PropertyType.IsAssignableTo(typeof(string))) 
                 {
@@ -239,7 +240,7 @@ namespace AutoDuty.Helpers
 
                         if (enumerableType.IsAssignableTo(typeof(Enum)) || enumerableType.IsAssignableTo(typeof(string)) || enumerableType.IsAssignableTo(typeof(uint)) && property.SetMethod != null)
                         {
-                            Svc.Log.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}{(enumerableType.IsEnum ? $" {string.Join(", ", Enum.GetNames(enumerableType))}" : "")})");
+                            ADLogging.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}{(enumerableType.IsEnum ? $" {string.Join(", ", Enum.GetNames(enumerableType))}" : "")})");
                             return;
                         }
                     }
@@ -259,7 +260,7 @@ namespace AutoDuty.Helpers
                 }
                 else if(property.SetMethod != null)
                 {
-                    Svc.Log.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}{(property.PropertyType.IsEnum ? $" {string.Join(", ", Enum.GetNames(property.PropertyType))}" : "")})");
+                    ADLogging.Info($"{prefix}{property.Name} = {property.GetValue(instance)} ({property.PropertyType.Name}{(property.PropertyType.IsEnum ? $" {string.Join(", ", Enum.GetNames(property.PropertyType))}" : "")})");
                 }
             }
         }
@@ -269,13 +270,13 @@ namespace AutoDuty.Helpers
             instance ??= ConfigurationMain.Instance.GetCurrentConfig;
             type     ??= instance.GetType() ?? typeof(ConfigurationProfileV2);
 
-            Svc.Log.Debug($"Config find : {configName} in {type.Name}");
+            ADLogging.Debug($"Config find : {configName} in {type.Name}");
 
             int dotIndex = configName.IndexOf('.');
             if (dotIndex > 0)
             {
                 string subConfig = configName[..dotIndex];
-                Svc.Log.Debug("Subconfig found: " + subConfig);
+                ADLogging.Debug("Subconfig found: " + subConfig);
 
                 if (subConfig[0] == '[')
                     if (type.IsAssignableTo(typeof(IList)))

@@ -1,17 +1,17 @@
 ﻿namespace AutoDuty.Helpers;
-
+using System.Collections.Generic;
+using System.Linq;
+using Configurations;
 using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Plugin.Services;
 using ECommons;
 using ECommons.DalamudServices;
+using ECommons.GameFunctions;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using IPC;
-using System.Collections.Generic;
-using System.Linq;
-using Configurations;
-using ECommons.GameFunctions;
+using Logging;
 using Lumina.Excel;
 using Lumina.Excel.Sheets;
 using EventHandler = FFXIVClientStructs.FFXIV.Client.Game.Event.EventHandler;
@@ -38,7 +38,7 @@ public class GlamourChestHelper : ActiveHelperBase<GlamourChestHelper, GlamourLo
             return;
 
         if (!QuestManager.IsQuestComplete(68553))
-            Svc.Log.Info("Glamour Chest requires having completed quest: If I Had a Glamour");
+            ADLogging.Info("Glamour Chest requires having completed quest: If I Had a Glamour");
 
 
         ExcelSheet<MirageStoreSetItemLookup> setLookups = Svc.Data.GetExcelSheet<MirageStoreSetItemLookup>();

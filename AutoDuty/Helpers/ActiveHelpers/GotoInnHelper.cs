@@ -3,6 +3,7 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -31,7 +32,7 @@ namespace AutoDuty.Helpers
             if (Svc.ClientState.TerritoryType != InnTerritoryType(whichGrandCompany))
             {
                 Instance.Start();
-                Svc.Log.Info($"Goto Inn Started {whichGrandCompany}");
+                ADLogging.Info($"Goto Inn Started {whichGrandCompany}");
             }
         }
 
@@ -100,7 +101,7 @@ namespace AutoDuty.Helpers
         {
             if (Plugin.States.HasFlag(PluginState.Navigating))
             {
-                Svc.Log.Debug($"AutoDuty has Started, Stopping GotoInn");
+                ADLogging.Debug($"AutoDuty has Started, Stopping GotoInn");
                 this.Stop();
             }
 
@@ -111,7 +112,7 @@ namespace AutoDuty.Helpers
 
             if (!Player.Available)
             {
-                Svc.Log.Debug($"Our player is null");
+                ADLogging.Debug($"Our player is null");
                 return;
             }
 
@@ -122,20 +123,20 @@ namespace AutoDuty.Helpers
 
             if (Svc.ClientState.TerritoryType == InnTerritoryType(whichGrandCompany))
             {
-                Svc.Log.Debug($"We are in the Inn, stopping GotoInn");
+                ADLogging.Debug($"We are in the Inn, stopping GotoInn");
                 this.Stop();
                 return;
             }
 
             if (Svc.ClientState.TerritoryType != PlayerHelper.GetGrandCompanyTerritoryType(whichGrandCompany) || InnKeepGameObject == null || Vector3.Distance(Player.Position, InnKeepGameObject.Position) > 7f)
             {
-                Svc.Log.Debug($"We are not in the correct TT or our innkeepGO is null or out innkeepPosition is > 7f, moving there");
+                ADLogging.Debug($"We are not in the correct TT or our innkeepGO is null or out innkeepPosition is > 7f, moving there");
                 GotoHelper.Invoke(PlayerHelper.GetGrandCompanyTerritoryType(whichGrandCompany), InnKeepLocation, 0.25f, 5f, false);
                 return;
             }
             else if (PlayerHelper.IsValid)
             {
-                Svc.Log.Debug($"Interacting with GO and Addons");
+                ADLogging.Debug($"Interacting with GO and Addons");
                 ObjectHelper.InteractWithObject(InnKeepGameObject);
                 AddonHelper.ClickSelectString(0);
                 AddonHelper.ClickSelectYesno();

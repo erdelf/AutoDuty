@@ -7,6 +7,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -31,7 +32,7 @@ namespace AutoDuty.Helpers
         internal static void InvokeAcceptOnly()
         {
             _dutyMode = DutyMode.None;
-            Svc.Log.Info("Queueing: Accepting only");
+            ADLogging.Info("Queueing: Accepting only");
             Instance.Start();
             Plugin.action = "Queueing: Waiting to accept";
         }
@@ -42,7 +43,7 @@ namespace AutoDuty.Helpers
             {
                 _dutyMode = dutyMode;
                 _content = content;
-                Svc.Log.Info($"Queueing: {dutyMode}: {content.Name}");
+                ADLogging.Info($"Queueing: {dutyMode}: {content.Name}");
 
                 Instance.Start();
                 Plugin.action = $"Queueing {_dutyMode}: {content.Name}";
@@ -55,7 +56,7 @@ namespace AutoDuty.Helpers
         internal override void Stop()
         {
             if (State == ActionState.Running)
-                Svc.Log.Info($"Done Queueing: {_dutyMode}: {_content?.Name}");
+                ADLogging.Info($"Done Queueing: {_dutyMode}: {_content?.Name}");
             _content                     = null;
             this._allConditionsMetToJoin = false;
             this._turnedOffTrustMembers  = false;
@@ -76,7 +77,7 @@ namespace AutoDuty.Helpers
         {
             if (GenericHelpers.TryGetAddonByName("ContentsFinderConfirm", out AtkUnitBase* addonContentsFinderConfirm) && GenericHelpers.IsAddonReady(addonContentsFinderConfirm))
             {
-                Svc.Log.Debug("Queue Helper - Confirming DutyPop");
+                ADLogging.Debug("Queue Helper - Confirming DutyPop");
                 AddonHelper.FireCallBack(addonContentsFinderConfirm, true, 8);
                 return true;
             }
@@ -100,21 +101,21 @@ namespace AutoDuty.Helpers
                 if (!EzThrottler.Throttle("OpenDawn", 5000) || !AgentHUD.Instance()->IsMainCommandEnabled(82)) 
                     return;
 
-                Svc.Log.Debug("Queue Helper - Opening Dawn");
+                ADLogging.Debug("Queue Helper - Opening Dawn");
                 RaptureAtkModule.Instance()->OpenDawn(_content.RowId);
                 return;
             }
 
             if (agentDawn->Data->ContentData.ExpansionCount < (_content!.ExVersion - 2))
             {
-                Svc.Log.Debug($"Queue Helper - You do not have expansion: {_content.ExVersion} unlocked stopping");
+                ADLogging.Debug($"Queue Helper - You do not have expansion: {_content.ExVersion} unlocked stopping");
                 this.Stop();
                 return;
             }
 
             if(!_content.CanTrustRun())
             {
-                Svc.Log.Debug("Queue Helper - Trust can't run, stopping QueueHelper");
+                ADLogging.Debug("Queue Helper - Trust can't run, stopping QueueHelper");
                 this.Stop();
                 Plugin.Stage = Stage.Stopped;
                 return;
@@ -122,7 +123,7 @@ namespace AutoDuty.Helpers
 
             if ((byte) agentDawn->SelectedContentId != _content.DawnRowId)
             {
-                Svc.Log.Debug($"Queue Helper - Clicking: {_content.EnglishName} at {_content.RowId} with dawn {_content.DawnRowId} instead of {agentDawn->SelectedContentId}");
+                ADLogging.Debug($"Queue Helper - Clicking: {_content.EnglishName} at {_content.RowId} with dawn {_content.DawnRowId} instead of {agentDawn->SelectedContentId}");
                 RaptureAtkModule.Instance()->OpenDawn(_content.RowId);
             }
             else if (!this._turnedOffTrustMembers)
@@ -143,7 +144,7 @@ namespace AutoDuty.Helpers
                     TrustMemberName?[]                  members    = AutoDuty.Configuration.SelectedTrustMembers;
                     if (members.Any(x => x is null || TrustHelper.Members[(TrustMemberName)x!].Level < _content.ClassJobLevelRequired))
                     {
-                        Svc.Log.Info("Not all trust members selected. Selecting automatically now");
+                        ADLogging.Info("Not all trust members selected. Selecting automatically now");
                         TrustHelper.SetLevelingTrustMembers(_content, LevelingMode.Trust_Solo);
                     }
                     
@@ -165,7 +166,7 @@ namespace AutoDuty.Helpers
             }
             else if(EzThrottler.Throttle("ClickRegisterButton", 10000))
             {
-                Svc.Log.Debug($"Queue Helper - Clicking: Register For Duty");
+                ADLogging.Debug($"Queue Helper - Clicking: Register For Duty");
                 agentDawn->RegisterForDuty();
             }
         }
@@ -177,27 +178,27 @@ namespace AutoDuty.Helpers
             {
                 if (!EzThrottler.Throttle("OpenDawnStory", 5000) || !AgentHUD.Instance()->IsMainCommandEnabled(91)) return;
                 
-                Svc.Log.Debug("Queue Helper - Opening DawnStory");
+                ADLogging.Debug("Queue Helper - Opening DawnStory");
                 RaptureAtkModule.Instance()->OpenDawnStory(_content.Id);
                 return;
             }
 
             if (agentDawnStory->Data->ContentData.ExpansionCount <= _content!.ExVersion)
             {
-                Svc.Log.Debug($"Queue Helper - You do not have expansion: {_content.ExVersion} unlocked. stopping");
+                ADLogging.Debug($"Queue Helper - You do not have expansion: {_content.ExVersion} unlocked. stopping");
                 this.Stop();
                 return;
             }
 
             if (agentDawnStory->Data->ContentData.ContentEntries[agentDawnStory->Data->ContentData.SelectedContentEntry].ContentFinderConditionId != _content.RowId)
             {
-                Svc.Log.Debug($"Queue Helper - Clicking: {_content.EnglishName} {_content.RowId}");// instead of {agentDawnStory->Data->ContentData.ContentEntries[agentDawnStory->Data->ContentData.SelectedContentEntry].ContentFinderConditionId}");
+                ADLogging.Debug($"Queue Helper - Clicking: {_content.EnglishName} {_content.RowId}");// instead of {agentDawnStory->Data->ContentData.ContentEntries[agentDawnStory->Data->ContentData.SelectedContentEntry].ContentFinderConditionId}");
 
                 RaptureAtkModule.Instance()->OpenDawnStory(_content.RowId);
             }
             else if(EzThrottler.Throttle("ClickRegisterButton", 10000))
             {
-                Svc.Log.Debug($"Queue Helper - Clicking: Register For Duty");
+                ADLogging.Debug($"Queue Helper - Clicking: Register For Duty");
                 AgentDawnStory.Instance()->RegisterForDuty();
             }
         }
@@ -210,10 +211,10 @@ namespace AutoDuty.Helpers
         private void QueueRegular()
         {
             bool unsync = ShouldBeUnSynced();
-            Svc.Log.Debug($"Sync check: {unsync}");
+            ADLogging.Debug($"Sync check: {unsync}");
             if (ContentsFinder.Instance()->IsUnrestrictedParty != unsync)
             {
-                Svc.Log.Debug("Queue Helper - Setting UnrestrictedParty");
+                ADLogging.Debug("Queue Helper - Setting UnrestrictedParty");
                 ContentsFinder.Instance()->IsUnrestrictedParty = unsync;
                 return;
             }
@@ -223,7 +224,7 @@ namespace AutoDuty.Helpers
             {
                 if (!AgentHUD.Instance()->IsMainCommandEnabled(33) || this._allConditionsMetToJoin)
                     return;
-                Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content!.Name}");
+                ADLogging.Debug($"Queue Helper - Opening ContentsFinder to {_content!.Name}");
                 AgentContentsFinder.Instance()->OpenRegularDuty(_content.ContentFinderCondition);
                 return;
             }
@@ -241,7 +242,7 @@ namespace AutoDuty.Helpers
 
             if (!this._allConditionsMetToJoin && AgentContentsFinder.Instance()->SelectedDuty.Id != _content!.ContentFinderCondition)
             {
-                Svc.Log.Debug($"Queue Helper - Opening ContentsFinder to {_content.Name} because we have the wrong selection of {listAtkComponentTreeListItems[(int)dutyList->SelectedItemIndex].Renderer->GetTextNodeById(5)->GetAsAtkTextNode()->NodeText.ToString().Replace("...", "")}");
+                ADLogging.Debug($"Queue Helper - Opening ContentsFinder to {_content.Name} because we have the wrong selection of {listAtkComponentTreeListItems[(int)dutyList->SelectedItemIndex].Renderer->GetTextNodeById(5)->GetAsAtkTextNode()->NodeText.ToString().Replace("...", "")}");
                 AgentContentsFinder.Instance()->OpenRegularDuty(_content.ContentFinderCondition);
                 EzThrottler.Throttle("QueueHelper", 500, true);
                 return;
@@ -250,14 +251,14 @@ namespace AutoDuty.Helpers
             string? selectedDutyName = this._addonContentsFinder->AtkValues[18].GetValueAsString().Replace("\u0002\u001a\u0002\u0002\u0003", string.Empty).Replace("\u0002\u001a\u0002\u0001\u0003", string.Empty).Replace("\u0002\u001f\u0001\u0003", "\u2013");
             if (selectedDutyName != _content!.Name && !string.IsNullOrEmpty(selectedDutyName))
             {
-                Svc.Log.Debug($"Queue Helper - We have {selectedDutyName} selected, not {_content.Name}, Clearing.");
+                ADLogging.Debug($"Queue Helper - We have {selectedDutyName} selected, not {_content.Name}, Clearing.");
                 AddonHelper.FireCallBack((AtkUnitBase*)this._addonContentsFinder, true, 12, 1);
                 return;
             }
 
             if (string.IsNullOrEmpty(selectedDutyName))
             {
-                Svc.Log.Debug("Queue Helper - Checking Duty");
+                ADLogging.Debug("Queue Helper - Checking Duty");
                 SelectDuty(this._addonContentsFinder);
                 return;
             }
@@ -265,14 +266,14 @@ namespace AutoDuty.Helpers
             if (selectedDutyName == _content.Name)
             {
                 this._allConditionsMetToJoin = true;
-                Svc.Log.Debug("Queue Helper - All Conditions Met, Clicking Join");
+                ADLogging.Debug("Queue Helper - All Conditions Met, Clicking Join");
                 AddonHelper.FireCallBack((AtkUnitBase*)this._addonContentsFinder, true, 12, 0);
 
                 if(MultiboxUtility.Config is { MultiBox: true, Host: true })
                     MultiboxUtility.Server.Queue();
                 return;
             }
-            Svc.Log.Debug("end");
+            ADLogging.Debug("end");
         }
 
         public delegate bool QueueNoviceTutorialDelegate(uint tutorialRowId);
@@ -309,7 +310,7 @@ namespace AutoDuty.Helpers
                     }
                     catch (Exception ex)
                     {
-                        Svc.Log.Error(ex.ToString());
+                        ADLogging.Error(ex.ToString());
                     }
                     break;
                 case DutyMode.Support:
@@ -337,7 +338,7 @@ namespace AutoDuty.Helpers
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex.ToString());
+                ADLogging.Error(ex.ToString());
             }
 
             return count;

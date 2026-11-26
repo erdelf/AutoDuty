@@ -1,21 +1,19 @@
-﻿using ECommons.DalamudServices;
-using ECommons.EzIpcManager;
+﻿using ECommons.EzIpcManager;
 using ECommons.Reflection;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI.Misc;
 using System.Globalization;
 using System.Numerics;
 using static ECommons.IPC.ECommonsIPC;
-using static global::AutoDuty.Data.Enums;
 
 // ReSharper disable InconsistentNaming
 #nullable disable
 
 namespace AutoDuty.IPC;
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Configurations;
-using Dalamud.Plugin;
-using Dalamud.Plugin.Ipc;
 using Data;
 using ECommons.GameFunctions;
 using ECommons.IPC.Subscribers.AutoRetainer;
@@ -23,11 +21,7 @@ using ECommons.IPC.Subscribers.Lifestream;
 using ECommons.IPC.Subscribers.RotationSolverReborn;
 using ECommons.IPC.Subscribers.Skippy;
 using Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
+using Logging;
 using WrathCombo.API;
 using WrathCombo.API.Enum;
 
@@ -60,7 +54,7 @@ internal static class AutoRetainer_IPCSubscriber
         if (IsEnabled)
         {
             long? remaining = AutoRetainer.GetClosestRetainerVentureSecondsRemaining(Player.CID);
-            Svc.Log.Debug($"AutoRetainer IPC - Closest Retainer Venture Remaining Time: {remaining}");
+            ADLogging.Debug($"AutoRetainer IPC - Closest Retainer Venture Remaining Time: {remaining}");
             return remaining < remainingTime;
         }
 
@@ -77,7 +71,7 @@ internal static class BossMod_IPCSubscriber
     {
         if(AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
         {
-            Svc.Log.Debug($"BossMod IPC - Disabling Module: {moduleName}, Disable: {disable}");
+            ADLogging.Debug($"BossMod IPC - Disabling Module: {moduleName}, Disable: {disable}");
             BossMod.DisableModule(moduleName, disable);
         }
     }
@@ -85,7 +79,7 @@ internal static class BossMod_IPCSubscriber
     public static void AddPreset(string name, string preset)
     {
         if (BossMod.Presets_Get(name) == null)
-            Svc.Log.Debug($"BossMod Adding Preset: {name} {BossMod.Presets_Create(preset, true)}");
+            ADLogging.Debug($"BossMod Adding Preset: {name} {BossMod.Presets_Create(preset, true)}");
     }
 
     public static void RefreshPreset(string name, string preset)
@@ -100,7 +94,7 @@ internal static class BossMod_IPCSubscriber
         if (AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
             if (BossMod.Presets_GetActive() != name)
             {
-                Svc.Log.Debug($"BossMod Setting Preset: {name}");
+                ADLogging.Debug($"BossMod Setting Preset: {name}");
                 AddPreset(name, preset);
                 BossMod.Presets_SetActive(name);
             }
@@ -111,7 +105,7 @@ internal static class BossMod_IPCSubscriber
         if (AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
             if (BossMod.Presets_GetActive() != null)
             {
-                Svc.Log.Debug($"BossMod Disabling Presets");
+                ADLogging.Debug($"BossMod Disabling Presets");
                 BossMod.Presets_ClearActive();
             }
     }
@@ -171,7 +165,7 @@ internal static class BossMod_IPCSubscriber
     {
         if (AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
         {
-            Svc.Log.Debug($"BossMod Setting Range to: {range}");
+            ADLogging.Debug($"BossMod Setting Range to: {range}");
 
             BossMod.Presets_AddTransientStrategy("AutoDuty",         "BossMod.Autorotation.MiscAI.StayCloseToTarget", "range", MathF.Round(range, 1).ToString(CultureInfo.InvariantCulture));
             BossMod.Presets_AddTransientStrategy("AutoDuty Passive", "BossMod.Autorotation.MiscAI.StayCloseToTarget", "range", MathF.Round(range, 1).ToString(CultureInfo.InvariantCulture));
@@ -184,7 +178,7 @@ internal static class BossMod_IPCSubscriber
     {
         if (AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
         {
-            Svc.Log.Debug($"BossMod Setting Movement: {on}");
+            ADLogging.Debug($"BossMod Setting Movement: {on}");
 
             string destinationStrategy = (on ? DestinationStrategy.Pathfind : DestinationStrategy.None).ToString();
 
@@ -197,7 +191,7 @@ internal static class BossMod_IPCSubscriber
     {
         if (AutoDuty.Configuration.DutyConfig.AutoManageBossModAISettings)
         {
-            Svc.Log.Debug($"BossMod Setting Positional: {positional}");
+            ADLogging.Debug($"BossMod Setting Positional: {positional}");
 
             BossMod.Presets_AddTransientStrategy("AutoDuty Passive", "BossMod.Autorotation.MiscAI.GoToPositional", "Positional", positional.ToString());
         }
@@ -395,7 +389,7 @@ public static class Wrath_IPCSubscriber
         }
 
         _curLease = null;
-        Svc.Log.Info($"Wrath lease cancelled via {(CancellationReason) reason} for: {s}");
+        ADLogging.Info($"Wrath lease cancelled via {(CancellationReason) reason} for: {s}");
     }
 
     internal static void Release()
@@ -575,7 +569,7 @@ public static class Knightshopper_IPCSubscriber
             case StartResult.ItemUnavailable:
             case StartResult.InvalidQuantity:
             default:
-                Svc.Log.Info($"Knightshopper rejected: {(StartResult)response.Item1} | {response.Item3}");
+                ADLogging.Info($"Knightshopper rejected: {(StartResult)response.Item1} | {response.Item3}");
                 return false;
         }
     }
@@ -621,7 +615,7 @@ internal static class IPCSubscriber_Common
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"Error while unregistering IPC: {ex}");
+                ADLogging.Error($"Error while unregistering IPC: {ex}");
             }
     }
 }

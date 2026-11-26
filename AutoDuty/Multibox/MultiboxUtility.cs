@@ -1,5 +1,4 @@
 namespace AutoDuty.Multibox;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,10 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Windows;
 using Configurations;
 using ECommons;
-using ECommons.Automation;
 using ECommons.DalamudServices;
 using ECommons.PartyFunctions;
 using ECommons.UIHelpers.AddonMasterImplementations;
@@ -18,6 +15,7 @@ using FFXIVClientStructs.FFXIV.Client.System.String;
 using FFXIVClientStructs.FFXIV.Client.UI.Info;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using Helpers;
+using Logging;
 using Lumina.Excel.Sheets;
 using Newtonsoft.Json;
 
@@ -668,10 +666,10 @@ public static class MultiboxUtility
 
 
     private static void DebugLog(string message) => 
-        Svc.Log.Debug($"Pipe Connection: {message}");
+        ADLogging.Debug($"Pipe Connection: {message}");
 
     private static void ErrorLog(string message) => 
-        Svc.Log.Error($"Pipe Connection: {message}");
+        ADLogging.Error($"Pipe Connection: {message}");
 
     private class StreamString(Stream ioStream)
     {

@@ -2,6 +2,7 @@ using Dalamud.Memory;
 using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -55,7 +56,7 @@ namespace AutoDuty.Managers
             AtkComponentNode* button = node == null ? null : node->GetAsAtkComponentNode();
             if (button == null)
             {
-                Svc.Log.Warning($"[Crucible] {addon->NameString} has no button node {nodeId}");
+                ADLogging.Warning($"[Crucible] {addon->NameString} has no button node {nodeId}");
                 return false;
             }
 
@@ -65,11 +66,11 @@ namespace AutoDuty.Managers
 
             if (evt == null)
             {
-                Svc.Log.Warning($"[Crucible] {addon->NameString} button {nodeId} has no click event");
+                ADLogging.Warning($"[Crucible] {addon->NameString} button {nodeId} has no click event");
                 return false;
             }
 
-            Svc.Log.Debug($"[Crucible] {addon->NameString} click button {nodeId} (param {evt->Param})");
+            ADLogging.Debug($"[Crucible] {addon->NameString} click button {nodeId} (param {evt->Param})");
             addon->ReceiveEvent(evt->State.EventType, (int)evt->Param, evt);
             return true;
         }
@@ -79,11 +80,11 @@ namespace AutoDuty.Managers
             AtkEvent* evt = FindEvent(&addon->UldManager, type, param, 0);
             if (evt == null)
             {
-                Svc.Log.Warning($"[Crucible] {addon->NameString} has no {type} event with param {param}");
+                ADLogging.Warning($"[Crucible] {addon->NameString} has no {type} event with param {param}");
                 return false;
             }
 
-            Svc.Log.Debug($"[Crucible] {addon->NameString} {type} (param {param})");
+            ADLogging.Debug($"[Crucible] {addon->NameString} {type} (param {param})");
             AtkEventData data = new();
             addon->ReceiveEvent(type, (int)param, evt, &data);
             return true;

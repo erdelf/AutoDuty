@@ -6,6 +6,7 @@ using ECommons.Throttlers;
 using ECommons.UIHelpers.AddonMasterImplementations;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -23,7 +24,7 @@ namespace AutoDuty.Helpers
         {
             if (!QuestManager.IsQuestComplete(66174))
             {
-                Svc.Log.Info("Materia Extraction requires having completed quest: Forging the Spirit");
+                ADLogging.Info("Materia Extraction requires having completed quest: Forging the Spirit");
             }
             else
             {
@@ -70,7 +71,7 @@ namespace AutoDuty.Helpers
 
             if (GenericHelpers.TryGetAddonByName("MaterializeDialog", out AtkUnitBase* addonMaterializeDialog) && GenericHelpers.IsAddonReady(addonMaterializeDialog))
             {
-                Svc.Log.Debug("AutoExtract - Confirming MaterializeDialog");
+                ADLogging.Debug("AutoExtract - Confirming MaterializeDialog");
                 new AddonMaster.MaterializeDialog(addonMaterializeDialog).Materialize();
                 return;
             }
@@ -95,7 +96,7 @@ namespace AutoDuty.Helpers
                     //switch to Category, if not on it
                     if (!this.switchedCategory)
                     {
-                        Svc.Log.Debug($"AutoExtract - Switching to Category: {this.currentCategory}");
+                        ADLogging.Debug($"AutoExtract - Switching to Category: {this.currentCategory}");
                         AddonHelper.FireCallBack(addonMaterialize, false, 1, this.currentCategory);
                         this.switchedCategory = true;
                         return;
@@ -103,7 +104,7 @@ namespace AutoDuty.Helpers
 
                     if (spiritbondTextNode->NodeText.ToString().Replace(" ", string.Empty) == "100%")
                     {
-                        Svc.Log.Debug($"AutoExtract - Extracting Materia");
+                        ADLogging.Debug($"AutoExtract - Extracting Materia");
                         AddonHelper.FireCallBack(addonMaterialize, true, 2, 0);
                         return;
                     }
@@ -116,7 +117,7 @@ namespace AutoDuty.Helpers
                 else
                 {
                     addonMaterialize->Close(true);
-                    Svc.Log.Info("Extract Materia Finished");
+                    ADLogging.Info("Extract Materia Finished");
                     this.Stop();
                 }
             }

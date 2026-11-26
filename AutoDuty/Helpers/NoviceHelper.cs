@@ -1,6 +1,7 @@
 ﻿using ECommons.DalamudServices;
 using System;
 using System.Collections.Generic;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -84,7 +85,7 @@ namespace AutoDuty.Helpers
 
             foreach (Tutorial tutorial in tutorials)
             {
-                Svc.Log.Debug($"Adding NoviceHall: {tutorial.RowId}");
+                ADLogging.Debug($"Adding NoviceHall: {tutorial.RowId}");
                 uint id = GetTerritoryOfTutorial(tutorial.RowId);
                 if(ContentPathsManager.DictionaryPaths.ContainsKey(id))
                     entries.Add(new PlaylistEntry

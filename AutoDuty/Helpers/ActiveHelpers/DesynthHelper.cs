@@ -6,6 +6,7 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.UI;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -73,7 +74,7 @@ namespace AutoDuty.Helpers
             }
             catch (Exception ex)
             {
-                Svc.Log.Warning($"[AutoDesynth] Gearsetter IPC call failed while collecting upgrade protection, falling back to gearset-only protection for this run: {ex.Message}");
+                ADLogging.Warning($"[AutoDesynth] Gearsetter IPC call failed while collecting upgrade protection, falling back to gearset-only protection for this run: {ex.Message}");
                 protectedSlots.Clear();
             }
 

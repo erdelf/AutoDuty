@@ -10,6 +10,7 @@ using ECommons.Throttlers;
 using ECommons.DalamudServices;
 using System.Numerics;
 using FFXIVClientStructs.FFXIV.Client.UI.Agent;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -49,12 +50,12 @@ namespace AutoDuty.Helpers
         {
             if (id != 0)
             {
-                Svc.Log.Debug($"Teleporting to AetheryteId: {id} SubIndex: {sub}");
+                ADLogging.Debug($"Teleporting to AetheryteId: {id} SubIndex: {sub}");
                 return TeleportAetheryte(id, sub);
             }
             else
             {
-                Svc.Log.Info("Unable to teleport to specified housing");
+                ADLogging.Info("Unable to teleport to specified housing");
                 return false;
             }
         }

@@ -4,6 +4,7 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -25,9 +26,9 @@ namespace AutoDuty.Helpers
         internal override void Start()
         {
             if (!AutoRetainer_IPCSubscriber.IsEnabled)
-                Svc.Log.Info("GC Turnin Requires AutoRetainer plugin. Get @ https://love.puni.sh/ment.json");
+                ADLogging.Info("GC Turnin Requires AutoRetainer plugin. Get @ https://love.puni.sh/ment.json");
             else if (PlayerHelper.GetGrandCompanyRank() <= 5)
-                Svc.Log.Info("GC Turnin requires GC Rank 6 or Higher");
+                ADLogging.Info("GC Turnin requires GC Rank 6 or Higher");
             else
                 base.Start();
         }

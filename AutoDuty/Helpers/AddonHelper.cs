@@ -5,6 +5,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using ECommons.UIHelpers.AddonMasterImplementations;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -24,7 +25,7 @@ namespace AutoDuty.Helpers
             }
             catch (Exception ex) 
             { 
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
             }
         }
 

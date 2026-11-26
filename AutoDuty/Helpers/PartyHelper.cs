@@ -1,4 +1,5 @@
-﻿namespace AutoDuty.Helpers
+﻿using AutoDuty.Logging;
+namespace AutoDuty.Helpers
 {
     using System;
     using System.Collections.Generic;
@@ -69,7 +70,7 @@
             else if (!members.Any(x => !x.Struct()->IsDead() && x.Struct()->InCombat))
                 partyInCombat = false;
 
-            Svc.Log.Debug("InCombatCheck: " + partyInCombat);
+            ADLogging.Debug("InCombatCheck: " + partyInCombat);
 
             partyCombatCheckTime = DateTime.Now;
 

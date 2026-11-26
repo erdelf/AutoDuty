@@ -3,6 +3,7 @@ using ECommons.ExcelServices;
 using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using ECommons.Throttlers;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -55,13 +56,13 @@ namespace AutoDuty.Helpers
         {
             if (allowHq && ItemCount(itemId + 1_000_000) >= 1)
             {
-                Svc.Log.Debug($"Using Item: {itemId + 1_000_000}");
+                ADLogging.Debug($"Using Item: {itemId + 1_000_000}");
                 UseItem(itemId + 1_000_000);
             }
             else if (ItemCount(itemId) >= 1)
             {
                 UseItem(itemId);
-                Svc.Log.Debug($"Using Item: {itemId}");
+                ADLogging.Debug($"Using Item: {itemId}");
             }
         }
 
@@ -174,21 +175,21 @@ namespace AutoDuty.Helpers
             uint itemLowestCondition = 60000;
             uint itemLowest = 0;
 
-            Svc.Log.Verbose("Lowest Equipped Item checks:");
+            ADLogging.Verbose("Lowest Equipped Item checks:");
 
             for (uint i = 0; i < 13; i++)
             {
                 InventoryItem item = equipedItems->Items[i];
-                Svc.Log.Verbose($"{i}: {item.ItemId} {item.Condition}");
+                ADLogging.Verbose($"{i}: {item.ItemId} {item.Condition}");
                 if (itemLowestCondition > item.Condition)
                 {
-                    Svc.Log.Verbose($"lower");
+                    ADLogging.Verbose($"lower");
                     itemLowest = i;
                     itemLowestCondition = item.Condition;
                 }
             }
 
-            Svc.Log.Verbose($"lowest Index {itemLowest}");
+            ADLogging.Verbose($"lowest Index {itemLowest}");
 
             return equipedItems->Items[itemLowest];
         }

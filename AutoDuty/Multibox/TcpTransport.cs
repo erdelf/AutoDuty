@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Sockets;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Multibox
 {
@@ -84,9 +85,9 @@ namespace AutoDuty.Multibox
             this.StopServer();
 
         private static void DebugLog(string message) => 
-            Svc.Log.Debug($"TCP Connection: {message}");
+            ADLogging.Debug($"TCP Connection: {message}");
 
         private static void ErrorLog(string message) => 
-            Svc.Log.Error($"TCP Connection: {message}");
+            ADLogging.Error($"TCP Connection: {message}");
     }
 }
