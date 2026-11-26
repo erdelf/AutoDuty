@@ -264,7 +264,6 @@ namespace AutoDuty.Data
                 {
                     if (value != this.id)
                     {
-                        Svc.Log.Debug(ContentPathsManager.DictionaryPaths.Count.ToString());
                         this.Path    = null;
                         this.content = null;
                     }

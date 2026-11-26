@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Reflection.Emit;
+using AutoDuty.Logging;
 #pragma warning disable CS0649 // Field is never assigned to, and will always have its default value
 
 namespace AutoDuty.Helpers
@@ -154,18 +155,18 @@ namespace AutoDuty.Helpers
 
                 if (debug)
                 {
-                    Svc.Log.Warning(delegateType.FullName                ?? string.Empty);
-                    Svc.Log.Warning(delegateType.ReflectedType?.FullName ?? string.Empty);
-                    Svc.Log.Warning(dmd.Name + " " + dmd.ReturnType.FullName + " " + string.Join(" | ", dmd.GetParameters().Select(p => p.ParameterType.FullName)));
-                    Svc.Log.Warning(string.Join(" | ", delegateArgsResolved.Select(t => t.FullName)));
-                    Svc.Log.Warning(string.Join(" | ", parameterTypes.Select(t => t.FullName)));
+                    ADLogging.Warning(delegateType.FullName                ?? string.Empty);
+                    ADLogging.Warning(delegateType.ReflectedType?.FullName ?? string.Empty);
+                    ADLogging.Warning(dmd.Name + " " + dmd.ReturnType.FullName + " " + string.Join(" | ", dmd.GetParameters().Select(p => p.ParameterType.FullName)));
+                    ADLogging.Warning(string.Join(" | ", delegateArgsResolved.Select(t => t.FullName)));
+                    ADLogging.Warning(string.Join(" | ", parameterTypes.Select(t => t.FullName)));
                 }
 
                 return (DelegateType)dmd.CreateDelegate(delegateType);
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex.ToString());
+                ADLogging.Error(ex.ToString());
             }
 
             return null!;

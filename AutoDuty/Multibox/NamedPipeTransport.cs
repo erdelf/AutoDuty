@@ -1,6 +1,7 @@
 using ECommons;
 using ECommons.DalamudServices;
 using System.IO.Pipes;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Multibox
 {
@@ -119,9 +120,9 @@ namespace AutoDuty.Multibox
             this.StopServer();
 
         private static void DebugLog(string message) => 
-            Svc.Log.Debug($"Pipe: {message}");
+            ADLogging.Debug($"Pipe: {message}");
 
         private static void ErrorLog(string message) => 
-            Svc.Log.Error($"Pipe: {message}");
+            ADLogging.Error($"Pipe: {message}");
     }
 }

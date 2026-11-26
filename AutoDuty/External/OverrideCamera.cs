@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 #pragma warning disable IDE0044
 
 namespace AutoDuty.External;
-
 using System;
 using System.Numerics;
 using ECommons.DalamudServices;
 using ECommons.MathHelpers;
+using Logging;
 
 [StructLayout(LayoutKind.Explicit, Size = 0x2B0)]
 public unsafe struct CameraEx
@@ -54,7 +54,7 @@ public sealed unsafe class OverrideCamera : IDisposable
     public OverrideCamera()
     {
         Svc.Hook.InitializeFromAttributes(this);
-        Svc.Log.Information($"RMICamera address: 0x{this._rmiCameraHook.Address:X}");
+        ADLogging.Info($"RMICamera address: 0x{this._rmiCameraHook.Address:X}");
     }
 
     public void Dispose() => 

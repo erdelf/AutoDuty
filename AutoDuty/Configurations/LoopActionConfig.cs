@@ -1,5 +1,10 @@
 ﻿namespace AutoDuty.Configurations;
-
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Numerics;
+using System.Reflection;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface;
 using Dalamud.Interface.Components;
@@ -18,16 +23,11 @@ using FFXIVClientStructs.FFXIV.Client.UI.Agent;
 using FFXIVClientStructs.FFXIV.Client.UI.Misc;
 using Helpers;
 using IPC;
+using Logging;
 using Lumina.Excel.Sheets;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Numerics;
-using System.Reflection;
-using static Helpers.RepairNPCHelper;
 using static Windows.ConfigTab;
+using static Helpers.RepairNPCHelper;
 
 [Flags]
 public enum LoopActionCategory
@@ -836,7 +836,7 @@ public class RetireLoopActionConfig : LoopActionConfig<RetireLoopActionConfig>
         if (this.AdjustForDutyModes && Configuration.Meta.DutyModeEnum is DutyMode.Crucible)
             return;
 
-        Plugin.taskManager.Enqueue(() => Svc.Log.Debug($"Retire Between Loop Action"));
+        Plugin.taskManager.Enqueue(() => ADLogging.Debug($"Retire Between Loop Action"));
 
         switch (this.RetireLocationEnum)
         {
@@ -854,7 +854,7 @@ public class RetireLoopActionConfig : LoopActionConfig<RetireLoopActionConfig>
             case RetireLocation.Personal_Home:
             case RetireLocation.FC_Estate:
             default:
-                Svc.Log.Info($"{(Housing)this.RetireLocationEnum} {this.RetireLocationEnum}");
+                ADLogging.Info($"{(Housing)this.RetireLocationEnum} {this.RetireLocationEnum}");
                 Plugin.taskManager.Enqueue(() => GotoHousingHelper.Invoke((Housing)this.RetireLocationEnum), "Loop-GotoHousingInvoke");
                 break;
         }
@@ -952,7 +952,7 @@ public class ConsumeItemsLoopActionConfig : LoopActionConfig<ConsumeItemsLoopAct
 
     protected override void RunInternal(ref bool queue)
     {
-        Plugin.taskManager.Enqueue(() => Svc.Log.Debug($"AutoConsume Action"));
+        Plugin.taskManager.Enqueue(() => ADLogging.Debug($"AutoConsume Action"));
         this.AutoConsumeItemsList.Each(x =>
         {
             bool isAvailable = InventoryHelper.IsItemAvailable(x.Value.ItemId, x.Value.CanBeHq);
@@ -1069,7 +1069,7 @@ public class ExecuteCommandsLoopActionConfig : LoopActionConfig<ExecuteCommandsL
 
     protected override void RunInternal(ref bool queue)
     {
-        Plugin.taskManager.Enqueue(() => Svc.Log.Debug($"ExecutingCommandsPreLoop, executing {this.CustomCommands.Count} commands"));
+        Plugin.taskManager.Enqueue(() => ADLogging.Debug($"ExecutingCommandsPreLoop, executing {this.CustomCommands.Count} commands"));
         this.CustomCommands.Each(x => Plugin.taskManager.Enqueue(() => Chat.ExecuteCommand(x), "Run-ExecuteCommands"));
     }
 
@@ -1241,16 +1241,16 @@ public class PlaylistSwitchLoopActionConfig : LoopActionConfig<PlaylistSwitchLoo
         PlaylistEntry? currentEntry = Plugin.PlaylistCurrentEntry;
         if (currentEntry != null && ++currentEntry.curCount < currentEntry.count && !currentEntry.TerminationConfig.ShouldStop)
         {
-            Svc.Log.Debug($"repeating the duty once more: {currentEntry.curCount + 1} of {currentEntry.count}");
+            ADLogging.Debug($"repeating the duty once more: {currentEntry.curCount + 1} of {currentEntry.count}");
         }
         else
         {
-            Svc.Log.Debug("next playlist entry");
+            ADLogging.Debug("next playlist entry");
             Plugin.playlistIndex++;
 
             if (Plugin.playlistIndex >= Plugin.PlaylistCurrent.Entries.Count)
             {
-                Svc.Log.Debug("playlist done");
+                ADLogging.Debug("playlist done");
                 queue                = false;
                 Plugin.playlistIndex = 0;
             }
@@ -1258,7 +1258,7 @@ public class PlaylistSwitchLoopActionConfig : LoopActionConfig<PlaylistSwitchLoo
             {
                 Plugin.PlaylistCurrentEntry!.curCount = 0;
 
-                Svc.Log.Debug($"entry with gearset {Plugin.PlaylistCurrentEntry.gearset}");
+                ADLogging.Debug($"entry with gearset {Plugin.PlaylistCurrentEntry.gearset}");
 
                 if (Plugin.PlaylistCurrentEntry.gearset.HasValue && RaptureGearsetModule.Instance()->IsValidGearset(Plugin.PlaylistCurrentEntry.gearset.Value))
                 {

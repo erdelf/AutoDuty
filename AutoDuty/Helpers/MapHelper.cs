@@ -7,6 +7,7 @@ using ECommons.Throttlers;
 using AutoDuty.IPC;
 using ECommons;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -88,10 +89,10 @@ namespace AutoDuty.Helpers
         {
             if (!IsFlagMarkerSet)
             {
-                Svc.Log.Info("There is no flag marker set");
+                ADLogging.Info("There is no flag marker set");
                 return;
             }
-            Svc.Log.Info("Moving to Flag Marker");
+            ADLogging.Info("Moving to Flag Marker");
             State = ActionState.Running;
             Plugin.States |= PluginState.Other;
             if (!Plugin.States.HasFlag(PluginState.Looping))

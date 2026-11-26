@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Numerics;
 using static AutoDuty.Managers.ContentPathsManager;
 using static AutoDuty.Windows.MainWindow;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Windows
 {
@@ -194,11 +195,11 @@ namespace AutoDuty.Windows
                 {
                     if (Plugin.Actions.Count < 1)
                     {
-                        Svc.Log.Error(Loc.Get("BuildTab.SavePathError"));
+                        ADLogging.Error(Loc.Get("BuildTab.SavePathError"));
                         return;
                     }
 
-                    Svc.Log.Info(Loc.Get("BuildTab.SavingPath", Plugin.pathFile));
+                    ADLogging.Info(Loc.Get("BuildTab.SavingPath", Plugin.pathFile));
 
                     PathFile? pathFile = null;
 
@@ -229,7 +230,7 @@ namespace AutoDuty.Windows
                 }
                 catch (Exception e)
                 {
-                    Svc.Log.Error(e.ToString());
+                    ADLogging.Error(e.ToString());
                     //throw;
                 }
 
@@ -361,7 +362,7 @@ namespace AutoDuty.Windows
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex.ToString());
+                ADLogging.Error(ex.ToString());
             }
 
             if (_scrollBottom)

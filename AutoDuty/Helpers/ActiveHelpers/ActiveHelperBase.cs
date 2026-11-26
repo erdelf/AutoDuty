@@ -3,6 +3,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using ECommons;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -52,7 +53,7 @@ namespace AutoDuty.Helpers
         public static void EnqueueActiveHelper<T, C>(LoopActionConfig<C>? config = null) where T : ActiveHelperBase<T,C>, new()
                                                                                       where C : LoopActionConfig<C>, new()
         {
-            Plugin.taskManager.Enqueue(() => Svc.Log.Debug($"Enqueueing {typeof(T).Name}"), "ActiveHelper");
+            Plugin.taskManager.Enqueue(() => ADLogging.Debug($"Enqueueing {typeof(T).Name}"), "ActiveHelper");
             Plugin.taskManager.Enqueue(() =>
                                        {
                                            if (config != null)
@@ -198,7 +199,7 @@ namespace AutoDuty.Helpers
                 return false;
 
             if (GotoHelper.State == ActionState.Running)
-                //Svc.Log.Debug("Goto Running");
+                //ADLogging.Debug("Goto Running");
                 return false;
 
             return true;
@@ -236,9 +237,9 @@ namespace AutoDuty.Helpers
             Invoke(Configuration.Overlay.LoopActions.FindConfig<C>() ?? Configuration.Loop.Between.Actions.FindConfig<C>() ?? Configuration.Loop.Pre.Actions.FindConfig<C>() ?? Configuration.Loop.Termination.Actions.FindConfig<C>() ?? new C());
 
         protected void DebugLog(string s) => 
-            Svc.Log.Debug($"{this.Name}: {s}");
+            ADLogging.Debug($"{this.Name}: {s}");
 
         protected void InfoLog(string s) => 
-            Svc.Log.Info($"{this.Name}: {s}");
+            ADLogging.Info($"{this.Name}: {s}");
     }
 }

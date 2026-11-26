@@ -4,6 +4,7 @@ using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using System.Text;
 using System.Text.RegularExpressions;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -66,7 +67,7 @@ namespace AutoDuty.Managers
                                     {
                                         pathIndex = pInx;
 
-                                        Svc.Log.Debug($"Selecting path {pathIndex} from {this.Paths.Count}");
+                                        ADLogging.Debug($"Selecting path {pathIndex} from {this.Paths.Count}");
 
                                         return this.Paths[pathIndex];
                                     }
@@ -180,7 +181,7 @@ namespace AutoDuty.Managers
                         }
                         catch (Exception ex)
                         {
-                            Svc.Log.Info($"{this.FilePath} is not a valid duty path: {ex}");
+                            ADLogging.Info($"{this.FilePath} is not a valid duty path: {ex}");
                             this.container.Paths.Remove(this);
                         }
 

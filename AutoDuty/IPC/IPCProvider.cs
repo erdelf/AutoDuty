@@ -1,5 +1,6 @@
 ﻿using AutoDuty.Helpers;
 using ECommons.EzIpcManager;
+using AutoDuty.Logging;
 // ReSharper disable UnusedMember.Global
 #pragma warning disable CA1822
 
@@ -23,21 +24,21 @@ namespace AutoDuty.IPC
         [EzIPC] 
         public void SetConfig(string config, object setting)
         {
-            Svc.Log.Debug("Config called with: " + setting.GetType().FullName);
+            ADLogging.Debug("Config called with: " + setting.GetType().FullName);
             switch (setting)
             {
                 case string s:
                     ConfigHelper.ModifyConfig(config, s);
                     break;
                 case JArray js:
-                    Svc.Log.Warning("JArray converted to: " + string.Join(" | ", js.ToObject<string[]>()));
+                    ADLogging.Warning("JArray converted to: " + string.Join(" | ", js.ToObject<string[]>()));
                     ConfigHelper.ModifyConfig(config, js.ToObject<string[]>() ?? []);
                     break;
                 case string[] ss:
                     ConfigHelper.ModifyConfig(config, ss);
                     break;
                 default:
-                    Svc.Log.Warning("setting has to be string or string[]");
+                    ADLogging.Warning("setting has to be string or string[]");
                     break;
             }
         }
@@ -53,7 +54,7 @@ namespace AutoDuty.IPC
             };
             if (dict is null)
             {
-                Svc.Log.Warning("Expected Dictionary<string, string>");
+                ADLogging.Warning("Expected Dictionary<string, string>");
                 return false;
             }
             return ConfigOverrideHelper.Push(dict);

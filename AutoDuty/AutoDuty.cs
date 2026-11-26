@@ -31,7 +31,11 @@ using System.Diagnostics;
 using System.Numerics;
 
 namespace AutoDuty;
-
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.RegularExpressions;
 using Configurations;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Game.ClientState.Objects.Enums;
@@ -43,13 +47,9 @@ using ECommons.EzIpcManager;
 using ECommons.IPC.Subscribers;
 using FFXIVClientStructs.FFXIV.Client.UI.Arrays;
 using FFXIVClientStructs.FFXIV.Client.UI.Misc;
+using Logging;
 using Multibox;
 using Pictomancy;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 using static Data.Classes;
 using ClassJob = Lumina.Excel.Sheets.ClassJob;
 using TaskManager = ECommons.Automation.NeoTaskManager.TaskManager;
@@ -198,7 +198,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 ConfigurationProfileV2.Save();
             }
 
-            Svc.Log.Debug($"Stage from {field.ToCustomString()} to {value.ToCustomString()}");
+            ADLogging.Debug($"Stage from {field.ToCustomString()} to {value.ToCustomString()}");
             field = value;
         }
     } = Stage.Stopped;
@@ -210,7 +210,7 @@ public sealed class AutoDuty : IDalamudPlugin
         {
             if (value != LevelingMode.None)
             {
-                Svc.Log.Debug($"Setting Leveling mode to {value}");
+                ADLogging.Debug($"Setting Leveling mode to {value}");
                 Content? duty = LevelingHelper.SelectHighestLevelingRelevantDuty(value);
 
                 if (duty != null)
@@ -219,7 +219,7 @@ public sealed class AutoDuty : IDalamudPlugin
                     MainTab.DutySelected      = ContentPathsManager.DictionaryPaths[duty.TerritoryType];
                     this.CurrentTerritoryContent = duty;
                     MainTab.DutySelected.SelectPath(out this.currentPath);
-                    Svc.Log.Debug($"Leveling Mode: Setting duty to {duty.Name}");
+                    ADLogging.Debug($"Leveling Mode: Setting duty to {duty.Name}");
                 }
                 else
                 {
@@ -227,7 +227,7 @@ public sealed class AutoDuty : IDalamudPlugin
                     this.mainListClicked         = false;
                     this.CurrentTerritoryContent = null;
                     this.levelingModeEnum        = LevelingMode.None;
-                    Svc.Log.Debug($"Leveling Mode: No appropriate leveling duty found");
+                    ADLogging.Debug($"Leveling Mode: No appropriate leveling duty found");
                 }
             }
             else
@@ -325,7 +325,7 @@ public sealed class AutoDuty : IDalamudPlugin
             this.assemblyDirectoryInfo = this.assemblyFileInfo.Directory;
 
             this.Version = 
-                ((PluginInterface.IsDev     ? new Version(0,0,0, 396) :
+                ((PluginInterface.IsDev     ? new Version(0,0,0, 400) :
                   PluginInterface.IsTesting ? PluginInterface.Manifest.TestingAssemblyVersion ?? PluginInterface.Manifest.AssemblyVersion : PluginInterface.Manifest.AssemblyVersion)!).Revision;
 
             if (!this.configDirectory.Exists)
@@ -462,13 +462,13 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                               {
                                                                                   if (argsArray.Length < 2)
                                                                                   {
-                                                                                      Svc.Log.Info($"{failPreMessage}Argument count must be at least 3, you inputted {argsArray.Length - 1}{failPostMessageLev}");
+                                                                                      ADLogging.Info($"{failPreMessage}Argument count must be at least 3, you inputted {argsArray.Length - 1}{failPostMessageLev}");
                                                                                       return;
                                                                                   }
 
                                                                                   if (!int.TryParse(argsArray[1], out int loopTimesLev))
                                                                                   {
-                                                                                      Svc.Log.Info($"{failPreMessage}Argument 1 must be an integer, you inputted {argsArray[3]}{failPostMessageLev}");
+                                                                                      ADLogging.Info($"{failPreMessage}Argument 1 must be an integer, you inputted {argsArray[3]}{failPostMessageLev}");
                                                                                       return;
                                                                                   }
 
@@ -481,31 +481,31 @@ public sealed class AutoDuty : IDalamudPlugin
 
                                                                               if (argsArray.Length < 4)
                                                                               {
-                                                                                  Svc.Log.Info($"{failPreMessage}Argument count must be at least 3, you inputted {argsArray.Length - 1}{failPostMessage}");
+                                                                                  ADLogging.Info($"{failPreMessage}Argument count must be at least 3, you inputted {argsArray.Length - 1}{failPostMessage}");
                                                                                   return;
                                                                               }
 
                                                                               if (!Enum.TryParse(argsArray[1], true, out DutyMode dutyMode))
                                                                               {
-                                                                                  Svc.Log.Info($"{failPreMessage}Argument 1 must be a DutyMode enum Type, you inputted {argsArray[1]}{failPostMessage}");
+                                                                                  ADLogging.Info($"{failPreMessage}Argument 1 must be a DutyMode enum Type, you inputted {argsArray[1]}{failPostMessage}");
                                                                                   return;
                                                                               }
 
                                                                               if (!uint.TryParse(argsArray[2], out uint territoryType))
                                                                               {
-                                                                                  Svc.Log.Info($"{failPreMessage}Argument 2 must be an unsigned integer, you inputted {argsArray[2]}{failPostMessage}");
+                                                                                  ADLogging.Info($"{failPreMessage}Argument 2 must be an unsigned integer, you inputted {argsArray[2]}{failPostMessage}");
                                                                                   return;
                                                                               }
 
                                                                               if (!int.TryParse(argsArray[3], out int loopTimes))
                                                                               {
-                                                                                  Svc.Log.Info($"{failPreMessage}Argument 3 must be an integer, you inputted {argsArray[3]}{failPostMessage}");
+                                                                                  ADLogging.Info($"{failPreMessage}Argument 3 must be an integer, you inputted {argsArray[3]}{failPostMessage}");
                                                                                   return;
                                                                               }
 
                                                                               if (!ContentHelper.DictionaryContent.TryGetValue(territoryType, out Content? content))
                                                                               {
-                                                                                  Svc.Log.Info($"{failPreMessage}Argument 2 value was not in our ContentList or has no Path, you inputted {argsArray[2]}{failPostMessage}");
+                                                                                  ADLogging.Info($"{failPreMessage}Argument 2 value was not in our ContentList or has no Path, you inputted {argsArray[2]}{failPostMessage}");
                                                                                   return;
                                                                               }
 
@@ -527,7 +527,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                                                                     (InventoryHelper.CurrentItemLevel < content.ItemLevelRequired ?
                                                                                                                          $"Your iLvl({InventoryHelper.CurrentItemLevel}) is less than {content.ItemLevelRequired}" :
                                                                                                                          "Your trust party is not of correct levels")));
-                                                                                  Svc.Log.Info($"Unable to run {content.Name}, {failReason} {content.CanTrustRun()}");
+                                                                                  ADLogging.Info($"Unable to run {content.Name}, {failReason} {content.CanTrustRun()}");
                                                                                   return;
                                                                               }
 
@@ -543,7 +543,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                                       else
                                                                                           obj = ObjectHelper.GetObjectByName(Svc.Targets.Target?.Name.TextValue ?? "");
 
-                                                                                      Svc.Log.Info($"{obj?.BaseId}");
+                                                                                      ADLogging.Info($"{obj?.BaseId}");
                                                                                       ImGui.SetClipboardText($"{obj?.BaseId}");
                                                                                   }),
                 (["leveling"], "Enables leveling mode (0 = disabled)", argsArray =>
@@ -586,7 +586,7 @@ public sealed class AutoDuty : IDalamudPlugin
         }
         catch (Exception e)
         {
-            Svc.Log.Info($"Failed loading plugin\n{e}");
+            ADLogging.Info($"Failed loading plugin\n{e}");
         }
     }
 
@@ -604,7 +604,7 @@ public sealed class AutoDuty : IDalamudPlugin
         string[] argsArray = matches.Count > 0 ? [..matches] : [string.Empty];
         string check = argsArray[0];
 
-        Svc.Log.Debug("command with: " + args);
+        ADLogging.Debug("command with: " + args);
 
 
         switch (argsArray[0])
@@ -634,11 +634,11 @@ public sealed class AutoDuty : IDalamudPlugin
                 {
                     try
                     {
-                        Svc.Log.Info(info());
+                        ADLogging.Info(info());
                     }
                     catch (Exception ex)
                     {
-                        Svc.Log.Info($": {ex}");
+                        ADLogging.Info($": {ex}");
                     }
                 }
 
@@ -690,7 +690,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 break;
             default:
                 (string[] keywords, string __, Action<string[]> action) cmd = this.commands.OrderBy(cmd => cmd.keywords.Min(key => ImGuiHelper.ComputeLevenshteinDistance(key, check))).First();
-                Svc.Log.Debug("Executing " + string.Join(", ", cmd.keywords));
+                ADLogging.Debug("Executing " + string.Join(", ", cmd.keywords));
                 cmd.action(argsArray);
                 break;
         }
@@ -792,7 +792,7 @@ public sealed class AutoDuty : IDalamudPlugin
             if (ConfigurationMain.Instance.dutyCountSinceReset.TryAdd(Player.CID, 0))
             {
                 ConfigurationMain.Instance.dutyCountResetDate = TimeHelper.GetNextDateTimeForHour(8);
-                Svc.Log.Debug($"[DutyCount] Added {Player.CID} and set date to {TimeHelper.GetNextDateTimeForHour(8)}");
+                ADLogging.Debug($"[DutyCount] Added {Player.CID} and set date to {TimeHelper.GetNextDateTimeForHour(8)}");
             }
 
             ConfigurationMain.Instance.dutyCountSinceReset[Player.CID]++;
@@ -803,7 +803,7 @@ public sealed class AutoDuty : IDalamudPlugin
     private void DutyState_DutyRecommenced(IDutyStateEventArgs args) => this.dutyState = DutyState.DutyRecommenced;
     private void DutyState_DutyCompleted(IDutyStateEventArgs args)
     {
-        Svc.Log.Warning("Duty Done");
+        ADLogging.Warning("Duty Done");
         this.dutyState = DutyState.DutyComplete;
         if(this.States is not (PluginState.None or PluginState.Paused))
         {
@@ -868,11 +868,11 @@ public sealed class AutoDuty : IDalamudPlugin
                     MultiboxUtility.Server.SendPath();
             }
 
-            //Svc.Log.Info($"Loading Path: {CurrentPath} {ListBoxPOSText.Count}");
+            //ADLogging.Info($"Loading Path: {CurrentPath} {ListBoxPOSText.Count}");
         }
         catch (Exception e)
         {
-            Svc.Log.Error(e.ToString());
+            ADLogging.Error(e.ToString());
             //throw;
         }
     }
@@ -881,7 +881,7 @@ public sealed class AutoDuty : IDalamudPlugin
     {
         if (this.TrustLevelingEnabled && TrustHelper.Members.Any(tm => tm.Value.Level < tm.Value.LevelCap))
         {
-            this.taskManager.Enqueue(() => Svc.Log.Debug($"Trust Leveling Enabled"),                     "TrustLeveling-Debug");
+            this.taskManager.Enqueue(() => ADLogging.Debug($"Trust Leveling Enabled"),                     "TrustLeveling-Debug");
             this.taskManager.Enqueue(() => TrustHelper.ClearCachedLevels(this.CurrentTerritoryContent!), "TrustLeveling-ClearCachedLevels");
             this.taskManager.Enqueue(() => TrustHelper.GetLevels(this.CurrentTerritoryContent),          "TrustLeveling-GetLevels");
             this.taskManager.EnqueueDelay(50);
@@ -910,7 +910,7 @@ public sealed class AutoDuty : IDalamudPlugin
         if (this.Stage is Stage.Stopped or Stage.Paused)
             return;
 
-        Svc.Log.Debug($"ClientState_TerritoryChanged: t={t}");
+        ADLogging.Debug($"ClientState_TerritoryChanged: t={t}");
 
         this.currentTerritoryType = t;
         this.mainListClicked      = false;
@@ -926,7 +926,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
         if (!this.States.HasFlag(PluginState.Looping) || GCTurninHelper.State == ActionState.Running || RepairHelper.State == ActionState.Running || GotoHelper.State == ActionState.Running || GotoInnHelper.State == ActionState.Running || GotoBarracksHelper.State == ActionState.Running || GotoHousingHelper.State == ActionState.Running || this.CurrentTerritoryContent == null)
         {
-            Svc.Log.Debug("We Changed Territories but are doing after loop actions or not running at all or in a Territory not supported by AutoDuty");
+            ADLogging.Debug("We Changed Territories but are doing after loop actions or not running at all or in a Territory not supported by AutoDuty");
             return;
         }
 
@@ -943,7 +943,7 @@ public sealed class AutoDuty : IDalamudPlugin
             if (this.currentLoop < Configuration.Meta.LoopTimes || Configuration.Meta.AutoDutyModeEnum == AutoDutyMode.Playlist)
             {
                 this.taskManager.Abort();
-                this.taskManager.Enqueue(() => Svc.Log.Debug($"Loop {this.currentLoop} of {Configuration.Meta.LoopTimes}"), "Loop-Debug");
+                this.taskManager.Enqueue(() => ADLogging.Debug($"Loop {this.currentLoop} of {Configuration.Meta.LoopTimes}"), "Loop-Debug");
                 this.taskManager.Enqueue(() => { this.Stage  =  Stage.Looping; },                                           "Loop-SetStage=99");
                 this.taskManager.Enqueue(() => { this.States &= ~PluginState.Navigating; },                                 "Loop-RemoveNavigationState");
                 this.taskManager.Enqueue(() => PlayerHelper.IsReady,                                                        "Loop-WaitPlayerReady", new TaskManagerConfiguration(int.MaxValue));
@@ -954,7 +954,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                          {
                                              if (Configuration.Loop.Termination.ShouldStop)
                                              {
-                                                 this.taskManager.Enqueue(() => Svc.Log.Info($"Loop Stop Condition Encountered, Stopping Loop"));
+                                                 this.taskManager.Enqueue(() => ADLogging.Info($"Loop Stop Condition Encountered, Stopping Loop"));
                                                  this.LoopTasks(false, Configuration is { Loop.Between: { Enabled: true, ExecuteLastLoop: true }});
                                              }
                                              else
@@ -966,10 +966,10 @@ public sealed class AutoDuty : IDalamudPlugin
             }
             else
             {
-                this.taskManager.Enqueue(() => Svc.Log.Debug($"Loops Done"), "Loop-Debug");
+                this.taskManager.Enqueue(() => ADLogging.Debug($"Loops Done"), "Loop-Debug");
                 this.taskManager.Enqueue(() => { this.States &= ~PluginState.Navigating; }, "Loop-RemoveNavigationState");
                 this.taskManager.Enqueue(() => PlayerHelper.IsReady, "Loop-WaitPlayerReady", new TaskManagerConfiguration(timeLimitMS: int.MaxValue));
-                this.taskManager.Enqueue(() => Svc.Log.Debug($"Loop {this.currentLoop} == {Configuration.Meta.LoopTimes} we are done Looping, Invoking Loop Actions"), "Loop-Debug");
+                this.taskManager.Enqueue(() => ADLogging.Debug($"Loop {this.currentLoop} == {Configuration.Meta.LoopTimes} we are done Looping, Invoking Loop Actions"), "Loop-Debug");
                 this.taskManager.Enqueue(() => this.LoopTasks(false, Configuration is { Loop.Between: { Enabled: true, ExecuteLastLoop: true }}), "Loop-LoopCompleteActions");
             }
         }
@@ -985,12 +985,12 @@ public sealed class AutoDuty : IDalamudPlugin
             switch (value)
             {
                 case true when this.Stage != Stage.Dead || DeathHelper.DeathState != PlayerLifeState.Dead:
-                    Svc.Log.Debug($"We Died, Setting Stage to Dead");
+                    ADLogging.Debug($"We Died, Setting Stage to Dead");
                     DeathHelper.DeathState = PlayerLifeState.Dead;
                     this.Stage             = Stage.Dead;
                     break;
                 case false when this.Stage != Stage.Revived || DeathHelper.DeathState != PlayerLifeState.Revived:
-                    Svc.Log.Debug($"We Revived, Setting Stage to Revived");
+                    ADLogging.Debug($"We Revived, Setting Stage to Revived");
                     this.Stage             = Stage.Revived;
                     DeathHelper.DeathState = PlayerLifeState.Revived;
                     break;
@@ -998,13 +998,13 @@ public sealed class AutoDuty : IDalamudPlugin
 
             return;
         }
-        //Svc.Log.Debug($"{flag} : {value}");
+        //ADLogging.Debug($"{flag} : {value}");
         if (this.Stage is not (Stage.Dead or Stage.Revived or Stage.Action) && !this.recentlyWatchedCutscene && !Conditions.Instance()->WatchingCutscene && 
             (flag is not (ConditionFlag.WatchingCutscene or ConditionFlag.WatchingCutscene78 or ConditionFlag.OccupiedInCutSceneEvent) and (ConditionFlag.BetweenAreas or ConditionFlag.BetweenAreas51 or ConditionFlag.Jumping61) ||
              (flag is ConditionFlag.SufferingStatusAffliction63 && PlayerHelper.HasStatus(1268))) && 
             value && this.States.HasFlag(PluginState.Navigating))
         {
-            Svc.Log.Info($"Condition_ConditionChange: Indexer Increase and Change Stage to Condition");
+            ADLogging.Info($"Condition_ConditionChange: Indexer Increase and Change Stage to Condition");
             this.indexer++;
             VNavmesh_IPCSubscriber.Path_Stop();
             this.Stage = Stage.Condition;
@@ -1021,7 +1021,7 @@ public sealed class AutoDuty : IDalamudPlugin
         if(InDungeon)
             Configuration.Meta.AutoDutyModeEnum = AutoDutyMode.Looping;
 
-        Svc.Log.Debug($"Run: territoryType={territoryType} loops={loops} bareMode={bareMode}");
+        ADLogging.Debug($"Run: territoryType={territoryType} loops={loops} bareMode={bareMode}");
 
         if (territoryType > 0 && !this.LevelingEnabled)
         {
@@ -1031,7 +1031,7 @@ public sealed class AutoDuty : IDalamudPlugin
             }
             else
             {
-                Svc.Log.Error($"({territoryType}) is not in our Dictionary as a compatible Duty");
+                ADLogging.Error($"({territoryType}) is not in our Dictionary as a compatible Duty");
                 return;
             }
         }
@@ -1056,7 +1056,7 @@ public sealed class AutoDuty : IDalamudPlugin
             Configuration.Loop.Termination.Enabled = false;
         }
 
-        Svc.Log.Info($"Running AutoDuty in {this.CurrentTerritoryContent.EnglishName}, Looping {Configuration.Meta.LoopTimes} times{(bareMode ? " in BareMode (No Pre, Between or Termination Loop Actions)" : "")}");
+        ADLogging.Info($"Running AutoDuty in {this.CurrentTerritoryContent.EnglishName}, Looping {Configuration.Meta.LoopTimes} times{(bareMode ? " in BareMode (No Pre, Between or Termination Loop Actions)" : "")}");
 
         //MainWindow.OpenTab("Mini");
         if (Configuration.Overlay.Show)
@@ -1068,7 +1068,7 @@ public sealed class AutoDuty : IDalamudPlugin
         this.SetGeneralSettings(false);
         VNavmesh_IPCSubscriber.SetMovementAllowed(true);
         this.taskManager.Abort();
-        Svc.Log.Info($"Running {this.CurrentTerritoryContent.Name} {Configuration.Meta.LoopTimes} Times");
+        ADLogging.Info($"Running {this.CurrentTerritoryContent.Name} {Configuration.Meta.LoopTimes} Times");
         if (!InDungeon)
         {
             this.currentLoop = 0;
@@ -1091,14 +1091,14 @@ public sealed class AutoDuty : IDalamudPlugin
                     loopAction.Run(ref queue);
                 }
 
-            this.taskManager.Enqueue(() => Svc.Log.Debug($"Queueing First Run"));
+            this.taskManager.Enqueue(() => ADLogging.Debug($"Queueing First Run"));
             this.Queue(this.CurrentTerritoryContent!);
         }
 
-        this.taskManager.Enqueue(() => Svc.Log.Debug($"Done Queueing-WaitDutyStarted, NavIsReady"));
+        this.taskManager.Enqueue(() => ADLogging.Debug($"Done Queueing-WaitDutyStarted, NavIsReady"));
         this.taskManager.Enqueue(() => Svc.DutyState.IsDutyStarted,          "Run-WaitDutyStarted");
         this.taskManager.Enqueue(() => VNavmesh_IPCSubscriber.Nav_IsReady, "Run-WaitNavIsReady", new TaskManagerConfiguration(int.MaxValue));
-        this.taskManager.Enqueue(() => Svc.Log.Debug($"Start Navigation"));
+        this.taskManager.Enqueue(() => ADLogging.Debug($"Start Navigation"));
         this.taskManager.Enqueue(() => this.StartNavigation(startFromZero), "Run-StartNavigation");
 
         if (this.currentLoop == 0)
@@ -1148,7 +1148,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
                                                                if (Configuration.Meta.AutoDutyModeEnum == AutoDutyMode.Looping && this.LevelingEnabled)
                                                                {
-                                                                   Svc.Log.Info("Leveling Enabled");
+                                                                   ADLogging.Info("Leveling Enabled");
                                                                    Content? duty = LevelingHelper.SelectHighestLevelingRelevantDuty(this.LevelingModeEnum);
                                                                    if (duty != null)
                                                                    {
@@ -1161,14 +1161,14 @@ public sealed class AutoDuty : IDalamudPlugin
 
                                                                            if (duty != dutyTrust)
                                                                            {
-                                                                               Svc.Log.Info("Trust can't run highest support duty");
+                                                                               ADLogging.Info("Trust can't run highest support duty");
 
                                                                                this.levelingModeEnum           = LevelingMode.Support;
                                                                                Configuration.Meta.dutyModeEnum = DutyMode.Support;
                                                                            }
                                                                        }
 
-                                                                       Svc.Log.Info($"Next Leveling Duty: {duty.Name} with {Configuration.Meta.dutyModeEnum} {this.levelingModeEnum}");
+                                                                       ADLogging.Info($"Next Leveling Duty: {duty.Name} with {Configuration.Meta.dutyModeEnum} {this.levelingModeEnum}");
                                                                        this.CurrentTerritoryContent = duty;
                                                                        ContentPathsManager.DictionaryPaths[duty.TerritoryType].SelectPath(out this.currentPath);
                                                                    }
@@ -1180,10 +1180,10 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                    }
                                                                }
 
-                                                               this.taskManager.Enqueue(() => Svc.Log.Debug($"Registering New Loop"));
+                                                               this.taskManager.Enqueue(() => ADLogging.Debug($"Registering New Loop"));
 
                                                                this.Queue(this.CurrentTerritoryContent!);
-                                                               this.taskManager.Enqueue(() => Svc.Log.Debug($"Incrementing LoopCount, Setting Action Var, Wait for CorrectTerritory, PlayerIsValid, DutyStarted, and NavIsReady"));
+                                                               this.taskManager.Enqueue(() => ADLogging.Debug($"Incrementing LoopCount, Setting Action Var, Wait for CorrectTerritory, PlayerIsValid, DutyStarted, and NavIsReady"));
                                                                this.taskManager.Enqueue(() =>
                                                                                         {
                                                                                             if (Configuration.Meta.AutoDutyModeEnum == AutoDutyMode.Playlist)
@@ -1202,7 +1202,7 @@ public sealed class AutoDuty : IDalamudPlugin
                                                                this.taskManager.Enqueue(() => PlayerHelper.IsValid,                 "Loop-WaitPlayerValid", new TaskManagerConfiguration(int.MaxValue));
                                                                this.taskManager.Enqueue(() => Svc.DutyState.IsDutyStarted,          "Loop-WaitDutyStarted", new TaskManagerConfiguration(int.MaxValue));
                                                                this.taskManager.Enqueue(() => VNavmesh_IPCSubscriber.Nav_IsReady, "Loop-WaitNavReady", new TaskManagerConfiguration(int.MaxValue));
-                                                               this.taskManager.Enqueue(() => Svc.Log.Debug($"StartNavigation"));
+                                                               this.taskManager.Enqueue(() => ADLogging.Debug($"StartNavigation"));
                                                                this.taskManager.Enqueue(() => this.StartNavigation(true), "Loop-StartNavigation");
                                                            }, () => !MultiboxUtility.MultiboxBlockingNextStep);
     }
@@ -1228,7 +1228,7 @@ public sealed class AutoDuty : IDalamudPlugin
             {
                 case TerminationMode.Kill_PC:
                 {
-                    this.taskManager.Enqueue(() => Svc.Log.Debug($"Killing PC"));
+                    this.taskManager.Enqueue(() => ADLogging.Debug($"Killing PC"));
                     if (!Configuration.Loop.Termination.TerminationKeepActive)
                     {
                         Configuration.Loop.Termination.TerminationMethodEnum = TerminationMode.Do_Nothing;
@@ -1258,7 +1258,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 }
                 case TerminationMode.Kill_Client:
                 {
-                    this.taskManager.Enqueue(() => Svc.Log.Debug($"Killing Client"));
+                    this.taskManager.Enqueue(() => ADLogging.Debug($"Killing Client"));
                     if (!Configuration.Loop.Termination.TerminationKeepActive)
                     {
                         Configuration.Loop.Termination.TerminationMethodEnum = TerminationMode.Do_Nothing;
@@ -1270,7 +1270,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 }
                 case TerminationMode.Logout:
                 {
-                    this.taskManager.Enqueue(() => Svc.Log.Debug($"Logging Out"));
+                    this.taskManager.Enqueue(() => ADLogging.Debug($"Logging Out"));
                     if (!Configuration.Loop.Termination.TerminationKeepActive)
                     {
                         Configuration.Loop.Termination.TerminationMethodEnum = TerminationMode.Do_Nothing;
@@ -1284,11 +1284,11 @@ public sealed class AutoDuty : IDalamudPlugin
                     break;
                 }
                 case TerminationMode.Start_AR_Multi_Mode:
-                    this.taskManager.Enqueue(() => Svc.Log.Debug($"Starting AR Multi Mode"));
+                    this.taskManager.Enqueue(() => ADLogging.Debug($"Starting AR Multi Mode"));
                     this.taskManager.Enqueue(() => Chat.ExecuteCommand($"/ays multi e"));
                     break;
                 case TerminationMode.Start_AR_Night_Mode:
-                    this.taskManager.Enqueue(() => Svc.Log.Debug($"Starting AR Night Mode"));
+                    this.taskManager.Enqueue(() => ADLogging.Debug($"Starting AR Night Mode"));
                     this.taskManager.Enqueue(() => Chat.ExecuteCommand($"/ays night e"));
                     break;
                 case TerminationMode.Do_Nothing:
@@ -1296,7 +1296,7 @@ public sealed class AutoDuty : IDalamudPlugin
                     break;
             }
 
-        Svc.Log.Debug($"Removing Looping, Setting CurrentLoop to 0, and Setting Stage to Stopped");
+        ADLogging.Debug($"Removing Looping, Setting CurrentLoop to 0, and Setting Stage to Stopped");
 
         this.States   &= ~PluginState.Looping;
         this.currentLoop =  0;
@@ -1305,7 +1305,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     private void Queue(Content content)
     {
-        Svc.Log.Debug($"Queueing duty: {content.Name} with mode {Configuration.Meta.DutyModeEnum}");
+        ADLogging.Debug($"Queueing duty: {content.Name} with mode {Configuration.Meta.DutyModeEnum}");
         if (Configuration.Meta.DutyModeEnum == DutyMode.Variant)
         {
             this.variantManager.RegisterVariantDuty(content);
@@ -1373,55 +1373,55 @@ public sealed class AutoDuty : IDalamudPlugin
             this.pathAction.Name is not ("SelectString" or "SelectYesno" or "SelectJournalResult"))
             return;
 
-        Svc.Log.Debug($"Starting Action {this.pathAction.ToCustomString()}");
+        ADLogging.Debug($"Starting Action {this.pathAction.ToCustomString()}");
 
         bool unsync = QueueHelper.ShouldBeUnSynced();
 
         if (this.pathAction.Tag.HasFlag(ActionTag.Unsynced) && !unsync)
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are synced");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are synced");
             this.indexer++;
             return;
         }
 
         if (this.pathAction.Tag.HasFlag(ActionTag.W2W) && !Configuration.DutyConfig.IsW2W(unsync: unsync))
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are not W2W-ing");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are not W2W-ing");
             this.indexer++;
             return;
         }
 
         if (this.pathAction.Tag.HasFlag(ActionTag.Synced) && unsync)
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are unsynced");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are unsynced");
             this.indexer++;
             return;
         }
 
         if (this.pathAction.Tag.HasFlag(ActionTag.Comment))
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because it is a comment");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because it is a comment");
             this.indexer++;
             return;
         }
 
         if (this.pathAction.Tag.HasFlag(ActionTag.Revival))
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because it is a Revival Tag");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because it is a Revival Tag");
             this.indexer++;
             return;
         }
 
         if ((this.skipTreasureCoffer || !Configuration.DutyConfig.LootTreasure || Configuration.DutyConfig.LootBossTreasureOnly) && this.pathAction.Tag.HasFlag(ActionTag.Treasure))
         {
-            Svc.Log.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are either in revival mode, LootTreasure is off or BossOnly");
+            ADLogging.Debug($"Skipping path entry {this.Actions[this.indexer].Name} because we are either in revival mode, LootTreasure is off or BossOnly");
             this.indexer++;
             return;
         }
 
         if (this.pathAction.Conditions.Any(pac => !pac.IsFulfilled()))
         {
-            Svc.Log.Debug($"Skipping path entry {this.pathAction.Name} because one of the conditions is not fulfilled");
+            ADLogging.Debug($"Skipping path entry {this.pathAction.Name} because one of the conditions is not fulfilled");
             this.indexer++;
             return;
         }
@@ -1486,7 +1486,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 VNavmesh_IPCSubscriber.Path_Stop();
                 if (Configuration.DutyConfig.Stuck.StuckReturn && stuckCount >= Configuration.DutyConfig.Stuck.StuckReturnX)
                 {
-                    Svc.Log.Debug($"Using Stuck Return Action");
+                    ADLogging.Debug($"Using Stuck Return Action");
                     if (ActionManager.Instance()->GetActionStatus(ActionType.Action, 6) == 0)
                     {
                         BossMod_IPCSubscriber.SetMovement(false);
@@ -1512,7 +1512,7 @@ public sealed class AutoDuty : IDalamudPlugin
                     }
                     else
                     {
-                        Svc.Log.Debug("Return action not available");
+                        ADLogging.Debug("Return action not available");
                     }
                 }
                 else if (Configuration.DutyConfig.Stuck.RebuildNavmeshOnStuck && stuckCount >= Configuration.DutyConfig.Stuck.RebuildNavmeshAfterStuckXTimes)
@@ -1640,12 +1640,12 @@ public sealed class AutoDuty : IDalamudPlugin
 
                     if (enemyCount > 2)
                     {
-                        Svc.Log.Debug($"Changing MaxDistanceToTarget to {Configuration.DutyConfig.BossMod.MaxDistanceToTargetAoEFloat}, because enemy count = {enemyCount}");
+                        ADLogging.Debug($"Changing MaxDistanceToTarget to {Configuration.DutyConfig.BossMod.MaxDistanceToTargetAoEFloat}, because enemy count = {enemyCount}");
                         BossMod_IPCSubscriber.SetRange(Configuration.DutyConfig.BossMod.MaxDistanceToTargetAoEFloat);
                     }
                     else
                     {
-                        Svc.Log.Debug($"Changing MaxDistanceToTarget to {Configuration.DutyConfig.BossMod.MaxDistanceToTargetFloat}, because enemy count = {enemyCount}");
+                        ADLogging.Debug($"Changing MaxDistanceToTarget to {Configuration.DutyConfig.BossMod.MaxDistanceToTargetFloat}, because enemy count = {enemyCount}");
                         BossMod_IPCSubscriber.SetRange(Configuration.DutyConfig.BossMod.MaxDistanceToTargetFloat);
                     }
                 }
@@ -1666,7 +1666,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     public void StartNavigation(bool startFromZero = true)
     {
-        Svc.Log.Debug($"StartNavigation: startFromZero={startFromZero}");
+        ADLogging.Debug($"StartNavigation: startFromZero={startFromZero}");
         if (ContentHelper.DictionaryContent.TryGetValue(Svc.ClientState.TerritoryType, out Content? content))
         {
             this.CurrentTerritoryContent = content;
@@ -1675,7 +1675,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
             if (false && content.DutyModes != DutyMode.None)
             {
-                Svc.Log.Info("Identifying duty mode");
+                ADLogging.Info("Identifying duty mode");
                 if (PartyHelper.PartyMember2?.ObjectKind == ObjectKind.BattleNpc)
                     unsafe
                     {
@@ -1696,7 +1696,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
                 int level = Player.Level;
                 Configuration.Meta.Unsynced = level == PlayerHelper.GetCurrentLevelFromSheet() && level - content.ClassJobLevelRequired > 3;
-                Svc.Log.Info("DUTYMODE: " + Configuration.Meta.dutyModeEnum + " out of " + content.DutyModes + " - " + string.Join("|",content.DutyModes.GetFlags().Select(dm => dm.ToString())));
+                ADLogging.Info("DUTYMODE: " + Configuration.Meta.dutyModeEnum + " out of " + content.DutyModes + " - " + string.Join("|",content.DutyModes.GetFlags().Select(dm => dm.ToString())));
             }
         }
         else
@@ -1743,7 +1743,7 @@ public sealed class AutoDuty : IDalamudPlugin
                 PandorasBox_IPCSubscriber.SetFeatureEnabled("Automatically Open Chests", false);
             this.lootTreasure = false;
         }
-        Svc.Log.Info("Starting Navigation");
+        ADLogging.Info("Starting Navigation");
         if (startFromZero) 
             this.indexer = 0;
     }
@@ -1789,7 +1789,7 @@ public sealed class AutoDuty : IDalamudPlugin
         if (PandorasBox_IPCSubscriber.IsEnabled && (PandorasBox_IPCSubscriber.GetFeatureEnabled("Auto-interact with Objects in Instances") ?? false))
             this.settingsActive |= SettingsActive.Pandora_Interact_Objects;
 
-        Svc.Log.Debug($"General Settings Active: {this.settingsActive}");
+        ADLogging.Debug($"General Settings Active: {this.settingsActive}");
     }
 
     internal void SetGeneralSettings(bool on)
@@ -1799,17 +1799,17 @@ public sealed class AutoDuty : IDalamudPlugin
 
         if (Configuration.DutyConfig.AutoManageVnavAlignCamera && this.settingsActive.HasFlag(SettingsActive.Vnav_Align_Camera_Off))
         {
-            Svc.Log.Debug($"Setting VnavAlignCamera: {on}");
+            ADLogging.Debug($"Setting VnavAlignCamera: {on}");
             VNavmesh_IPCSubscriber.Path_SetAlignCamera(on);
         }
         if (PandorasBox_IPCSubscriber.IsEnabled && this.settingsActive.HasFlag(SettingsActive.Pandora_Interact_Objects))
         {
-            Svc.Log.Debug($"Setting PandorasBos Auto-interact with Objects in Instances: {on}");
+            ADLogging.Debug($"Setting PandorasBos Auto-interact with Objects in Instances: {on}");
             PandorasBox_IPCSubscriber.SetFeatureEnabled("Auto-interact with Objects in Instances", on);
         }
         if (YesAlready_IPCSubscriber.IsEnabled && this.settingsActive.HasFlag(SettingsActive.YesAlready))
         {
-            Svc.Log.Debug($"Setting YesAlready Enabled: {on}");
+            ADLogging.Debug($"Setting YesAlready Enabled: {on}");
             YesAlready_IPCSubscriber.SetState(on);
         }
 
@@ -1839,7 +1839,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
                 if (!active || wrathRotationReady)
                 {
-                    Svc.Log.Debug("Wrath rotation:" + active);
+                    ADLogging.Debug("Wrath rotation:" + active);
                     Wrath_IPCSubscriber.SetAutoMode(active);
 
                     return true;
@@ -1853,7 +1853,7 @@ public sealed class AutoDuty : IDalamudPlugin
         {
             if (RSR_IPCSubscriber.IsEnabled)
             {
-                Svc.Log.Debug("RSR: " + active);
+                ADLogging.Debug("RSR: " + active);
                 if (active)
                     RSR_IPCSubscriber.RotationAuto();
                 else
@@ -1903,7 +1903,7 @@ public sealed class AutoDuty : IDalamudPlugin
 
     internal static void SetBMSettings(bool defaults = false)
     {
-        Svc.Log.Debug("Setting BossMod settings");
+        ADLogging.Debug("Setting BossMod settings");
 
         BMRoleChecks();
 
@@ -1967,7 +1967,7 @@ public sealed class AutoDuty : IDalamudPlugin
         if (curJob != this.jobLastKnown)
             if (this.LevelingEnabled)
             {
-                Svc.Log.Info($"{(Configuration.Meta.DutyModeEnum == DutyMode.Support || Configuration.Meta.DutyModeEnum == DutyMode.Trust) && (Configuration.Meta.DutyModeEnum == DutyMode.Support || this.SupportLevelingEnabled) && (Configuration.Meta.DutyModeEnum != DutyMode.Trust || this.TrustLevelingEnabled)} ({Configuration.Meta.DutyModeEnum == DutyMode.Support} || {Configuration.Meta.DutyModeEnum == DutyMode.Trust}) && ({Configuration.Meta.DutyModeEnum == DutyMode.Support} || {this.SupportLevelingEnabled}) && ({Configuration.Meta.DutyModeEnum != DutyMode.Trust} || {this.TrustLevelingEnabled})");
+                ADLogging.Info($"{(Configuration.Meta.DutyModeEnum == DutyMode.Support || Configuration.Meta.DutyModeEnum == DutyMode.Trust) && (Configuration.Meta.DutyModeEnum == DutyMode.Support || this.SupportLevelingEnabled) && (Configuration.Meta.DutyModeEnum != DutyMode.Trust || this.TrustLevelingEnabled)} ({Configuration.Meta.DutyModeEnum == DutyMode.Support} || {Configuration.Meta.DutyModeEnum == DutyMode.Trust}) && ({Configuration.Meta.DutyModeEnum == DutyMode.Support} || {this.SupportLevelingEnabled}) && ({Configuration.Meta.DutyModeEnum != DutyMode.Trust} || {this.TrustLevelingEnabled})");
                 Content? duty = LevelingHelper.SelectHighestLevelingRelevantDuty(this.LevelingModeEnum);
                 if (duty != null)
                 {
@@ -2208,7 +2208,7 @@ public sealed class AutoDuty : IDalamudPlugin
         Svc.Framework.Update             -= this.Framework_Update;
         Svc.Framework.Update             -= SchedulerHelper.ScheduleInvoker;
         InstanceContentCrucible.Dispose();
-        FileHelper.FileSystemWatcher?.Dispose();
+        FileHelper.FILESYSTEM_WATCHER?.Dispose();
         FileHelper.fileWatcher?.Dispose();
         this.windowSystem?.RemoveAllWindows();
         ECommonsMain.Dispose();

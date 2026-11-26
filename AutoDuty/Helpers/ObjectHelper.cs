@@ -7,6 +7,7 @@ using FFXIVClientStructs.FFXIV.Client.Game.Control;
 using FFXIVClientStructs.FFXIV.Client.Game.UI;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -137,7 +138,7 @@ namespace AutoDuty.Helpers
             }
             catch (Exception ex)
             {
-                Svc.Log.Info($"InteractWithObject: Exception: {ex}");
+                ADLogging.Info($"InteractWithObject: Exception: {ex}");
             }
         }
         internal static unsafe AtkUnitBase* InteractWithObjectUntilAddon(IGameObject? gameObject, string addonName)

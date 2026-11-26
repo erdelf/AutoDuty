@@ -10,7 +10,10 @@ using ECommons.DalamudServices;
 using ECommons.ImGuiMethods;
 
 namespace AutoDuty.Windows;
-
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using Configurations;
 using Dalamud.Game.ClientState.Objects.Types;
 using Data;
@@ -26,14 +29,11 @@ using FFXIVClientStructs.FFXIV.Common.Component.BGCollision;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using FFXIVClientStructs.Interop;
 using FFXIVClientStructs.STD;
+using Logging;
 using Lumina.Excel.Sheets;
 using Multibox;
 using NightmareUI.Censoring;
 using Properties;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using Achievement = Lumina.Excel.Sheets.Achievement;
 using Vector2 = FFXIVClientStructs.FFXIV.Common.Math.Vector2;
 
@@ -361,7 +361,7 @@ public static class ConfigTab
                     ConfigurationProfileV2.Save();
 
                 if (ImGui.Button("Print Mod List##DevPrintModList")) 
-                    Svc.Log.Info(string.Join("\n", PluginInterface.InstalledPlugins.Where(pl => pl.IsLoaded).GroupBy(pl => pl.Manifest.InstalledFromUrl).OrderByDescending(g => g.Count()).Select(g => g.Key+"\n\t"+string.Join("\n\t", g.Select(pl => pl.Name)))));
+                    ADLogging.Info(string.Join("\n", PluginInterface.InstalledPlugins.Where(pl => pl.IsLoaded).GroupBy(pl => pl.Manifest.InstalledFromUrl).OrderByDescending(g => g.Count()).Select(g => g.Key+"\n\t"+string.Join("\n\t", g.Select(pl => pl.Name)))));
 
                 if (ImGui.Button("Rotation On##DevRotationOn")) 
                     Plugin.SetRotationPluginSettings(true, ignoreConfig: true, ignoreTimer: true);
@@ -385,7 +385,7 @@ public static class ConfigTab
                 {
                     IEnumerable<IGameObject> treasures = ObjectHelper.GetObjectsByObjectKind(Dalamud.Game.ClientState.Objects.Enums.ObjectKind.Treasure)?.
                                                                       Where(x => ObjectHelper.BelowDistanceToPoint(x.Position, Player.Position, 50, 10)) ?? [];
-                    Svc.Log.Debug(treasures.Count() + "\n" + string.Join("\n", treasures.Select(igo => igo.Position.ToString())));
+                    ADLogging.Debug(treasures.Count() + "\n" + string.Join("\n", treasures.Select(igo => igo.Position.ToString())));
                 }
 
                 unsafe

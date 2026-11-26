@@ -2,6 +2,7 @@
 using Dalamud.Utility;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -60,7 +61,7 @@ namespace AutoDuty.Helpers
                 {
                     bool nonColoredSet = false;
 
-                    //Svc.Log.Debug(string.Join(" | ", regex.Groups.Values.Select(g=> g.Value)));
+                    //ADLogging.Debug(string.Join(" | ", regex.Groups.Values.Select(g=> g.Value)));
 
                     string nonColored = regex.Groups[1].Value;
                     if (!nonColored.IsNullOrEmpty())
@@ -71,7 +72,7 @@ namespace AutoDuty.Helpers
                         first = false;
                         ImGui.Text(nonColored);
                         nonColoredSet = true;
-                        //Svc.Log.Debug("non colored: " + nonColored);
+                        //ADLogging.Debug("non colored: " + nonColored);
                     }
 
                     string colorText   = regex.Groups[2].Value;
@@ -98,7 +99,7 @@ namespace AutoDuty.Helpers
 
                                         Vector4 color = new(r, g, b, a);
                                         ImGui.TextColored(color, coloredText);
-                                        //Svc.Log.Debug("colored: " + coloredText + " in: " + color);
+                                        //ADLogging.Debug("colored: " + coloredText + " in: " + color);
                                     }
                     }
 
@@ -327,7 +328,7 @@ namespace AutoDuty.Helpers
                     needsRefresh = false;
                     currentMin   = minimal;
                     currentMax   = maximum;
-                    Svc.Log.Warning("I give up..");
+                    ADLogging.Warning("I give up..");
                 }
             } while (needsRefresh);
 

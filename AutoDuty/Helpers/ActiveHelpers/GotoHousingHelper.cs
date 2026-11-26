@@ -3,6 +3,7 @@ using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -68,7 +69,7 @@ namespace AutoDuty.Helpers
         {
             if (Plugin.States.HasFlag(PluginState.Navigating))
             {
-                Svc.Log.Debug($"AutoDuty has Started, Stopping GotoHousing");
+                ADLogging.Debug($"AutoDuty has Started, Stopping GotoHousing");
                 this.Stop();
             }
 
@@ -79,7 +80,7 @@ namespace AutoDuty.Helpers
 
             if (!Player.Available)
             {
-                Svc.Log.Debug($"Our player is null");
+                ADLogging.Debug($"Our player is null");
                 return;
             }
 
@@ -90,7 +91,7 @@ namespace AutoDuty.Helpers
 
             if (InPrivateHouse(whichHousing))
             {
-                Svc.Log.Debug($"We are in a private house, Stopping GotoHousing");
+                ADLogging.Debug($"We are in a private house, Stopping GotoHousing");
                 this.Stop();
                 return;
             }
@@ -99,7 +100,7 @@ namespace AutoDuty.Helpers
             {
                 if (!PlayerHelper.IsCasting)
                 {
-                    Svc.Log.Debug($"We are not in the correct housing area, teleporting there");
+                    ADLogging.Debug($"We are not in the correct housing area, teleporting there");
                     switch (whichHousing)
                     {
                         case Housing.Apartment when !TeleportHelper.TeleportApartment()        && TeleportHelper.ApartmentTeleportId    == 0:
@@ -118,11 +119,11 @@ namespace AutoDuty.Helpers
             {
                 if (EntranceGameObject == null)
                 {
-                    Svc.Log.Debug($"unable to find entrance door {TeleportHelper.FCEstateWardCenterVector3} {TeleportHelper.FCEstateEntranceGameObject}");
+                    ADLogging.Debug($"unable to find entrance door {TeleportHelper.FCEstateWardCenterVector3} {TeleportHelper.FCEstateEntranceGameObject}");
                 }
                 else if (MovementHelper.Move(EntranceGameObject, 0.25f, 3f, false, false))
                 {
-                    Svc.Log.Debug($"We are in range of the entrance door, entering");
+                    ADLogging.Debug($"We are in range of the entrance door, entering");
                     ObjectHelper.InteractWithObject(EntranceGameObject);
                     AddonHelper.ClickSelectString(0);
                     AddonHelper.ClickSelectYesno();
@@ -130,7 +131,7 @@ namespace AutoDuty.Helpers
                 }
                 else
                 {
-                    Svc.Log.Debug($"Moving closer to {EntranceGameObject?.Name} at location {EntranceGameObject?.Position}, we are {Vector3.Distance(EntranceGameObject?.Position ?? Vector3.Zero, Player.Position)} away");
+                    ADLogging.Debug($"Moving closer to {EntranceGameObject?.Name} at location {EntranceGameObject?.Position}, we are {Vector3.Distance(EntranceGameObject?.Position ?? Vector3.Zero, Player.Position)} away");
                 }
             }
         }

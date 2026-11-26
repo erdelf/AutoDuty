@@ -1,31 +1,27 @@
-﻿using System;
-using AutoDuty.Managers;
+﻿using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Colors;
 using Dalamud.Interface.Utility.Raii;
 using ECommons;
 using ECommons.ImGuiMethods;
 using ECommons.Throttlers;
-using Dalamud.Bindings.ImGui;
 using Serilog.Events;
 using System.Numerics;
 using static AutoDuty.Updater.GitHubHelper;
 
 namespace AutoDuty.Windows
 {
+    using Logging;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
-    using Configurations;
-    using ECommons.DalamudServices;
 
     internal static class LogTab
     {
-        internal static void Add(LogMessage message) => _logEntriesToAdd.Enqueue(message);
+        private static  LogTableInfo.LogTable? logTable;
 
         private static Task<UserCode?>? _taskUserCode = null;
         private static Task<PollResponseClass?>? _taskPollResponse = null;
         private static Task<string?>? _taskSubmitIssue = null;
-        private static readonly Queue<LogMessage> _logEntriesToAdd = [];
+
         private static string _titleInput = $"[Bug] ";
         private static string _whatHappenedInput = string.Empty;
         private static string _reproStepsInput = string.Empty;
@@ -35,10 +31,12 @@ namespace AutoDuty.Windows
         private static ImGuiWindowFlags _imGuiWindowFlags = ImGuiWindowFlags.None;
         private static bool _copied = false;
         private static bool _clearedDataAfterPopupClose = true;
+
         public static void Draw()
         {
             if (MainWindow.CurrentTabName != "Log")
                 MainWindow.CurrentTabName = "Log";
+
             if (!_popupOpen && !_clearedDataAfterPopupClose)
             {
                 _clearedDataAfterPopupClose = false;
@@ -52,26 +50,21 @@ namespace AutoDuty.Windows
                 _titleInput = string.Empty;
                 _whatHappenedInput = string.Empty;
             }
-            ImGuiEx.Spacing();
-            bool logAutoScroll = AutoDuty.Configuration.Log.AutoScroll;
-            if (ImGui.Checkbox(Loc.Get("LogTab.AutoScroll"), ref logAutoScroll))
+            ImGuiEx.Spacing(); 
+            
+            using ImRaii.ChildDisposable child = ImRaii.Child("scrolling", new Vector2(ImGui.GetContentRegionAvail().X, ImGui.GetContentRegionAvail().Y), true, ImGuiWindowFlags.HorizontalScrollbar);
+            if (!child.Success)
+                return;
 
-            {
-                AutoDuty.Configuration.Log.AutoScroll = logAutoScroll;
-                ConfigurationProfileV2.Save();
-            }
+            if (ImGui.Button(Loc.Get("LogTab.CopyLog")))
+                ADLogging.LogSystem.CopyToClipboard();
 
             ImGui.SameLine();
-            if (ImGuiEx.IconButton(Dalamud.Interface.FontAwesomeIcon.Trash))
-                Plugin.dalamudLogEntries.Clear();
-            if (ImGui.IsItemHovered())
-                ImGui.SetTooltip(Loc.Get("LogTab.ClearLog"));
+            if (ImGui.Button(Loc.Get("LogTab.ClearLog")))
+                ADLogging.LogSystem.Clear();
+
             ImGui.SameLine();
-            if (ImGuiEx.IconButton(Dalamud.Interface.FontAwesomeIcon.Copy))
-                ImGui.SetClipboardText(Plugin.dalamudLogEntries.SelectMulti(x => x.Message).ToList().ToCustomString("\n"));
-            if (ImGui.IsItemHovered())
-                ImGui.SetTooltip(Loc.Get("LogTab.CopyLog"));
-            ImGui.SameLine();
+
             using (ImRaii.Disabled(!_taskUserCode?.IsCompletedSuccessfully ?? false))
             {
                 if (ImGui.Button(Loc.Get("LogTab.CreateIssue")))
@@ -97,7 +90,7 @@ namespace AutoDuty.Windows
                 ImGui.SetNextWindowSize(ImGui.GetMainViewport().Size);
                 ImGui.SetNextWindowPos(ImGui.GetMainViewport().GetCenter(), ImGuiCond.None, new Vector2(0.5f, 0.5f));
                 _imGuiWindowFlags = ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoMove;
-            }    
+            }
             if (ImGui.BeginPopupModal(Loc.Get("LogTab.CreateIssue"), ref _popupOpen, _imGuiWindowFlags))
             {
                 _clearedDataAfterPopupClose = false;
@@ -107,58 +100,21 @@ namespace AutoDuty.Windows
                     DrawIssuePopup();
                 ImGui.EndPopup();
             }
+
             if (ImGui.IsItemHovered())
                 ImGui.SetTooltip(Loc.Get("LogTab.CreateIssueTooltip"));
-            ImGui.SameLine();
-            ImGui.SetNextItemWidth(ImGui.GetContentRegionAvail().X);
-            var currentLevel = AutoDuty.Configuration.Log.LogEventLevel;
-            if (ImGui.BeginCombo("##LogEventLevel", Loc.Get($"LogTab.LogLevels.{currentLevel}")))
+
+            using (ImRaii.ChildDisposable logTableChild = ImRaii.Child("Log Details Window", new Vector2(-1, -1), false))
             {
-                foreach (var level in Enum.GetValues<LogEventLevel>())
-                {
-                    if (ImGui.Selectable(Loc.Get($"LogTab.LogLevels.{level}"), level == currentLevel))
-                    {
-                        AutoDuty.Configuration.Log.LogEventLevel = level;
-                        if (Svc.Log.MinimumLogLevel > AutoDuty.Configuration.Log.LogEventLevel)
-                            Svc.Log.MinimumLogLevel = AutoDuty.Configuration.Log.LogEventLevel;
-                        ConfigurationProfileV2.Save();
-                    }
-                }
-                ImGui.EndCombo();
+                if (!logTableChild.Success)
+                    return;
+
+                logTable ??= new LogTableInfo.LogTable();
+
+                logTable.Reload();
+                logTable.Draw();
             }
-
-            if (ImGui.IsItemHovered())
-                ImGui.SetTooltip(Loc.Get("LogTab.FilterLogLevel"));
-            ImGuiEx.Spacing();
-
-            if (AutoDuty.Configuration.Log.LogEventLevel < LogEventLevel.Information) ImGui.TextWrapped(Loc.Get("LogTab.DebugLevelWarning"));
-
-            ImGuiEx.Spacing();
-            ImGui.BeginChild("scrolling", new Vector2(ImGui.GetContentRegionAvail().X, ImGui.GetContentRegionAvail().Y), true, ImGuiWindowFlags.HorizontalScrollbar);
-
-            Plugin.dalamudLogEntries.Each(e => { if (e.LogEventLevel >= AutoDuty.Configuration.Log.LogEventLevel) ImGui.TextColored(GetLogEntryColor(e.LogEventLevel), e.Message); });
-
-            if (EzThrottler.Throttle("AddLogEntries", 25))
-                while (_logEntriesToAdd.Count != 0)
-                {
-                    LogMessage? logEntry = _logEntriesToAdd.Dequeue();
-                    if (logEntry == null)
-                        return;
-                    Plugin.dalamudLogEntries.Add(logEntry);
-                }
-
-            if (AutoDuty.Configuration.Log.AutoScroll && ImGui.GetScrollY() >= ImGui.GetScrollMaxY())
-                ImGui.SetScrollHereY(1.0f);
-
-            ImGui.EndChild();
         }
-
-        private static Vector4 GetLogEntryColor(LogEventLevel logEntryType) => logEntryType switch
-        {
-            LogEventLevel.Error => ImGuiColors.DalamudRed,
-            LogEventLevel.Warning => ImGuiColors.DalamudOrange,
-            _ => ImGuiColors.DalamudWhite,
-        };
 
         private static void DrawUserCodePopup()
         { 
@@ -225,12 +181,14 @@ namespace AutoDuty.Windows
                 ImGui.TextColored(ImGuiColors.HealerGreen, Loc.Get("LogTab.IssueForm.Submitting"));
                 return;
             }
-            else if (_taskSubmitIssue is { IsCompletedSuccessfully: true })
+
+            if (_taskSubmitIssue is { IsCompletedSuccessfully: true })
             {
                 _popupOpen = false;
                 ImGui.CloseCurrentPopup();
                 return;
             }
+
             ImGui.Text(Loc.Get("LogTab.IssueForm.Title"));
             ImGui.Separator();
             ImGui.Text(Loc.Get("LogTab.IssueForm.AddTitle"));
@@ -243,6 +201,7 @@ namespace AutoDuty.Windows
             ImGui.TextWrapped(Loc.Get("LogTab.IssueForm.DuplicateWarning"));
             if (ImGui.IsItemClicked(ImGuiMouseButton.Left))
                 GenericHelpers.ShellStart("https://github.com/erdelf/AutoDuty/issues");
+
             ImGui.NewLine();
             ImGui.TextWrapped(Loc.Get("LogTab.IssueForm.WhatHappened"));
             ImGui.SameLine(0, 5);
@@ -256,6 +215,7 @@ namespace AutoDuty.Windows
             ImGui.TextWrapped(Loc.Get("LogTab.IssueForm.ReproStepsHelp"));
             ImGui.InputTextMultiline("##ReproStepsInput", ref _reproStepsInput, 500, new Vector2(ImGui.GetContentRegionAvail().X, ImGui.GetContentRegionAvail().Y - (ImGui.CalcTextSize("Submit Issue").Y * 3)));
             ImGui.NewLine();
+
             using (ImRaii.Disabled(_titleInput.Equals("[Bug] ") || _whatHappenedInput.IsNullOrEmpty() || _reproStepsInput.IsNullOrEmpty()))
             {
                 if (ImGui.Button(Loc.Get("LogTab.IssueForm.Submit")))

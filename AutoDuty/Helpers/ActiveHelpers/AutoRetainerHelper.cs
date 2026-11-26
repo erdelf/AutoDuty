@@ -6,6 +6,7 @@ using ECommons;
 using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -33,7 +34,7 @@ namespace AutoDuty.Helpers
                 return;
             this.DebugLog("AutoRetainerHelper.Invoke");
             if (!AutoRetainer_IPCSubscriber.IsEnabled)
-                Svc.Log.Info("AutoRetainer requires a plugin, visit https://puni.sh/plugin/AutoRetainer for more info");
+                ADLogging.Info("AutoRetainer requires a plugin, visit https://puni.sh/plugin/AutoRetainer for more info");
             else if (State != ActionState.Running) 
                 base.Start();
         }

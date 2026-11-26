@@ -11,6 +11,7 @@ using ECommons;
 using ECommons.Configuration;
 using ECommons.DalamudServices;
 using Helpers;
+using Logging;
 using Multibox;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -480,7 +481,7 @@ public class ConfigurationMain
                                 });
 
     public static void DebugLog(string message) => 
-        Svc.Log.Debug($"Configuration Main: {message}");
+        ADLogging.Debug($"Configuration Main: {message}");
 
     public static void Save()
     {

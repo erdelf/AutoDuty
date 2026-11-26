@@ -12,7 +12,7 @@ namespace AutoDuty.Updater
     using static Data.Classes;
     internal static class FileHelper
     {
-        internal static readonly FileSystemWatcher FileSystemWatcher = new(Plugin.pathsDirectory.FullName)
+        internal static readonly FileSystemWatcher FILESYSTEM_WATCHER = new(Plugin.pathsDirectory.FullName)
         {
             NotifyFilter = NotifyFilters.Attributes
                                                                                         | NotifyFilters.CreationTime
@@ -39,67 +39,14 @@ namespace AutoDuty.Updater
             return md5.ComputeHash(stream);
         }
 
-        private static void LogInit()
-        {
-            string? path = $"{Plugin.dalamudDirectory}/dalamud.log";
-            if (!File.Exists(path)) 
-                return;
-
-            FileInfo file = new(path);
-            if (!file.Exists) 
-                return;
-
-            string? directory = file.DirectoryName;
-            string? filename  = file.Name;
-            if (directory.IsNullOrEmpty() || filename.IsNullOrEmpty())
-                return;
-
-            long lastMaxOffset = file.Length;
-
-            fileWatcher.Path = directory!;
-            fileWatcher.Filter = filename;
-            fileWatcher.NotifyFilter = NotifyFilters.LastWrite;
-
-            fileWatcher.Changed += (_, _) =>
-            {
-                using FileStream fs = new(file.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                fs.Seek(lastMaxOffset, SeekOrigin.Begin);
-                using StreamReader sr = new(fs);
-
-                while (sr.ReadLine() is { } x)
-                {
-                    if (!x.Contains("[AutoDuty]")) continue;
-
-                    LogMessage logEntry = new() { Message = x };
-
-                    if (x.Contains("[FTL]"))
-                        logEntry.LogEventLevel = LogEventLevel.Fatal;
-                    else if (x.Contains("[ERR]"))
-                        logEntry.LogEventLevel = LogEventLevel.Error;
-                    else if (x.Contains("[WRN]"))
-                        logEntry.LogEventLevel = LogEventLevel.Warning;
-                    else if (x.Contains("[INF]"))
-                        logEntry.LogEventLevel = LogEventLevel.Information;
-                    else if (x.Contains("[DBG]"))
-                        logEntry.LogEventLevel = LogEventLevel.Debug;
-                    else if (x.Contains("[VRB]"))
-                        logEntry.LogEventLevel = LogEventLevel.Verbose;
-                    LogTab.Add(logEntry);
-                }
-                lastMaxOffset = fs.Position;
-            };
-            fileWatcher.EnableRaisingEvents = true;
-        }
-
         internal static void Init()
         {
-            FileSystemWatcher.Changed += OnChanged;
-            FileSystemWatcher.Created += OnCreated;
-            FileSystemWatcher.Deleted += OnDeleted;
-            FileSystemWatcher.Renamed += OnRenamed;
-            FileSystemWatcher.EnableRaisingEvents = true;
+            FILESYSTEM_WATCHER.Changed += OnChanged;
+            FILESYSTEM_WATCHER.Created += OnCreated;
+            FILESYSTEM_WATCHER.Deleted += OnDeleted;
+            FILESYSTEM_WATCHER.Renamed += OnRenamed;
+            FILESYSTEM_WATCHER.EnableRaisingEvents = true;
             Update();
-            LogInit();
         }
 
         private static void Update()

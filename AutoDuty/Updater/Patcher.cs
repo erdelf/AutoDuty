@@ -1,4 +1,5 @@
 ﻿using ECommons.DalamudServices;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Updater
 {
@@ -29,13 +30,13 @@ namespace AutoDuty.Updater
         private static void OnPatcherTaskCompleted(bool success)
         {
             if (PatcherTask != null && success && PatcherTask.Result)
-                Svc.Log.Info("Patching Complete");
+                ADLogging.Info("Patching Complete");
             PatcherTask = null;
         }
 
         public static async Task<bool> PatchTask(bool skipMD5)
         {
-            Svc.Log.Info("Patching Started");
+            ADLogging.Info("Patching Started");
             try
             {
                 IEnumerable<FileInfo> localFileInfos = Plugin.pathsDirectory.EnumerateFiles("*.json", SearchOption.AllDirectories);
@@ -55,7 +56,7 @@ namespace AutoDuty.Updater
                     foreach (KeyValuePair<string, string> file in downloadList)
                     {
                         bool    result = await GitHubHelper.DownloadFileAsync($"https://raw.githubusercontent.com/erdelf/AutoDuty/refs/heads/master/AutoDuty/Paths/{file.Key}", $"{Plugin.pathsDirectory.FullName}/{file.Key}");
-                        Svc.Log.Info(result ? $"Successfully downloaded: {file.Key}" : $"Failed to download: {file.Key}");
+                        ADLogging.Info(result ? $"Successfully downloaded: {file.Key}" : $"Failed to download: {file.Key}");
                     }
                 }
 
@@ -67,7 +68,7 @@ namespace AutoDuty.Updater
                     foreach (KeyValuePair<string, string> file in deleteList)
                     {
                         File.Delete($"{Plugin.pathsDirectory.FullName}/{file.Key}");
-                        Svc.Log.Info("Deleted " + file.Key);
+                        ADLogging.Info("Deleted " + file.Key);
                     }
                 }
 
@@ -75,7 +76,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"error patching path files: {ex}");
+                ADLogging.Error($"error patching path files: {ex}");
                 return false;
             }
         }

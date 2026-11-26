@@ -8,15 +8,14 @@ using Newtonsoft.Json;
 #pragma warning disable PendingExcelSchema
 
 namespace AutoDuty.Managers;
-
-using ECommons;
-using ECommons.Throttlers;
-using ECommons.UIHelpers.AtkReaderImplementations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Helpers;
+using ECommons;
+using ECommons.Throttlers;
+using ECommons.UIHelpers.AtkReaderImplementations;
+using Logging;
 using Screens = CrucibleUi.Screens;
 
 [JsonObject(MemberSerialization.OptOut)]
@@ -176,7 +175,7 @@ internal static unsafe class CrucibleTeam
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex, "[Crucible] Couldn't read the XBMPet sheet; familiar names are unknown");
+                ADLogging.Error(ex, "[Crucible] Couldn't read the XBMPet sheet; familiar names are unknown");
             }
 
             return [];
@@ -200,7 +199,7 @@ internal static unsafe class CrucibleTeam
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex, "[Crucible] Couldn't read the XBMPet sheet; familiar names are unknown");
+                ADLogging.Error(ex, "[Crucible] Couldn't read the XBMPet sheet; familiar names are unknown");
                 names.Clear();
             }
 
@@ -234,7 +233,7 @@ internal static unsafe class CrucibleTeam
         if (!Player.Available || !ConfigurationMain.Instance.crucibleConfigByCID.Remove(Player.CID))
             return;
 
-        Svc.Log.Info("[Crucible] Cleared the saved familiar ranks for this character");
+        ADLogging.Info("[Crucible] Cleared the saved familiar ranks for this character");
         ConfigurationMain.Save();
     }
 
@@ -393,7 +392,7 @@ internal static unsafe class CrucibleTeam
 
     public static bool RememberTeam(List<ReaderXBMPetParty.MonsterEntry> rows)
     {
-        Svc.Log.Debug("Crucible Team - Remember Team");
+        ADLogging.Debug("Crucible Team - Remember Team");
 
         bool       changed = false;
         List<uint> team    = new(rows.Count);
@@ -619,7 +618,7 @@ internal sealed unsafe class CrucibleTeamSetup
 
         bool waitedTooLong = now - this.stepSince > StepPatience;
 
-        Svc.Log.Debug("Crucible Team - Executing step: " + this.step);
+        ADLogging.Debug("Crucible Team - Executing step: " + this.step);
         switch (this.step)
         {
             case Step.Plan:
@@ -635,7 +634,7 @@ internal sealed unsafe class CrucibleTeamSetup
                     }
                     else
                     {
-                        Svc.Log.Warning("[Crucible] No \"Remove All\" option; removing familiars one at a time");
+                        ADLogging.Warning("[Crucible] No \"Remove All\" option; removing familiars one at a time");
                         Screens.Menu.Close(allMenu);
                         this.SetStep(Step.Plan, now);
                     }
@@ -712,12 +711,12 @@ internal sealed unsafe class CrucibleTeamSetup
             this.scanFrom    = now;
             this.scanChanged = false;
             if (this.scanTotal > 0)
-                Svc.Log.Info($"[Crucible] Reading ranks for {this.scanTotal} familiars from the bestiary: {Names(this.scanQueue)}");
+                ADLogging.Info($"[Crucible] Reading ranks for {this.scanTotal} familiars from the bestiary: {Names(this.scanQueue)}");
         }
 
         if (this.scanning != 0)
         {
-            Svc.Log.Debug("Scanning");
+            ADLogging.Debug("Scanning");
             if (CrucibleUi.BestiarySelected(notebook) is { } selected && selected.SheetData.Number == this.scanning)
             {
                 this.scanChanged |= CrucibleTeam.RememberFamiliarUnsaved(selected);
@@ -726,13 +725,13 @@ internal sealed unsafe class CrucibleTeamSetup
             }
             else if (now - this.scanStarted > ScanPatience)
             {
-                Svc.Log.Warning($"[Crucible] No. {this.scanning} never showed in the bestiary's detail pane; skipping it");
+                ADLogging.Warning($"[Crucible] No. {this.scanning} never showed in the bestiary's detail pane; skipping it");
                 this.scanQueue.Remove(this.scanning);
                 this.scanning = 0;
             }
             else if (!this.scanRetried && now - this.scanStarted > ScanRetry)
             {
-                Svc.Log.Debug("[Crucible] Scan retry");
+                ADLogging.Debug("[Crucible] Scan retry");
                 this.scanRetried = true;
                 Screens.Notebook.PickEntry(notebook, SlotOf(notebook, this.scanning));
             }
@@ -751,10 +750,10 @@ internal sealed unsafe class CrucibleTeamSetup
             return false;
 
         this.Status = $"Reading familiar ranks ({this.scanTotal - this.scanQueue.Count + 1}/{this.scanTotal})";
-        Svc.Log.Debug(this.Status);
+        ADLogging.Debug(this.Status);
         if (!Screens.Notebook.PickEntry(notebook, SlotOf(notebook, next)))
         {
-            Svc.Log.Warning($"[Crucible] Couldn't click No. {next} in the bestiary; skipping it");
+            ADLogging.Warning($"[Crucible] Couldn't click No. {next} in the bestiary; skipping it");
             this.scanQueue.Remove(next);
             return false;
         }
@@ -870,7 +869,7 @@ internal sealed unsafe class CrucibleTeamSetup
             return false;
         }
 
-        Svc.Log.Warning("[Crucible] Couldn't clear the board to keep reading ranks; going with the ranks already known");
+        ADLogging.Warning("[Crucible] Couldn't clear the board to keep reading ranks; going with the ranks already known");
         this.scanQueue?.Clear();
         this.scanClearing = false;
         this.clearTries   = 0;
@@ -880,14 +879,14 @@ internal sealed unsafe class CrucibleTeamSetup
     private void FinishScan(DateTime now)
     {
         if (this.scanQueue is not null && this.scanTotal > 0)
-            Svc.Log.Info($"[Crucible] Read {this.scanTotal} familiars from the bestiary in {(now - this.scanFrom).TotalSeconds:0.0}s");
+            ADLogging.Info($"[Crucible] Read {this.scanTotal} familiars from the bestiary in {(now - this.scanFrom).TotalSeconds:0.0}s");
         if (this.scanChanged)
             ConfigurationMain.Save();
         CrucibleTeam.Scanning = false;
 
         List<uint> refreshed = CrucibleTeam.For(this.mode);
         if (!refreshed.SequenceEqual(this.goal))
-            Svc.Log.Info($"[Crucible] {this.mode} team re-read with every rank known: {Names(this.goal)} -> {Names(refreshed)}");
+            ADLogging.Info($"[Crucible] {this.mode} team re-read with every rank known: {Names(this.goal)} -> {Names(refreshed)}");
 
         this.scanDone       = true;
         this.goal           = refreshed;
@@ -941,7 +940,7 @@ internal sealed unsafe class CrucibleTeamSetup
         if (missing.Count == 0)
         {
             this.Status = "Team ready";
-            Svc.Log.Info($"[Crucible] Team ready: {Names(team)}");
+            ADLogging.Info($"[Crucible] Team ready: {Names(team)}");
             return true;
         }
 
@@ -1004,7 +1003,7 @@ internal sealed unsafe class CrucibleTeamSetup
 
         if (now - this.requestedAt > Resend)
         {
-            Svc.Log.Debug($"Crucible Team - Switch to Page for {number}");
+            ADLogging.Debug($"Crucible Team - Switch to Page for {number}");
             ReaderXBMMonsterNotebook monsterNotebook = new(notebook);
 
             Screens.Notebook.ShowPage(notebook, (monsterNotebook.CurrentPage + 1) % monsterNotebook.PageCount);
@@ -1026,7 +1025,7 @@ internal sealed unsafe class CrucibleTeamSetup
         if (!readerNotebook.Filtered)
             return true;
             
-        Svc.Log.Debug("[Crucible] Bestiary Filter active");
+        ADLogging.Debug("[Crucible] Bestiary Filter active");
 
         AtkUnitBase* bestiaryFilter = CrucibleUi.Ready(CrucibleUi.BestiaryWindowFilter);
         if (bestiaryFilter == null)
@@ -1048,7 +1047,7 @@ internal sealed unsafe class CrucibleTeamSetup
     {
         this.Error  = message;
         this.Status = message;
-        Svc.Log.Error($"[Crucible] {message}");
+        ADLogging.Error($"[Crucible] {message}");
         return true;
     }
 

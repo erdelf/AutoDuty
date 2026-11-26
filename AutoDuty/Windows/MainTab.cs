@@ -8,6 +8,7 @@ using ECommons.DalamudServices;
 using ECommons.ExcelServices;
 using ECommons.GameFunctions;
 using ECommons.ImGuiMethods;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Windows
 {
@@ -472,7 +473,7 @@ namespace AutoDuty.Windows
 
                                             if (DutySelected.Content.TrustMembers.All(x => x.MemberName != member))
                                             {
-                                                Svc.Log.Debug($"Killing {member}");
+                                                ADLogging.Debug($"Killing {member}");
                                                 Configuration.SelectedTrustMembers[i] = null;
                                             }
                                         }
@@ -655,12 +656,12 @@ namespace AutoDuty.Windows
                                             (Plugin.LevelingModeEnum.IsTrustLeveling() &&
                                              (ilvl < 370 || Plugin.currentPlayerItemLevelAndClassJob.Value != null && Plugin.currentPlayerItemLevelAndClassJob.Value != Player.Job)))
                                         {
-                                            Svc.Log.Debug($"You are on a non-compatible job: {Player.Job.GetCombatRole()}, or your doing trust and your iLvl({ilvl}) is below 370, or your iLvl has changed, Disabling Leveling Mode");
+                                            ADLogging.Debug($"You are on a non-compatible job: {Player.Job.GetCombatRole()}, or your doing trust and your iLvl({ilvl}) is below 370, or your iLvl has changed, Disabling Leveling Mode");
                                             Plugin.LevelingModeEnum = LevelingMode.None;
                                         }
                                         else if (ilvl > 0 && ilvl != Plugin.currentPlayerItemLevelAndClassJob.Key)
                                         {
-                                            Svc.Log.Debug($"Your iLvl has changed, Selecting new Duty.");
+                                            ADLogging.Debug($"Your iLvl has changed, Selecting new Duty.");
                                             Plugin.CurrentTerritoryContent = LevelingHelper.SelectHighestLevelingRelevantDuty(Plugin.LevelingModeEnum);
                                         }
                                         else
@@ -1678,7 +1679,7 @@ namespace AutoDuty.Windows
             }
             catch (Exception ex)
             {
-                Svc.Log.Warning(ex, "[Crucible] Couldn't import the shop order from the clipboard");
+                ADLogging.Warning(ex, "[Crucible] Couldn't import the shop order from the clipboard");
                 Notify.Error(Loc.Get("MainTab.Crucible.ImportShopOrderFailed"));
             }
         }
@@ -1716,7 +1717,7 @@ namespace AutoDuty.Windows
             }
             catch (Exception ex)
             {
-                Svc.Log.Warning(ex, "[Crucible] Couldn't import the beast tier list from the clipboard");
+                ADLogging.Warning(ex, "[Crucible] Couldn't import the beast tier list from the clipboard");
                 Notify.Error(Loc.Get("MainTab.Crucible.ImportBeastTierListFailed"));
             }
         }

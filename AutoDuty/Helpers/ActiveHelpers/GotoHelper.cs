@@ -6,6 +6,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using System.Numerics;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -45,7 +46,7 @@ namespace AutoDuty.Helpers
         {
             if (State != ActionState.Running)
             {
-                Svc.Log.Info($"Goto Started, Going to {territoryType}{(moveLocations.Count > 0 ? $" and moving to {moveLocations[^1]} using {moveLocations.Count} pathLocations" : "")}");
+                ADLogging.Info($"Goto Started, Going to {territoryType}{(moveLocations.Count > 0 ? $" and moving to {moveLocations[^1]} using {moveLocations.Count} pathLocations" : "")}");
                 
                 GotoHelper.territoryType      = territoryType;
                 GotoHelper.gameObjectDataId   = gameObjectDataId;
@@ -186,7 +187,7 @@ namespace AutoDuty.Helpers
                     return;
                 }
             }
-            //Svc.Log.Info($"{_locationIndex < _moveLocations.Count} || ({_gameObject} != null && {ObjectHelper.GetDistanceToPlayer(_gameObject!)} > {_lastPointTollerance}) && {PlayerHelper.IsReady}");
+            //ADLogging.Info($"{_locationIndex < _moveLocations.Count} || ({_gameObject} != null && {ObjectHelper.GetDistanceToPlayer(_gameObject!)} > {_lastPointTollerance}) && {PlayerHelper.IsReady}");
             if (locationIndex < moveLocations.Count || (GameObject != null && ObjectHelper.GetDistanceToPlayer(GameObject) > lastPointTolerance) && PlayerHelper.IsReady)
             {
                 Vector3 moveLoc;
@@ -216,7 +217,7 @@ namespace AutoDuty.Helpers
 
         public override void OnCommand(string[] argsArray)
         {
-            Svc.Log.Debug("going to " + argsArray[1]);
+            ADLogging.Debug("going to " + argsArray[1]);
             switch (argsArray[1])
             {
                 case "inn":

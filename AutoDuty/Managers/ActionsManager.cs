@@ -15,6 +15,7 @@ using FFXIVClientStructs.FFXIV.Component.GUI;
 using System.Numerics;
 using static AutoDuty.Helpers.ObjectHelper;
 using static AutoDuty.Helpers.PlayerHelper;
+using AutoDuty.Logging;
 #pragma warning disable CA1822
 #pragma warning disable IDE0060
 // ReSharper disable UnusedParameter.Global
@@ -85,12 +86,12 @@ namespace AutoDuty.Managers
                 }
                 else
                 {
-                    Svc.Log.Error("no action");
+                    ADLogging.Error("no action");
                 }
             }
             catch (Exception ex)
             {
-                Svc.Log.Error(ex.ToString());
+                ADLogging.Error(ex.ToString());
             }
         }
 
@@ -156,7 +157,7 @@ namespace AutoDuty.Managers
                         // ReSharper disable once AssignmentInConditionalExpression
                         if ((operationResult = operation[operatorValue](getDistance, distance)))
                             invokeAction = true;
-                        Svc.Log.Info($"Condition: {getDistance}{operatorValue}{distance} = {operationResult}");
+                        ADLogging.Info($"Condition: {getDistance}{operatorValue}{distance} = {operationResult}");
                         break;
                     }
                 case "ObjectDistanceToPoint":
@@ -175,7 +176,7 @@ namespace AutoDuty.Managers
                         float getDistance = Vector3.Distance(vector3, targetObject.Position);
                         if (operationResult = operation[operatorValue](getDistance, distance))
                             invokeAction = true;
-                        Svc.Log.Info($"Condition: {getDistance}{operatorValue}{distance} = {operationResult}");
+                        ADLogging.Info($"Condition: {getDistance}{operatorValue}{distance} = {operationResult}");
                         break;
                     }
                 case "ItemCount":
@@ -190,7 +191,7 @@ namespace AutoDuty.Managers
                     int itemCount = InventoryHelper.ItemCount(itemId);
                     if (operationResult = operationFunc(itemCount, quantity))
                         invokeAction = true;
-                    Svc.Log.Info($"Condition: {itemCount}{operatorValue}{quantity} = {operationResult}");
+                    ADLogging.Info($"Condition: {itemCount}{operatorValue}{quantity} = {operationResult}");
                     break;
                 case "ObjectSpawned":
                     if (conditionArray.Length > 2)
@@ -239,7 +240,7 @@ namespace AutoDuty.Managers
             {
                 string?      actionActual    = actionArray[0];
                 List<string> actionArguments = [..actionArray.Length > 1 ? actionArray[1..] : [string.Empty]];
-                Svc.Log.Debug($"ConditionAction: Invoking Action: {actionActual} with Arguments: {actionArguments}");
+                ADLogging.Debug($"ConditionAction: Invoking Action: {actionActual} with Arguments: {actionArguments}");
                 this.InvokeAction(new PathAction() { Name = actionActual, Arguments = actionArguments });
             }
         }
@@ -624,7 +625,7 @@ namespace AutoDuty.Managers
                 }
                 else
                 {
-                    Svc.Log.Debug($"InteractableCheck: Interacting with {gameObject!.Name} at {gameObject.Position} which is {GetDistanceToPlayer(gameObject)} away, because game object is not null: {gameObject != null} and IsTargetable: {gameObject!.IsTargetable} and IsValid: {gameObject.IsValid()}");
+                    ADLogging.Debug($"InteractableCheck: Interacting with {gameObject!.Name} at {gameObject.Position} which is {GetDistanceToPlayer(gameObject)} away, because game object is not null: {gameObject != null} and IsTargetable: {gameObject!.IsTargetable} and IsValid: {gameObject.IsValid()}");
                     if (VNavmesh_IPCSubscriber.Path_IsRunning)
                         VNavmesh_IPCSubscriber.Path_Stop();
                     InteractWithObject(gameObject);
@@ -670,7 +671,7 @@ namespace AutoDuty.Managers
                 {
                     if (TryGetObjectByDataId(gameObject?.BaseId ?? 0, out gameObject))
                     {
-                        Svc.Log.Debug($"Interactable - Looping because {gameObject?.Name} is still Targetable: {gameObject?.IsTargetable} and we did not change conditions,  Position: {gameObject?.Position} Distance: {GetDistanceToPlayer(gameObject!.Position)}");
+                        ADLogging.Debug($"Interactable - Looping because {gameObject?.Name} is still Targetable: {gameObject?.IsTargetable} and we did not change conditions,  Position: {gameObject?.Position} Distance: {GetDistanceToPlayer(gameObject!.Position)}");
                         this.Interactable(gameObject);
                     }
                 }
@@ -777,7 +778,7 @@ namespace AutoDuty.Managers
 
         public void Boss(PathAction action)
         {
-            Svc.Log.Info($"Starting Action Boss: {Plugin.DutyData?.bossObject?.Name.TextValue ?? "null"}");
+            ADLogging.Info($"Starting Action Boss: {Plugin.DutyData?.bossObject?.Name.TextValue ?? "null"}");
             int index = 0;
             List<IGameObject>? treasureCofferObjects = null;
             Plugin.skipTreasureCoffer = false;
@@ -829,10 +830,10 @@ namespace AutoDuty.Managers
 
         public unsafe void Action(PathAction action)
         {
-            Svc.Log.Debug($"Action: {action.Arguments[0]}");
+            ADLogging.Debug($"Action: {action.Arguments[0]}");
             if (Enum.TryParse(action.Arguments[0], out ActionType type))
             {
-                Svc.Log.Debug($"Action: {type} {action.Arguments[1]}");
+                ADLogging.Debug($"Action: {type} {action.Arguments[1]}");
                 if (uint.TryParse(action.Arguments[1], out uint id))
                 {
                     if (ActionManager.Instance()->GetActionStatus(type, id) != 573)
@@ -892,7 +893,7 @@ namespace AutoDuty.Managers
                 ILayoutInstance*                         inst   = insts  != null ? FindPtr(ref *insts,                  key) : null;
                 Collider*                                coll   = inst   != null ? inst->GetCollider() : null;
 
-                Svc.Log.Warning((coll != null).ToString());
+                ADLogging.Warning((coll != null).ToString());
             }
         }
 

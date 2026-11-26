@@ -5,6 +5,7 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using Dalamud.Networking.Http;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Updater
 {
@@ -37,7 +38,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
                 return false;
             }
         }
@@ -59,7 +60,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
                 return (null, null);
             }
         }
@@ -78,7 +79,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
                 return null;
             }
         }
@@ -102,7 +103,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
                 return null;
             }
         }
@@ -120,7 +121,7 @@ namespace AutoDuty.Updater
                                      };
 
                 string? json = JsonSerializer.Serialize(issue, jsonSerializerOptions);
-                Svc.Log.Info(json);
+                ADLogging.Info(json);
                 _client.DefaultRequestHeaders.Add("User-Agent", "AutoDuty");
                 _client.DefaultRequestHeaders.Add("Accept", "application/vnd.github+json");
                 _client.DefaultRequestHeaders.Add("Authorization", $"Bearer {accessToken}");
@@ -136,7 +137,7 @@ namespace AutoDuty.Updater
             }
             catch (Exception ex)
             {
-                Svc.Log.Error($"{ex}");
+                ADLogging.Error($"{ex}");
                 return null;
             }
         }

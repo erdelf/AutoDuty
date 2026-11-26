@@ -2,6 +2,7 @@ using AutoDuty.Configurations;
 using Dalamud.Game.ClientState.Conditions;
 using ECommons.DalamudServices;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -172,7 +173,7 @@ namespace AutoDuty.Managers
             {
                 ReaderXBMResult xbmResult = new(result);
 
-                Svc.Log.Info($"Crucible Results: Total Score: {xbmResult.TotalScore}, Rank: {xbmResult.Rank}" +
+                ADLogging.Info($"Crucible Results: Total Score: {xbmResult.TotalScore}, Rank: {xbmResult.Rank}" +
                              "\nBeasts:\n\t" + 
                              string.Join("\n\t", xbmResult.BeastEntries.Select(entry => $"{CrucibleTeam.FamiliarSheetDatas[entry.Number].Name} ({entry.Number}) - Rank: {entry.PrevRank} -> {entry.NewRank}, XP: {entry.PrevXP} -> {entry.NewXP}")) +
                              $"\nScores: Performance: {xbmResult.Performance} | MovesMade: {xbmResult.MovesMadeScore} | Enemy: {xbmResult.EnemyScore} | Elite: {xbmResult.EliteScore} | Boss: {xbmResult.BossScore} | HP: {xbmResult.RemainingHP} -> {xbmResult.RemainingHPScore}\n"+
@@ -230,7 +231,7 @@ namespace AutoDuty.Managers
                     if (pickedEntry.Number != alive[i].Number)
                     {
                         Screens.PetParty.Pick(party, pickedEntry.index);
-                        Svc.Log.Debug($"Crucible: Unpicking familiar ({pickedEntry.Name})");
+                        ADLogging.Debug($"Crucible: Unpicking familiar ({pickedEntry.Name})");
                         this.fightNext = now + PickInterval;
                         return true;
                     }
@@ -245,14 +246,14 @@ namespace AutoDuty.Managers
 
                 Screens.PetParty.Pick(party, entry.index);
                 this.fightNext = now + PickInterval;
-                Svc.Log.Debug($"Crucible: Picking familiar ({entry.Name})");
+                ADLogging.Debug($"Crucible: Picking familiar ({entry.Name})");
                 return true;
             }
 
             Screens.StageDetail.Confirm(layout);
             this.fightNext   = now + CommenceRetry;
             this.confirmFrom = now;
-            Svc.Log.Debug("Crucible: Commencing the battle");
+            ADLogging.Debug("Crucible: Commencing the battle");
             this.Status = "Commencing the battle";
             return true;
         }
@@ -303,7 +304,7 @@ namespace AutoDuty.Managers
 
             ReaderXBMContentsTreasure.TreasureChoice best = choices.OrderBy(x => CrucibleItemData.TreasureRank(x.Item)).ThenBy(x => x.treasureIndex).First();
 
-            Svc.Log.Info($"[Crucible] Treasure: taking {Describe(best)} from {string.Join(" / ", choices.Select(Describe))}");
+            ADLogging.Info($"[Crucible] Treasure: taking {Describe(best)} from {string.Join(" / ", choices.Select(Describe))}");
 
             Screens.Treasure.Take(treasure, (uint)best.treasureIndex);
 
@@ -339,7 +340,7 @@ namespace AutoDuty.Managers
                 this.restStep = 0;
 
                 string names = string.Join(", ", this.restPicks.Select(i => $"{rows[i].Name} {rows[i].HP}/{rows[i].MaxHP}"));
-                Svc.Log.Info($"[Crucible] Campsite: resting with {(names.Length > 0 ? names : "no familiars (90% self heal)")}");
+                ADLogging.Info($"[Crucible] Campsite: resting with {(names.Length > 0 ? names : "no familiars (90% self heal)")}");
             }
 
             if (this.restStep < this.restPicks.Count)
@@ -442,7 +443,7 @@ namespace AutoDuty.Managers
                 {
                     this.closedThisVisit = true;
                     this.Status          = $"Shop done, {coins} coins left";
-                    Svc.Log.Info($"[Crucible] Shop: done with {coins} coins left");
+                    ADLogging.Info($"[Crucible] Shop: done with {coins} coins left");
 
                     if (Screens.ItemShop.Close(shop))
                         this.confirmFrom = now;
@@ -452,7 +453,7 @@ namespace AutoDuty.Managers
             }
 
             this.Status = $"Buying {CrucibleItemData.NameOf(buy.Item)} for {buy.Price}";
-            Svc.Log.Info($"[Crucible] Shop: buying {CrucibleItemData.NameOf(buy.Item)} for {buy.Price} of {coins} coins");
+            ADLogging.Info($"[Crucible] Shop: buying {CrucibleItemData.NameOf(buy.Item)} for {buy.Price} of {coins} coins");
 
             this.shopTried.Add(buy.Item);
             Screens.ItemShop.Buy(shop, buy.purchaseIndex);
@@ -516,7 +517,7 @@ namespace AutoDuty.Managers
 
             if (this.feedTry >= this.feedOrder.Count)
             {
-                Svc.Log.Info("[Crucible] Shop: no familiar would take the feed");
+                ADLogging.Info("[Crucible] Shop: no familiar would take the feed");
                 Screens.PetParty.Return(party);
                 this.feedFrom = DateTime.MinValue;
                 return;
@@ -621,7 +622,7 @@ namespace AutoDuty.Managers
                 this.itemLastUse = now;
 
                 this.Status       = $"Using {pick.Name} at {hp:P0}";
-                Svc.Log.Info($"[Crucible] Items: using {pick.Name} (slot {slot}) at {hp:P0} {(InArena ? "in a fight" : "on the board")}");
+                ADLogging.Info($"[Crucible] Items: using {pick.Name} (slot {slot}) at {hp:P0} {(InArena ? "in a fight" : "on the board")}");
 
                 return true;
             }

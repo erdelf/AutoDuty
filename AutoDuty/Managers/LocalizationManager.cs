@@ -1,13 +1,12 @@
 namespace AutoDuty.Managers;
-
 using System;
 using System.Collections.Generic;
 using System.IO;
 using Configurations;
+using ECommons.Throttlers;
+using Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ECommons.DalamudServices;
-using ECommons.Throttlers;
 
 internal static class LocalizationManager
 {
@@ -34,7 +33,7 @@ internal static class LocalizationManager
 
             if (!Directory.Exists(dirPath))
             {
-                Svc.Log.Warning($"Localization directory not found: {dirPath}");
+                ADLogging.Warning($"Localization directory not found: {dirPath}");
                 return;
             }
 
@@ -42,7 +41,7 @@ internal static class LocalizationManager
 
             if (jsonFiles.Length == 0)
             {
-                Svc.Log.Warning($"No JSON files found in: {dirPath}");
+                ADLogging.Warning($"No JSON files found in: {dirPath}");
                 return;
             }
 
@@ -58,11 +57,11 @@ internal static class LocalizationManager
                 }
                 catch (Exception ex)
                 {
-                    Svc.Log.Error($"Failed to load {filePath}: {ex.Message}");
+                    ADLogging.Error($"Failed to load {filePath}: {ex.Message}");
                 }
             }
 
-            Svc.Log.Info($"Loaded {this.keyed.Count} translations for {language} from {jsonFiles.Length} files");
+            ADLogging.Info($"Loaded {this.keyed.Count} translations for {language} from {jsonFiles.Length} files");
 
             this.ready = this.keyed.Count > 0;
             return;
@@ -119,7 +118,7 @@ internal static class LocalizationManager
         availableLanguages = languages.ToArray();
 
         if (!translations.ContainsKey(BASE_LANGUAGE))
-            Svc.Log.Error("Languages broken");
+            ADLogging.Error("Languages broken");
 
         SetLanguage(ConfigurationMain.Instance.Language, true);
     }
@@ -132,7 +131,7 @@ internal static class LocalizationManager
         //translations.Clear();
 
         ConfigurationMain.Instance.Language = language;
-        Svc.Log.Info($"Language changed to: {language}");
+        ADLogging.Info($"Language changed to: {language}");
     }
 
     internal static string Get(string key)
@@ -143,7 +142,7 @@ internal static class LocalizationManager
             return translation;
 
         if(EzThrottler.Throttle($"MissingTranslationKey-{key}~{ConfigurationMain.Instance.Language}", 30_000))
-            Svc.Log.Warning($"Missing translation key in {ConfigurationMain.Instance.Language}: {key}");
+            ADLogging.Warning($"Missing translation key in {ConfigurationMain.Instance.Language}: {key}");
 
         translation = BaseTranslation.GetTranslation(key);
 
@@ -151,7 +150,7 @@ internal static class LocalizationManager
             return translation;
 
         if (EzThrottler.Throttle($"MissingTranslationKeyBaseLang-{key}~{BASE_LANGUAGE}", 30_000))
-            Svc.Log.Error($"Missing translation key in base language {BASE_LANGUAGE}: {key}");
+            ADLogging.Error($"Missing translation key in base language {BASE_LANGUAGE}: {key}");
         return key;
     }
 
@@ -164,7 +163,7 @@ internal static class LocalizationManager
         }
         catch (FormatException ex)
         {
-            Svc.Log.Error($"Format error for key '{key}': {ex.Message}");
+            ADLogging.Error($"Format error for key '{key}': {ex.Message}");
             return template;
         }
     }

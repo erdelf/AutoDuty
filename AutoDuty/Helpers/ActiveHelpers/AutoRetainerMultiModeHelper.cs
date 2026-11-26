@@ -2,6 +2,7 @@
 using Dalamud.Game.ClientState.Conditions;
 using Dalamud.Plugin.Services;
 using ECommons.DalamudServices;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -27,9 +28,9 @@ namespace AutoDuty.Helpers
             this.DebugLog(this.DisplayName + ".Invoke");
 
             if (!AutoRetainer_IPCSubscriber.IsEnabled)
-                Svc.Log.Info("AutoRetainer functionality requires AutoRetainer, visit https://puni.sh/plugin/AutoRetainer for more info");
+                ADLogging.Info("AutoRetainer functionality requires AutoRetainer, visit https://puni.sh/plugin/AutoRetainer for more info");
             else if(!Lifestream_IPCSubscriber.IsEnabled)
-                Svc.Log.Info("AutoRetainer MultiMode functionality requires Lifestream, visit https://github.com/NightmareXIV/Lifestream for more info");
+                ADLogging.Info("AutoRetainer MultiMode functionality requires Lifestream, visit https://github.com/NightmareXIV/Lifestream for more info");
             else if (InventoryManager.Instance()->GetEmptySlotsInBag() <= 1)
                 this.DebugLog("Not enough inventory space, skipping");
             else if (State != ActionState.Running)

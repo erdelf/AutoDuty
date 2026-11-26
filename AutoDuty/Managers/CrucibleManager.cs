@@ -5,6 +5,7 @@ using ECommons.DalamudServices;
 using ECommons.Throttlers;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using Lumina.Excel;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -52,11 +53,11 @@ namespace AutoDuty.Managers
         {
             if (!BoardByDuty.TryGetValue(content.ContentFinderCondition, out uint board))
             {
-                _taskManager.Enqueue(() => Svc.Log.Error($"No Crucible board for {content.Name} (CFC {content.ContentFinderCondition})"), "RegisterCrucible");
+                _taskManager.Enqueue(() => ADLogging.Error($"No Crucible board for {content.Name} (CFC {content.ContentFinderCondition})"), "RegisterCrucible");
                 return;
             }
 
-            _taskManager.Enqueue(() => Svc.Log.Info($"Queueing Crucible: {content.Name} (board {board})"), "RegisterCrucible");
+            _taskManager.Enqueue(() => ADLogging.Info($"Queueing Crucible: {content.Name} (board {board})"), "RegisterCrucible");
             _taskManager.Enqueue(() => Plugin.action = $"Queueing Crucible: {content.Name}",              "RegisterCrucible");
 
             if (!PlayerHelper.IsValid)
@@ -79,7 +80,7 @@ namespace AutoDuty.Managers
                                  {
                                      if (this.teamSetup.Error == null)
                                          return;
-                                     Svc.Log.Error($"Crucible team setup failed: {this.teamSetup.Error}");
+                                     ADLogging.Error($"Crucible team setup failed: {this.teamSetup.Error}");
                                      _taskManager.Abort();
                                      Plugin.Stage = Stage.Stopped;
                                  }, "RegisterCrucible-TeamCheck");
@@ -111,7 +112,7 @@ namespace AutoDuty.Managers
 
             if (DateTime.UtcNow - this.challengedAt <= TimeSpan.FromSeconds(5) && CrucibleUi.TryReady(CrucibleUi.YesNo, out AtkUnitBase* smallTeam))
             {
-                Svc.Log.Info("[Crucible] Team is smaller than a full team; confirming the challenge anyway");
+                ADLogging.Info("[Crucible] Team is smaller than a full team; confirming the challenge anyway");
                 Screens.Prompt.Yes(smallTeam);
                 this.challengedAt = DateTime.MinValue;
             }
@@ -136,12 +137,12 @@ namespace AutoDuty.Managers
         private static unsafe void ChooseSelectStringText(AtkUnitBase* menu, bool scanRequired)
         {
             string text  = scanRequired ? BestiaryText : ChallengeText;
-            Svc.Log.Debug("[Crucible] Select String " + text);
+            ADLogging.Debug("[Crucible] Select String " + text);
 
             int index = text.Length > 0 ? CrucibleUi.SelectStringIndex(menu, text) : -1;
             if (index < 0)
             {
-                Svc.Log.Warning($"[Crucible] Lauda's menu has no \"{text}\" option");
+                ADLogging.Warning($"[Crucible] Lauda's menu has no \"{text}\" option");
                 return;
             }
 
@@ -151,7 +152,7 @@ namespace AutoDuty.Managers
         private unsafe bool OpenBoard(uint board)
         {
             void DebugLog(string message) => 
-                Svc.Log.Debug($"Crucible Open Board: {message}");
+                ADLogging.Debug($"Crucible Open Board: {message}");
 
             if (CrucibleUi.IsOpen(CrucibleUi.TeamWindow))
             {

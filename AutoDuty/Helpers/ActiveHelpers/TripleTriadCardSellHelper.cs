@@ -5,6 +5,7 @@ using FFXIVClientStructs.FFXIV.Client.Game;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using AutoDuty.IPC;
 using ECommons.Throttlers;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Helpers
 {
@@ -29,9 +30,9 @@ namespace AutoDuty.Helpers
         internal override void Start()
         {
             if (!QuestManager.IsQuestComplete(65970))
-                Svc.Log.Info("Gold Saucer requires having completed quest: It Could Happen To You");
+                ADLogging.Info("Gold Saucer requires having completed quest: It Could Happen To You");
             else if(!CardsInInventory(this.ActionConfig))
-                Svc.Log.Info("Not enough TTT cards in inventory");
+                ADLogging.Info("Not enough TTT cards in inventory");
             else if (State != ActionState.Running) base.Start();
         }
 
@@ -57,12 +58,12 @@ namespace AutoDuty.Helpers
                 return;
 
             if (GotoHelper.State == ActionState.Running)
-                //Svc.Log.Debug("Goto Running");
+                //ADLogging.Debug("Goto Running");
                 return;
 
             if (Svc.ClientState.TerritoryType != GoldSaucerTerritoryType)
             {
-                Svc.Log.Debug("Moving to Gold Saucer");
+                ADLogging.Debug("Moving to Gold Saucer");
                 GotoHelper.Invoke(GoldSaucerTerritoryType, [TripleTriadCardVendorLocation], 0.25f, 2f, false);
 
                 return;
@@ -71,18 +72,18 @@ namespace AutoDuty.Helpers
             if (ObjectHelper.GetDistanceToPlayer(TripleTriadCardVendorLocation) > 4 && PlayerHelper.IsReady && VNavmesh_IPCSubscriber.Nav_IsReady && !VNavmesh_IPCSubscriber.SimpleMove_PathfindInProgress &&
                 VNavmesh_IPCSubscriber.Path_NumWaypoints == 0)
             {
-                Svc.Log.Debug("Setting Move to Triple Triad Card Trader");
+                ADLogging.Debug("Setting Move to Triple Triad Card Trader");
                 MovementHelper.Move(TripleTriadCardVendorLocation, 0.25f, 4f);
                 return;
             }
             else if (ObjectHelper.GetDistanceToPlayer(TripleTriadCardVendorLocation) > 4 && VNavmesh_IPCSubscriber.Path_NumWaypoints > 0)
             {
-                Svc.Log.Debug("Moving to Triple Triad Card Trader");
+                ADLogging.Debug("Moving to Triple Triad Card Trader");
                 return;
             }
             else if (ObjectHelper.GetDistanceToPlayer(TripleTriadCardVendorLocation) <= 4 && VNavmesh_IPCSubscriber.Path_NumWaypoints > 0)
             {
-                Svc.Log.Debug("Stopping Path");
+                ADLogging.Debug("Stopping Path");
                 VNavmesh_IPCSubscriber.Path_Stop();
                 return;
             }
@@ -93,12 +94,12 @@ namespace AutoDuty.Helpers
                     readerExchange = null;
                     if (GenericHelpers.TryGetAddonByName("SelectIconString", out addonSelectIconString) && GenericHelpers.IsAddonReady(addonSelectIconString))
                     {
-                        Svc.Log.Debug($"Clicking SelectIconString");
+                        ADLogging.Debug($"Clicking SelectIconString");
                         AddonHelper.ClickSelectIconString(1);
                     }
                     else if (!GenericHelpers.TryGetAddonByName("TripleTriadCoinExchange", out addonExchange) && TripleTriadVendorGameObject != null)
                     {
-                        Svc.Log.Debug("Interacting with TTT");
+                        ADLogging.Debug("Interacting with TTT");
                         ObjectHelper.InteractWithObject(TripleTriadVendorGameObject);
                     }
                 }

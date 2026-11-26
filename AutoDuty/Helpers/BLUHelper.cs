@@ -1,4 +1,5 @@
-﻿namespace AutoDuty.Helpers
+﻿using AutoDuty.Logging;
+namespace AutoDuty.Helpers
 {
     using System;
     using System.Collections.Generic;
@@ -116,7 +117,7 @@
 
         private static void DebugLog(string s)
         {
-            Svc.Log.Debug($"[BLUHelper] {s}");
+            ADLogging.Debug($"[BLUHelper] {s}");
         }
     
     }

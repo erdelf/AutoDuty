@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using ECommons.DalamudServices;
 
 namespace AutoDuty.Helpers;
+using Logging;
 
 internal static class ConfigOverrideHelper
 {
@@ -16,7 +16,7 @@ internal static class ConfigOverrideHelper
     {
         if (overrides is null || overrides.Count == 0)
         {
-            Svc.Log.Error("Overrides dictionary empty");
+            ADLogging.Error("Overrides dictionary empty");
             return false;
         }
 
@@ -29,21 +29,21 @@ internal static class ConfigOverrideHelper
 
             if (!config.HasValue || config.Value.property == null)
             {
-                Svc.Log.Error($"Unable to find config: {name}");
+                ADLogging.Error($"Unable to find config: {name}");
                 Revert(touched, newlyTracked);
                 return false;
             }
 
             if (config.Value.property.PropertyType.ToString().Contains("Dalamud.Plugin", System.StringComparison.InvariantCultureIgnoreCase))
             {
-                Svc.Log.Error($"Cannot override plugin field: {name}");
+                ADLogging.Error($"Cannot override plugin field: {name}");
                 Revert(touched, newlyTracked);
                 return false;
             }
 
             if (config.Value.property.PropertyType.IsAssignableTo(typeof(IList)))
             {
-                Svc.Log.Error($"List configs are not supported: {name}");
+                ADLogging.Error($"List configs are not supported: {name}");
                 Revert(touched, newlyTracked);
                 return false;
             }
@@ -51,7 +51,7 @@ internal static class ConfigOverrideHelper
             object? newValue = ConfigHelper.ConvertConfigValue(config.Value.property.PropertyType, value, out string failReason);
             if (newValue is null)
             {
-                Svc.Log.Error($"Unable to set {name}: {failReason}");
+                ADLogging.Error($"Unable to set {name}: {failReason}");
                 Revert(touched, newlyTracked);
                 return false;
             }
@@ -67,7 +67,7 @@ internal static class ConfigOverrideHelper
             config.Value.property.SetValue(config.Value.instance, newValue);
         }
 
-        Svc.Log.Debug($"Applied {overrides.Count} override(s); active={Active.Count}");
+        ADLogging.Debug($"Applied {overrides.Count} override(s); active={Active.Count}");
         return true;
     }
 
@@ -76,7 +76,7 @@ internal static class ConfigOverrideHelper
         if (Active.Count == 0)
             return false;
 
-        Svc.Log.Debug($"Restoring {Active.Count} override(s)");
+        ADLogging.Debug($"Restoring {Active.Count} override(s)");
         foreach (OverrideEntry entry in Active.Values)
             entry.config.property!.SetValue(entry.config.instance, entry.PreviousValue);
         Active.Clear();

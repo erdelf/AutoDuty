@@ -5,6 +5,7 @@ using ECommons.Automation.NeoTaskManager;
 using ECommons.DalamudServices;
 using ECommons.UIHelpers.AtkReaderImplementations;
 using FFXIVClientStructs.FFXIV.Component.GUI;
+using AutoDuty.Logging;
 
 namespace AutoDuty.Managers
 {
@@ -23,10 +24,10 @@ namespace AutoDuty.Managers
         {
             if (content.GCArmyIndex < 0)
             {
-                _taskManager.Enqueue(() => Svc.Log.Info("GCArmyIndex was < than 0"), "RegisterSquadron");
+                _taskManager.Enqueue(() => ADLogging.Info("GCArmyIndex was < than 0"), "RegisterSquadron");
                 return;
             }
-            _taskManager.Enqueue(() => Svc.Log.Info($"Queueing Squadron: {content.Name}"), "RegisterSquadron");
+            _taskManager.Enqueue(() => ADLogging.Info($"Queueing Squadron: {content.Name}"), "RegisterSquadron");
             _taskManager.Enqueue(() => Plugin.action = $"Queueing Squadron: {content.Name}", "RegisterSquadron");
 
             AtkUnitBase* captureAddon = null;
@@ -34,9 +35,9 @@ namespace AutoDuty.Managers
             //Check if player is valid
             if (!PlayerHelper.IsValid)
             {
-                Svc.Log.Info("player was invalid, waiting for it to be valid.");
+                ADLogging.Info("player was invalid, waiting for it to be valid.");
                 _taskManager.Enqueue(() => PlayerHelper.IsValid, "RegisterSquadron", new TaskManagerConfiguration(int.MaxValue));
-                Svc.Log.Info("Delaying next Enqueue by 2s");
+                ADLogging.Info("Delaying next Enqueue by 2s");
                 _taskManager.EnqueueDelay(2000);
             }
 
@@ -53,7 +54,7 @@ namespace AutoDuty.Managers
             _taskManager.Enqueue(() => AddonHelper.FireCallBack(captureAddon, true, 11, content.GCArmyIndex), "RegisterSquadron");
 
 
-            _taskManager.Enqueue(() => Svc.Log.Warning(content.GCArmyIndex.ToString()));
+            _taskManager.Enqueue(() => ADLogging.Warning(content.GCArmyIndex.ToString()));
 
             // Open member list
             _taskManager.Enqueue(() => AddonHelper.FireCallBack(captureAddon, true, 12, content.GCArmyIndex), "RegisterSquadron-MemberList");
@@ -115,7 +116,7 @@ namespace AutoDuty.Managers
                                                      }
                                                      break;
                                                  default:
-                                                     Svc.Log.Error($"Squadron class breaking? {member.Name} with {member.ClassType}");
+                                                     ADLogging.Error($"Squadron class breaking? {member.Name} with {member.ClassType}");
                                                      break;
                                              }
                                      }, "RegisterSquadron-SelectMembers");
@@ -139,7 +140,7 @@ namespace AutoDuty.Managers
                 if (Svc.ClientState.TerritoryType == content.TerritoryType)
                 {
                     // Reset states because we queued the correct duty, this is for looping
-                    Svc.Log.Info("Resetting states for loop.");
+                    ADLogging.Info("Resetting states for loop.");
                     this.InteractedWithSergeant = false;
                     this.OpeningMissions        = false;
                     this.ViewingMissions        = false;
@@ -163,7 +164,7 @@ namespace AutoDuty.Managers
             {
                 // Talk window up ClickIt
                 AddonHelper.ClickTalk();
-                Svc.Log.Info("Clicking Talk");
+                ADLogging.Info("Clicking Talk");
                 return false;
             }
 
@@ -171,7 +172,7 @@ namespace AutoDuty.Managers
             {
                 // Viewing missions, move on to the next step for registering
                 this.ViewingMissions = true;
-                Svc.Log.Info("ViewingMissions: TRUE");
+                ADLogging.Info("ViewingMissions: TRUE");
                 return true;
             }
 
@@ -182,7 +183,7 @@ namespace AutoDuty.Managers
             // Check if the GcArmyExpeditionResult addon is open
             if (GenericHelpers.TryGetAddonByName("GcArmyExpeditionResult", out AtkUnitBase* expeditionResultScreen))
             {
-                Svc.Log.Info("Viewing expedition result");
+                ADLogging.Info("Viewing expedition result");
                 // Close the expedition result menu
                 AddonHelper.FireCallBack(expeditionResultScreen, true, 0);
                 // Reset states so we try to open the squadron view again until we hit the squadron duty GUI
